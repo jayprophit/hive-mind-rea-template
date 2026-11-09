@@ -1,0 +1,11 @@
+model:
+  default: "nemotron-3.5-super-vl"
+  provider: "nous"
+  base_url: "https://inference-api.nousresearch.com/v1"
+memory:
+  search:
+    provider: "none"
+auxiliary:
+  group_router:
+    provider: "custom"
+    model: "laya"

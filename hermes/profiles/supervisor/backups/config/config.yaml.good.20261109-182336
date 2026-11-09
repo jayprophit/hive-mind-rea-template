@@ -1,0 +1,24 @@
+# Hermes Agent profile: supervisor
+model:
+  default: "bonsai-2:4b"
+  provider: "custom"
+  base_url: "http://127.0.0.1:11434/v1"
+terminal:
+  backend: "local"
+  cwd: "."
+  timeout: 180
+browser:
+  auto_local_for_private_urls: true
+  inactivity_timeout: 120
+memory:
+  memory_enabled: true
+auxiliary:
+  group_router:
+    provider: "custom"
+    model: "laya"
+  coder:
+    provider: "custom"
+    model: "lfm3:1.7b"
+gateway:
+  bot_loop_guard:
+    max_hops: 4

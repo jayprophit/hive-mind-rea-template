@@ -1,0 +1,14 @@
+{
+  "title": "Work Tracking Matrix — Hive Mind",
+  "uid": "work-matrix",
+  "schemaVersion": 30,
+  "refresh": "10s",
+  "time": {"from": "now-24h", "to": "now"},
+  "panels": [
+    {"title": "Tokens / day (Ollama)", "type": "timeseries", "datasource": {"type": "prometheus", "uid": "prometheus"}, "targets": [{"expr": "rate(ollama_tokens_total[5m])", "refId": "A"}]},
+    {"title": "Requests by @coder/@windows/@decider", "type": "stat", "datasource": {"type": "prometheus", "uid": "prometheus"}, "targets": [{"expr": "count(ollama_requests_total)"}]},
+    {"title": "Hermes Turns / Obsidian rows", "type": "table", "datasource": {"type": "prometheus", "uid": "prometheus"}, "targets": [{"expr": "hermes_turns_per_minute"}]},
+    {"title": "Agent Errors", "type": "stat", "datasource": {"type": "loki", "uid": "loki"}, "targets": [{"expr": "{job=\"hermes\"} |= \"error\"", "refId": "A"}]}
+  ],
+  "tags": ["hive-mind", "obsidian"]
+}

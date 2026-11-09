@@ -1,0 +1,11 @@
+model:
+  default: "iceman"
+  provider: "nous"
+  base_url: "https://inference-api.nousresearch.com/v1"
+memory:
+  search:
+    provider: "none"
+auxiliary:
+  group_router:
+    provider: "custom"
+    model: "laya"

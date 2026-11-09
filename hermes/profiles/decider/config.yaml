@@ -1,0 +1,15 @@
+model:
+  default: "laya"
+  provider: "custom"
+  base_url: "http://127.0.0.1:11434/v1"
+terminal:
+  backend: "local"
+  cwd: "."
+memory:
+  memory_enabled: true
+  search:
+    provider: "none"
+auxiliary:
+  group_router:
+    provider: "custom"
+    model: "laya"

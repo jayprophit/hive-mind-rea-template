@@ -1,0 +1,11 @@
+model:
+  default: "bonsai-2:4b"
+  provider: "custom"
+  base_url: "http://127.0.0.1:11434/v1"
+memory:
+  search:
+    provider: "none"
+auxiliary:
+  group_router:
+    provider: "custom"
+    model: "laya"
