@@ -1,0 +1,53 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp@latest"],
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+      "enabled": false
+    },
+    "perplexity": {
+      "type": "local",
+      "command": ["npx", "-y", "server-perplexity-ask"],
+      "environment": { "PERPLEXITY_API_KEY": "{env:PERPLEXITY_API_KEY}" },
+      "enabled": false
+    },
+    "firecrawl": {
+      "type": "local",
+      "command": ["npx", "-y", "firecrawl-mcp"],
+      "environment": { "FIRECRAWL_API_KEY": "{env:FIRECRAWL_API_KEY}" },
+      "enabled": false
+    },
+    "apify": {
+      "type": "local",
+      "command": ["npx", "-y", "@apify/actors-mcp-server"],
+      "environment": { "APIFY_TOKEN": "{env:APIFY_TOKEN}" },
+      "enabled": false
+    },
+    "filesystem": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\jpowe"],
+      "enabled": false
+    },
+    "memory": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+      "enabled": false
+    },
+    "fetch": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-fetch"],
+      "enabled": false
+    },
+    "git": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-git", "--repository", "."],
+      "enabled": false
+    }
+  }
+}

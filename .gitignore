@@ -21,3 +21,14 @@ __pycache__/
 *.log
 .ollama/
 .ledger/
+# Repos (cloned locally, not part of template)
+repos/
+# Runtime / lock files
+*.db
+*.db-wal
+*.db-shm
+*.lock
+gateway.lock
+state.db*
+*.fts_rebuild.lock
+*.quarantine.lock

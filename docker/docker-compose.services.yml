@@ -1,0 +1,52 @@
+# Optional self-hosted services for Hive Mind (heavy on 7.75GB RAM - enable selectively)
+# Usage: docker compose -f docker-compose.services.yml up -d <service>
+
+services:
+  openproject:
+    image: openproject/openproject:14
+    ports: ["8080:80"]
+    environment:
+      - OPENPROJECT_SECRET_KEY_BASE=${OPENPROJECT_SECRET_KEY_BASE:-change_me}
+      - OPENPROJECT_HOST__NAME=localhost:8080
+      - OPENPROJECT_HTTPS=false
+    volumes:
+      - openproject_pgdata:/var/openproject/pgdata
+      - openproject_assets:/var/openproject/assets
+    restart: unless-stopped
+
+  chatwoot:
+    image: chatwoot/chatwoot:latest
+    depends_on: [chatwoot-postgres, chatwoot-redis]
+    ports: ["3001:3000"]
+    environment:
+      - SECRET_KEY_BASE=${CHATWOOT_SECRET_KEY_BASE:-change_me}
+      - FRONTEND_URL=http://localhost:3001
+      - POSTGRES_HOST=chatwoot-postgres
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=postgres
+      - REDIS_URL=redis://chatwoot-redis:6379
+    restart: unless-stopped
+
+  chatwoot-postgres:
+    image: postgres:16-alpine
+    environment: [POSTGRES_DB=chatwoot, POSTGRES_USER=postgres, POSTGRES_PASSWORD=postgres]
+    volumes: [chatwoot_pg:/var/lib/postgresql/data]
+    restart: unless-stopped
+
+  chatwoot-redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --dev --bind 0.0.0.0
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
+    restart: unless-stopped
+
+volumes:
+  openproject_pgdata:
+  openproject_assets:
+  chatwoot_pg:
