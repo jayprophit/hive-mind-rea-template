@@ -91,7 +91,7 @@ A "second brain" is a personal knowledge management (PKM) system — a digital r
 | Ollama | 11434 | ✅ Running | Primary LLM engine (bonsai-2:4b, lfm3:1.7b, laya) |
 | Hermes | CLI | ✅ Configured | Supervisor (routes via laya /v1/systemone) |
 | OpenClaw Gateway | 18789 | ✅ Running | Windows automation (files, Office, browser, canvas) |
-| Grafana | 3000 | ✅ Running | Dashboards (/d/work-matrix), metrics, logs |
+| Grafana | 3000 | ✅ Running | Dashboards (/d/adw9qkn/work-tracking-matrix, /d/work-matrix), metrics, logs |
 | Obsidian | Vault | ✅ Created | Second brain (Daily, Work, Projects, Templates) |
 
 ### Supporting (on-demand)
