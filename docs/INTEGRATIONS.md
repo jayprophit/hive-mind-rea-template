@@ -10,15 +10,45 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 - **blocked/needs-key**: requires API key, account, admin, or heavy deps
 - **pending**: not yet installed
 
-## Craft Anything (NEW - installed 2026-11-11)
-- **Installed**: `C:\Program Files\Craft Anything\craft-anything-cli.exe` + `craft-anything.exe`
-- **MCP server**: `craft-anything-cli mcp` (30 tools) - configured in `mcp/opencode-mcp.example.json`
-- **Connected to**: Claude Code, Codex, Gemini CLI, Windsurf, VS Code, OpenCode, Copilot CLI, Hermes, Devin (all 9 agents via `setup --all-detected --yes`)
-- **Skill**: `craft-anything` skill installed in `~/.claude/skills/`, `~/.agents/skills/`, `~/.hermes/skills/`
-- **AI backends**: Claude Code (45ms), Hermes Agent (45ms), OpenCode (33ms) - all responding
-- **Optional engines**: Chromium browser OK; Ghidra/JADX/Java/Frida/GDB/LLDB/mitmproxy/Binwalk/Rizin/tshark not installed (optional)
-- **Role in pipeline**: Reverse engineering / software investigation with evidence-backed findings. Use for triage, report generation, rebuild studies, and deep code analysis.
-- **Commands**: `craft-anything-cli commands` (list all tools), `craft-anything-cli capabilities`, `craft-anything-cli triage <file>`, `craft-anything-cli report`, `craft-anything-cli rebuild`, `craft-anything-cli chat`
+## Reverse Engineering Stack (complete - 2026-11-11)
+| Tool | Version | Location | Purpose |
+|---|---|---|---|
+| Craft Anything | Latest (30 MCP tools) | C:\Program Files\Craft Anything\ | Investigation, triage, reports, rebuild studies. MCP connected to 9 agents. |
+| Ghidra | 11.4.2 | C:\Tools\Ghidra\ | Deep binary decompilation (C-like pseudocode from exe/dll/so/firmware) |
+| JADX | 1.5.3 | C:\Tools\JADX\ | Android APK decompilation to Java source |
+| Rizin | 0.9.1 | C:\Tools\Rizin\ | CLI disassembler, binary analysis, strings, structure |
+| Java (Temurin) | 21.0.13 | C:\Program Files\Eclipse Adoptium\ | Runtime for Ghidra/JADX |
+| mitmproxy | 12.3.1 | C:\Program Files\mitmproxy\ | HTTPS traffic interception, API reverse-engineering |
+| Frida | 17.26.2 + tools 14.13.1 | codex-runtimes/python/Scripts/ | Runtime function tracing, hooking, dynamic analysis |
+| faster-whisper | Latest | pip | Speech-to-text for audio analysis |
+| ffmpeg | Gyan.FFmpeg | winget | Media processing, format conversion |
+| yt-dlp | 2026.10.26 | pip | Media download from URLs |
+
+### Not installed (optional, niche)
+| Tool | Why skip | Install when |
+|---|---|---|
+| GDB | Debugging compiled code (Linux focus) | Specific debugging tasks (Rizin/Ghidra cover analysis) |
+| objdump | Disassembly (covered by Rizin) | Quick one-off disassembly |
+| tshark/Wireshark | Network packet analysis (covered by mitmproxy) | Deep packet forensics |
+| LLDB | Apple/macOS debugging | Only if developing for Apple (user has iPad Pro 1 but builds on Windows; Apple dev needs Mac + license) |
+
+### Environment variables set
+- JAVA_HOME = C:\Program Files\Eclipse Adoptium\jdk-21.0.13.9-hotspot
+- PATH includes: Java bin, Ghidra, JADX bin, Rizin bin, Frida scripts
+
+### How they work together in the pipeline
+```
+Craft Anything (MCP) ── investigation, triage, reports, rebuild studies
+       │
+       ├── Ghidra ── deep binary decompilation (C pseudocode)
+       ├── JADX ── Android APK → Java source
+       ├── Rizin ── CLI disassembly, strings, structure analysis
+       ├── mitmproxy ── intercept HTTPS traffic from target apps
+       ├── Frida ── hook/trace running processes dynamically
+       ├── faster-whisper ── transcribe audio from media
+       ├── ffmpeg ── process/convert media files
+       └── yt-dlp ── download media from URLs for analysis
+```
 
 | Item | Type | Status | Notes / Install |
 |---|---|---|---|
