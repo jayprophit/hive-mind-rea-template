@@ -23,6 +23,8 @@ __pycache__/
 .ledger/
 # Repos (cloned locally, not part of template)
 repos/
+# Projects (user projects get their own repos, not this template)
+Projects/
 # Runtime / lock files
 *.db
 *.db-wal

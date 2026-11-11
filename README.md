@@ -143,6 +143,15 @@ opencode/               OpenCode agent .md files (22 agents)
 repos/                  Cloned repos (gitignored: livekit, chatwoot, weknora, cap, cal.com, openproject)
 ```
 
+## Important: Projects vs. Setup
+
+**This repo contains ONLY the setup/configuration.** It does NOT contain project work.
+
+- **Setup files** (committed): hermes/, grafana/, obsidian-vault/, mcp/, docker/, docs/, tools/, opencode/, README.md
+- **Project work** (gitignored): Projects/, repos/, *.db, *.lock, state files
+- **Your projects** get their own repos. When you start a new project, create a new repo and clone this template's setup into it.
+- The Obsidian vault tracks ALL projects via requestId dedup in PROJECT_MATRIX.md, but the actual project code lives in separate repos.
+
 ## REA Loop (Revived by AI each turn)
 ```
 Plan → Design → Build → Check → Research → Recheck → Build → Fix → Amend → Compare

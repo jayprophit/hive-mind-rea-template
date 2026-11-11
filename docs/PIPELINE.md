@@ -103,20 +103,20 @@ A "second brain" is a personal knowledge management (PKM) system — a digital r
 | OpenCode | CLI | ✅ Configured | Subagent delegation (22 agents) |
 
 ### Reverse Engineering Stack
-| Tool | Status | Purpose |
-|---|---|---|
-| Craft Anything | ✅ MCP connected to 9 agents | Investigation, triage, reports, rebuild |
-| Ghidra 11.4.2 | ✅ Installed | Deep binary decompilation |
-| JADX 1.5.3 | ✅ Installed | Android APK → Java source |
-| Rizin 0.9.1 | ✅ Installed | CLI disassembly, binary analysis |
-| mitmproxy 12.3.1 | ✅ Installed | HTTPS traffic interception |
-| Frida 17.26.2 | ✅ Installed | Runtime hooking/tracing |
-| tshark 4.2.2 | ✅ Installed (WSL) | Packet capture, protocol analysis |
-| GDB 15.1 | ✅ Installed (WSL) | Linux binary debugging |
-| objdump 2.42 | ✅ Installed (WSL) | ELF disassembly |
-| faster-whisper | ✅ Installed | Speech-to-text |
-| ffmpeg | ✅ Installed | Media processing |
-| yt-dlp | ✅ Installed | Media download |
+| Tool | Status | Purpose | Database Integration |
+|---|---|---|---|
+| Craft Anything | ✅ MCP connected to 9 agents | Investigation, triage, reports, rebuild | ✅ Tool calls logged via Hermes supervisor → Obsidian Daily + PROJECT_MATRIX.md (requestId dedup) |
+| Ghidra 11.4.2 | ✅ Installed | Deep binary decompilation | ✅ Investigation results logged via Hermes → Obsidian |
+| JADX 1.5.3 | ✅ Installed | Android APK → Java source | ✅ Investigation results logged via Hermes → Obsidian |
+| Rizin 0.9.1 | ✅ Installed | CLI disassembly, binary analysis | ✅ Investigation results logged via Hermes → Obsidian |
+| mitmproxy 12.3.1 | ✅ Installed | HTTPS traffic interception | ✅ Traffic analysis logged via Hermes → Obsidian |
+| Frida 17.26.2 | ✅ Installed | Runtime hooking/tracing | ✅ Tracing results logged via Hermes → Obsidian |
+| tshark 4.2.2 | ✅ Installed (WSL) | Packet capture, protocol analysis | ✅ Capture analysis logged via Hermes → Obsidian |
+| GDB 15.1 | ✅ Installed (WSL) | Linux binary debugging | ✅ Debug sessions logged via Hermes → Obsidian |
+| objdump 2.42 | ✅ Installed (WSL) | ELF disassembly | ✅ Analysis logged via Hermes → Obsidian |
+| faster-whisper | ✅ Installed | Speech-to-text | ✅ Transcriptions logged via Hermes → Obsidian |
+| ffmpeg | ✅ Installed | Media processing | ✅ Processing logged via Hermes → Obsidian |
+| yt-dlp | ✅ Installed | Media download | ✅ Downloads logged via Hermes → Obsidian |
 
 ### MCP Servers (configured in opencode-mcp.example.json)
 | Server | Status | Purpose |
@@ -194,6 +194,66 @@ wsl -d Ubuntu sudo tshark -i any -w capture.pcap
 - Grafana: `http://127.0.0.1:3000/d/work-matrix`
 - Daily log: `Daily/YYYY-MM-DD.md`
 - Project matrix: `Work/PROJECT_MATRIX.md`
+
+## How Craft Anything + All Tools Connect to the Database
+
+### Data Flow (every command is tracked)
+
+```
+User command (any tool)
+    │
+    ▼
+Hermes Supervisor (@supervisor)
+    │
+    ├── Routes via laya /v1/systemone (is_coding, is_windows, is_risky)
+    │
+    ├── Delegates to worker (@coder, @windows, @researcher, etc.)
+    │       │
+    │       ├── Worker calls tool (Craft Anything, Ghidra, mitmproxy, etc.)
+    │       │       │
+    │       │       └── Tool result → Worker → Supervisor
+    │       │
+    │       └── Worker writes to Obsidian Daily (frontmatter: tokens_total, cost_usd, model_used, agent, grafana_dashboard)
+    │
+    ├── Supervisor writes to PROJECT_MATRIX.md (requestId dedup)
+    │
+    └── Grafana scrapes Prometheus (Ollama metrics) + Loki (log tails) + Obsidian frontmatter
+            │
+            └── Dashboard: /d/adw9qkn/work-tracking-matrix-e28094-hive-mind
+```
+
+### Craft Anything Integration
+
+Craft Anything is connected as an **MCP server** to 9 agents (Claude Code, Codex, Gemini CLI, Windsurf, VS Code, OpenCode, Copilot CLI, Hermes, Devin). When you run a Craft Anything command:
+
+1. **Direct usage** (via `craft-anything-cli`): Results are stored in Craft Anything's own project files (`.cany` folders with evidence, memory, journal). These are NOT automatically pushed to Obsidian/Grafana.
+
+2. **Via Hermes supervisor** (via MCP): When you send a command through Hermes (e.g., `@researcher investigate target.exe with Craft Anything`), the supervisor:
+   - Routes the task via laya
+   - Delegates to the appropriate worker
+   - Worker calls Craft Anything MCP tools
+   - Worker logs results to Obsidian Daily (frontmatter + notes)
+   - Supervisor writes to PROJECT_MATRIX.md (requestId dedup)
+   - Grafana picks up the new row
+
+3. **Via OpenCode subagent**: When you use `@coder` or other subagents, they can call Craft Anything MCP tools, and the parent session logs the results.
+
+### To ensure Craft Anything data reaches the database:
+- **Always route through Hermes supervisor** for tracked investigations
+- **Use `@researcher` or `@reviewer`** to wrap Craft Anything commands
+- **The supervisor writes one row per turn** to Obsidian + Grafana
+- **requestId dedup** prevents duplicate entries
+
+### Example: Tracked Craft Anything investigation
+```
+@researcher Use Craft Anything to triage suspicious.exe and write a report
+# → Hermes routes to @researcher
+# → @researcher calls craft-anything-cli triage suspicious.exe
+# → @researcher calls craft-anything-cli report --html
+# → @researcher writes results to Obsidian Daily (frontmatter + notes)
+# → Hermes writes to PROJECT_MATRIX.md (requestId dedup)
+# → Grafana dashboard updates with new row
+```
 
 ## 2nd Brain Summary
 
