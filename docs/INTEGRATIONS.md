@@ -24,11 +24,15 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 | ffmpeg | Gyan.FFmpeg | winget | Media processing, format conversion |
 | yt-dlp | 2026.10.26 | pip | Media download from URLs |
 
+### Installed in Ubuntu WSL (for Linux debugging)
+| Tool | Version | Location | Purpose |
+|---|---|---|---|
+| GDB | 15.1 | Ubuntu WSL (/usr/bin/gdb) | GNU Debugger for Linux compiled binaries |
+| objdump | 2.42 | Ubuntu WSL (/usr/bin/objdump) | Disassemble ELF binaries, show sections/symbols/headers |
+
 ### Not installed (optional, niche)
 | Tool | Why skip | Install when |
 |---|---|---|
-| GDB | Debugging compiled code (Linux focus) | Specific debugging tasks (Rizin/Ghidra cover analysis) |
-| objdump | Disassembly (covered by Rizin) | Quick one-off disassembly |
 | tshark/Wireshark | Network packet analysis (covered by mitmproxy) | Deep packet forensics |
 | LLDB | Apple/macOS debugging | Only if developing for Apple (user has iPad Pro 1 but builds on Windows; Apple dev needs Mac + license) |
 
