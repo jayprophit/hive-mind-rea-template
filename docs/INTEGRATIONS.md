@@ -30,10 +30,14 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 | GDB | 15.1 | Ubuntu WSL (/usr/bin/gdb) | GNU Debugger for Linux compiled binaries |
 | objdump | 2.42 | Ubuntu WSL (/usr/bin/objdump) | Disassemble ELF binaries, show sections/symbols/headers |
 
+### Installed in Ubuntu WSL (network analysis)
+| Tool | Version | Location | Purpose |
+|---|---|---|---|
+| tshark | 4.2.2 | Ubuntu WSL (/usr/bin/tshark) | Packet capture and protocol analysis (1000+ protocols, .pcap reading, field extraction) |
+
 ### Not installed (optional, niche)
 | Tool | Why skip | Install when |
 |---|---|---|
-| tshark/Wireshark | Network packet analysis (covered by mitmproxy) | Deep packet forensics |
 | LLDB | Apple/macOS debugging | Only if developing for Apple (user has iPad Pro 1 but builds on Windows; Apple dev needs Mac + license) |
 
 ### Environment variables set
