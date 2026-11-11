@@ -10,6 +10,16 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 - **blocked/needs-key**: requires API key, account, admin, or heavy deps
 - **pending**: not yet installed
 
+## Craft Anything (NEW - installed 2026-11-11)
+- **Installed**: `C:\Program Files\Craft Anything\craft-anything-cli.exe` + `craft-anything.exe`
+- **MCP server**: `craft-anything-cli mcp` (30 tools) - configured in `mcp/opencode-mcp.example.json`
+- **Connected to**: Claude Code, Codex, Gemini CLI, Windsurf, VS Code, OpenCode, Copilot CLI, Hermes, Devin (all 9 agents via `setup --all-detected --yes`)
+- **Skill**: `craft-anything` skill installed in `~/.claude/skills/`, `~/.agents/skills/`, `~/.hermes/skills/`
+- **AI backends**: Claude Code (45ms), Hermes Agent (45ms), OpenCode (33ms) - all responding
+- **Optional engines**: Chromium browser OK; Ghidra/JADX/Java/Frida/GDB/LLDB/mitmproxy/Binwalk/Rizin/tshark not installed (optional)
+- **Role in pipeline**: Reverse engineering / software investigation with evidence-backed findings. Use for triage, report generation, rebuild studies, and deep code analysis.
+- **Commands**: `craft-anything-cli commands` (list all tools), `craft-anything-cli capabilities`, `craft-anything-cli triage <file>`, `craft-anything-cli report`, `craft-anything-cli rebuild`, `craft-anything-cli chat`
+
 | Item | Type | Status | Notes / Install |
 |---|---|---|---|
 | scion | TBD | pending | needs identification (SCION network? other) |
@@ -43,4 +53,5 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 | j.a.v.i.s / JARVIS | GitHub repo | cloned/pending | clone target (specify exact repo) |
 | grok bot clone repo | GitHub repo | cloned/pending | clone target (specify exact repo) |
 | livekit | realtime media | pending | LiveKit server/SDK; docker or cloud |
+| craft-anything | investigation/reverse-engineering | installed | MCP server (30 tools), connected to 9 agents, skill in 3 locations, Chromium engine OK |
 

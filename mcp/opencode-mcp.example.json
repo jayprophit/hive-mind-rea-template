@@ -48,6 +48,11 @@
       "type": "local",
       "command": ["uvx", "mcp-server-git", "--repository", "."],
       "enabled": false
+    },
+    "craft-anything": {
+      "type": "local",
+      "command": ["C:\\\\Program Files\\\\Craft Anything\\\\craft-anything-cli.exe", "mcp"],
+      "enabled": true
     }
   }
 }
