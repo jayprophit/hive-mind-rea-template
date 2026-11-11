@@ -10,6 +10,14 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 - **blocked/needs-key**: requires API key, account, admin, or heavy deps
 - **pending**: not yet installed
 
+## GitHub Repository
+- **URL**: https://github.com/jayprophit/hive-mind-rea-template
+- **Visibility**: Public
+- **Starred**: Yes (by jayprophit)
+- **Branch**: main (9 commits)
+- **Clone**: `git clone https://github.com/jayprophit/hive-mind-rea-template.git`
+- **Contents**: hermes/profiles/, opencode/agents/, grafana/provisioning/, obsidian-vault/, mcp/, docker/, docs/, tools/, repos/ (gitignored)
+
 ## Reverse Engineering Stack (complete - 2026-11-11)
 | Tool | Version | Location | Purpose |
 |---|---|---|---|
