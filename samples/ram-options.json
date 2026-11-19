@@ -1,0 +1,50 @@
+[
+  {
+    "Retailer": "Amazon UK",
+    "Module": "Timetec 8GB DDR4-2666 PC4-21300",
+    "Price_GBP": 51.99,
+    "Speed_MTs": 2666,
+    "Rank": "1Rx8",
+    "Stock": "In stock"
+  },
+  {
+    "Retailer": "Ebuyer",
+    "Module": "Origin Storage 8GB DDR4-2666 2Rx8",
+    "Price_GBP": 58.0,
+    "Speed_MTs": 2666,
+    "Rank": "2Rx8",
+    "Stock": "In stock"
+  },
+  {
+    "Retailer": "Amazon UK",
+    "Module": "Integral 8GB DDR4-2666 SODIMM",
+    "Price_GBP": 60.95,
+    "Speed_MTs": 2666,
+    "Rank": "1Rx8",
+    "Stock": "In stock"
+  },
+  {
+    "Retailer": "Mr Memory",
+    "Module": "Mr Memory 8GB DDR4-2666 260-pin",
+    "Price_GBP": 62.4,
+    "Speed_MTs": 2666,
+    "Rank": "1Rx8",
+    "Stock": "In stock, free delivery"
+  },
+  {
+    "Retailer": "Amazon UK",
+    "Module": "Crucial CT8G4SFS8266 8GB DDR4-2666",
+    "Price_GBP": 63.0,
+    "Speed_MTs": 2666,
+    "Rank": "1Rx8",
+    "Stock": "In stock"
+  },
+  {
+    "Retailer": "Amazon UK",
+    "Module": "Crucial CT8G4SFRA32A 8GB DDR4-3200",
+    "Price_GBP": 84.23,
+    "Speed_MTs": 3200,
+    "Rank": "1Rx8",
+    "Stock": "In stock"
+  }
+]

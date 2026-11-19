@@ -86,3 +86,31 @@ Vault: C:\Users\jpowe\Documents\ObsidianVault
 - This MATRIX.md = master spine
 
 Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\ObsidianVault
+
+## Active work - 2026-11-19
+
+### Laptop health (IdeaPad 3 15IIL05 / 81WE) - complete
+- Commit charge 14.9 GB -> 9.5 GB (-36%), processes 358 -> 268
+- 15 auto-start services moved to Manual (`tools/trim-services.ps1 -Tier 2 -Apply -StopNow`)
+- `vmmemWSL` capped at 2 GB via `.wslconfig` (was 2.9 GB)
+- `RestartApps = 0` so Windows stops reopening apps at sign-in
+- Codex sandbox service moved to Manual via registry (Set-Service denied)
+
+### Pending - needs a human
+- **BIOS** EMCN42WW (2020) -> EMCN60WW (2024-05-27)
+  https://download.lenovo.com/consumer/mobiles/emcn60ww.exe
+- **RAM** 8GB DDR4-2666 SO-DIMM -> 12 GB total (Lenovo PSREF max = 4GB soldered + 8GB)
+
+### Toolkit
+- `scripts/research.py` key-free search/fetch/HN/Wikipedia
+- `scripts/office.py` JSON/MD -> xlsx/docx/pptx/csv
+- `scripts/viz.py` SVG charts + Mermaid diagrams
+- `docs/AGENT-ACTIONS.md` read/write/buy/sell contract for any agent
+
+### Tooling
+- `browse` 0.1.5 installed, registered with OpenCode, Claude Code, Codex, VS Code,
+  Windsurf, Gemini CLI, Copilot CLI, LM Studio, Hermes. Extension pairing pending.
+
+### Not present
+- `graphify` and `demobase` do not exist on this machine. Optional, disabled in
+  `core/stack.yaml`. Do not report them as broken.

@@ -123,6 +123,59 @@ natively. `scripts/doctor.py` reports which are present.
 
 ---
 
+## Research and reporting toolkit
+
+Four dependency-free scripts turn "find something out" into a document you can
+hand to someone. They exist because hosted search billed per query and stopped
+working when the balance ran out, while a script that scrapes Google or Bing
+gets a bot challenge instead of results.
+
+| Script | Does | Needs |
+|---|---|---|
+| `scripts/research.py` | Search, fetch pages as readable text | nothing |
+| `scripts/office.py` | Write `.xlsx` `.docx` `.pptx` `.csv` | `pip install openpyxl python-docx python-pptx` |
+| `scripts/viz.py` | Charts (SVG/HTML) and Mermaid diagrams | nothing |
+| `scripts/doctor.py` | Health check | nothing |
+
+```bash
+python -m pip install --user openpyxl python-docx python-pptx
+
+python scripts/research.py "ideapad 3 15iil05 memory upgrade"
+python scripts/research.py --url https://download.lenovo.com/consumer/mobiles/emcn60ww.txt
+python scripts/research.py --hn "opencode mcp server"
+
+python scripts/viz.py --from samples/ram-options.json --chart bar \
+    --x Module --y Price_GBP -o ram.svg --title "RAM options" --html
+
+python scripts/office.py --from samples/ram-options.json --to xlsx ram.xlsx
+python scripts/office.py --from samples/ram-options.json --to docx ram.docx
+python scripts/office.py --from samples/ram-options.json --to pptx ram.pptx
+```
+
+### One file, every office suite
+
+`.docx`, `.xlsx` and `.pptx` are ZIP-based Open XML. Microsoft Office, Google
+Workspace, LibreOffice, OnlyOffice and WPS all read them, and Google Drive
+converts them on upload. For a native Google file, upload the Microsoft one and
+let Drive convert, or hand over the `.csv` for Sheets.
+
+Charts are SVG — vector, so they stay sharp at any zoom, and they open in a
+browser, Word, PowerPoint, LibreOffice and Google Slides. Diagrams are Mermaid
+source, rendered by GitHub, GitLab, Obsidian, VS Code and the OpenCode Review
+pane, so they stay editable as text instead of becoming a picture.
+
+### Why not use a search API
+
+A key works and is the right answer if you have one — Brave (2,000/month free)
+and Tavily (1,000/month) both have free tiers. Without one, this toolkit uses
+endpoints that answer plain HTTP: Marginalia, Hacker News (Algolia), Wikipedia,
+and direct page fetch. Verified on 2026-11-19: Google required JavaScript,
+Bing returned unrelated results, DuckDuckGo served a bot challenge, and no
+public SearXNG instance answered. The browser reaches all of them, because a
+real browser passes the checks a script cannot.
+
+---
+
 ## Second brain
 
 One vault. **Exactly one.**
