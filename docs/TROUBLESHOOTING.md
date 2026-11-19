@@ -142,3 +142,60 @@ On 8 GB of RAM this is expected, and no driver update changes it. In order:
    except adding RAM.
 
 Minimum useful upgrade on this class of laptop: 8 GB SODIMM to reach 12–16 GB.
+
+---
+
+## Commit charge is higher than physical RAM before you open anything
+
+Symptom: right after a reboot, `(Get-Counter '\Memory\Committed Bytes')` reports more
+than installed RAM, and every `Get-CimInstance` / `DISM` / `SFC` call fails with
+`0x8007000e` (not enough memory resources).
+
+The cause is services that start automatically, not the applications you launch.
+Measure before changing anything:
+
+```powershell
+Get-Process | Group-Object ProcessName |
+  ForEach-Object { [pscustomobject]@{
+      Name = $_.Name; N = $_.Count
+      MB   = [math]::Round((($_.Group | Measure-Object PrivateMemorySize64 -Sum).Sum)/1MB, 0)
+  } } | Sort-Object MB -Descending | Select-Object -First 15
+```
+
+Then `tools/trim-services.ps1` — report only, then `-Apply -StopNow`. Tier 1 has no
+functional tradeoff; Tier 2 (PostgreSQL stack, Codex sandbox) means starting those
+yourself. Real result on an 8 GB laptop: 15 services moved to Manual, 14.9 GB → 9.9 GB.
+
+### Three things that look like startup entries but are not
+
+**Packaged services refuse `Set-Service` even when elevated.** `CodexSandboxService.OpenAI.Codex`
+answers `Access is denied`. Its security descriptor grants only Authenticated Users and the
+package SID — Administrators are not in it. The registry holds the same value and *is*
+writable when elevated:
+
+```powershell
+Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Services\<ServiceName>' -Name Start -Value 3
+```
+
+`2` = Automatic, `3` = Manual, `4` = Disabled. `trim-services.ps1` falls back to this
+automatically. Restart is not required; `sc.exe stop <name>` applies it now.
+
+**Windows reopens your apps at sign-in.** If processes come back with `sihost.exe` as parent
+and there is no `Run` entry, it is app restore, not autostart:
+
+```powershell
+Set-ItemProperty 'HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon' -Name RestartApps -Value 0
+```
+
+**`vmmemWSL` is a virtual machine, not a program.** WSL2 defaults to half of physical RAM and
+does not return it at idle. Cap it in `%USERPROFILE%\.wslconfig`, then `wsl --shutdown`:
+
+```ini
+[wsl2]
+memory=2GB
+processors=2
+swap=1GB
+```
+
+On the reference machine that alone released 2.9 GB.
+

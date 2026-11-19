@@ -156,8 +156,28 @@ foreach ($t in $targets) {
             Write-Host ("         {0}" -f $t.Why) -ForegroundColor DarkGray
             $changed++
         } catch {
-            Write-Warn ("{0,-38} failed: {1}" -f $t.Name, $_.Exception.Message.Split([char]10)[0])
-            continue
+            $err = $_.Exception.Message.Split([char]10)[0]
+            # Packaged services (CodexSandboxService.OpenAI.Codex is one) deny
+            # SERVICE_CHANGE_CONFIG even to Administrators: their security
+            # descriptor grants only Authenticated Users and the package SID.
+            # The registry value is the same setting and is writable when
+            # elevated, so fall back to it before giving up.
+            $regKey = "HKLM:\SYSTEM\CurrentControlSet\Services\$($t.Name)"
+            $fixed  = $false
+            if (Test-Path $regKey) {
+                try {
+                    Set-ItemProperty -Path $regKey -Name Start -Value 3 -Type DWord -ErrorAction Stop
+                    Write-Ok ("{0,-38} {1} -> Manual (via registry)" -f $t.Name, $current)
+                    Write-Host ("         {0}" -f $t.Why) -ForegroundColor DarkGray
+                    Write-Host ("         packaged service: Set-Service denied, registry fallback used") -ForegroundColor DarkGray
+                    $changed++
+                    $fixed = $true
+                } catch { }
+            }
+            if (-not $fixed) {
+                Write-Warn ("{0,-38} failed: {1}" -f $t.Name, $err)
+                continue
+            }
         }
     }
 
