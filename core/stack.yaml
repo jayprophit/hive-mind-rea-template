@@ -1,0 +1,190 @@
+# Hive Mind REA - portable stack definition
+#
+# This file is the single source of truth for what the stack contains.
+# Installers read it; nothing in here is OS-specific. Per-platform paths are
+# derived at install time by scripts/bootstrap.py, never hard-coded.
+#
+# Schema: stack/v1
+
+schema: stack/v1
+name: hive-mind-rea
+version: 4.0.0
+description: >
+  Local-first AI development and reverse-engineering suite.
+  Runs on Windows, macOS, Linux and inside WSL. Degrades gracefully:
+  every component is optional except the runtime itself.
+
+# ---------------------------------------------------------------------------
+# Runtime requirements. Used by scripts/doctor.py to score the machine.
+# ---------------------------------------------------------------------------
+requirements:
+  python: ">=3.10"
+  ram_gb_min: 8
+  ram_gb_recommended: 16
+  disk_gb_min: 20
+  disk_gb_recommended: 60
+  cpu_cores_min: 2
+
+# ---------------------------------------------------------------------------
+# Ports. Chosen to avoid common conflicts; each can be overridden by env var
+# of the same name in the `env` key.
+# ---------------------------------------------------------------------------
+ports:
+  ollama: 11434
+  grafana: 3000
+  lmstudio: 1234
+  openclaw: 18789
+
+# ---------------------------------------------------------------------------
+# Components. `detect` is a command that proves the component works.
+# `install` lists the per-platform package-manager commands.
+# `required: false` means the stack still runs without it.
+# ---------------------------------------------------------------------------
+components:
+
+  - id: ollama
+    label: Ollama
+    required: true
+    role: Local LLM runtime
+    detect: { command: ["ollama", "--version"] }
+    env: { OLLAMA_HOST: "127.0.0.1:11434" }
+    install:
+      windows: ["winget install --id Ollama.Ollama -e"]
+      macos:   ["brew install ollama"]
+      linux:   ["curl -fsSL https://ollama.com/install.sh | sh"]
+    models:
+      # Chosen for 8 GB RAM / CPU-only. Pull in this order; stop when RAM is tight.
+      - { name: "lfm3:1.7b",          size_gb: 1.1, note: "fast default, tool calling" }
+      - { name: "qwen2.5-coder:1.5b", size_gb: 1.0, note: "best small coding model" }
+      - { name: "llama3.2:3b",        size_gb: 2.0, note: "general reasoning" }
+      - { name: "qwen3:4b",           size_gb: 2.6, note: "upper bound for 8 GB" }
+
+  - id: hermes
+    label: Hermes
+    required: false
+    role: Supervisor agent, routes and delegates
+    detect: { command: ["hermes", "--version"] }
+    env: { HERMES_HOME: "${DATA_DIR}/hermes" }
+
+  - id: opencode
+    label: OpenCode
+    required: false
+    role: Coding agent with subagent delegation
+    detect: { command: ["opencode", "--version"] }
+    install:
+      windows: ["npm install -g opencode-ai"]
+      macos:   ["npm install -g opencode-ai", "brew install opencode"]
+      linux:   ["npm install -g opencode-ai", "curl -fsSL https://opencode.ai/install | bash"]
+
+  - id: craft-anything
+    label: Craft Anything
+    required: false
+    role: Software investigation MCP server
+    detect:
+      command: ["craft-anything-cli", "--version"]
+      # Fallback probe: a correct MCP server answers initialize in one line of JSON.
+      mcp_probe: true
+    install:
+      windows: ["winget install --id CraftAnything.CraftAnything -e"]
+      macos:   ["brew install --cask craft-anything"]
+      linux:   ["curl -fsSL https://craftanything.dev/install.sh | sh"]
+
+  - id: git
+    label: Git
+    required: true
+    role: version control
+    detect: { command: ["git", "--version"] }
+    install:
+      windows: ["winget install --id Git.Git -e"]
+      macos:   ["xcode-select --install", "brew install git"]
+      linux:   ["sudo apt-get install -y git"]
+
+  - id: node
+    label: Node.js
+    required: false
+    role: runs MCP servers, OpenCode
+    detect: { command: ["node", "--version"] }
+    install:
+      windows: ["winget install --id OpenJS.NodeJS.LTS -e"]
+      macos:   ["brew install node"]
+      linux:   ["sudo apt-get install -y nodejs npm"]
+
+  - id: grafana
+    label: Grafana
+    required: false
+    role: dashboards over the Obsidian work matrix
+    detect: { http: "http://127.0.0.1:3000/api/health" }
+    install:
+      windows: ["winget install --id GrafanaLabs.Grafana.OSS -e"]
+      macos:   ["brew install grafana"]
+      linux:   ["sudo apt-get install -y grafana"]
+
+  - id: docker
+    label: Docker
+    required: false
+    role: optional heavy services
+    detect: { command: ["docker", "version", "--format", "{{.Server.Version}}"] }
+    install:
+      windows: ["winget install --id Docker.DockerDesktop -e"]
+      macos:   ["brew install --cask docker"]
+      linux:   ["sudo apt-get install -y docker.io"]
+
+# ---------------------------------------------------------------------------
+# MCP servers shared by every agent host (OpenCode, Hermes, Claude Desktop...).
+# ${VARS} are substituted by scripts/bootstrap.py.
+# ---------------------------------------------------------------------------
+mcp_servers:
+
+  - id: craft-anything
+    transport: stdio
+    command: ["${CRAFT_ANYTHING_CLI}", "mcp"]
+    note: >
+      Investigation memory lives in the project directory. Always run it with
+      the workspace as cwd so core_target_open can resolve relative paths.
+    enabled: true
+
+  - id: filesystem
+    transport: stdio
+    command: ["npx", "-y", "@modelcontextprotocol/server-filesystem", "${WORKSPACE}"]
+    enabled: true
+
+  - id: git
+    transport: stdio
+    command: ["uvx", "mcp-server-git", "--repository", "${WORKSPACE}"]
+    enabled: false
+
+  - id: fetch
+    transport: stdio
+    command: ["uvx", "mcp-server-fetch"]
+    enabled: false
+
+# ---------------------------------------------------------------------------
+# Second brain. One vault, one canonical location. Do not create a second one.
+# ---------------------------------------------------------------------------
+second_brain:
+  vault: "${WORKSPACE}/obsidian-vault"
+  layout: [Daily, Work, Projects, Templates, Dashboards]
+  rule: >
+    Every agent turn appends exactly one row to Daily/<date>.md and one row to
+    Work/PROJECT_MATRIX.md, keyed by requestId so replays dedupe.
+  index:
+    # Optional graph/vector layer. Pick at most one so the vault stays readable.
+    graphify: { enabled: false, note: "graph export of wikilinks" }
+    demobase: { enabled: false, note: "sample/vector store for demos" }
+
+# ---------------------------------------------------------------------------
+# Agent roles. Portable definitions; host-specific prompts live in core/agents.
+# ---------------------------------------------------------------------------
+roles:
+  - { id: supervisor, model: lfm3:1.7b, delegates: [coder, reviewer, researcher, windows] }
+  - { id: coder,      model: qwen2.5-coder:1.5b }
+  - { id: reviewer,   model: lfm3:1.7b }
+  - { id: researcher, model: llama3.2:3b }
+  - { id: windows,    model: lfm3:1.7b, platforms: [windows] }
+  - { id: designer,   model: lfm3:1.7b }
+  - { id: qa,         model: lfm3:1.7b }
+  - { id: writer,     model: lfm3:1.7b }
+  - { id: marketer,   model: lfm3:1.7b }
+  - { id: finance,    model: lfm3:1.7b }
+  - { id: hr,         model: lfm3:1.7b }
+  - { id: decider,    model: lfm3:1.7b }

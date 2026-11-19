@@ -1,36 +1,105 @@
+# ===========================================================================
+# Hive Mind REA - ignore rules
+#
+# Principle: this repo holds *declarative configuration only*.
+# Anything a running process writes belongs on the machine, never in git.
+# That is what makes the template portable between Windows, macOS and Linux.
+# ===========================================================================
+
+# --- secrets ---------------------------------------------------------------
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+auth.json
+*-auth.json
+secure-token-storage.json
+credentials.json
+
+# --- SQLite / databases ----------------------------------------------------
 *.db
 *.db-*
 *.db-wal
 *.db-shm
-auth.lock
-gateway.lock
-.gateway.pid
-.models/
-.obslmstudio/
-.lmstudio/
-*.gguf
-*.gguf.part
-*.tar.gz
-*.vhdx
-node_modules/
-__pycache__/
-*.pyc
-*.log
-.ollama/
-.ledger/
-# Repos (cloned locally, not part of template)
-repos/
-# Projects (user projects get their own repos, not this template)
-Projects/
-# Runtime / lock files
-*.db
-*.db-wal
-*.db-shm
-*.lock
-gateway.lock
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
 state.db*
 *.fts_rebuild.lock
 *.quarantine.lock
+
+# --- process and runtime state --------------------------------------------
+*.lock
+*.pid
+gateway.lock
+.gateway.pid
+*.heartbeat
+ticker_heartbeat
+ticker_last_success
+*.sock
+*.socket
+runtime/
+sessions/
+pending_messages/
+bot_relay/
+checkpoints/
+backups/
+logs/
+log/
+receipts/
+update_receipts/
+plugin-update-checks/
+cache/
+__pycache__/
+*.pyc
+*.pyo
+
+# --- model weights (huge, re-downloadable) -------------------------------
+*.gguf
+*.gguf.part
+*.safetensors
+*.onnx
+*.bin.zst
+.ollama/
+.models/
+.lmstudio/
+.obslmstudio/
+
+# --- archives / containers ------------------------------------------------
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.vhdx
+*.vhd
+*.iso
+
+# --- cloned third-party repos (fetched by the installer, not vendored) ----
+repos/
+
+# --- user project work (each project gets its own repo) ------------------
+Projects/
+projects/
+scratch/
+
+# --- editor / OS noise ----------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.tmp
+~$*
+
+# --- local overrides ------------------------------------------------------
+*.local.yaml
+*.local.yml
+*.local.json
+config.local.*

@@ -1,198 +1,312 @@
-# Hive Mind REA Template — Local AI Suite for Windows 10/11
-### Crouton Alpha deployment — local-first Hive Mind (Hermes + Ollama + OpenClaw + OpenCode + LM Studio + Grafana + Obsidian)
+# Hive Mind REA Template
 
-> **GitHub:** https://github.com/jayprophit/hive-mind-rea-template (public, starred)
-> **Clone:** `git clone https://github.com/jayprophit/hive-mind-rea-template.git`
+**A local-first AI development and reverse-engineering suite that runs on any desktop OS.**
 
----
+Windows 10/11 · macOS · Linux · WSL — one configuration, one vault, one command.
 
-## What This Is
-
-A complete, local-first AI development suite that runs on a low-spec Windows machine (i3-1005G1, 7.75GB RAM, Intel UHD 1GB). Everything is configured to work together — no cloud keys needed for local operation. Includes a 12-bot AI team, reverse engineering stack, Grafana dashboards, Obsidian second brain, and REA (Revived by AI) loop methodology.
+[![Status](https://img.shields.io/badge/status-working-brightgreen)](#verified-status)
+[![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)](#platform-support)
+[![License](https://img.shields.io/badge/license-see%20LICENSE-lightgrey)](#)
 
 ---
 
-## Stack
+## What this is
 
-### Core AI (always running)
-| Component | Port | Model/Version | Role |
-|---|---|---|---|
-| **Ollama** | 11434 | bonsai-2:4b (1.6GB), lfm3:1.7b (1.1GB), laya (844MB) | Primary LLM engine |
-| **Hermes** | CLI | bonsai-2:4b (supervisor) | AI supervisor — routes via laya /v1/systemone, delegates to workers |
-| **OpenClaw Gateway** | 18789 | ollama/bonsai-2:4b | Windows automation (files, Office, browser, canvas, screen) |
-| **OpenCode** | CLI | 22 agents | Subagent delegation (coder, decider, windows, designer, etc.) |
-| **Grafana** | 3000 | 13.3.0 | Dashboards (/d/adw9qkn/...), metrics, logs |
-| **Obsidian** | Vault | Second brain | Knowledge base (Daily, Work, Projects, Templates) |
+A reproducible setup for a **local AI team** that does real work on a normal laptop:
+it codes, reviews, researches, drives the desktop, reverse-engineers binaries, and
+keeps a written record of every turn in an Obsidian vault.
 
-### Supporting (on-demand)
-| Component | Port | Status | Role |
-|---|---|---|---|
-| **LM Studio** | 1234 | Server running (gemma-4-e4b) | Spare LLM engine (run ONE at a time) |
-| **Bionic** | N/A | Configured (Ollama endpoint) | Cloud reviewer |
-| **Docker Desktop** | 2375 | Backend running | Container runtime (selective services) |
+Nothing here needs a cloud API key. Everything degrades gracefully: run one model on
+8 GB of RAM, or ten on 32 GB.
 
-### Reverse Engineering Stack
-| Tool | Version | Purpose |
+**This repo is configuration, not a running system.** It installs *into* a machine.
+Runtime state (databases, locks, logs, session history) is deliberately excluded, so
+the same checkout works on your Windows 11 laptop, your Windows 10 desktop, a Mac and
+a Linux box without carrying stale state between them.
+
+---
+
+## Platform support
+
+| Platform | Status | Notes |
 |---|---|---|
-| **Craft Anything** | Latest (30 MCP tools) | Investigation, triage, reports, rebuild studies. MCP connected to 9 agents. |
-| **Ghidra** | 11.4.2 | Deep binary decompilation (C pseudocode from exe/dll/so/firmware) |
-| **JADX** | 1.5.3 | Android APK → Java source code |
-| **Rizin** | 0.9.1 | CLI disassembler, binary analysis, strings, structure |
-| **Java (Temurin)** | 21.0.13 | Runtime for Ghidra/JADX |
-| **mitmproxy** | 12.3.1 | HTTPS traffic interception, API reverse-engineering |
-| **Frida** | 17.26.2 | Runtime function tracing, hooking, dynamic analysis |
-| **tshark** | 4.2.2 (WSL) | Packet capture, 1000+ protocols |
-| **GDB** | 15.1 (WSL) | Linux binary debugging |
-| **objdump** | 2.42 (WSL) | ELF disassembly |
-| **faster-whisper** | Latest | Speech-to-text |
-| **ffmpeg** | Gyan.FFmpeg | Media processing, format conversion |
-| **yt-dlp** | 2026.10.26 | Media download from URLs |
+| **Windows 11** | Verified working | Reference build. i3-1005G1, 8 GB, Intel UHD. |
+| **Windows 10** | Supported | Same scripts. `scripts/doctor.py` handles PowerShell 5.1. |
+| **WSL2 (Ubuntu)** | Supported | Best option for the reverse-engineering toolchain. |
+| **macOS** (Intel / Apple silicon) | Supported | Paths resolve to `~/Library/Application Support`. |
+| **Linux** (Debian/Ubuntu/Fedora) | Supported | XDG paths. `apt`/`dnf` hints in `core/stack.yaml`. |
 
-### Cloud Escalation (free, daily reset)
-11 Nous Portal models: beam, crouton-alpha, deepseek-v4.1-flash, flint-40b, glm-5.3-flash, iceman, inkling-2-small, longcat-2.5, mimo-v2.6-flash, nemotron-3.5-lightning, nemotron-3.5-super-vl
-
-### MCP Servers (configured in mcp/opencode-mcp.example.json)
-Playwright, Chrome DevTools, Perplexity, Firecrawl, Apify, Craft Anything, Filesystem, Memory, Git, Fetch
-
-### Docker Services (docker/docker-compose.services.yml)
-OpenProject (8080), Chatwoot (3001), LiveKit (7880) — stubs, start selectively
-
-### Cloned Repos (repos/, gitignored)
-livekit, chatwoot, weknora, cap, cal.com, openproject
+The installers are written but only the Windows path has been exercised end to end.
+Treat macOS/Linux as *expected to work, not yet proven* — run `scripts/doctor.py`
+and open an issue with its output if something is off.
 
 ---
 
-## Quick Start (Windows 11/10)
+## Quick start
 
-### 1. Install core tools
+```bash
+git clone https://github.com/jayprophit/hive-mind-rea-template.git
+cd hive-mind-rea-template
+python scripts/doctor.py          # what does this machine already have?
+python scripts/bootstrap.py       # dry run: show what would change
+python scripts/bootstrap.py --apply --scaffold-vault
+```
+
+Then pull one small model and start:
+
+```bash
+ollama pull lfm3:1.7b             # 1.1 GB, tool calling, fast on CPU
+ollama serve
+```
+
+Windows users get a one-file maintenance script as well:
+
 ```powershell
-# Ollama
-winget install Ollama.Ollama
-ollama pull bonsai-2:4b
-ollama pull lfm3:1.7b
-ollama pull laya
-
-# Hermes (install from https://hermes-agent.nousresearch.com/)
-# Set HERMES_HOME = %LOCALAPPDATA%\hermes
-# Copy hermes/config.yaml and hermes/profiles/* to %LOCALAPPDATA%\hermes\
-
-# OpenCode
-# Copy opencode/agents/*.md to ~/.config/opencode/agents/
-
-# Grafana
-# Service on :3000, copy grafana/provisioning/* to Grafana conf/provisioning (Admin)
-```
-
-### 2. Run the full pipeline
-```powershell
-# Start services (most should already be running)
-ollama serve                    # :11434
-# OpenClaw Gateway already on :18789
-# Grafana already on :3000
-
-# Hermes supervisor
-$env:HERMES_HOME="C:\Users\jpowe\AppData\Local\hermes"
-python -m hermes_cli.main -p supervisor --model ollama/bonsai-2:4b chat
-
-# OpenCode (alternative)
-opencode --model ollama/bonsai-2:4b
-```
-
-### 3. Delegate to workers
-```
-@coder Fix auth.ts, run npm test
-@windows Open Excel and check cell B2
-@decider Score risk for deploying v2.0
-@researcher Find latest SWE-bench results
-@reviewer Review the coder's diff
-@beam Design architecture for new feature
-```
-
-### 4. Track progress
-- Obsidian: Open `obsidian-vault/` as vault
-- Grafana: http://127.0.0.1:3000/d/adw9qkn/work-tracking-matrix-e28094-hive-mind
-- Daily log: `obsidian-vault/Daily/YYYY-MM-DD.md`
-- Project matrix: `obsidian-vault/Work/PROJECT_MATRIX.md`
-
-### 5. Reverse engineer
-```powershell
-craft-anything-cli triage target.exe
-craft-anything-cli report --html
-mitmdump  # intercept HTTPS
-frida-trace -p <PID> -i "open*"
-wsl -d Ubuntu sudo tshark -i any -w capture.pcap
-```
-
-### 6. Install script (automated)
-```powershell
-powershell -ExecutionPolicy Bypass -File tools/install_windows.ps1 -InstallCLI -CloneRepos -ShowVersions
+# In an *Administrator* PowerShell
+powershell -ExecutionPolicy Bypass -File .\tools\repair-windows-admin.ps1
 ```
 
 ---
 
-## Repo Layout
+## How it is organised
+
 ```
-hermes/                 Hermes Bot profiles (23: 12 roles + 11 cloud specialists)
-grafana/provisioning/   datasources.yaml + dashboards/work-matrix.json + dashboards.yaml
-obsidian-vault/         Daily/Work/Project.md + PROJECT_MATRIX.md (requestId dedup, Grafana ingest)
-mcp/                    OpenCode MCP config template (10 servers)
-docker/                 Docker Compose service stubs (OpenProject, Chatwoot, LiveKit)
-docs/                   INTEGRATIONS.md, INSTALL_WINDOWS.md, PIPELINE.md
-tools/                  install_windows.ps1 (CLI tools, repo cloning, version checks)
-opencode/               OpenCode agent .md files (22 agents)
-repos/                  Cloned repos (gitignored: livekit, chatwoot, weknora, cap, cal.com, openproject)
-```
-
-## Important: Projects vs. Setup
-
-**This repo contains ONLY the setup/configuration.** It does NOT contain project work.
-
-- **Setup files** (committed): hermes/, grafana/, obsidian-vault/, mcp/, docker/, docs/, tools/, opencode/, README.md
-- **Project work** (gitignored): Projects/, repos/, *.db, *.lock, state files
-- **Your projects** get their own repos. When you start a new project, create a new repo and clone this template's setup into it.
-- The Obsidian vault tracks ALL projects via requestId dedup in PROJECT_MATRIX.md, but the actual project code lives in separate repos.
-
-## REA Loop (Revived by AI each turn)
-```
-Plan → Design → Build → Check → Research → Recheck → Build → Fix → Amend → Compare
-  → Feedback → Fine-tune → Plan → Build → Discovery → Test → Compare
-  → Gather data → Weakness/Gaps → Improve → Next version
+core/
+  stack.yaml            Single source of truth: components, ports, models, roles.
+                        Nothing OS-specific lives here.
+scripts/
+  doctor.py             Cross-platform health check. No dependencies.
+  bootstrap.py          Cross-platform installer and config writer.
+platforms/              Per-OS notes and shims.
+  windows/  macos/  linux/
+opencode/
+  agents/*.md           22 agent prompts, portable markdown.
+hermes/
+  profiles/             Role configs. State files are git-ignored.
+obsidian-vault/         The second brain. Exactly one vault.
+grafana/provisioning/   Datasources + work-matrix dashboard.
+docker/                 Optional heavy services (OpenProject, Chatwoot, LiveKit).
+docs/                   Architecture, integrations, install notes.
+tools/                  Windows maintenance and installer scripts.
 ```
 
-Every turn writes ONE row to Obsidian Daily + PROJECT_MATRIX.md with requestId dedup.
-Grafana scrapes Prometheus (Ollama metrics) + Loki (log tails) + Obsidian frontmatter.
+### The one rule that makes this portable
 
-## 2nd Brain (Obsidian Vault)
+> **Config lives in the repo. State lives on the machine.**
 
-A "second brain" is a personal knowledge management (PKM) system — a digital repository for capturing, organizing, and retrieving information (Tiago Forte's BASB methodology).
+`state.db`, `*.lock`, `logs/`, `cache/`, `sessions/`, `*.db-wal` are all git-ignored.
+If you ever see a lock file in a commit, that is a bug — it will be inherited by the
+next machine and wedge it.
 
-**This repo's Obsidian vault IS the second brain:**
-- **Capture:** Daily notes, agent vocabulary, project rows, tool manifests
-- **Organize:** Daily/, Work/, Projects/, Dashboards/, Templates/, mcp/, docker/, docs/, tools/, repos/
-- **Distill:** Agent_Vocabulary.md, Agent_Vocabulary_GrokBot.md, INTEGRATIONS.md
-- **Express:** Grafana dashboards, PROJECT_MATRIX.md, Daily logs, git commits
+---
 
-## Full Suite Documentation
-- `docs/PIPELINE.md` — Complete architecture diagram, component status, quick reference, 2nd brain explanation
-- `docs/INTEGRATIONS.md` — All integrations with status, install notes, API key requirements
-- `docs/INSTALL_WINDOWS.md` — Windows 10/11 install guide with performance tips
-- `obsidian-vault/Work/PROJECT_MATRIX.md` — Master project tracker with REA loop
+## The stack
 
-## Top Models for This Machine (i3-1005G1, 7.75GB, UHD 1GB)
-- **Top 1:** `bonsai-2:4b` — 1.6GB ternary, vision+tools+thinking 256K, 8-12 tok/s
-- **Top 5:** bonsai-2:4b, lfm3:1.7b, laya, d3:2b (3.1GB decision), qwen2.5-coder:1.5b
-- **Top 10:** adds qwen3:0.6b, gemma3:1b, qwen3:1.7b, qwen3:4b, OLMoE 7B int8 (22 tok/s CPU)
-- **Image/video gen:** impossible locally (FLUX 14.6GB, Wan 21GB) — use cloud FAL.ai via Hermes `image.generate`
+| Layer | Component | Port | Role |
+|---|---|---|---|
+| Models | **Ollama** | 11434 | Local LLM runtime |
+| Supervisor | **Hermes** | CLI | Routes work, delegates to roles |
+| Coding | **OpenCode** | CLI | Subagents, structured edits, MCP |
+| Investigation | **Craft Anything** | stdio/MCP | How does this software actually work |
+| Desktop control | **OpenClaw** | 18789 | Files, Office, browser, screen |
+| Dashboards | **Grafana** | 3000 | Work matrix over the vault |
+| Knowledge | **Obsidian** | vault | The second brain |
+| Optional | **Docker** | 2375 | Heavy services, start only when needed |
 
-## Not Installed (optional)
-| Tool | Why skip | Install when |
+### Reverse-engineering toolchain
+
+`Craft Anything` (MCP) · `Ghidra` · `JADX` · `Rizin` · `mitmproxy` · `Frida`
+· `tshark` · `GDB` · `objdump` · `ffmpeg` · `yt-dlp`
+
+On Windows, the ELF/GDB/packet tools are best run inside **WSL2** rather than
+natively. `scripts/doctor.py` reports which are present.
+
+---
+
+## Second brain
+
+One vault. **Exactly one.**
+
+```
+obsidian-vault/
+  Daily/            one note per day, one row per agent turn
+  Work/             PROJECT_MATRIX.md — the master tracker
+  Projects/         one note per project
+  Templates/        Daily.md, Project.md
+  Dashboards/       saved queries, Grafana links
+```
+
+Every agent turn writes **one row**, keyed by `requestId`. Replaying the same request
+updates the row instead of appending a duplicate. That single constraint is what keeps
+the vault readable after a thousand turns.
+
+### About `graphify` and `demobase`
+
+These are listed in `core/stack.yaml` as **optional index layers, disabled by default**:
+
+- `graphify` — a graph export of wikilinks (Obsidian already draws this natively).
+- `demobase` — a sample/vector store for demos.
+
+Neither ships with this template and neither exists on the reference machine. If you
+want a semantic layer over the vault, pick **one** and point it at `obsidian-vault/`.
+Do not let two tools both write an index into the same vault.
+
+---
+
+## REA loop
+
+```
+Plan → Design → Build → Check → Research → Recheck → Build → Fix → Amend
+  → Compare → Feedback → Fine-tune → Plan → Build → Discovery → Test
+  → Compare → Gather data → Weakness/Gaps → Improve → Next version
+```
+
+Each pass ends with a written row in `Daily/` and `Work/PROJECT_MATRIX.md`.
+The vault is the memory; the loop is the thing that keeps it honest.
+
+---
+
+## Moving to a Windows 10 desktop
+
+1. **Install prerequisites** on the desktop: Git, Python 3.10+, Node LTS, Ollama.
+   ```powershell
+   winget install --id Git.Git -e
+   winget install --id OpenJS.NodeJS.LTS -e
+   winget install --id Ollama.Ollama -e
+   ```
+2. **Clone, don't copy.** Copying a working tree brings stale locks with it.
+   ```powershell
+   git clone https://github.com/jayprophit/hive-mind-rea-template.git C:\hive
+   cd C:\hive
+   ```
+3. **Check the machine before changing it.**
+   ```powershell
+   python scripts\doctor.py
+   ```
+4. **Apply config.**
+   ```powershell
+   python scripts\bootstrap.py --apply --scaffold-vault
+   ```
+5. **Pull one model only** until you know the RAM headroom.
+   ```powershell
+   ollama pull lfm3:1.7b
+   ```
+6. **Run the maintenance script** once, elevated, to clear caches and check drivers.
+7. **Merge your notes.** Copy only `.md` files from the old vault — never `.obsidian/`
+   workspace state, which is per-machine.
+
+Windows 10 differences that matter:
+
+- PowerShell 5.1 is the default shell. `scripts/doctor.py` and `bootstrap.py` avoid
+  PowerShell-only syntax, so they behave the same there.
+- `winget` may need the App Installer update from the Store before it works.
+- Windows 10 has no `SetConsoleMode` VT by default in older builds; `doctor.py`
+  falls back to plain text automatically.
+
+---
+
+## Troubleshooting
+
+### "The agent stops mid-prompt and never finishes"
+
+Check the provider balance, not the MCP server. In the reference build this was
+`AI.Error: Insufficient balance` from the hosted provider — the local stack was fine.
+Run `python scripts/doctor.py`; if every local check passes, the failure is upstream.
+Point the agent at a local model to confirm:
+
+```bash
+opencode --model ollama/lfm3:1.7b
+```
+
+### A `rea` MCP server closes immediately
+
+Corrupted `npx` cache — the module graph is incomplete. Symptom:
+
+```
+ERR_MODULE_NOT_FOUND: Cannot find module '@jridgewell/trace-mapping'
+```
+
+Fix:
+
+```bash
+rm -rf ~/AppData/Local/npm-cache/_npx/*   # Windows
+rm -rf ~/.npm/_npx/*                      # macOS / Linux
+npx -y rea-agents@6.7.0 --version         # verify, then restart Hermes
+```
+
+`rea` also needs `REA_PWNTOOLS_PYTHON` set to a Python with `pwntools` installed.
+
+### `pip` fails with `No module named 'pip._vendor...'`
+
+A corrupted pip install. Repair in place:
+
+```bash
+python -m ensurepip --upgrade
+python -m pip install --user pwntools
+```
+
+### Craft Anything says "not installed" but it is
+
+GUI installers do not add themselves to `PATH`. `doctor.py` and `bootstrap.py` probe
+the conventional install roots (`C:\Program Files\Craft Anything`,
+`/Applications/Craft Anything.app/Contents/MacOS`, `~/.local/bin`) before giving up.
+
+### Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`
+
+v3 of that plugin is dashboard-only. The loader expects an importable package.
+Add a one-line `__init__.py` in the plugin directory, or disable the plugin — the
+dashboard mounts from `dashboard/api.py` regardless.
+
+---
+
+## Verified status
+
+Measured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):
+
+| Check | Result |
+|---|---|
+| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |
+| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, ~160 ms |
+| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |
+| Ollama | 0.40.16, 3 models, listening on :11434 |
+| Grafana | responding on :3000 |
+| SSD | WD Blue SN550, healthy |
+
+Known warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,
+Docker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.
+
+---
+
+## Requirements
+
+| | Minimum | Recommended |
 |---|---|---|
-| tshark/Wireshark | Network packets (covered by mitmproxy) | Deep packet forensics |
-| LLDB | Apple/macOS debugging | Only if developing for Apple (needs Mac + license) |
-| GDB/objdump (Windows) | Covered by Rizin/Ghidra | Specific debugging tasks (available in Ubuntu WSL) |
+| RAM | 8 GB | 16 GB |
+| Disk | 20 GB free | 60 GB free |
+| CPU | 2 cores, AVX2 | 4 cores |
+| GPU | none (CPU inference) | 6 GB+ VRAM |
+
+At 8 GB, run **one** model at a time (1.5B–4B parameters). Close browsers before
+starting an agent session. This is the single biggest performance factor, larger than
+any driver update.
 
 ---
 
-Crouoton Alpha deployment. No cloud keys needed for local operation. Built to 100%+.
+## Related repos
 
-**GitHub:** https://github.com/jayprophit/hive-mind-rea-template (public, starred)
+Part of the same build:
+
+- [`jayprophit/Aetherius-OS`](https://github.com/jayprophit/Aetherius-OS) — AI operating system shell
+- [`jayprophit/Agent-Bridge`](https://github.com/jayprophit/Agent-Bridge) — unified agent/tool runtime
+- [`jayprophit/craft-anything`](https://github.com/jayprophit/craft-anything) — investigation engine (fork)
+
+---
+
+## Contributing
+
+The most useful contribution is a `doctor.py` run from a platform not in the verified
+table. Paste the output in an issue.
+
+---
+
+**Local-first. One vault. Any OS.**
