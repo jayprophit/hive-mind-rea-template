@@ -117,6 +117,7 @@
     }
   ],
   "requirements": {
+    "social_connections": "Studio must connect to X/Twitter, LinkedIn, Facebook, Instagram, YouTube, TikTok, Reddit, Bluesky, Threads, Pinterest, Discord, Slack, Telegram, WhatsApp, GitHub and email through a SOCIAL_CONNECTIONS registry with OAuth/webhook steps, status, read-only default and no stored secrets.",
     "byte_exact_reverse": "Every reverse-engineering task must sweep the artifact byte by byte: record total bytes and sha256, account for every range with a finding or an unknown carrying its offset, require 100% coverage before closing the gap, and back claims with offset/hash/observed output plus a differential replay. Never silently skip data; never bypass DRM.",
     "team_not_picker": "The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.",
     "team_behaviour": [

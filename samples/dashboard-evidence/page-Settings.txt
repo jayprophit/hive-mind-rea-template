@@ -1,0 +1,136 @@
+- button "> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >..." [ref=e100 expanded=false]
+- code "> Filing your mission into your company's knowledge base."
+- code "> Recording the vision that will steer your agents."
+- code "> Announcing your launch."
+- code "> Provisioning an isolated instance to host your product."
+- code "> Creating the source-code repository your product will live in."
+- code "> Spinning up a managed Postgres database."
+- code "> Pre-warming the hosting platform so your first deploy lands fast."
+- code "> Opening a secure, isolated sandbox to build your site in."
+- code "> Pulling your repository into the build sandbox."
+- code "> Running a command"
+- code "> Reading a file"
+- code "> Listing your assets..."
+- code "> Working..."
+- code "> Working..."
+- code "> Reading a file"
+- code "> Working..."
+- code "> Listing your assets..."
+- code "> Working..."
+- code "> Searching the code"
+- code "> Working..."
+- code "> Working..."
+- code "> Reading a file"
+- code "> Reading a file"
+- code "> Running npm"
+- code "> Editing page.tsx"
+- code "> Editing page.tsx"
+- code "> Reading a file"
+- code "> Editing 3 files"
+- code "> Reading a file"
+- code "> Editing custom-style.css"
+- code "> Reviewing changes"
+- code "> Running a command"
+- code "> Looking through files"
+- code "> Installing dependencies"
+- code "> Reviewing changes"
+- code "> Running a command"
+- code "> Running a script"
+- code "> Running a Python script"
+- code "> Running a Python script"
+- code "> Running a command"
+- code "> Reviewing changes"
+- code "> Committing your landing page and pushing it to your repository."
+- code "> Building the production bundle and publishing your site to the web."
+- code "> Closing down the build sandbox now that the site is shipped."
+- code "> Linking everything together and finishing the build."
+- code "> Putting the finishing touches on your company."
+- code "> Planning the first things your agents should tackle."
+- code "> Adding those first tasks to your queue."
+- code "> Saving a recap of everything we set up."
+- code "> Sending you a welcome email with everything you need."
+- link "PageMurmur" [ref=e101]
+- button "+ Add credits" [ref=e102]
+- button "Notifications" [ref=e103 expanded=false]
+- button "Edit" [ref=e104]
+- button "Menu Ôû¥" [ref=e105 expanded=false]
+  - heading "Polsia" [level=2]
+    - code "Mood: Triumphant"
+    - group "Polsia actions"
+      - button "Auto Mode" [ref=e106]
+      - button "Night task" [ref=e107]
+    - button "Subscribe" [ref=e152]
+  - heading "Business" [level=2]
+    - p "Updated 4m ago"
+    - heading "Last 30 days" [level=3]
+      - p "No traffic details yet"
+      - p "They show here once your app counts its first visit."
+      - group "Business actions"
+        - button "Setup payments" [ref=e109]
+        - button "All Business capabilities" [ref=e110 expanded=false]
+  - heading "Tasks" [level=2]
+    - button "Run task: Let merchants securely access their private PageMurmur workspace" [ref=e111]
+    - button "Run task: Give the verified PageMurmur owner private administration access" [ref=e112]
+    - button "Run task: Save and manage competitor products in your PageMurmur workspace" [ref=e113]
+    - button "See all tasks" [ref=e114]
+    - group "Tasks actions"
+      - button "New tasks" [ref=e115]
+  - heading "Documents" [level=2]
+    - button "Product Roadmap 0 of 7 outcomes completed" [ref=e116]
+    - list "List" [2 items]
+      - listitem "Design guide Nov 11"
+        - button "Design guide Nov 11" [ref=e117]
+        - code "/-/| /_/ | | |/| |^| | |_|/"
+      - listitem "PageMurmur ÔÇö Company Profile Nov 11"
+        - button "PageMurmur ÔÇö Company Profile Nov 11" [ref=e118]
+        - code "/-/| /_/ | | |/| |^| | |_|/"
+    - button "View all (5)" [ref=e119]
+  - heading "Twitter" [level=2]
+    - link "@newonpolsia" [ref=e120]
+    - button "Connect X account" [ref=e121]
+    - link "Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what..." [ref=e122]
+    - button "Delete tweet" [ref=e123]
+    - group "Twitter actions"
+      - button "Tweet" [ref=e124]
+  - heading "Email" [level=2]
+    - button "Refresh" [ref=e125]
+    - button "Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11" [ref=e126]
+    - button "View all" [ref=e127]
+    - group "Email actions"
+      - button "Cold outreach" [ref=e128]
+      - button "Support" [ref=e129]
+  - heading "Meta Ads" [level=2]
+    - group "Ads actions"
+      - button "Meta Ads - Not running yet" [ref=e130]
+  - heading "Media" [level=2]
+    - p "No media yet."
+    - group "Media actions"
+      - button "Image" [ref=e131]
+      - button "Video" [ref=e132]
+      - button "All Media capabilities" [ref=e133 expanded=false]
+    - button "New capability" [ref=e134]
+    - button "Open inbox" [ref=e135]
+    - dialog "Settings"
+      - heading "Settings" [level=2]
+      - tablist "Tab list"
+        - tab "Company" [ref=e153 selected=true]
+        - tab "Profile" [ref=e154 selected=false]
+        - tab "Emails" [ref=e155 selected=false]
+        - tab "Billing" [ref=e156 selected=false]
+      - textbox "Company name" [ref=e157]
+      - status "This name is already saved. Enter a different name to rename your company."
+      - button "Review change" [ref=e158 disabled]
+      - textbox "Mailing address" [ref=e159]
+      - status "Shown in your cold outreach email footer."
+      - button "Save address" [ref=e160 disabled]
+      - heading "Bank accounts" [level=3]
+      - p "Only the current company owner can use these connections."
+      - p "Connect a bank account to read financial information and request supported actions. Access depends on the provider and the permissions you grant."
+      - status "Not connected"
+      - button "Connect Brex" [ref=e161]
+      - status "Not connected"
+      - button "Connect Mercury" [ref=e162]
+      - button "Pause" [ref=e163]
+      - button "Advanced Ôû¥" [ref=e164]
+      - button "Close" [ref=e165]
+

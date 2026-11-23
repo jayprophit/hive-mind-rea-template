@@ -168,6 +168,32 @@ All other members keep working on independent gaps. Once the user supplies the
 item, the waiting phase resumes automatically. Authorisation given once is
 remembered; only sensitive or irreversible actions ask again.
 
+### 5e. Social connections
+
+The studio must connect to social platforms, not only display a link to X.
+Add a `SOCIAL_CONNECTIONS` registry with at least:
+
+- X/Twitter (already linked in the original), LinkedIn, Facebook, Instagram,
+  YouTube, TikTok, Reddit, Bluesky, Threads, Pinterest,
+- Discord, Slack, Telegram, WhatsApp (chat/community),
+- GitHub (already an integration) and email.
+
+Each entry has `id`, `name`, `category`, `scopes`, `connectSteps`, `status`
+(disconnected / connected / expired), `readOnly` default, and a test-mode
+preview. No secret is stored in local state; the person supplies credentials
+through their own OAuth flow or a webhook. Reports can be posted to any
+connected channel, with human approval remembered once.
+
+### 5f. Dashboard surfaces to reproduce
+
+The studio must expose the same account surfaces seen in the original dashboard:
+**Settings, Teams, Refer and earn, Help, Give feedback, Personal account,
+Billing, Upgrade, Usage details, Top up credits, Credits, New company, My
+portfolio**, plus any other menu items discovered. Each surface needs a real
+route, a working state model, and links back to the team workflow. `Credits` and
+`Top up credits` must remain informational/test-mode only — no feature may be
+locked behind them.
+
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a

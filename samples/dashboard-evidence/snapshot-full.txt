@@ -1,0 +1,110 @@
+- button "> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >..." [ref=e30 expanded=false]
+- code "> Filing your mission into your company's knowledge base."
+- code "> Recording the vision that will steer your agents."
+- code "> Announcing your launch."
+- code "> Provisioning an isolated instance to host your product."
+- code "> Creating the source-code repository your product will live in."
+- code "> Spinning up a managed Postgres database."
+- code "> Pre-warming the hosting platform so your first deploy lands fast."
+- code "> Opening a secure, isolated sandbox to build your site in."
+- code "> Pulling your repository into the build sandbox."
+- code "> Running a command"
+- code "> Reading a file"
+- code "> Listing your assets..."
+- code "> Working..."
+- code "> Working..."
+- code "> Reading a file"
+- code "> Working..."
+- code "> Listing your assets..."
+- code "> Working..."
+- code "> Searching the code"
+- code "> Working..."
+- code "> Working..."
+- code "> Reading a file"
+- code "> Reading a file"
+- code "> Running npm"
+- code "> Editing page.tsx"
+- code "> Editing page.tsx"
+- code "> Reading a file"
+- code "> Editing 3 files"
+- code "> Reading a file"
+- code "> Editing custom-style.css"
+- code "> Reviewing changes"
+- code "> Running a command"
+- code "> Looking through files"
+- code "> Installing dependencies"
+- code "> Reviewing changes"
+- code "> Running a command"
+- code "> Running a script"
+- code "> Running a Python script"
+- code "> Running a Python script"
+- code "> Running a command"
+- code "> Reviewing changes"
+- code "> Committing your landing page and pushing it to your repository."
+- code "> Building the production bundle and publishing your site to the web."
+- code "> Closing down the build sandbox now that the site is shipped."
+- code "> Linking everything together and finishing the build."
+- code "> Putting the finishing touches on your company."
+- code "> Planning the first things your agents should tackle."
+- code "> Adding those first tasks to your queue."
+- code "> Saving a recap of everything we set up."
+- code "> Sending you a welcome email with everything you need."
+- link "PageMurmur" [ref=e31]
+- button "+ Add credits" [ref=e32]
+- button "Notifications" [ref=e33 expanded=false]
+- button "Edit" [ref=e34]
+- button "Menu Ôû¥" [ref=e35 expanded=false]
+  - heading "Polsia" [level=2]
+    - code "Mood: Triumphant"
+    - group "Polsia actions"
+      - button "Auto Mode" [ref=e1]
+      - button "Night task" [ref=e2]
+    - button "Subscribe" [ref=e3]
+  - heading "Business" [level=2]
+    - p "Updated 3m ago"
+    - heading "Last 30 days" [level=3]
+      - p "No traffic details yet"
+      - p "They show here once your app counts its first visit."
+      - group "Business actions"
+        - button "Setup payments" [ref=e4]
+        - button "All Business capabilities" [ref=e5 expanded=false]
+  - heading "Tasks" [level=2]
+    - button "Run task: Let merchants securely access their private PageMurmur workspace" [ref=e6]
+    - button "Run task: Give the verified PageMurmur owner private administration access" [ref=e7]
+    - button "Run task: Save and manage competitor products in your PageMurmur workspace" [ref=e8]
+    - button "See all tasks" [ref=e9]
+    - group "Tasks actions"
+      - button "New tasks" [ref=e10]
+  - heading "Documents" [level=2]
+    - button "Product Roadmap 0 of 7 outcomes completed" [ref=e11]
+    - list "List" [2 items]
+      - button "Design guide Nov 11" [ref=e12]
+      - code "/-/| /_/ | | |/| |^| | |_|/"
+      - button "PageMurmur ÔÇö Company Profile Nov 11" [ref=e13]
+      - code "/-/| /_/ | | |/| |^| | |_|/"
+    - button "View all (5)" [ref=e14]
+  - heading "Twitter" [level=2]
+    - link "@newonpolsia" [ref=e15]
+    - button "Connect X account" [ref=e16]
+    - link "Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what..." [ref=e17]
+    - button "Delete tweet" [ref=e18]
+    - group "Twitter actions"
+      - button "Tweet" [ref=e19]
+  - heading "Email" [level=2]
+    - button "Refresh" [ref=e20]
+    - button "Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11" [ref=e21]
+    - button "View all" [ref=e22]
+    - group "Email actions"
+      - button "Cold outreach" [ref=e23]
+      - button "Support" [ref=e24]
+  - heading "Meta Ads" [level=2]
+    - group "Ads actions"
+      - button "Meta Ads - Not running yet" [ref=e25]
+  - heading "Media" [level=2]
+    - p "No media yet."
+    - group "Media actions"
+      - button "Image" [ref=e26]
+      - button "Video" [ref=e27]
+      - button "All Media capabilities" [ref=e28 expanded=false]
+    - button "New capability" [ref=e29]
+    - button "Open inbox" [ref=e36]

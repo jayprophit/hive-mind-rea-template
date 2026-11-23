@@ -1,16 +1,16 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T10:40:47+00:00",
+  "generated": "2026-11-23T11:11:29+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
-    "documents": 113,
-    "headings": 251,
-    "chunks": 495,
-    "facts": 215,
+    "documents": 120,
+    "headings": 253,
+    "chunks": 566,
+    "facts": 216,
     "assets": 0,
-    "sources": 335,
+    "sources": 342,
     "runs": 0,
     "approvals": 0
   },
@@ -61,9 +61,9 @@
       "path": "data/build-facts.json",
       "kind": "json",
       "title": "build-facts",
-      "modified": "2026-11-23T10:40:01+00:00",
-      "sha256": "ae3473ba94cd93d0897f04570ede07492b16f7b7311fcccca6e1debb7c25abd7",
-      "words": 1537,
+      "modified": "2026-11-23T10:55:45+00:00",
+      "sha256": "4b7be9859625c1712e3e6f826a88bd2bacbf04f0d7ea81f09bac82458ef86c70",
+      "words": 1576,
       "headings": [],
       "links": [],
       "chunks": [
@@ -90,32 +90,32 @@
         {
           "heading": "",
           "line": 1,
-          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"byte_exact_reverse\": \"Every reverse-engineering task must sweep the artifact byte by byte: record total bytes and sha256, account for every range with a finding or an unknown carrying its offset, require 100% coverage before closing the gap, and back claims with offset/hash/observed output plus a differential replay. Never silently skip data; never bypass DRM.\",\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely "
+          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"social_connections\": \"Studio must connect to X/Twitter, LinkedIn, Facebook, Instagram, YouTube, TikTok, Reddit, Bluesky, Threads, Pinterest, Discord, Slack, Telegram, WhatsApp, GitHub and email through a SOCIAL_CONNECTIONS registry with OAuth/webhook steps, status, read-only default and no stored secrets.\",\n    \"byte_exact_reverse\": \"Every reverse-engineering task must sweep the artifact byte by byte: record total bytes and sha256, account for every range with a finding or an unknown carrying its offset, require 100% coverage before closing the gap, and back claims with offset/hash/observed output plus a differential replay. Never silently skip data; never bypass DRM.\",\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each ot"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "rson enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically\",\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start "
+          "text": "AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically\",\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (O"
         },
         {
           "heading": "",
           "line": 1,
-          "text": ",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ],\n  \"research\": [\n    { \"topic\": \"heavy RE MCP tooling\", \"finding\": \"rea-lab: 482 runs found no solve-rate gain at ~2x time and cost\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"lean RE skill\", \"finding\": \"leanrea: 8 KB skill, direct shell tools, same accuracy, 38% less time, 35% less cost, 60% fewer tokens\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"official agent patterns\", \"finding\": \"Agent Skills, "
+          "text": "integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ],\n  \"research\": [\n    { \"topic\": \"heavy RE MCP tooling\", \"finding\": \"rea-lab: 482 runs found no solve-rate gain at ~2x time and "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "s, same accuracy, 38% less time, 35% less cost, 60% fewer tokens\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"official agent patterns\", \"finding\": \"Agent Skills, subagents, hooks, dynamic workflows and agent teams adopted as registries\", \"source\": \"code.claude.com/docs\" },\n    { \"topic\": \"free ecosystems\", \"finding\": \"Grok/Manus/Codex/Hermes/OpenClaw open alternatives studied; MIT/Apache/CC0 patterns only\", \"source\": \"GitHub API\" },\n    { \"topic\": \"pending wave 4\", \"finding\": \"INSTINCTS, AGENT_ACCESS allowlist, run monitor, behaviour recordings and catalogue scaling are documented but not implemented\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" }\n  ],\n  \"recommendations\": [\n    { \"priority\": \"P0\", \"item\": \"Logged-in capture evidence\", \"why\": \"Original target redirects to /login; dashboard cannot be inferred from public pages\", \"where\": \"capture/dashboard/\" },\n    { \"priority\": \"P0\", \"item\": \"Checkpoint/resume in IndexedDB\", \"why\": \"Three builds were lost to crashes and PTY timeouts\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P0\", \"item\": \"One builder at a time\", \"why\": \"Concurrent builders overwrote studio.js\", \"where\": \"craft.json, operator\" },\n    { \"priority\": \"P1\", \"item\": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\""
+          "text": "cloned repos (repos/ is 1.56 GB and not in git)\"\n  ],\n  \"research\": [\n    { \"topic\": \"heavy RE MCP tooling\", \"finding\": \"rea-lab: 482 runs found no solve-rate gain at ~2x time and cost\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"lean RE skill\", \"finding\": \"leanrea: 8 KB skill, direct shell tools, same accuracy, 38% less time, 35% less cost, 60% fewer tokens\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"official agent patterns\", \"finding\": \"Agent Skills, subagents, hooks, dynamic workflows and agent teams adopted as registries\", \"source\": \"code.claude.com/docs\" },\n    { \"topic\": \"free ecosystems\", \"finding\": \"Grok/Manus/Codex/Hermes/OpenClaw open alternatives studied; MIT/Apache/CC0 patterns only\", \"source\": \"GitHub API\" },\n    { \"topic\": \"pending wave 4\", \"finding\": \"INSTINCTS, AGENT_ACCESS allowlist, run monitor, behaviour recordings and catalogue scaling are documented but not implemented\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" }\n  ],\n  \"recommendations\": [\n    { \"priority\": \"P0\", \"item\": \"Logged-in capture evidence\", \"why\": \"Original target redirects to /login; dashboard cannot be inferred from public pages\", \"where\": \"capture/dashboard/\" },\n    { \"priority\": \"P0\", \"item\": \"Checkpoint/resume in IndexedDB\", \"why\": \"Three builds were lost to crashes and PTY timeouts\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P0\", \"item\": \"One b"
         },
         {
           "heading": "",
           "line": 1,
-          "text": ": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },\n    { \"priority\": \"P1\", \"item\": \"Vitest tests for phase runner\", \"why\": \"Self-modifying team can silently break the 13-phase engine\", \"where\": \"app/tests/\" },\n    { \"priority\": \"P1\", \"item\": \"Model fallback registry\", \"why\": \"Free endpoints return 429/503; fail over, then local lfm3\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Payment guardrails\", \"why\": \"Idempotency, spend cap, audit log before any live mode\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Source provenance UI\", \"why\": \"Make evidence-to-decision auditable\", \"where\": \"app/studio/index.html\" },\n    { \"priority\": \"P2\", \"item\": \"Retrospective-driven prompt rewriting\", \"why\": \"Adapt next round from what failed\", \"where\": \"app/src/studio.js\" }\n  ],\n  \"still_needed\": [\n    \"Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs\",\n    \"Revoke the exposed gho_hV2Y OAuth app on GitHub\",\n    \"Fit an 8 GB DDR4-2666 SO-DIMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review"
+          "text": " \"P0\", \"item\": \"Checkpoint/resume in IndexedDB\", \"why\": \"Three builds were lost to crashes and PTY timeouts\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P0\", \"item\": \"One builder at a time\", \"why\": \"Concurrent builders overwrote studio.js\", \"where\": \"craft.json, operator\" },\n    { \"priority\": \"P1\", \"item\": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },\n    { \"priority\": \"P1\", \"item\": \"Vitest tests for phase runner\", \"why\": \"Self-modifying team can silently break the 13-phase engine\", \"where\": \"app/tests/\" },\n    { \"priority\": \"P1\", \"item\": \"Model fallback registry\", \"why\": \"Free endpoints return 429/503; fail over, then local lfm3\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Payment guardrails\", \"why\": \"Idempotency, spend cap, audit log before any live mode\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Source provenance UI\", \"why\": \"Make evidence-to-decision auditable\", \"where\": \"app/studio/index.html\" },\n    { \"priority\": \"P2\", \"item\": \"Retrospective-driven prompt rewriting\", \"why\": \"Adapt next round from what failed\", \"where\": \"app/src/studio.js\" }\n  ],\n  \"still_needed\": [\n    \"Logged-in screenshots or saved HT"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "IMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (craft.json currently paused)\"\n  ]\n}"
+          "text": " \"Retrospective-driven prompt rewriting\", \"why\": \"Adapt next round from what failed\", \"where\": \"app/src/studio.js\" }\n  ],\n  \"still_needed\": [\n    \"Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs\",\n    \"Revoke the exposed gho_hV2Y OAuth app on GitHub\",\n    \"Fit an 8 GB DDR4-2666 SO-DIMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (craft.json currently paused)\"\n  ]\n}"
         }
       ]
     },
@@ -1292,9 +1292,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T10:39:52+00:00",
-      "sha256": "cb128c5bf8cfdd24c07cffe36a3100e19c947f78ed46194c27ad366c10f81782",
-      "words": 2110,
+      "modified": "2026-11-23T10:55:56+00:00",
+      "sha256": "ccce264f26d9c69ad7cb755098816cccc66a1bd28c6a23d39836dbbc845d8e74",
+      "words": 2294,
       "headings": [
         {
           "level": 1,
@@ -1358,23 +1358,33 @@
         },
         {
           "level": 3,
-          "text": "6. Payments (commerce, not feature gates)",
+          "text": "5e. Social connections",
           "line": 171
         },
         {
           "level": 3,
+          "text": "5f. Dashboard surfaces to reproduce",
+          "line": 187
+        },
+        {
+          "level": 3,
+          "text": "6. Payments (commerce, not feature gates)",
+          "line": 197
+        },
+        {
+          "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 181
+          "line": 207
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 190
+          "line": 216
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 200
+          "line": 226
         }
       ],
       "links": [],
@@ -1455,28 +1465,38 @@
           "text": "### 5c. Human gate — only what the person must do\n\nWhen a step needs a login, API key, payment credential, irreversible action or\nauthorisation, the team must not stop the whole loop. It creates a **handoff\ncard** containing:\n\n- exactly what is needed and why (one short paragraph),\n- a numbered click-by-click walkthrough to get it,\n- the precise field/link/permission required,\n- which task and phase is waiting,\n- a \"continue without it\" fallback if one exists.\n\nAll other members keep working on independent gaps. Once the user supplies the\nitem, the waiting phase resumes automatically. Authorisation given once is\nremembered; only sensitive or irreversible actions ask again."
         },
         {
-          "heading": "6. Payments (commerce, not feature gates)",
+          "heading": "5e. Social connections",
           "line": 171,
+          "text": "### 5e. Social connections\n\nThe studio must connect to social platforms, not only display a link to X.\nAdd a `SOCIAL_CONNECTIONS` registry with at least:\n\n- X/Twitter (already linked in the original), LinkedIn, Facebook, Instagram,\n  YouTube, TikTok, Reddit, Bluesky, Threads, Pinterest,\n- Discord, Slack, Telegram, WhatsApp (chat/community),\n- GitHub (already an integration) and email.\n\nEach entry has `id`, `name`, `category`, `scopes`, `connectSteps`, `status`\n(disconnected / connected / expired), `readOnly` default, and a test-mode\npreview. No secret is stored in local state; the person supplies credentials\nthrough their own OAuth flow or a webhook. Reports can be posted to any\nconnected channel, with human approval remembered once."
+        },
+        {
+          "heading": "5f. Dashboard surfaces to reproduce",
+          "line": 187,
+          "text": "### 5f. Dashboard surfaces to reproduce\n\nThe studio must expose the same account surfaces seen in the original dashboard:\n**Settings, Teams, Refer and earn, Help, Give feedback, Personal account,\nBilling, Upgrade, Usage details, Top up credits, Credits, New company, My\nportfolio**, plus any other menu items discovered. Each surface needs a real\nroute, a working state model, and links back to the team workflow. `Credits` and\n`Top up credits` must remain informational/test-mode only — no feature may be\nlocked behind them."
+        },
+        {
+          "heading": "6. Payments (commerce, not feature gates)",
+          "line": 197,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 181,
+          "line": 207,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 190,
+          "line": 216,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 200,
+          "line": 226,
           "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
         },
         {
           "heading": "Acceptance criteria",
-          "line": 200,
+          "line": 226,
           "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
@@ -4326,6 +4346,435 @@
       ]
     },
     {
+      "path": "samples/dashboard-evidence/menu-full.txt",
+      "kind": "txt",
+      "title": "menu-full",
+      "modified": "2026-11-23T10:57:50+00:00",
+      "sha256": "335fdddf8cbdb6cd6d7cf2bbafd1201798271a1713caaf2154e4c8787883a114",
+      "words": 727,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "- button \"> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >...\" [ref=e51 expanded=false]\n- code \"> Filing your mission into your company's knowledge base.\"\n- code \"> Recording the vision that will steer your agents.\"\n- code \"> Announcing your launch.\"\n- code \"> Provisioning an isolated instance to host your product.\"\n- code \"> Creating the source-code repository your product will live in.\"\n- code \"> Spinning up a managed Postgres database.\"\n- code \"> Pre-warming the hosting platform so your first deploy lands fast.\"\n- code \"> Opening a secure, isolated sandbox to build your site in.\"\n- code \"> Pulling your repository into the build sandbox.\"\n- code \"> Running a command\"\n- code \"> Reading a file\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Working...\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Searching the code\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Reading a file\"\n- code \"> Running npm\"\n- code \"> Editing page.tsx\"\n- code \"> Editing page.tsx\"\n- code \"> Reading a file\"\n- code \"> Editing 3 files\"\n- code \"> Reading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- cod"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ding a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Running a script\"\n- code \"> Running a Python script\"\n- code \"> Running a Python script\"\n- code \"> Running a command\"\n- code \"> Reviewing changes\"\n- code \"> Committing your landing page and pushing it to your repository.\"\n- code \"> Building the production bundle and publishing your site to the web.\"\n- code \"> Closing down the build sandbox now that the site is shipped.\"\n- code \"> Linking everything together and finishing the build.\"\n- code \"> Putting the finishing touches on your company.\"\n- code \"> Planning the first things your agents should tackle.\"\n- code \"> Adding those first tasks to your queue.\"\n- code \"> Saving a recap of everything we set up.\"\n- code \"> Sending you a welcome email with everything you need.\"\n- link \"PageMurmur\" [ref=e52]\n- button \"+ Add credits\" [ref=e53]\n- button \"Notifications\" [ref=e54 expanded=false]\n- button \"Edit\" [ref=e55]\n- button \"Menu Ôû¥\" [ref=e35 expanded=true]\n  - heading \"Polsia\" [level=2]\n    - code \"Mood: Triumphant\"\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e56]\n      - button \"Night task\" [ref=e57]\n    - button \"Subscribe\" [ref=e58]\n  - heading \"Business\" [level=2]\n    - p \"Updat"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e56]\n      - button \"Night task\" [ref=e57]\n    - button \"Subscribe\" [ref=e58]\n  - heading \"Business\" [level=2]\n    - p \"Updated 3m ago\"\n    - heading \"Last 30 days\" [level=3]\n      - p \"No traffic details yet\"\n      - p \"They show here once your app counts its first visit.\"\n      - group \"Business actions\"\n        - button \"Setup payments\" [ref=e59]\n        - button \"All Business capabilities\" [ref=e60 expanded=false]\n  - heading \"Tasks\" [level=2]\n    - button \"Run task: Let merchants securely access their private PageMurmur workspace\" [ref=e61]\n    - button \"Run task: Give the verified PageMurmur owner private administration access\" [ref=e62]\n    - button \"Run task: Save and manage competitor products in your PageMurmur workspace\" [ref=e63]\n    - button \"See all tasks\" [ref=e64]\n    - group \"Tasks actions\"\n      - button \"New tasks\" [ref=e65]\n  - heading \"Documents\" [level=2]\n    - button \"Product Roadmap 0 of 7 outcomes completed\" [ref=e66]\n    - list \"List\" [2 items]\n      - listitem \"Design guide Nov 11\"\n        - button \"Design guide Nov 11\" [ref=e67]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n      - listitem \"PageMurmur ÔÇö Company Profile Nov 11\"\n        - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e68]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e69]\n  - heading \"Twitter"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "e Nov 11\"\n        - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e68]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e69]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e70]\n    - button \"Connect X account\" [ref=e71]\n    - link \"Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what...\" [ref=e72]\n    - button \"Delete tweet\" [ref=e73]\n    - group \"Twitter actions\"\n      - button \"Tweet\" [ref=e74]\n  - heading \"Email\" [level=2]\n    - button \"Refresh\" [ref=e75]\n    - button \"Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11\" [ref=e76]\n    - button \"View all\" [ref=e77]\n    - group \"Email actions\"\n      - button \"Cold outreach\" [ref=e78]\n      - button \"Support\" [ref=e79]\n  - heading \"Meta Ads\" [level=2]\n    - group \"Ads actions\"\n      - button \"Meta Ads - Not running yet\" [ref=e80]\n  - heading \"Media\" [level=2]\n    - p \"No media yet.\"\n    - group \"Media actions\"\n      - button \"Image\" [ref=e81]\n      - button \"Video\" [ref=e82]\n      - button \"All Media capabilities\" [ref=e83 expanded=false]\n    - button \"New capability\" [ref=e84]\n    - button \"Open inbox\" [ref=e85]\n    - dialog \"Dialog\"\n      - button \"My Portfolio\" [ref=e86]\n      - button \"New Company\" [ref=e87]\n      - button \"Credits 0\" [ref=e88]\n      - button \"Top up credits\" [ref=e89]\n      - b"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "log \"Dialog\"\n      - button \"My Portfolio\" [ref=e86]\n      - button \"New Company\" [ref=e87]\n      - button \"Credits 0\" [ref=e88]\n      - button \"Top up credits\" [ref=e89]\n      - button \"Usage details\" [ref=e90]\n      - button \"Upgrade\" [ref=e91]\n      - button \"Billing\" [ref=e92 expanded=false]\n      - button \"Teams\" [ref=e93]\n      - button \"Settings\" [ref=e94]\n      - button \"Personal accounts\" [ref=e95]\n      - button \"Help & More\" [ref=e96 expanded=false]\n      - button \"Give Feedback\" [ref=e97]\n      - button \"Refer & Earn\" [ref=e98]\n      - button \"Logout\" [ref=e99]"
+        }
+      ]
+    },
+    {
+      "path": "samples/dashboard-evidence/menu.txt",
+      "kind": "txt",
+      "title": "menu",
+      "modified": "2026-11-23T10:57:28+00:00",
+      "sha256": "22503202cfac3c59c3060a87d3b90e38cf89ebd7b43160c40d75357e00914163",
+      "words": 715,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "- button \"> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >...\" [ref=e30 expanded=false]\n- code \"> Filing your mission into your company's knowledge base.\"\n- code \"> Recording the vision that will steer your agents.\"\n- code \"> Announcing your launch.\"\n- code \"> Provisioning an isolated instance to host your product.\"\n- code \"> Creating the source-code repository your product will live in.\"\n- code \"> Spinning up a managed Postgres database.\"\n- code \"> Pre-warming the hosting platform so your first deploy lands fast.\"\n- code \"> Opening a secure, isolated sandbox to build your site in.\"\n- code \"> Pulling your repository into the build sandbox.\"\n- code \"> Running a command\"\n- code \"> Reading a file\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Working...\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Searching the code\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Reading a file\"\n- code \"> Running npm\"\n- code \"> Editing page.tsx\"\n- code \"> Editing page.tsx\"\n- code \"> Reading a file\"\n- code \"> Editing 3 files\"\n- code \"> Reading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- cod"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ding a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Running a script\"\n- code \"> Running a Python script\"\n- code \"> Running a Python script\"\n- code \"> Running a command\"\n- code \"> Reviewing changes\"\n- code \"> Committing your landing page and pushing it to your repository.\"\n- code \"> Building the production bundle and publishing your site to the web.\"\n- code \"> Closing down the build sandbox now that the site is shipped.\"\n- code \"> Linking everything together and finishing the build.\"\n- code \"> Putting the finishing touches on your company.\"\n- code \"> Planning the first things your agents should tackle.\"\n- code \"> Adding those first tasks to your queue.\"\n- code \"> Saving a recap of everything we set up.\"\n- code \"> Sending you a welcome email with everything you need.\"\n- link \"PageMurmur\" [ref=e31]\n- button \"+ Add credits\" [ref=e32]\n- button \"Notifications\" [ref=e33 expanded=false]\n- button \"Edit\" [ref=e34]\n- button \"Menu Ôû¥\" [ref=e35 expanded=true]\n  - heading \"Polsia\" [level=2]\n    - code \"Mood: Triumphant\"\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e1]\n      - button \"Night task\" [ref=e2]\n    - button \"Subscribe\" [ref=e3]\n  - heading \"Business\" [level=2]\n    - p \"Updated "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e1]\n      - button \"Night task\" [ref=e2]\n    - button \"Subscribe\" [ref=e3]\n  - heading \"Business\" [level=2]\n    - p \"Updated 3m ago\"\n    - heading \"Last 30 days\" [level=3]\n      - p \"No traffic details yet\"\n      - p \"They show here once your app counts its first visit.\"\n      - group \"Business actions\"\n        - button \"Setup payments\" [ref=e4]\n        - button \"All Business capabilities\" [ref=e5 expanded=false]\n  - heading \"Tasks\" [level=2]\n    - button \"Run task: Let merchants securely access their private PageMurmur workspace\" [ref=e6]\n    - button \"Run task: Give the verified PageMurmur owner private administration access\" [ref=e7]\n    - button \"Run task: Save and manage competitor products in your PageMurmur workspace\" [ref=e8]\n    - button \"See all tasks\" [ref=e9]\n    - group \"Tasks actions\"\n      - button \"New tasks\" [ref=e10]\n  - heading \"Documents\" [level=2]\n    - button \"Product Roadmap 0 of 7 outcomes completed\" [ref=e11]\n    - list \"List\" [2 items]\n      - button \"Design guide Nov 11\" [ref=e12]\n      - code \"/-/| /_/ | | |/| |^| | |_|/\"\n      - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e13]\n      - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e14]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e15]\n    - button \"Connect X account\" [ref=e16]\n    - link \"Competitor"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " | |_|/\"\n    - button \"View all (5)\" [ref=e14]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e15]\n    - button \"Connect X account\" [ref=e16]\n    - link \"Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what...\" [ref=e17]\n    - button \"Delete tweet\" [ref=e18]\n    - group \"Twitter actions\"\n      - button \"Tweet\" [ref=e19]\n  - heading \"Email\" [level=2]\n    - button \"Refresh\" [ref=e20]\n    - button \"Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11\" [ref=e21]\n    - button \"View all\" [ref=e22]\n    - group \"Email actions\"\n      - button \"Cold outreach\" [ref=e23]\n      - button \"Support\" [ref=e24]\n  - heading \"Meta Ads\" [level=2]\n    - group \"Ads actions\"\n      - button \"Meta Ads - Not running yet\" [ref=e25]\n  - heading \"Media\" [level=2]\n    - p \"No media yet.\"\n    - group \"Media actions\"\n      - button \"Image\" [ref=e26]\n      - button \"Video\" [ref=e27]\n      - button \"All Media capabilities\" [ref=e28 expanded=false]\n    - button \"New capability\" [ref=e29]\n    - button \"Open inbox\" [ref=e36]\n    - dialog \"Dialog\"\n      - button \"My Portfolio\" [ref=e37]\n      - button \"New Company\" [ref=e38]\n      - button \"Credits 0\" [ref=e39]\n      - button \"Top up credits\" [ref=e40]\n      - button \"Usage details\" [ref=e41]\n      - button \"Upgrade\" [ref=e42]\n      - button \"Billing\" [ref=e43 expanded=fal"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ts 0\" [ref=e39]\n      - button \"Top up credits\" [ref=e40]\n      - button \"Usage details\" [ref=e41]\n      - button \"Upgrade\" [ref=e42]\n      - button \"Billing\" [ref=e43 expanded=false]\n      - button \"Teams\" [ref=e44]\n      - button \"Settings\" [ref=e45]\n      - button \"Personal accounts\" [ref=e46]\n      - button \"Help & More\" [ref=e47 expanded=false]\n      - button \"Give Feedback\" [ref=e48]\n      - button \"Refer & Earn\" [ref=e49]\n      - button \"Logout\" [ref=e50]"
+        }
+      ]
+    },
+    {
+      "path": "samples/dashboard-evidence/page-Billing.txt",
+      "kind": "txt",
+      "title": "page-Billing",
+      "modified": "2026-11-23T11:07:23+00:00",
+      "sha256": "2f3148f1fe4d0222a4aa96aaff1a07f99d5f6cf6662ce7265ee6bc008f231b67",
+      "words": 721,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "- button \"> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >...\" [ref=e100 expanded=false]\n- code \"> Filing your mission into your company's knowledge base.\"\n- code \"> Recording the vision that will steer your agents.\"\n- code \"> Announcing your launch.\"\n- code \"> Provisioning an isolated instance to host your product.\"\n- code \"> Creating the source-code repository your product will live in.\"\n- code \"> Spinning up a managed Postgres database.\"\n- code \"> Pre-warming the hosting platform so your first deploy lands fast.\"\n- code \"> Opening a secure, isolated sandbox to build your site in.\"\n- code \"> Pulling your repository into the build sandbox.\"\n- code \"> Running a command\"\n- code \"> Reading a file\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Working...\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Searching the code\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Reading a file\"\n- code \"> Running npm\"\n- code \"> Editing page.tsx\"\n- code \"> Editing page.tsx\"\n- code \"> Reading a file\"\n- code \"> Editing 3 files\"\n- code \"> Reading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- co"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Running a script\"\n- code \"> Running a Python script\"\n- code \"> Running a Python script\"\n- code \"> Running a command\"\n- code \"> Reviewing changes\"\n- code \"> Committing your landing page and pushing it to your repository.\"\n- code \"> Building the production bundle and publishing your site to the web.\"\n- code \"> Closing down the build sandbox now that the site is shipped.\"\n- code \"> Linking everything together and finishing the build.\"\n- code \"> Putting the finishing touches on your company.\"\n- code \"> Planning the first things your agents should tackle.\"\n- code \"> Adding those first tasks to your queue.\"\n- code \"> Saving a recap of everything we set up.\"\n- code \"> Sending you a welcome email with everything you need.\"\n- link \"PageMurmur\" [ref=e101]\n- button \"+ Add credits\" [ref=e102]\n- button \"Notifications\" [ref=e103 expanded=false]\n- button \"Edit\" [ref=e104]\n- button \"Menu Ôû¥\" [ref=e105 expanded=false]\n  - heading \"Polsia\" [level=2]\n    - code \"Mood: Triumphant\"\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e106]\n      - button \"Night task\" [ref=e107]\n    - button \"Subscribe\" [ref=e166]\n  - heading \"Business\" [level=2]\n    "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e106]\n      - button \"Night task\" [ref=e107]\n    - button \"Subscribe\" [ref=e166]\n  - heading \"Business\" [level=2]\n    - p \"Updated 5m ago\"\n    - heading \"Last 30 days\" [level=3]\n      - p \"No traffic details yet\"\n      - p \"They show here once your app counts its first visit.\"\n      - group \"Business actions\"\n        - button \"Setup payments\" [ref=e109]\n        - button \"All Business capabilities\" [ref=e110 expanded=false]\n  - heading \"Tasks\" [level=2]\n    - button \"Run task: Let merchants securely access their private PageMurmur workspace\" [ref=e111]\n    - button \"Run task: Give the verified PageMurmur owner private administration access\" [ref=e112]\n    - button \"Run task: Save and manage competitor products in your PageMurmur workspace\" [ref=e113]\n    - button \"See all tasks\" [ref=e114]\n    - group \"Tasks actions\"\n      - button \"New tasks\" [ref=e115]\n  - heading \"Documents\" [level=2]\n    - button \"Product Roadmap 0 of 7 outcomes completed\" [ref=e116]\n    - list \"List\" [2 items]\n      - listitem \"Design guide Nov 11\"\n        - button \"Design guide Nov 11\" [ref=e117]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n      - listitem \"PageMurmur ÔÇö Company Profile Nov 11\"\n        - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e118]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e119]"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " ÔÇö Company Profile Nov 11\"\n        - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e118]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e119]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e120]\n    - button \"Connect X account\" [ref=e121]\n    - link \"Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what...\" [ref=e122]\n    - button \"Delete tweet\" [ref=e123]\n    - group \"Twitter actions\"\n      - button \"Tweet\" [ref=e124]\n  - heading \"Email\" [level=2]\n    - button \"Refresh\" [ref=e125]\n    - button \"Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11\" [ref=e126]\n    - button \"View all\" [ref=e127]\n    - group \"Email actions\"\n      - button \"Cold outreach\" [ref=e128]\n      - button \"Support\" [ref=e129]\n  - heading \"Meta Ads\" [level=2]\n    - group \"Ads actions\"\n      - button \"Meta Ads - Not running yet\" [ref=e130]\n  - heading \"Media\" [level=2]\n    - p \"No media yet.\"\n    - group \"Media actions\"\n      - button \"Image\" [ref=e131]\n      - button \"Video\" [ref=e132]\n      - button \"All Media capabilities\" [ref=e133 expanded=false]\n    - button \"New capability\" [ref=e134]\n    - button \"Open inbox\" [ref=e135]\n    - dialog \"Settings\"\n      - heading \"Settings\" [level=2]\n      - tablist \"Tab list\"\n        - tab \"Company\" [ref=e153 selected=false]\n        - tab "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ton \"Open inbox\" [ref=e135]\n    - dialog \"Settings\"\n      - heading \"Settings\" [level=2]\n      - tablist \"Tab list\"\n        - tab \"Company\" [ref=e153 selected=false]\n        - tab \"Profile\" [ref=e154 selected=false]\n        - tab \"Emails\" [ref=e155 selected=false]\n        - tab \"Billing\" [ref=e156 selected=true]\n      - heading \"Automatic top-up\" [level=3]\n      - p \"Buy credits automatically when your balance runs low.\"\n      - alert \"CouldnÔÇÖt load your billing settings. Please try again.\"\n      - button \"Try again\" [ref=e167]\n      - button \"Close\" [ref=e165]"
+        }
+      ]
+    },
+    {
+      "path": "samples/dashboard-evidence/page-Settings.txt",
+      "kind": "txt",
+      "title": "page-Settings",
+      "modified": "2026-11-23T11:06:29+00:00",
+      "sha256": "0fe1436120b320d9d6b22a3ed6881a39356ac1550d4dd0b9ad48f32c1dc41188",
+      "words": 799,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "- button \"> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >...\" [ref=e100 expanded=false]\n- code \"> Filing your mission into your company's knowledge base.\"\n- code \"> Recording the vision that will steer your agents.\"\n- code \"> Announcing your launch.\"\n- code \"> Provisioning an isolated instance to host your product.\"\n- code \"> Creating the source-code repository your product will live in.\"\n- code \"> Spinning up a managed Postgres database.\"\n- code \"> Pre-warming the hosting platform so your first deploy lands fast.\"\n- code \"> Opening a secure, isolated sandbox to build your site in.\"\n- code \"> Pulling your repository into the build sandbox.\"\n- code \"> Running a command\"\n- code \"> Reading a file\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Working...\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Searching the code\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Reading a file\"\n- code \"> Running npm\"\n- code \"> Editing page.tsx\"\n- code \"> Editing page.tsx\"\n- code \"> Reading a file\"\n- code \"> Editing 3 files\"\n- code \"> Reading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- co"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Running a script\"\n- code \"> Running a Python script\"\n- code \"> Running a Python script\"\n- code \"> Running a command\"\n- code \"> Reviewing changes\"\n- code \"> Committing your landing page and pushing it to your repository.\"\n- code \"> Building the production bundle and publishing your site to the web.\"\n- code \"> Closing down the build sandbox now that the site is shipped.\"\n- code \"> Linking everything together and finishing the build.\"\n- code \"> Putting the finishing touches on your company.\"\n- code \"> Planning the first things your agents should tackle.\"\n- code \"> Adding those first tasks to your queue.\"\n- code \"> Saving a recap of everything we set up.\"\n- code \"> Sending you a welcome email with everything you need.\"\n- link \"PageMurmur\" [ref=e101]\n- button \"+ Add credits\" [ref=e102]\n- button \"Notifications\" [ref=e103 expanded=false]\n- button \"Edit\" [ref=e104]\n- button \"Menu Ôû¥\" [ref=e105 expanded=false]\n  - heading \"Polsia\" [level=2]\n    - code \"Mood: Triumphant\"\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e106]\n      - button \"Night task\" [ref=e107]\n    - button \"Subscribe\" [ref=e152]\n  - heading \"Business\" [level=2]\n    "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e106]\n      - button \"Night task\" [ref=e107]\n    - button \"Subscribe\" [ref=e152]\n  - heading \"Business\" [level=2]\n    - p \"Updated 4m ago\"\n    - heading \"Last 30 days\" [level=3]\n      - p \"No traffic details yet\"\n      - p \"They show here once your app counts its first visit.\"\n      - group \"Business actions\"\n        - button \"Setup payments\" [ref=e109]\n        - button \"All Business capabilities\" [ref=e110 expanded=false]\n  - heading \"Tasks\" [level=2]\n    - button \"Run task: Let merchants securely access their private PageMurmur workspace\" [ref=e111]\n    - button \"Run task: Give the verified PageMurmur owner private administration access\" [ref=e112]\n    - button \"Run task: Save and manage competitor products in your PageMurmur workspace\" [ref=e113]\n    - button \"See all tasks\" [ref=e114]\n    - group \"Tasks actions\"\n      - button \"New tasks\" [ref=e115]\n  - heading \"Documents\" [level=2]\n    - button \"Product Roadmap 0 of 7 outcomes completed\" [ref=e116]\n    - list \"List\" [2 items]\n      - listitem \"Design guide Nov 11\"\n        - button \"Design guide Nov 11\" [ref=e117]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n      - listitem \"PageMurmur ÔÇö Company Profile Nov 11\"\n        - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e118]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e119]"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " ÔÇö Company Profile Nov 11\"\n        - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e118]\n        - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e119]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e120]\n    - button \"Connect X account\" [ref=e121]\n    - link \"Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what...\" [ref=e122]\n    - button \"Delete tweet\" [ref=e123]\n    - group \"Twitter actions\"\n      - button \"Tweet\" [ref=e124]\n  - heading \"Email\" [level=2]\n    - button \"Refresh\" [ref=e125]\n    - button \"Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11\" [ref=e126]\n    - button \"View all\" [ref=e127]\n    - group \"Email actions\"\n      - button \"Cold outreach\" [ref=e128]\n      - button \"Support\" [ref=e129]\n  - heading \"Meta Ads\" [level=2]\n    - group \"Ads actions\"\n      - button \"Meta Ads - Not running yet\" [ref=e130]\n  - heading \"Media\" [level=2]\n    - p \"No media yet.\"\n    - group \"Media actions\"\n      - button \"Image\" [ref=e131]\n      - button \"Video\" [ref=e132]\n      - button \"All Media capabilities\" [ref=e133 expanded=false]\n    - button \"New capability\" [ref=e134]\n    - button \"Open inbox\" [ref=e135]\n    - dialog \"Settings\"\n      - heading \"Settings\" [level=2]\n      - tablist \"Tab list\"\n        - tab \"Company\" [ref=e153 selected=true]\n        - tab \""
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ton \"Open inbox\" [ref=e135]\n    - dialog \"Settings\"\n      - heading \"Settings\" [level=2]\n      - tablist \"Tab list\"\n        - tab \"Company\" [ref=e153 selected=true]\n        - tab \"Profile\" [ref=e154 selected=false]\n        - tab \"Emails\" [ref=e155 selected=false]\n        - tab \"Billing\" [ref=e156 selected=false]\n      - textbox \"Company name\" [ref=e157]\n      - status \"This name is already saved. Enter a different name to rename your company.\"\n      - button \"Review change\" [ref=e158 disabled]\n      - textbox \"Mailing address\" [ref=e159]\n      - status \"Shown in your cold outreach email footer.\"\n      - button \"Save address\" [ref=e160 disabled]\n      - heading \"Bank accounts\" [level=3]\n      - p \"Only the current company owner can use these connections.\"\n      - p \"Connect a bank account to read financial information and request supported actions. Access depends on the provider and the permissions you grant.\"\n      - status \"Not connected\"\n      - button \"Connect Brex\" [ref=e161]\n      - status \"Not connected\"\n      - button \"Connect Mercury\" [ref=e162]\n      - button \"Pause\" [ref=e163]\n      - button \"Advanced Ôû¥\" [ref=e164]\n      - button \"Close\" [ref=e165]"
+        }
+      ]
+    },
+    {
+      "path": "samples/dashboard-evidence/snapshot-full.txt",
+      "kind": "txt",
+      "title": "snapshot-full",
+      "modified": "2026-11-23T10:57:04+00:00",
+      "sha256": "b82e1c71a942eb2fef85369482de7c2a716391c1ec8872ab9253da1e6ea69f3f",
+      "words": 643,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "- button \"> Filing your mission into your company's knowledge base. > Recording the vision that will steer your agents. >...\" [ref=e30 expanded=false]\n- code \"> Filing your mission into your company's knowledge base.\"\n- code \"> Recording the vision that will steer your agents.\"\n- code \"> Announcing your launch.\"\n- code \"> Provisioning an isolated instance to host your product.\"\n- code \"> Creating the source-code repository your product will live in.\"\n- code \"> Spinning up a managed Postgres database.\"\n- code \"> Pre-warming the hosting platform so your first deploy lands fast.\"\n- code \"> Opening a secure, isolated sandbox to build your site in.\"\n- code \"> Pulling your repository into the build sandbox.\"\n- code \"> Running a command\"\n- code \"> Reading a file\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Working...\"\n- code \"> Listing your assets...\"\n- code \"> Working...\"\n- code \"> Searching the code\"\n- code \"> Working...\"\n- code \"> Working...\"\n- code \"> Reading a file\"\n- code \"> Reading a file\"\n- code \"> Running npm\"\n- code \"> Editing page.tsx\"\n- code \"> Editing page.tsx\"\n- code \"> Reading a file\"\n- code \"> Editing 3 files\"\n- code \"> Reading a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- cod"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ding a file\"\n- code \"> Editing custom-style.css\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Looking through files\"\n- code \"> Installing dependencies\"\n- code \"> Reviewing changes\"\n- code \"> Running a command\"\n- code \"> Running a script\"\n- code \"> Running a Python script\"\n- code \"> Running a Python script\"\n- code \"> Running a command\"\n- code \"> Reviewing changes\"\n- code \"> Committing your landing page and pushing it to your repository.\"\n- code \"> Building the production bundle and publishing your site to the web.\"\n- code \"> Closing down the build sandbox now that the site is shipped.\"\n- code \"> Linking everything together and finishing the build.\"\n- code \"> Putting the finishing touches on your company.\"\n- code \"> Planning the first things your agents should tackle.\"\n- code \"> Adding those first tasks to your queue.\"\n- code \"> Saving a recap of everything we set up.\"\n- code \"> Sending you a welcome email with everything you need.\"\n- link \"PageMurmur\" [ref=e31]\n- button \"+ Add credits\" [ref=e32]\n- button \"Notifications\" [ref=e33 expanded=false]\n- button \"Edit\" [ref=e34]\n- button \"Menu Ôû¥\" [ref=e35 expanded=false]\n  - heading \"Polsia\" [level=2]\n    - code \"Mood: Triumphant\"\n    - group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e1]\n      - button \"Night task\" [ref=e2]\n    - button \"Subscribe\" [ref=e3]\n  - heading \"Business\" [level=2]\n    - p \"Updated"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " group \"Polsia actions\"\n      - button \"Auto Mode\" [ref=e1]\n      - button \"Night task\" [ref=e2]\n    - button \"Subscribe\" [ref=e3]\n  - heading \"Business\" [level=2]\n    - p \"Updated 3m ago\"\n    - heading \"Last 30 days\" [level=3]\n      - p \"No traffic details yet\"\n      - p \"They show here once your app counts its first visit.\"\n      - group \"Business actions\"\n        - button \"Setup payments\" [ref=e4]\n        - button \"All Business capabilities\" [ref=e5 expanded=false]\n  - heading \"Tasks\" [level=2]\n    - button \"Run task: Let merchants securely access their private PageMurmur workspace\" [ref=e6]\n    - button \"Run task: Give the verified PageMurmur owner private administration access\" [ref=e7]\n    - button \"Run task: Save and manage competitor products in your PageMurmur workspace\" [ref=e8]\n    - button \"See all tasks\" [ref=e9]\n    - group \"Tasks actions\"\n      - button \"New tasks\" [ref=e10]\n  - heading \"Documents\" [level=2]\n    - button \"Product Roadmap 0 of 7 outcomes completed\" [ref=e11]\n    - list \"List\" [2 items]\n      - button \"Design guide Nov 11\" [ref=e12]\n      - code \"/-/| /_/ | | |/| |^| | |_|/\"\n      - button \"PageMurmur ÔÇö Company Profile Nov 11\" [ref=e13]\n      - code \"/-/| /_/ | | |/| |^| | |_|/\"\n    - button \"View all (5)\" [ref=e14]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e15]\n    - button \"Connect X account\" [ref=e16]\n    - link \"Competito"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "| | |_|/\"\n    - button \"View all (5)\" [ref=e14]\n  - heading \"Twitter\" [level=2]\n    - link \"@newonpolsia\" [ref=e15]\n    - button \"Connect X account\" [ref=e16]\n    - link \"Competitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what...\" [ref=e17]\n    - button \"Delete tweet\" [ref=e18]\n    - group \"Twitter actions\"\n      - button \"Tweet\" [ref=e19]\n  - heading \"Email\" [level=2]\n    - button \"Refresh\" [ref=e20]\n    - button \"Last sent Welcome to PageMurmur! jprophit@googlemail.com Nov 11\" [ref=e21]\n    - button \"View all\" [ref=e22]\n    - group \"Email actions\"\n      - button \"Cold outreach\" [ref=e23]\n      - button \"Support\" [ref=e24]\n  - heading \"Meta Ads\" [level=2]\n    - group \"Ads actions\"\n      - button \"Meta Ads - Not running yet\" [ref=e25]\n  - heading \"Media\" [level=2]\n    - p \"No media yet.\"\n    - group \"Media actions\"\n      - button \"Image\" [ref=e26]\n      - button \"Video\" [ref=e27]\n      - button \"All Media capabilities\" [ref=e28 expanded=false]\n    - button \"New capability\" [ref=e29]\n    - button \"Open inbox\" [ref=e36]"
+        }
+      ]
+    },
+    {
+      "path": "samples/dashboard-evidence/snapshot.txt",
+      "kind": "txt",
+      "title": "snapshot",
+      "modified": "2026-11-23T10:56:38+00:00",
+      "sha256": "0849357007d9224b3c1d6e1ce3265173f2f1e6dc666d2f6ed86fa743e1a60516",
+      "words": 9,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "browse: --within needs a value; see `browse snapshot --help`"
+        }
+      ]
+    },
+    {
+      "path": "samples/dashboard-evidence/surfaces.json",
+      "kind": "json",
+      "title": "surfaces",
+      "modified": "2026-11-23T11:02:09+00:00",
+      "sha256": "4dc7ffd6e8913b8ef4a484c44b03ab7aa792ab8b6e70a8b7cbb7cc0c06b505de",
+      "words": 8487,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "tab: 283230181\n\n{\"My Portfolio\":\"NOT FOUND\",\"New Company\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 1S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company ow"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "EW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\n1 Company Limit Reached\\n\\nYour plan allows 1 active company.\\n\\nSEE PLANS\",\"Credits 0\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 1S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email an"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "e your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njpr"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "lus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nCredits\\n\\nYour balance and every credit movement ÔÇö grants, task spends, and refunds.\\n\\n0\\ncredits\\n\\nUsage details\\n\\nAdd credits\\nNOV 11, 2026\\n7:40 PM\\nSPEND\\nCompany onboarding\\nPageMurmur\\nÔêÆ1\\n2:32 PM\\nSPEND\\nRun-now task\\nÔêÆ1\\n2:16 PM\\nSPEND\\nCompany onboarding\\nÔêÆ1\\n2:16 PM\\nCREDIT\\nWelcome credits\\n+3\\nShowing 4 of 4\",\"Top up credits\":\"NOT FOUND\"}\n\nPage: 4 navigations\ntab: 283230181\n\n{\"Usage details\":\"POLSIA\\nUsage details\\njprophit@googlemail.com\\nMENU Ôû¥\\nUsage details\\nDOCUMENTATION\\nUSAGE\\nIN-APP PRICES\\nAll spend\\nAll companies\\nLast 30 days\\n\\nLOADING USAGEÔÇª\",\"Upgrade\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy l"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ur product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sen"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 2S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "in account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nChoose A Plan\\nLOADING PLANSÔÇª\",\"Billing\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": ":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "tion bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 4S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a priv"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nMY PORTFOLIO\\nNEW COMPANY\\nCREDITS\\"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nMY PORTFOLIO\\nNEW COMPANY\\nCREDITS\\n0\\nTOP UP CREDITS\\nUSAGE DETAILS\\nUPGRADE\\nBILLING\\nÔû©\\nTEAMS\\nSETTINGS\\nPERSONAL ACCOUNTS\\nHELP & MORE\\nÔû©\\nGIVE FEEDBACK\\nREFER & EARN\\nLOGOUT\",\"Teams\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n>"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "viewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 1S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nO"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@p"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "s, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nTeams\\nADD MEMBER\"}\n\nPage: 4 navigations\ntab: 283230181\n\n{\"Settings\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 2S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. Page"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "|\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nSettings\\nCOMPANY\\nPROFILE\\nEMAILS\\nBILLING\\nCOMPANY NAME\\nTHIS NAME IS ALREADY SAVED. ENTER A DIFFERENT NAME TO RENAME YOUR COMPANY.\\nREVIEW CHANGE\\nMAILING ADDRESS\\nSHOWN IN YOUR COLD OUTREACH EMAIL FOOTER.\\nSAVE ADDRESS\\nBank accounts\\n\\nOnly the current company owner can use these connections.\\n\\nConnect a bank account to read financial information and request supported actions. Access depends on the provider and the permissions you grant.\\n\\nBrex\\n\\nNot connected\\n\\nConnect\",\"Personal accounts\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "n into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "hing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  ÔöÇ     ÔöÇ   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 1S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. Fro"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nPersonal accounts\\n\\nPrivate to you. Connect a bank accou"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "nd Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nPersonal accounts\\n\\nPrivate to you. Connect a bank account to view its balances and transactions.\\n\\nBank accounts\\n\\nThese connections are private to you. They are not shared with your companies.\\n\\nConnect a bank account to read financial information and request supported actions. Access depends on the provider and the permissions you grant.\\n\\nBrex\\n\\nNot connected\\n\\nConnect Brex\\nMercury\\n\\nNot connected\\n\\nConnect Mercury\",\"Help & More\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 fil"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "g...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "öÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 2S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss un"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nMY PORTFOLIO\\nNEW COMPANY\\nCREDITS\\n0\\nTOP UP CREDITS\\nUSAGE DETAILS\\nUPGRADE\\nBILLING\\nÔû©\\nTEAMS\\nSETTINGS\\nPERSONAL ACCOUNTS\\nHELP & MORE\\nÔû©\\nGIVE FEEDBACK\\nREFER & EARN\\nLOGOUT\",\"Give Feedback\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandb"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "e.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 1S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATUR"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "urmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nGive Feedback\\n\\nTell us what to fix, build, or keep. We read everything.\\n\\nTitle\\nTag\\nSelect a tag\\nBug\\nIdea\\nPraise\\nOther\\nDescription\\nScreenshot or recording\\nCHOOSE FILE\\nOptional ÔÇö an image or video, up to 10MB\\nCANCEL\\nSEND FEEDBACK\"}\n\nPage: 4 navigations\ntab: 283230181\n\n{\"Refer & Earn\":\"> Filing your mission into your company"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ding\\nCHOOSE FILE\\nOptional ÔÇö an image or video, up to 10MB\\nCANCEL\\nSEND FEEDBACK\"}\n\nPage: 4 navigations\ntab: 283230181\n\n{\"Refer & Earn\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to t"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 0S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMu"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "reate an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will crea"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "H\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nRefer & Earn\\n\\nShare Polsia with friends and earn 25 task credits when they subscribe. No limits ÔÇö keep referring, keep earning.\\n\\nYOUR REFERRAL LINK\\nCOPY\\nFRIENDS REFERRED\\n0\\nFRIENDS SUBSCRIBED\\n0\\nCREDITS EARNED\\n0\\n\\nCREDITS ARE ADDED INSTANTLY WHEN YOUR FRIEND STARTS THEIR SUBSCRIPTION\",\"+ Add credits\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Read"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ng your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\n"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 5S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nAdd More Credits\\n\\nChoose a one-time credit top-up.\\n\\nTop up credits\\nPURCHASE ON DEMAND. USE ANYTIME.\\n+3 credits ÔÇö $9\\n+10 credits ÔÇö $25 (popular)\\n+25 credits ÔÇö $49\\n+60 credits ÔÇö $99\\n+150 credits ÔÇö $199\\n+250 credits ÔÇö $299\\n+400 credits ÔÇö $449\\n+600 credits ÔÇö $649\\n+800 credits ÔÇö $849\\n+1000 credits ÔÇö $1,049\\n$2.50/CREDIT\\nUpgrade your plan\\nMORE CREDITS EVERY MONTH\\nÔåÆ\\nAutomatic top-up\\n\\nBuy credits automatically when your balance runs low.\\n\\nLoading your billing setting\",\"Subscribe\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launc"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "\\nLoading your billing setting\",\"Subscribe\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything to"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 2S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "y, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPA"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "UTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nChoose A Plan\\nLOADING PLANSÔÇª\",\"Notifications\":\"> Filing your mission into your company's knowledge base.\\n> Recording the vision that will steer your agents.\\n> Announcing your launch.\\n> Provisioning an isolated instance to host your product.\\n> Creating the source-code repository your product will live in.\\n> Spinning up a managed Postgres database.\\n> Pre-warming the hosting platform so your first deploy lands fast.\\n> Opening a secure, isolated sandbox to build your site in.\\n> Pulling your repository into the build sandbox.\\n> Running a command\\n> Reading a file\\n> Listing your assets...\\n> Working...\\n> Working...\\n> Reading a file\\n> Working...\\n> Listing your assets...\\n> Working...\\n> Searching the code\\n> Working...\\n> Working...\\n> Reading a file\\n> Reading a file\\n> Running npm\\n> Editing page.tsx\\n> Editing page.tsx\\n> Reading a file\\n> Editing 3 files\\n> Reading a file\\n> Editing custom-style.css\\n> Reviewing changes\\n> Running a command\\n> Looking through files\\n> Installing dependencies\\n> Reviewing changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page a"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "g changes\\n> Running a command\\n> Running a script\\n> Running a Python script\\n> Running a Python script\\n> Running a command\\n> Reviewing changes\\n> Committing your landing page and pushing it to your repository.\\n> Building the production bundle and publishing your site to the web.\\n> Closing down the build sandbox now that the site is shipped.\\n> Linking everything together and finishing the build.\\n> Putting the finishing touches on your company.\\n> Planning the first things your agents should tackle.\\n> Adding those first tasks to your queue.\\n> Saving a recap of everything we set up.\\n> Sending you a welcome email with everything you need.\\nPageMurmur\\n+ ADD CREDITS\\nEDIT\\nMENU Ôû¥\\nPolsia\\n  ­ƒÄè      ­ƒÄë\\n    Ôò▓    Ôò▒\\nÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ\\nÔöé  Ôÿà     Ôÿà   Ôöé\\nÔöé     Ôû¢      Ôöé\\nÔöé  ÔùíÔùíÔùíÔùíÔùíÔùíÔùí   Ôöé\\nÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ\\nTRIUMPHANT\\nYOUR COMPANY IS LIVE!\\nAUTO MODE\\nNIGHT TASK\\nHire Your AI Employee\\nWORKS WHILE YOU SLEEP\\nSUBSCRIBE\\nCANCEL ANYTIME\\nBusiness\\nALL-TIME VISITORS: 1\\nREVENUE: $0.00\\n\\nUPDATED 1S AGO\\n\\nLAST 30 DAYS\\n\\nNO TRAFFIC DETAILS YET\\n\\nThey show here once your app counts its first visit.\\n\\nSETUP PAYMENTS\\nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspa"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "nÔï»\\nTasks\\nLet merchants securely access their private PageMurmur workspace\\nOnline merchants create an account with email and password and enter their private PageMurmur workspace immediately, without email confirmation. ReturÔÇª\\nFEATURE\\n1 CREDIT\\nGive the verified PageMurmur owner private administration access\\nThe PageMurmur owner uses the company owner email from trusted server context to establish a private admin account. From a fresh browser, opening /admÔÇª\\nFEATURE\\n1 CREDIT\\nSave and manage competitor products in your PageMurmur workspace\\nPrerequisite: merchants can sign in and open their private workspace through the existing ÔÇ£Let merchants securely access their private PageMurmur workÔÇª\\nFEATURE\\n1 CREDIT\\nSEE ALL TASKS\\nNEW TASKS\\nDocuments\\nÔÿÀ\\nProduct Roadmap\\n0 of 7 outcomes completed\\nÔåù\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nDesign guide\\nNOV 11\\n /-/|\\n/_/ |\\n| |/|\\n|^| |\\n|_|/\\nPageMurmur ÔÇö Company Profile\\nNOV 11\\nVIEW ALL (5)\\nTwitter\\n@newonpolsia\\nCONNECT X ACCOUNT\\nCompetitor price and stock changes are easy to miss until they matter. PageMurmur tracks public product pages, logs what changed, and sends timely alerts plus a clear daily report. Stock signals are estimates; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIE"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "; decisions stay yours.\\n19:41 ┬À 11 NOV 2026\\nTWEET\\nEmail\\npagemurmur-9jsvs1@polsia.app\\nREFRESH\\nWelcome to PageMurmur!\\njprophit@googlemail.com\\nNOV 11\\n1 SENT ┬À 0 RECEIVEDVIEW ALL\\nCOLD OUTREACH\\nSUPPORT\\nMeta Ads\\nNot running yet\\nSet a daily budget and Polsia will create and manage your Meta ads.\\nMETA ADS\\nMedia\\n\\nNo media yet.\\n\\nIMAGE\\nVIDEO\\nÔï»\\n+\\nNEW CAPABILITY\\nNOTIFICATIONS\\n\\nNo notifications yet.\"}\n\nPage: 4 navigations"
+        }
+      ]
+    },
+    {
       "path": "samples/out/ram-options.csv",
       "kind": "csv",
       "title": "ram-options",
@@ -5156,9 +5605,9 @@
     {
       "path": "data/build-facts.json",
       "kind": "text",
-      "sha256": "ae3473ba94cd93d0897f04570ede07492b16f7b7311fcccca6e1debb7c25abd7",
-      "bytes": 11280,
-      "modified": "2026-11-23T10:40:01+00:00"
+      "sha256": "4b7be9859625c1712e3e6f826a88bd2bacbf04f0d7ea81f09bac82458ef86c70",
+      "bytes": 11594,
+      "modified": "2026-11-23T10:55:45+00:00"
     },
     {
       "path": "data/README.md",
@@ -5233,9 +5682,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "cb128c5bf8cfdd24c07cffe36a3100e19c947f78ed46194c27ad366c10f81782",
-      "bytes": 13771,
-      "modified": "2026-11-23T10:39:52+00:00"
+      "sha256": "ccce264f26d9c69ad7cb755098816cccc66a1bd28c6a23d39836dbbc845d8e74",
+      "bytes": 15045,
+      "modified": "2026-11-23T10:55:56+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",
@@ -7352,6 +7801,55 @@
       "modified": "2026-11-23T10:37:46+00:00"
     },
     {
+      "path": "samples/dashboard-evidence/menu-full.txt",
+      "kind": "text",
+      "sha256": "335fdddf8cbdb6cd6d7cf2bbafd1201798271a1713caaf2154e4c8787883a114",
+      "bytes": 5596,
+      "modified": "2026-11-23T10:57:50+00:00"
+    },
+    {
+      "path": "samples/dashboard-evidence/menu.txt",
+      "kind": "text",
+      "sha256": "22503202cfac3c59c3060a87d3b90e38cf89ebd7b43160c40d75357e00914163",
+      "bytes": 5478,
+      "modified": "2026-11-23T10:57:28+00:00"
+    },
+    {
+      "path": "samples/dashboard-evidence/page-Billing.txt",
+      "kind": "text",
+      "sha256": "2f3148f1fe4d0222a4aa96aaff1a07f99d5f6cf6662ce7265ee6bc008f231b67",
+      "bytes": 5588,
+      "modified": "2026-11-23T11:07:23+00:00"
+    },
+    {
+      "path": "samples/dashboard-evidence/page-Settings.txt",
+      "kind": "text",
+      "sha256": "0fe1436120b320d9d6b22a3ed6881a39356ac1550d4dd0b9ad48f32c1dc41188",
+      "bytes": 6208,
+      "modified": "2026-11-23T11:06:29+00:00"
+    },
+    {
+      "path": "samples/dashboard-evidence/snapshot-full.txt",
+      "kind": "text",
+      "sha256": "b82e1c71a942eb2fef85369482de7c2a716391c1ec8872ab9253da1e6ea69f3f",
+      "bytes": 4875,
+      "modified": "2026-11-23T10:57:04+00:00"
+    },
+    {
+      "path": "samples/dashboard-evidence/snapshot.txt",
+      "kind": "text",
+      "sha256": "0849357007d9224b3c1d6e1ce3265173f2f1e6dc666d2f6ed86fa743e1a60516",
+      "bytes": 62,
+      "modified": "2026-11-23T10:56:38+00:00"
+    },
+    {
+      "path": "samples/dashboard-evidence/surfaces.json",
+      "kind": "text",
+      "sha256": "4dc7ffd6e8913b8ef4a484c44b03ab7aa792ab8b6e70a8b7cbb7cc0c06b505de",
+      "bytes": 55390,
+      "modified": "2026-11-23T11:02:09+00:00"
+    },
+    {
       "path": "samples/out/ram-options.csv",
       "kind": "text",
       "sha256": "5bb357f9e396655ace132be32d69bad149d6e82859263e97f5b1c79dd4fd7da0",
@@ -7957,6 +8455,11 @@
       "category": "projects",
       "key": "projects[3].status",
       "value": "present"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.social_connections",
+      "value": "Studio must connect to X/Twitter, LinkedIn, Facebook, Instagram, YouTube, TikTok, Reddit, Bluesky, Threads, Pinterest, Discord, Slack, Telegram, WhatsApp, GitHub and email through a SOCIAL_CONNECTIONS registry with OAuth/webhook steps, status, read-only default and no stored secrets."
     },
     {
       "category": "requirements",
