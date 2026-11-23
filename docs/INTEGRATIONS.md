@@ -84,13 +84,15 @@ Craft Anything (MCP) ── investigation, triage, reports, rebuild studies
 | cal.com | scheduling | pending | SaaS or self-host Docker |
 | chatwoot | support (Docker) | pending | docker compose; needs RAM |
 | cap | screen recording | pending | Cap.so app/repo |
-| basemode | TBD | pending | needs identification |
+| basemode | TBD | **not found** | no installable package/repo/skill resolved (GitHub, npm, PyPI, skills.sh checked 2026-11-23) |
+| graphify | knowledge graph | **installed** | `graphifyy` 0.9.118 (CLI `graphify`), skill installed for OpenCode in repo + project; MCP registered; 660 nodes / 863 edges built |
+| demobase | TBD | **not found** | no matching installable package/repo/skill resolved |
 | apify mcp | MCP | configured | needs APIFY_TOKEN |
 | vidiq mcp | MCP | configured | needs VidIQ API access |
 | calude x jev skill | skill | pending | needs source/packaging |
-| yt-dlp | CLI media | pending | `pip install -U yt-dlp` or winget |
-| whisper | STT | pending | openai-whisper (heavy) or whisper.cpp/faster-whisper |
-| ffmpeg | media | pending | winget/choco/scoop |
+| yt-dlp | CLI media | **installed** | `yt-dlp` 2026.10.26 via pip, on PATH |
+| whisper | STT | **installed** | `faster-whisper` 1.2.1 via pip (local, free) |
+| ffmpeg | media | **installed** | Gyan.FFmpeg via winget, on PATH |
 | remotion | video (React) | pending | npm project scaffold |
 | youtube analytics api | API | needs-key | Google Cloud project + OAuth/API key |
 | instagram api | API | needs-key | Meta app + permissions |
