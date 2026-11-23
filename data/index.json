@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T09:50:47+00:00",
+  "generated": "2026-11-23T10:08:34+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 111,
-    "headings": 215,
-    "chunks": 447,
+    "headings": 219,
+    "chunks": 455,
     "facts": 152,
     "assets": 0,
     "sources": 333,
@@ -951,9 +951,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T09:26:36+00:00",
-      "sha256": "3ec358d43366d8556c5df4e723140591fdeb426e45e0cd500de1bdfd265a2f7d",
-      "words": 1287,
+      "modified": "2026-11-23T09:58:14+00:00",
+      "sha256": "5384c210ad9d8e3862832f658e217a7a8d644c8977c6c54d3306779d61d15b5f",
+      "words": 1933,
       "headings": [
         {
           "level": 1,
@@ -997,28 +997,38 @@
         },
         {
           "level": 3,
-          "text": "5. Autonomy — it must be able to do the work on its own",
+          "text": "5. Autonomy — the continuous REA loop",
           "line": 87
         },
         {
           "level": 3,
+          "text": "5b. Free services instead of paid ones",
+          "line": 118
+        },
+        {
+          "level": 3,
+          "text": "5c. Human gate — only what the person must do",
+          "line": 138
+        },
+        {
+          "level": 3,
           "text": "6. Payments (commerce, not feature gates)",
-          "line": 99
+          "line": 154
         },
         {
           "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 109
+          "line": 164
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 118
+          "line": 173
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 128
+          "line": 183
         }
       ],
       "links": [],
@@ -1069,29 +1079,54 @@
           "text": "### 4. Automation and human oversight\n\n- Auto mode runs in rounds with intervals: hours, days, weeks, months, years,\n  or non-stop. A visible countdown shows the next round.\n- The person authorises once. That authorisation is remembered in local state;\n  ordinary actions do not ask again. Sensitive actions can still be gated.\n- Reports (round summary, messages, decisions, files changed) can be sent to a\n  configured email address or chat webhook. No API keys are hard-coded."
         },
         {
-          "heading": "5. Autonomy — it must be able to do the work on its own",
+          "heading": "5. Autonomy — the continuous REA loop",
           "line": 87,
-          "text": "### 5. Autonomy — it must be able to do the work on its own\n\n- Given a task, the team runs the full loop without hand-holding:\n  **plan → research → build → test → check → fix → report**.\n- Members resolve their own problems: if a tool fails, retry with a different\n  approach; if a step is blocked, post it to the channel and let another role\n  pick it up. Do not stop at the first error.\n- The team can plan, research, build, test, document and report. A visible\n  activity log shows what each member did and why.\n- Human authorisation is given once and remembered. Only genuinely sensitive\n  or irreversible actions should re-ask."
+          "text": "### 5. Autonomy — the continuous REA loop\n\nGiven a task, the team runs this loop **without hand-holding**, and keeps\ncycling until the task's acceptance criteria pass or a human-only item blocks it:\n\n| # | Phase | Key | What must happen |\n|---|---|---|---|\n| 1 | Intake + gap analysis | `intake` | Restate the task, write acceptance criteria, list what is known/unknown, identify exactly what is missing and what the user must supply. Produce a gap list with severity. |\n| 2 | Plan | `plan` | Decompose the gaps into role-sized jobs, assign owners, set order and dependencies. |\n| 3 | Internet + open resources | `discover` | Search the internet for similar builds, prior art, docs and data. Check open-source repos, public datasets and free services. Record each source with a URL and a one-line finding. |\n| 4 | Reverse-engineer closed sources | `reverse` | Where a target is closed, inspect what is observable: page/HTML, JS bundles, network requests, file formats, strings and behaviour. Record evidence; never copy proprietary code into `app/`. |\n| 5 | Automatic setup | `setup` | Install/configure whatever the build needs: tools, free-tier accounts/endpoints, model providers, storage and integrations. Use free substitutes for paid services (see registry). |\n| 6 | Build | `build` | Produce the first working version from the gathered evidence. |\n| 7 | Test | `test` | Run automated checks: b"
+        },
+        {
+          "heading": "5. Autonomy — the continuous REA loop",
+          "line": 87,
+          "text": "ubstitutes for paid services (see registry). |\n| 6 | Build | `build` | Produce the first working version from the gathered evidence. |\n| 7 | Test | `test` | Run automated checks: build, links, console errors, unit tests, visual comparison. |\n| 8 | Check / verify | `check` | Independent review against the acceptance criteria by roles that did not build it. |\n| 9 | Fix errors | `fix` | Correct every failure; re-run the failing check. |\n| 10 | Amend | `amend` | Improve the result using new evidence: wording, layout, logic, data and missing content. |\n| 11 | Implement | `implement` | Integrate the amended work, rebuild and freeze a version. |\n| 12 | Report + retrospective | `report` | Write the round report, what changed, what is still blocked, and the next improvement. |\n| 13 | Loop | `loop` | If any acceptance criterion fails, return to phase 3 (new evidence) or 6 (rebuild) with a new attempt. Continue until achieved or blocked only on the human gate. |\n\nRules:\n\n- A task is `done` only when every acceptance criterion passes and the gap\n  list is closed. \"Good enough\" is not a stopping condition.\n- Failures never end the loop: retry with a different approach, then hand the\n  job to another role if it stays blocked.\n- `PHASES` in code must be data-driven so new phases can be added without\n  rewriting the runner.\n- The activity log must show phase, attempt number, evidence used and "
+        },
+        {
+          "heading": "5. Autonomy — the continuous REA loop",
+          "line": 87,
+          "text": "ys blocked.\n- `PHASES` in code must be data-driven so new phases can be added without\n  rewriting the runner.\n- The activity log must show phase, attempt number, evidence used and owner."
+        },
+        {
+          "heading": "5b. Free services instead of paid ones",
+          "line": 118,
+          "text": "### 5b. Free services instead of paid ones\n\nKeep a `FREE_SERVICES` registry that maps a paid capability to a free/open\nsubstitute and uses it automatically unless the user supplies their own:\n\n| Paid capability | Free substitute |\n|---|---|\n| Search / web data | Marginalia, Hacker News, Wikipedia, direct site fetch, Bing/DDG HTML, user's browser via `browse` MCP |\n| LLM inference | Nous free tier models, OpenCode free models, local Ollama fallback |\n| Repo / hosting | GitHub free, GitHub Pages, local git |\n| Storage / DB | IndexedDB + local SQLite knowledge databases in this repo |\n| Diagrams / docs | Mermaid, Markdown, Open XML (.docx/.xlsx/.pptx), CSV, SVG, HTML |\n| Email reports | `mailto:` draft plus a user-configured free webhook |\n| Payments | Stripe/PayPal **test mode** with the user's own key; no gating of features |\n| OCR / PDF / media | Local Python libs already installed (pypdf, Pillow, pandas) |\n\nEvery substitute records `substitutesFor`, cost `0`, and a source URL. If a\nfree option cannot do the job, the team produces a user handoff card instead\nof silently failing or buying anything."
+        },
+        {
+          "heading": "5c. Human gate — only what the person must do",
+          "line": 138,
+          "text": "### 5c. Human gate — only what the person must do\n\nWhen a step needs a login, API key, payment credential, irreversible action or\nauthorisation, the team must not stop the whole loop. It creates a **handoff\ncard** containing:\n\n- exactly what is needed and why (one short paragraph),\n- a numbered click-by-click walkthrough to get it,\n- the precise field/link/permission required,\n- which task and phase is waiting,\n- a \"continue without it\" fallback if one exists.\n\nAll other members keep working on independent gaps. Once the user supplies the\nitem, the waiting phase resumes automatically. Authorisation given once is\nremembered; only sensitive or irreversible actions ask again."
         },
         {
           "heading": "6. Payments (commerce, not feature gates)",
-          "line": 99,
+          "line": 154,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 109,
+          "line": 164,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 118,
+          "line": 173,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 128,
-          "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs plan→research→build→test→fix→report without manual steps; a\n   failed step is retried or handed to another role, not left hanging.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. `npm run build` succeeds and the visual check still passes."
+          "line": 183,
+          "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
+        },
+        {
+          "heading": "Acceptance criteria",
+          "line": 183,
+          "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
     },
@@ -2424,9 +2459,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T09:50:08+00:00",
-      "sha256": "af1359fb9c1740538e748726750d4c79b0e6e8088499dfc2d0a72c87201e3acf",
-      "words": 1957,
+      "modified": "2026-11-23T10:07:52+00:00",
+      "sha256": "770efdb9fea048ac38bd21a281efde3383ad2cf3ce52f96bdf041b467df7e9a8",
+      "words": 2163,
       "headings": [
         {
           "level": 1,
@@ -2520,8 +2555,13 @@
         },
         {
           "level": 2,
+          "text": "Gap analysis and REA loop expansion (10:07)",
+          "line": 246
+        },
+        {
+          "level": 2,
           "text": "Requests queued (for this machine's new build)",
-          "line": 247
+          "line": 270
         }
       ],
       "links": [],
@@ -2624,11 +2664,21 @@
         {
           "heading": "Verified final build (09:50)",
           "line": 228,
-          "text": "### Verified final build (09:50)\n- `npm run build` succeeds: 15 dist files, 7 page folders including the new\n  `/changelog` and `/acceptable-use`.\n- `app/src/studio.js` is 951 lines: no member picker, automatic role selection\n  with reasons, multiple members active concurrently, shared message bus,\n  task board, handoffs, autonomy loop, payments tab with no paid gates,\n  retrospectives, auto-mode intervals and remembered authorisation.\n- Ten inter-agent communication languages implemented as a pluggable registry\n  (prose, JSON envelope, task DSL, Markdown, tool calls, pub/sub events,\n  blackboard, semantic digest, A2A/MCP envelopes, human digest); every message\n  is labelled, auto-routed, filterable and persisted.\n- Visual check: 78% alike, 30/30 claims hold. Remaining visual gaps are in the\n  long legal pages (/privacy 64%, /terms 62%) and a missing form field.\n- Authenticated dashboard still cannot be reproduced: Craft Anything's browser\n  has no logins and the target redirected to `/login`. Need logged-in evidence.\n- Two concurrent builders once overwrote each other; stale trees were killed\n  and a final controlled single round produced the state above.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+          "text": "### Verified final build (09:50)\n- `npm run build` succeeds: 15 dist files, 7 page folders including the new\n  `/changelog` and `/acceptable-use`.\n- `app/src/studio.js` is 951 lines: no member picker, automatic role selection\n  with reasons, multiple members active concurrently, shared message bus,\n  task board, handoffs, autonomy loop, payments tab with no paid gates,\n  retrospectives, auto-mode intervals and remembered authorisation.\n- Ten inter-agent communication languages implemented as a pluggable registry\n  (prose, JSON envelope, task DSL, Markdown, tool calls, pub/sub events,\n  blackboard, semantic digest, A2A/MCP envelopes, human digest); every message\n  is labelled, auto-routed, filterable and persisted.\n- Visual check: 78% alike, 30/30 claims hold. Remaining visual gaps are in the\n  long legal pages (/privacy 64%, /terms 62%) and a missing form field.\n- Authenticated dashboard still cannot be reproduced: Craft Anything's browser\n  has no logins and the target redirected to `/login`. Need logged-in evidence.\n- Two concurrent builders once overwrote each other; stale trees were killed\n  and a final controlled single round produced the state above."
+        },
+        {
+          "heading": "Gap analysis and REA loop expansion (10:07)",
+          "line": 246,
+          "text": "## Gap analysis and REA loop expansion (10:07)\n\nGaps found against the requested autonomy loop: the old `PHASES` had only\n7 stages (plan, research, build, test, check, fix, report) and no internet/open\nresource scan, no closed-source reverse engineering, no setup, no explicit\ngap analysis, no amend/implement, no \"loop until criteria pass\", no free-service\nregistry and no human handoff cards.\n\nImplemented in `app/src/studio.js` (now 1,488 lines, build succeeds):\n- 13-phase data-driven `PHASES`: intake/gap analysis, plan, discover (internet\n  + open resources), reverse (closed sources), setup, build, test, check, fix,\n  amend, implement, report, loop/decision.\n- `FREE_SERVICES` registry mapping paid capabilities to free substitutes, used\n  automatically during setup; no purchase required.\n- Human gate produces handoff cards with the exact walkthrough, field or\n  permission needed and a continue-without fallback; other members keep working.\n- Gaps, sources with URLs, attempts and evidence are shown in the UI and written\n  into reports; `MAX_REA_ATTEMPTS` and acceptance criteria drive the loop.\n- Verification markers: `FREE_SERVICES` 6, handoff 44, gap 36, discover 10,\n  reverse 8, setup 11, amend 6, implement 7, acceptance 24.\n- `docs/TEAM-BRIEF.md` is the updated source of truth (5, 5b, 5c).\n- Builder auto-retry paused in `craft.json`; one builder at a time.\n- Don't let memory cl"
+        },
+        {
+          "heading": "Gap analysis and REA loop expansion (10:07)",
+          "line": 246,
+          "text": "ement 7, acceptance 24.\n- `docs/TEAM-BRIEF.md` is the updated source of truth (5, 5b, 5c).\n- Builder auto-retry paused in `craft.json`; one builder at a time.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
         },
         {
           "heading": "Requests queued (for this machine's new build)",
-          "line": 247,
+          "line": 270,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
@@ -2725,9 +2775,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T09:50:15+00:00",
-      "sha256": "d4fc377500057e1ec69a7b40f0f8095e51987377746ec3ded24c832c2e58dc18",
-      "words": 1927,
+      "modified": "2026-11-23T10:07:59+00:00",
+      "sha256": "9670ff7f939d8dd818c319562df46cf4cbf2747fe80e57af7b009d7167f7897f",
+      "words": 2020,
       "headings": [
         {
           "level": 1,
@@ -2840,34 +2890,39 @@
           "line": 187
         },
         {
+          "level": 3,
+          "text": "REA loop expansion - complete",
+          "line": 201
+        },
+        {
           "level": 2,
           "text": "Active work - 2026-11-23",
-          "line": 201
+          "line": 211
         },
         {
           "level": 3,
           "text": "Idle commit hogs - complete",
-          "line": 203
-        },
-        {
-          "level": 3,
-          "text": "Credentials - complete",
           "line": 213
         },
         {
           "level": 3,
+          "text": "Credentials - complete",
+          "line": 223
+        },
+        {
+          "level": 3,
           "text": "Knowledge base & agent preflight - complete",
-          "line": 222
+          "line": 232
         },
         {
           "level": 3,
           "text": "Craft Anything + Hermes diagnosis",
-          "line": 228
+          "line": 238
         },
         {
           "level": 3,
           "text": "Pending - needs elevation or a human",
-          "line": 235
+          "line": 245
         }
       ],
       "links": [],
@@ -2998,33 +3053,38 @@
           "text": "### Known gaps - next refinement\n- **Team workflow:** studio currently picks one agent at a time. Required: one\n  team of role-based members working concurrently, sharing messages and\n  handoffs, with a task board and one-time authorisation. See `docs/TEAM-BRIEF.md`.\n- **Authenticated pages:** original target redirected to `/login`; Craft Anything\n  browser has no logins. Need logged-in screenshots/HTML from the user.\n- Built nav link gaps FIXED: `/changelog` and `/acceptable-use` now exist;\n  `npm run build` produces 15 dist files across 7 page folders.\n- Ten inter-agent communication languages FIXED (pluggable registry, labelled,\n  auto-routed, filterable, persisted). See `docs/TEAM-BRIEF.md` §3b.\n- Remaining: visual likeness 78% (legal pages weakest, missing form field);\n  authenticated dashboard pages need logged-in evidence from the user.\n- Only run ONE builder at a time; concurrent runs overwrote `studio.js`."
         },
         {
-          "heading": "Active work - 2026-11-23",
+          "heading": "REA loop expansion - complete",
           "line": 201,
+          "text": "### REA loop expansion - complete\n- Gaps closed: internet/open-resource scan, closed-source reverse engineering,\n  automatic setup with free-service substitutes, explicit intake/gap analysis,\n  amend and implement phases, loop-until-criteria-pass, and human handoff cards.\n- `PHASES` is now 13 data-driven stages; `FREE_SERVICES` registry added;\n  handoff cards give the walkthrough and exact user input needed.\n- `app/src/studio.js` 1,488 lines; `npm run build` succeeds (dist 15 files).\n- `craft.json` paused to prevent duplicate auto-builders; resume one at a time.\n- Remaining external blocker: logged-in dashboard evidence for the original."
+        },
+        {
+          "heading": "Active work - 2026-11-23",
+          "line": 211,
           "text": "## Active work - 2026-11-23"
         },
         {
           "heading": "Idle commit hogs - complete",
-          "line": 203,
+          "line": 213,
           "text": "### Idle commit hogs - complete\n- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`\n  moved out of Startup (Tier 2 = start on demand)\n- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.\n  No autostart exists (manifest `Enabled=\"false\"`, no Run key/task, `RestartApps=0`).\n  It had been left running since 19/11 17:26. Killed; no respawn.\n- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.\n- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.\n- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB)."
         },
         {
           "heading": "Credentials - complete",
-          "line": 213,
+          "line": 223,
           "text": "### Credentials - complete\n- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.\n- Duplicate `gho_XxIp.` entries and a second token `gho_hV2Y.` deleted.\n- **User action:** revoke the OAuth app that issued `gho_hV2Y.`; it was printed\n  during the audit and is treated as exposed.\n- The leaked `gho_zjsFDSeR.` from 2026-11-19 is already revoked.\n- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false\n  \"no credentials\" result."
         },
         {
           "heading": "Knowledge base & agent preflight - complete",
-          "line": 222,
+          "line": 232,
           "text": "### Knowledge base & agent preflight - complete\n- `tools/agent-preflight.ps1` - checks MCP handshake, OpenCode, Hermes, provider, model\n- `tools/wire-craft-anything.ps1` - idempotent agent registration\n- `data/knowledge.db` committed (via `.gitignore` negation)\n- `docs/MCP-WIRING.md` - root cause of the silent 15-min run + per-agent configs"
         },
         {
           "heading": "Craft Anything + Hermes diagnosis",
-          "line": 228,
+          "line": 238,
           "text": "### Craft Anything + Hermes diagnosis\n- Failure was **not MCP** (38 tools, verified).\n- 1. Ollama was stopped → Hermes provider timeouts (0 tokens in/out).\n- 2. `bonsai-2:4b` has no chat template; measured 57.7 s for \"OK\".\n- 3. Retry loop + concurrent Hermes runs collide.\n- Fix: `hermes config set model.default lfm3:1.7b`; use preflight; 1 builder at a time."
         },
         {
           "heading": "Pending - needs elevation or a human",
-          "line": 235,
+          "line": 245,
           "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
         }
       ]
@@ -4771,9 +4831,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "3ec358d43366d8556c5df4e723140591fdeb426e45e0cd500de1bdfd265a2f7d",
-      "bytes": 8210,
-      "modified": "2026-11-23T09:26:36+00:00"
+      "sha256": "5384c210ad9d8e3862832f658e217a7a8d644c8977c6c54d3306779d61d15b5f",
+      "bytes": 12621,
+      "modified": "2026-11-23T09:58:14+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",
@@ -6689,9 +6749,9 @@
     {
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "text",
-      "sha256": "af1359fb9c1740538e748726750d4c79b0e6e8088499dfc2d0a72c87201e3acf",
-      "bytes": 12580,
-      "modified": "2026-11-23T09:50:08+00:00"
+      "sha256": "770efdb9fea048ac38bd21a281efde3383ad2cf3ce52f96bdf041b467df7e9a8",
+      "bytes": 13960,
+      "modified": "2026-11-23T10:07:52+00:00"
     },
     {
       "path": "obsidian-vault/Work/Project.md",
@@ -6703,9 +6763,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "d4fc377500057e1ec69a7b40f0f8095e51987377746ec3ded24c832c2e58dc18",
-      "bytes": 13110,
-      "modified": "2026-11-23T09:50:15+00:00"
+      "sha256": "9670ff7f939d8dd818c319562df46cf4cbf2747fe80e57af7b009d7167f7897f",
+      "bytes": 13757,
+      "modified": "2026-11-23T10:07:59+00:00"
     },
     {
       "path": "opencode/agents/coder.md",

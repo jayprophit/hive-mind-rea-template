@@ -198,6 +198,16 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
   authenticated dashboard pages need logged-in evidence from the user.
 - Only run ONE builder at a time; concurrent runs overwrote `studio.js`.
 
+### REA loop expansion - complete
+- Gaps closed: internet/open-resource scan, closed-source reverse engineering,
+  automatic setup with free-service substitutes, explicit intake/gap analysis,
+  amend and implement phases, loop-until-criteria-pass, and human handoff cards.
+- `PHASES` is now 13 data-driven stages; `FREE_SERVICES` registry added;
+  handoff cards give the walkthrough and exact user input needed.
+- `app/src/studio.js` 1,488 lines; `npm run build` succeeds (dist 15 files).
+- `craft.json` paused to prevent duplicate auto-builders; resume one at a time.
+- Remaining external blocker: logged-in dashboard evidence for the original.
+
 ## Active work - 2026-11-23
 
 ### Idle commit hogs - complete

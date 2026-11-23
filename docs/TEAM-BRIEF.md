@@ -84,17 +84,72 @@ Rules:
 - Reports (round summary, messages, decisions, files changed) can be sent to a
   configured email address or chat webhook. No API keys are hard-coded.
 
-### 5. Autonomy — it must be able to do the work on its own
+### 5. Autonomy — the continuous REA loop
 
-- Given a task, the team runs the full loop without hand-holding:
-  **plan → research → build → test → check → fix → report**.
-- Members resolve their own problems: if a tool fails, retry with a different
-  approach; if a step is blocked, post it to the channel and let another role
-  pick it up. Do not stop at the first error.
-- The team can plan, research, build, test, document and report. A visible
-  activity log shows what each member did and why.
-- Human authorisation is given once and remembered. Only genuinely sensitive
-  or irreversible actions should re-ask.
+Given a task, the team runs this loop **without hand-holding**, and keeps
+cycling until the task's acceptance criteria pass or a human-only item blocks it:
+
+| # | Phase | Key | What must happen |
+|---|---|---|---|
+| 1 | Intake + gap analysis | `intake` | Restate the task, write acceptance criteria, list what is known/unknown, identify exactly what is missing and what the user must supply. Produce a gap list with severity. |
+| 2 | Plan | `plan` | Decompose the gaps into role-sized jobs, assign owners, set order and dependencies. |
+| 3 | Internet + open resources | `discover` | Search the internet for similar builds, prior art, docs and data. Check open-source repos, public datasets and free services. Record each source with a URL and a one-line finding. |
+| 4 | Reverse-engineer closed sources | `reverse` | Where a target is closed, inspect what is observable: page/HTML, JS bundles, network requests, file formats, strings and behaviour. Record evidence; never copy proprietary code into `app/`. |
+| 5 | Automatic setup | `setup` | Install/configure whatever the build needs: tools, free-tier accounts/endpoints, model providers, storage and integrations. Use free substitutes for paid services (see registry). |
+| 6 | Build | `build` | Produce the first working version from the gathered evidence. |
+| 7 | Test | `test` | Run automated checks: build, links, console errors, unit tests, visual comparison. |
+| 8 | Check / verify | `check` | Independent review against the acceptance criteria by roles that did not build it. |
+| 9 | Fix errors | `fix` | Correct every failure; re-run the failing check. |
+| 10 | Amend | `amend` | Improve the result using new evidence: wording, layout, logic, data and missing content. |
+| 11 | Implement | `implement` | Integrate the amended work, rebuild and freeze a version. |
+| 12 | Report + retrospective | `report` | Write the round report, what changed, what is still blocked, and the next improvement. |
+| 13 | Loop | `loop` | If any acceptance criterion fails, return to phase 3 (new evidence) or 6 (rebuild) with a new attempt. Continue until achieved or blocked only on the human gate. |
+
+Rules:
+
+- A task is `done` only when every acceptance criterion passes and the gap
+  list is closed. "Good enough" is not a stopping condition.
+- Failures never end the loop: retry with a different approach, then hand the
+  job to another role if it stays blocked.
+- `PHASES` in code must be data-driven so new phases can be added without
+  rewriting the runner.
+- The activity log must show phase, attempt number, evidence used and owner.
+
+### 5b. Free services instead of paid ones
+
+Keep a `FREE_SERVICES` registry that maps a paid capability to a free/open
+substitute and uses it automatically unless the user supplies their own:
+
+| Paid capability | Free substitute |
+|---|---|
+| Search / web data | Marginalia, Hacker News, Wikipedia, direct site fetch, Bing/DDG HTML, user's browser via `browse` MCP |
+| LLM inference | Nous free tier models, OpenCode free models, local Ollama fallback |
+| Repo / hosting | GitHub free, GitHub Pages, local git |
+| Storage / DB | IndexedDB + local SQLite knowledge databases in this repo |
+| Diagrams / docs | Mermaid, Markdown, Open XML (.docx/.xlsx/.pptx), CSV, SVG, HTML |
+| Email reports | `mailto:` draft plus a user-configured free webhook |
+| Payments | Stripe/PayPal **test mode** with the user's own key; no gating of features |
+| OCR / PDF / media | Local Python libs already installed (pypdf, Pillow, pandas) |
+
+Every substitute records `substitutesFor`, cost `0`, and a source URL. If a
+free option cannot do the job, the team produces a user handoff card instead
+of silently failing or buying anything.
+
+### 5c. Human gate — only what the person must do
+
+When a step needs a login, API key, payment credential, irreversible action or
+authorisation, the team must not stop the whole loop. It creates a **handoff
+card** containing:
+
+- exactly what is needed and why (one short paragraph),
+- a numbered click-by-click walkthrough to get it,
+- the precise field/link/permission required,
+- which task and phase is waiting,
+- a "continue without it" fallback if one exists.
+
+All other members keep working on independent gaps. Once the user supplies the
+item, the waiting phase resumes automatically. Authorisation given once is
+remembered; only sensitive or irreversible actions ask again.
 
 ### 6. Payments (commerce, not feature gates)
 
@@ -138,12 +193,21 @@ Rules:
 5. The task board updates automatically as work moves between members.
 6. Authorisation is requested once, then remembered.
 7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.
-8. A task runs plan→research→build→test→fix→report without manual steps; a
-   failed step is retried or handed to another role, not left hanging.
+8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →
+   discover internet+open resources → reverse-engineer closed sources →
+   automatic setup → build → test → check → fix → amend → implement → report →
+   loop) without manual steps. It keeps cycling until every acceptance
+   criterion passes or a human-only item is handed off.
 9. A payment integration can create a test-mode checkout and record it, while
    no feature is locked behind payment.
 10. Each round produces a retrospective and a visible completion metric.
 11. At least ten communication languages/types are supported, each message is
    labelled with its type, the channel can be filtered by type, and new types
    are added through a registry.
-12. `npm run build` succeeds and the visual check still passes.
+12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and
+   uses them automatically; no paid tool is required to complete a task.
+13. Human-only items produce a handoff card with the walkthrough and the exact
+   field/permission needed, while other members keep working.
+14. The gap list, sources with URLs, attempts and evidence are visible in the UI
+   and written into the round report.
+15. `npm run build` succeeds and the visual check still passes.
