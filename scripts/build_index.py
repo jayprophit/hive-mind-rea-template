@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""Build a portable, searchable index of this repository.
+"""Build a portable, searchable index of a repository OR a project workspace.
 
 Outputs
 -------
-data/index.json    structured, diffable dump (documents, headings, links, facts)
-data/knowledge.db  SQLite + FTS5 for fast offline search
+<root>/data/index.json    structured, diffable dump
+<root>/data/knowledge.db  SQLite + FTS5 for fast offline search
 
 Run from anywhere:
-    python scripts/build_index.py
+    python scripts/build_index.py                       # this template
+    python scripts/build_index.py --root "C:\\path\\project" --project \
+        --out "C:\\repo\\projects\\name\\knowledge.db"   # project copy
 
-The index is deliberately built from files that are safe to publish. Runtime
-state (repos/, Hermes caches, *.db, session logs) is excluded.
+The project mode uses the same schema as the template (so it is a copy of the
+template database), then adds project-only tables: assets, sources, runs,
+approvals. Every file is recorded once in `sources` with a sha256 so nothing is
+duplicated or silently missed.
 """
 from __future__ import annotations
 
@@ -33,9 +37,19 @@ DATA = ROOT / "data"
 DB_PATH = DATA / "knowledge.db"
 JSON_PATH = DATA / "index.json"
 
+# Set by main(); project mode builds a separate database from the same schema.
+PROJECT_MODE = False
+
 TEXT_SUFFIXES = {
     ".md", ".markdown", ".txt", ".yaml", ".yml", ".json", ".jsonl",
     ".py", ".ps1", ".sh", ".toml", ".ini", ".cfg", ".html", ".css", ".js",
+    ".svg", ".csv", ".xml",
+}
+
+ASSET_SUFFIXES = {
+    ".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".ico", ".avif",
+    ".otf", ".ttf", ".woff", ".woff2", ".eot", ".pdf", ".mp3", ".mp4",
+    ".wav", ".zip", ".glb", ".gltf",
 }
 
 EXCLUDE_DIRS = {
@@ -64,11 +78,21 @@ def rel_posix(path: Path) -> str:
 
 def should_skip(path: Path) -> bool:
     rel = rel_posix(path)
-    if rel in EXCLUDE_FILES:
+    if (rel in EXCLUDE_FILES or rel.endswith("knowledge.db")
+            or rel.endswith("index.json") or rel.endswith("knowledge.json")):
         return True
-    if any(part in EXCLUDE_DIRS for part in path.relative_to(ROOT).parts):
+    dirs = set(EXCLUDE_DIRS)
+    if PROJECT_MODE:
+        # A project's dist/ is output worth recording, not runtime state.
+        dirs.discard("dist")
+        dirs.discard("build")
+    if any(part in dirs for part in path.relative_to(ROOT).parts):
         return True
-    if rel.startswith("hermes/profiles/") and any(s in f"/{rel}" for s in HERMES_SKIP):
+    if not PROJECT_MODE and rel.startswith("hermes/profiles/") and any(
+        s in f"/{rel}" for s in HERMES_SKIP
+    ):
+        return True
+    if rel.endswith(".db-shm") or rel.endswith(".db-wal"):
         return True
     return False
 
@@ -190,25 +214,131 @@ def load_stack_facts():
     return facts
 
 
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    try:
+        with path.open("rb") as fh:
+            for block in iter(lambda: fh.read(65536), b""):
+                h.update(block)
+    except OSError:
+        return ""
+    return h.hexdigest()
+
+
+def parse_activity(path: Path):
+    """build-activity.log -> (time, kind, text) rows."""
+    rows = []
+    if not path.exists():
+        return rows
+    for line in read_text(path).splitlines():
+        m = re.match(r"^(\d\d:\d\d:\d\d)\s+(\w+)\s+(.*)$", line)
+        if m:
+            rows.append((m.group(1), m.group(2), m.group(3)[:2000]))
+    return rows
+
+
+def parse_inbox(root: Path):
+    """Inbox questions/approvals -> rows with answered/waiting status."""
+    rows = []
+    inbox = root / "inbox"
+    if not inbox.exists():
+        return rows
+    for p in sorted(inbox.glob("*.json")):
+        if p.name == "build-progress.json":
+            continue
+        try:
+            d = json.loads(read_text(p))
+        except json.JSONDecodeError:
+            continue
+        answered = list(inbox.glob(str(p.stem.split("-request")[0]) + "*.answer.json"))
+        rows.append((
+            d.get("id", p.stem), d.get("kind", ""), d.get("title", ""),
+            d.get("action", ""), d.get("created_ms", ""),
+            "answered" if answered else "waiting",
+        ))
+    return rows
+
+
+def project_facts(root: Path):
+    """Curated facts pulled from a project's own state files."""
+    facts = []
+    cp = root / "craft.json"
+    if cp.exists():
+        try:
+            d = json.loads(read_text(cp))
+            for key in ("name", "builder", "status", "stack", "questions"):
+                if key in d:
+                    facts.append(("project", f"craft.{key}", str(d[key])))
+            if d.get("request"):
+                facts.append(("project", "craft.request", str(d["request"])[:4000]))
+            if d.get("note"):
+                facts.append(("project", "craft.note", str(d["note"])[:1000]))
+            approvals = d.get("approvals", {})
+            for k, v in approvals.items():
+                facts.append(("project", f"approval.{k}", str(v)))
+            for i, c in enumerate(d.get("checks", []) or []):
+                facts.append(("check", f"check[{i}]", json.dumps(c)[:1000]))
+        except json.JSONDecodeError:
+            pass
+    return facts
+
+
 def build():
-    DATA.mkdir(parents=True, exist_ok=True)
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     documents = []
+    assets = []
+    sources = []
     all_facts = []
 
     for path in sorted(ROOT.rglob("*")):
-        if not path.is_file():
+        if not path.is_file() or should_skip(path):
             continue
-        if path.suffix.lower() not in TEXT_SUFFIXES:
+
+        suffix = path.suffix.lower()
+        rel = rel_posix(path)
+        stat = path.stat()
+        modified = datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc).isoformat(timespec="seconds")
+
+        # Binary evidence is recorded, never duplicated into text chunks.
+        if suffix in ASSET_SUFFIXES:
+            digest = sha256_file(path)
+            width = height = None
+            try:
+                from PIL import Image
+                with Image.open(path) as im:
+                    width, height = im.size
+            except Exception:
+                pass
+            assets.append({
+                "path": rel, "kind": suffix.lstrip("."), "bytes": stat.st_size,
+                "modified": modified, "sha256": digest,
+                "width": width, "height": height,
+            })
+            sources.append((rel, "asset", digest, stat.st_size, modified))
             continue
-        if should_skip(path):
+
+        # Very large evidence captures are recorded by hash, never chunked.
+        # Their content is already in the project; duplicating it here only
+        # inflates the database. The path + sha256 prevents anything being lost.
+        if PROJECT_MODE and ("evidence/" in rel or stat.st_size > 1_000_000):
+            digest = sha256_file(path)
+            sources.append((rel, "evidence" if "evidence/" in rel else "large_text",
+                            digest, stat.st_size, modified))
+            continue
+
+        if suffix not in TEXT_SUFFIXES:
+            digest = sha256_file(path)
+            sources.append((rel, "other", digest, stat.st_size, modified))
             continue
 
         text = read_text(path)
         if not text.strip():
+            sources.append((rel, "empty", sha256_file(path), stat.st_size, modified))
             continue
 
-        rel = rel_posix(path)
-        is_markdown = path.suffix.lower() in {".md", ".markdown"}
+        digest = hashlib.sha256(text.encode("utf-8", "ignore")).hexdigest()
+        sources.append((rel, "text", digest, stat.st_size, modified))
+        is_markdown = suffix in {".md", ".markdown"}
         title = first_title(text, path.stem) if is_markdown else path.stem
         headings = find_headings(text) if is_markdown else []
         links = sorted({m.group(1).strip() for m in WIKI_RE.finditer(text)} |
@@ -218,17 +348,17 @@ def build():
 
         documents.append({
             "path": rel,
-            "kind": path.suffix.lower().lstrip("."),
+            "kind": suffix.lstrip("."),
             "title": title,
-            "modified": datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).isoformat(timespec="seconds"),
-            "sha256": hashlib.sha256(text.encode("utf-8", "ignore")).hexdigest(),
+            "modified": modified,
+            "sha256": digest,
             "words": words,
             "headings": headings,
             "links": links,
             "chunks": [{"heading": h, "line": ln, "text": t} for h, ln, t in chunks],
         })
 
-    facts_path = DATA / "build-facts.json"
+    facts_path = ROOT / "data" / "build-facts.json"
     if facts_path.exists():
         try:
             facts = json.loads(read_text(facts_path))
@@ -237,17 +367,46 @@ def build():
             print(f"WARN: data/build-facts.json is not valid JSON: {exc}", file=sys.stderr)
     all_facts.extend(load_stack_facts())
 
+    runs = []
+    approvals = []
+    if PROJECT_MODE:
+        all_facts.extend(project_facts(ROOT))
+        runs = parse_activity(ROOT / "build-activity.log")
+        approvals = parse_inbox(ROOT)
+
     index = {
         "schema": "knowledge-index/v1",
+        "mode": "project" if PROJECT_MODE else "template",
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "root": str(ROOT),
+        "database": str(DB_PATH),
         "counts": {
             "documents": len(documents),
             "headings": sum(len(d["headings"]) for d in documents),
             "chunks": sum(len(d["chunks"]) for d in documents),
             "facts": len(all_facts),
+            "assets": len(assets),
+            "sources": len(sources),
+            "runs": len(runs),
+            "approvals": len(approvals),
         },
-        "documents": documents,
+        # Project JSON stays a manifest; the DB holds the full text and FTS.
+        "documents": documents if not PROJECT_MODE else [
+            {k: d[k] for k in ("path", "kind", "title", "modified", "sha256", "words")}
+            for d in documents
+        ],
+        "assets": assets,
+        "sources": [
+            {"path": p, "kind": k, "sha256": h, "bytes": b, "modified": m}
+            for p, k, h, b, m in sources
+        ],
+        "runs": [
+            {"time": t, "kind": k, "text": x} for t, k, x in runs
+        ],
+        "approvals": [
+            {"id": a, "kind": b, "title": c, "action": d, "created_ms": e, "status": f}
+            for a, b, c, d, e, f in approvals
+        ],
         "facts": [{"category": c, "key": k, "value": v} for c, k, v in all_facts],
     }
     JSON_PATH.write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -273,9 +432,21 @@ def build():
             id INTEGER PRIMARY KEY, doc_id INTEGER, target TEXT);
         CREATE TABLE facts(
             id INTEGER PRIMARY KEY, category TEXT, key TEXT, value TEXT);
+        CREATE TABLE assets(
+            id INTEGER PRIMARY KEY, path TEXT UNIQUE, kind TEXT, bytes INTEGER,
+            modified TEXT, sha256 TEXT, width INTEGER, height INTEGER);
+        CREATE TABLE sources(
+            id INTEGER PRIMARY KEY, path TEXT UNIQUE, kind TEXT, sha256 TEXT,
+            bytes INTEGER, modified TEXT);
+        CREATE TABLE runs(
+            id INTEGER PRIMARY KEY, time TEXT, kind TEXT, text TEXT);
+        CREATE TABLE approvals(
+            id TEXT PRIMARY KEY, kind TEXT, title TEXT, action TEXT,
+            created_ms TEXT, status TEXT);
         CREATE VIRTUAL TABLE chunks_fts USING fts5(
             text, heading, path UNINDEXED, doc_id UNINDEXED,
             tokenize='porter unicode61');
+        CREATE UNIQUE INDEX idx_facts ON facts(category, key);
         """
     )
 
@@ -297,25 +468,62 @@ def build():
                         (chunk["text"], chunk["heading"], doc["path"], doc_id))
 
     for category, key, value in all_facts:
-        con.execute("INSERT INTO facts(category,key,value) VALUES(?,?,?)", (category, key, value))
+        con.execute("INSERT OR REPLACE INTO facts(category,key,value) VALUES(?,?,?)",
+                    (category, key, value))
+    for a in assets:
+        con.execute("INSERT OR REPLACE INTO assets(path,kind,bytes,modified,sha256,width,height) "
+                    "VALUES(?,?,?,?,?,?,?)",
+                    (a["path"], a["kind"], a["bytes"], a["modified"], a["sha256"],
+                     a.get("width"), a.get("height")))
+    for p, k, h, b, m in sources:
+        con.execute("INSERT OR REPLACE INTO sources(path,kind,sha256,bytes,modified) VALUES(?,?,?,?,?)",
+                    (p, k, h, b, m))
+    for t, k, x in runs:
+        con.execute("INSERT INTO runs(time,kind,text) VALUES(?,?,?)", (t, k, x))
+    for a, b, c, d, e, f in approvals:
+        con.execute("INSERT OR REPLACE INTO approvals(id,kind,title,action,created_ms,status) "
+                    "VALUES(?,?,?,?,?,?)", (a, b, c, d, e, f))
 
     con.commit()
     con.close()
 
-    print(f"documents : {index['counts']['documents']}")
-    print(f"headings  : {index['counts']['headings']}")
-    print(f"chunks    : {index['counts']['chunks']}")
-    print(f"facts     : {index['counts']['facts']}")
-    print(f"json      : {JSON_PATH.relative_to(ROOT)} "
-          f"({JSON_PATH.stat().st_size / 1024:.0f} KB)")
-    print(f"database  : {DB_PATH.relative_to(ROOT)} "
-          f"({DB_PATH.stat().st_size / 1024:.0f} KB)")
+    print(f"mode      : {'project' if PROJECT_MODE else 'template'}")
+    print(f"root      : {ROOT}")
+    for key in ("documents", "headings", "chunks", "facts", "assets", "sources", "runs", "approvals"):
+        print(f"{key:<10}: {index['counts'][key]}")
+    print(f"json      : {JSON_PATH} ({JSON_PATH.stat().st_size / 1024:.0f} KB)")
+    print(f"database  : {DB_PATH} ({DB_PATH.stat().st_size / 1024:.0f} KB)")
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Build data/index.json and data/knowledge.db")
+    global ROOT, DATA, DB_PATH, JSON_PATH, PROJECT_MODE
+
+    parser = argparse.ArgumentParser(description="Build a template or project knowledge database")
+    parser.add_argument("--root", help="Folder to index (default: this repository)")
+    parser.add_argument("--out", help="Database file to write (default: <root>/data/knowledge.db)")
+    parser.add_argument("--json-out", help="JSON dump to write (default: beside the database)")
+    parser.add_argument("--project", action="store_true",
+                        help="Project mode: add assets, sources, runs and approvals")
     parser.add_argument("--quiet", action="store_true")
     args = parser.parse_args()
+
+    if args.root:
+        ROOT = Path(args.root).resolve()
+    DATA = ROOT / "data"
+
+    if args.out:
+        DB_PATH = Path(args.out).resolve()
+    else:
+        DB_PATH = DATA / "knowledge.db"
+
+    if args.json_out:
+        JSON_PATH = Path(args.json_out).resolve()
+    elif args.out:
+        JSON_PATH = DB_PATH.with_suffix(".json")
+    else:
+        JSON_PATH = DATA / "index.json"
+
+    PROJECT_MODE = args.project
     build()
 
 

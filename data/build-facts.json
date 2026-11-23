@@ -116,6 +116,19 @@
       "status": "present"
     }
   ],
+  "requirements": {
+    "team_not_picker": "The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.",
+    "team_behaviour": [
+      "Orchestrator decomposes a task and assigns roles; several members work concurrently",
+      "Shared message channel and task board visible in the UI; members post findings and hand off artefacts",
+      "Each role has goals, permissions and a status (working, waiting, done)",
+      "Human authorisation given once, then remembered; approvals are not re-requested every action",
+      "Auto mode supports hours, days, weeks, months, years and non-stop",
+      "Progress reports can be sent to email or a chat webhook",
+      "No subscription, credits or paid feature gates anywhere"
+    ],
+    "current_gap": "app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging."
+  },
   "lessons": [
     "A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.",
     "Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.",

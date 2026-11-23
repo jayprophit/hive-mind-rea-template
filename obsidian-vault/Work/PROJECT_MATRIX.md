@@ -177,6 +177,22 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
   and the new run is refining the existing app.
 - Keep exactly one builder at a time. Monitor `build-activity.log`.
 
+### Project database - complete
+- `data/knowledge.db` remains the generic template. `projects/polsia-free-v1/knowledge.db`
+  is the project's own copy (same schema + assets/sources/runs/approvals), with a
+  working copy in the project workspace `.hive/`.
+- Rebuild with `scripts/build_index.py --root <workspace> --project --out <db>`.
+- `sources` ledger gives one sha256 per file: nothing duplicated or missed.
+
+### Known gaps - next refinement
+- **Team workflow:** studio currently picks one agent at a time. Required: one
+  team of role-based members working concurrently, sharing messages and
+  handoffs, with a task board and one-time authorisation. See `docs/TEAM-BRIEF.md`.
+- **Authenticated pages:** original target redirected to `/login`; Craft Anything
+  browser has no logins. Need logged-in screenshots/HTML from the user.
+- Built nav still links to `/changelog` (and possibly `/acceptable-use`) with no
+  page present — check and fix in the next round.
+
 ## Active work - 2026-11-23
 
 ### Idle commit hogs - complete

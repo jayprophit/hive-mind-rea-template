@@ -1,12 +1,18 @@
 {
   "schema": "knowledge-index/v1",
-  "generated": "2026-11-23T07:22:44+00:00",
+  "mode": "template",
+  "generated": "2026-11-23T07:47:15+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
+  "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
-    "documents": 107,
-    "headings": 191,
-    "chunks": 410,
-    "facts": 141
+    "documents": 111,
+    "headings": 209,
+    "chunks": 440,
+    "facts": 150,
+    "assets": 0,
+    "sources": 333,
+    "runs": 0,
+    "approvals": 0
   },
   "documents": [
     {
@@ -55,9 +61,9 @@
       "path": "data/build-facts.json",
       "kind": "json",
       "title": "build-facts",
-      "modified": "2026-11-23T07:21:14+00:00",
-      "sha256": "bbc7779faa1d44ddfc678b76d8585646e0b50e060e6e04587d4d8e289f5d633a",
-      "words": 890,
+      "modified": "2026-11-23T07:46:02+00:00",
+      "sha256": "478d11611baea5c4607666c84d0ea9341fd1e9376b75ab924ba1e5d00774b89b",
+      "words": 1045,
       "headings": [],
       "links": [],
       "chunks": [
@@ -84,12 +90,17 @@
         {
           "heading": "",
           "line": 1,
-          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n"
+          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
+          "text": " hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer aut"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "s; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
         }
       ]
     },
@@ -860,6 +871,182 @@
           "heading": "2nd Brain Summary",
           "line": 258,
           "text": "## 2nd Brain Summary\n\n**You already have a second brain.** Your Obsidian vault at `C:\\Users\\jpowe\\Documents\\ObsidianVault\\` is a fully functional second brain following Tiago Forte's BASB methodology:\n\n1. **Capture**: Daily notes, agent vocabulary, project rows, tool manifests\n2. **Organize**: Daily/, Work/, Projects/, Dashboards/, Templates/, mcp/, docker/, docs/, tools/, repos/\n3. **Distill**: Agent_Vocabulary.md, Agent_Vocabulary_GrokBot.md, INTEGRATIONS.md\n4. **Express**: Grafana dashboards, PROJECT_MATRIX.md, Daily logs, git commits\n\n**Is it useful?** Yes — it's the backbone of your entire system. Every agent reads/writes to it. Grafana scrapes it for live metrics. The REA loop depends on it for tracking progress. Without it, you'd lose context between sessions.\n\n**What makes yours special:** It's not just notes — it's a living database that your AI team reads and writes to automatically. Every turn adds a row. requestId dedup prevents duplicates. The Grafana dashboard turns it into a live monitoring system."
+        }
+      ]
+    },
+    {
+      "path": "docs/PROJECT-DATABASE.md",
+      "kind": "md",
+      "title": "Template database vs project database",
+      "modified": "2026-11-23T07:46:09+00:00",
+      "sha256": "0e2f83755c419358ad0e1d327d63251e35ccf58ab0a614bebb2d89e367ba05aa",
+      "words": 672,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Template database vs project database",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "text": "Rebuild the project database",
+          "line": 17
+        },
+        {
+          "level": 2,
+          "text": "Same core schema",
+          "line": 33
+        },
+        {
+          "level": 2,
+          "text": "Query either database",
+          "line": 49
+        },
+        {
+          "level": 2,
+          "text": "Tools installed for this workflow",
+          "line": 72
+        },
+        {
+          "level": 2,
+          "text": "Current limitation — authenticated pages",
+          "line": 85
+        }
+      ],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "Template database vs project database",
+          "line": 1,
+          "text": "# Template database vs project database\n\nThere are **two separate SQLite files** with the same core schema:\n\n| File | Purpose |\n|---|---|\n| `data/knowledge.db` | The **template** — generic, publishable knowledge about the stack, machine, agents and docs. Safe to pull on any workstation. |\n| `projects/polsia-free-v1/knowledge.db` | This project's **own copy**, with the same tables plus project-only evidence, source ledger, build log and approvals. |\n\nThe project file is a copy of the template design, not a second copy of the\ntemplate's content. It contains only `polsia free v1` data.\n\nA working copy is also written into the project workspace at\n`C:\\Users\\jpowe\\Desktop\\projects\\polsia free v1\\.hive\\knowledge.db` so the agent\ncan read it locally without touching the repo."
+        },
+        {
+          "heading": "Rebuild the project database",
+          "line": 17,
+          "text": "## Rebuild the project database\n\n```powershell\ncd C:\\Users\\jpowe\\hive-mind-rea-template\npython scripts\\build_index.py `\n  --root \"C:\\Users\\jpowe\\Desktop\\projects\\polsia free v1\" `\n  --project `\n  --out \"C:\\Users\\jpowe\\hive-mind-rea-template\\projects\\polsia-free-v1\\knowledge.db\"\n\nCopy-Item projects\\polsia-free-v1\\knowledge.db `\n  \"C:\\Users\\jpowe\\Desktop\\projects\\polsia free v1\\.hive\\knowledge.db\" -Force\n```\n\nRun this after a build finishes so screenshots, `capture.json`, `docs-data.js`\nand the build log are current."
+        },
+        {
+          "heading": "Same core schema",
+          "line": 33,
+          "text": "## Same core schema\n\n`documents`, `headings`, `chunks`, `links`, `facts`, `chunks_fts` exist in both.\nThe project file adds:\n\n| Table | What it guarantees |\n|---|---|\n| `sources` | One row per file with `sha256`, bytes and modified time — nothing is silently missed or duplicated. `path` is unique. |\n| `assets` | Screenshots, fonts and binaries with hash, size and image dimensions. Duplicate files are detectable by identical `sha256`. |\n| `runs` | Every `build-activity.log` event (time, kind, text) — the full build history. |\n| `approvals` | Every inbox question/approval with answered/waiting status. |\n\nVery large evidence JSON files (14–16 MB in this project) are recorded in\n`sources` as `evidence` by hash and size, **not** chunked into FTS. This keeps\nthe project DB small (~5.6 MB) while still proving the file was seen."
+        },
+        {
+          "heading": "Query either database",
+          "line": 49,
+          "text": "## Query either database\n\n```powershell\npython scripts\\query.py --stats\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --stats\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --search \"cookie banner\"\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --runs 10\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --assets\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --sources\n\n# sqlite-utils is installed for ad-hoc SQL\npython -m sqlite_utils projects\\polsia-free-v1\\knowledge.db tables\npython -m sqlite_utils projects\\polsia-free-v1\\knowledge.db query \\\n  \"select kind, count(*), sum(bytes) from assets group by kind\"\n```\n\nUseful dedup check:\n\n```sql\nSELECT sha256, count(*) copies, group_concat(path)\nFROM sources GROUP BY sha256 HAVING copies > 1;\n```"
+        },
+        {
+          "heading": "Tools installed for this workflow",
+          "line": 72,
+          "text": "## Tools installed for this workflow\n\n| Tool | Why |\n|---|---|\n| `sqlite-utils` 4.2.1 | Query/inspect the two databases from the CLI |\n| Python `Pillow` | Image dimensions recorded in `assets` |\n| Python `PyYAML`, `pandas`, `matplotlib`, `python-docx`, `python-pptx`, `openpyxl` | Existing reporting stack — charts, Office output, stack parsing |\n| Craft Anything MCP (38 tools) | Evidence, web capture, rebuild checks, approvals |\n\nOptional, not installed (only if you want them): DB Browser for SQLite (GUI),\nDatasette (browser UI for the DB), `ripgrep`/`jq` for shell searching. None are\nneeded for the build to work."
+        },
+        {
+          "heading": "Current limitation — authenticated pages",
+          "line": 85,
+          "text": "## Current limitation — authenticated pages\n\nCraft Anything's `web_site_open` uses a **fresh browser profile with no logins**.\nThe original target `https://polsia.com/dashboard/untitled-l1v2k8` redirected to\n`/login`, so the capture contains only public pages. Any part of the logged-in\ndashboard cannot be reproduced from this evidence. Provide screenshots or saved\nHTML from a logged-in session, place them under `capture/dashboard/`, rebuild\nthe project database, and run another refinement round.\n\nA second known gap is functional, not visual: `app/src/studio.js` currently has\na **list of selectable agents**. The requested design is a **single team** whose\nmembers work concurrently, share messages and hand off work like a real\ncompany. That requirement is recorded in `data/build-facts.json` under\n`requirements` and must be the subject of the next refinement round."
+        }
+      ]
+    },
+    {
+      "path": "docs/TEAM-BRIEF.md",
+      "kind": "md",
+      "title": "Team workflow brief — polsia free v1",
+      "modified": "2026-11-23T07:46:30+00:00",
+      "sha256": "109d92e0871e3669bda3dd144194e522de52158d200a40ce7d2eb0b1e3c7e4ff",
+      "words": 547,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Team workflow brief — polsia free v1",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "text": "The correction",
+          "line": 3
+        },
+        {
+          "level": 2,
+          "text": "What to build in `app/`",
+          "line": 10
+        },
+        {
+          "level": 3,
+          "text": "1. One team, not a picker",
+          "line": 12
+        },
+        {
+          "level": 3,
+          "text": "2. Concurrent work with roles",
+          "line": 20
+        },
+        {
+          "level": 3,
+          "text": "3. Shared communication (the important part)",
+          "line": 30
+        },
+        {
+          "level": 3,
+          "text": "4. Automation and human oversight",
+          "line": 43
+        },
+        {
+          "level": 3,
+          "text": "5. Constraints",
+          "line": 52
+        },
+        {
+          "level": 2,
+          "text": "Acceptance criteria",
+          "line": 62
+        }
+      ],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "Team workflow brief — polsia free v1",
+          "line": 1,
+          "text": "# Team workflow brief — polsia free v1"
+        },
+        {
+          "heading": "The correction",
+          "line": 3,
+          "text": "## The correction\n\nThe current studio is a **picker**: a list of agents you select one at a time.\nThat is not what was asked for. The requested system is **one team** that works\ntogether, like a real company or organisation: members have roles, work at the\nsame time on the same task, and pass information between themselves."
+        },
+        {
+          "heading": "What to build in `app/`",
+          "line": 10,
+          "text": "## What to build in `app/`"
+        },
+        {
+          "heading": "1. One team, not a picker",
+          "line": 12,
+          "text": "### 1. One team, not a picker\n\n- Remove the \"choose an agent\" interaction as the primary mode.\n- Show a **team** of role-based members, all present and active on the current\n  task. Selecting a member opens their detail/status; it does not switch the\n  system to only that member.\n- Default state: the whole team is working on the shared task."
+        },
+        {
+          "heading": "2. Concurrent work with roles",
+          "line": 20,
+          "text": "### 2. Concurrent work with roles\n\n- A task is created once. The orchestrator decomposes it into role-sized jobs\n  and assigns them to several members **at the same time**.\n- Members have distinct roles (orchestrator, planner, researcher, engineer,\n  reviewer, tester, operations, integration, documentation, support, finance,\n  QA, etc.), each with goals, permissions and a live status:\n  `idle → working → blocked → handoff → done`.\n- Several members can be `working` simultaneously."
+        },
+        {
+          "heading": "3. Shared communication (the important part)",
+          "line": 30,
+          "text": "### 3. Shared communication (the important part)\n\n- Implement a **shared message bus** in the browser (event bus + `localStorage`\n  persistence, no backend):\n  - members post messages to the team channel with `{from, to, taskId, type, body, time}`\n  - `to` may be a member id, a role, or `all`\n  - a member's output can become another member's input (artefact handoff)\n- The UI shows a **team channel** (chronological messages), a **task board**\n  (to-do / in progress / review / done with owner and role), and a **handoff\n  trail** showing what each member passed to whom.\n- Members react to messages addressed to them and to new tasks in their role;\n  this is what makes it feel like a team rather than a list."
+        },
+        {
+          "heading": "4. Automation and human oversight",
+          "line": 43,
+          "text": "### 4. Automation and human oversight\n\n- Auto mode runs in rounds with intervals: hours, days, weeks, months, years,\n  or non-stop. A visible countdown shows the next round.\n- The person authorises once. That authorisation is remembered in local state;\n  ordinary actions do not ask again. Sensitive actions can still be gated.\n- Reports (round summary, messages, decisions, files changed) can be sent to a\n  configured email address or chat webhook. No API keys are hard-coded."
+        },
+        {
+          "heading": "5. Constraints",
+          "line": 52,
+          "text": "### 5. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
+        },
+        {
+          "heading": "Acceptance criteria",
+          "line": 62,
+          "text": "## Acceptance criteria\n\n1. One task assigned to the team causes several members to show `working` at\n   the same time.\n2. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n3. The task board updates automatically as work moves between members.\n4. Authorisation is requested once, then remembered.\n5. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n6. `npm run build` succeeds and the visual check still passes."
         }
       ]
     },
@@ -2192,9 +2379,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T07:22:04+00:00",
-      "sha256": "38e7fdb2717f30104bfe2ca6e8a75f8dc28f0cbefdedac62f30c860008bdafa2",
-      "words": 1510,
+      "modified": "2026-11-23T07:46:38+00:00",
+      "sha256": "cefc743e284ba4614d8216a97b0e0920a918b9e8426580a7d8f9d2fe108fab43",
+      "words": 1678,
       "headings": [
         {
           "level": 1,
@@ -2273,8 +2460,13 @@
         },
         {
           "level": 2,
+          "text": "Project database + the team correction",
+          "line": 199
+        },
+        {
+          "level": 2,
           "text": "Requests queued (for this machine's new build)",
-          "line": 200
+          "line": 217
         }
       ],
       "links": [],
@@ -2362,11 +2554,16 @@
         {
           "heading": "Build outcome so far",
           "line": 191,
-          "text": "### Build outcome so far\n- First CLI run built the Vite site (`app/`, `dist/` 9 files) and reached\n  **83% visual likeness, 6/6 claims** after refinement.\n- That run was killed by a 600 s tool timeout; the user restarted Craft Anything\n  at 07:19, and the fresh run is inspecting the existing app and continuing.\n- One transient tool error (`craft-anything_rebuild_status` missing `project`)\n  was recovered by the agent without intervention.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+          "text": "### Build outcome so far\n- First CLI run built the Vite site (`app/`, `dist/` 9 files) and reached\n  **83% visual likeness, 6/6 claims** after refinement.\n- That run was killed by a 600 s tool timeout; the user restarted Craft Anything\n  at 07:19, and the fresh run is inspecting the existing app and continuing.\n- One transient tool error (`craft-anything_rebuild_status` missing `project`)\n  was recovered by the agent without intervention."
+        },
+        {
+          "heading": "Project database + the team correction",
+          "line": 199,
+          "text": "## Project database + the team correction\n\n- Generalized `scripts/build_index.py`: `--root`, `--out`, `--project`.\n- Template DB: `data/knowledge.db` (109 docs, 420 chunks, 141 facts, 1.1 MB).\n- Project DB: `projects/polsia-free-v1/knowledge.db` (same core schema + assets,\n  sources, runs, approvals; 75 docs, 1,416 chunks, 40 assets, 224 sources,\n  720 run events, 5.6 MB). Copy also in the workspace `.hive/`.\n- `sources` gives one sha256 per file, so nothing is duplicated or missed.\n  Two 14-16 MB evidence JSON files are recorded by hash, not chunked.\n- Installed `sqlite-utils` 4.2.1; PIL already present for image dimensions.\n- **User correction:** the studio is a picker of individual agents, but the\n  requirement is one collaborative team working concurrently with shared\n  messages, handoffs and a task board. Spec written to `docs/TEAM-BRIEF.md`.\n- Authenticated dashboard pages still cannot be captured: Craft Anything's\n  browser uses a fresh profile with no logins, so the target redirected to\n  `/login`. Need logged-in screenshots/HTML from the user for those parts.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
         },
         {
           "heading": "Requests queued (for this machine's new build)",
-          "line": 200,
+          "line": 217,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
@@ -2463,9 +2660,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T07:22:11+00:00",
-      "sha256": "ff83ff5acbc9c82d743b030b0930128969e58fdd0e25f660b2d570ae540bff51",
-      "words": 1735,
+      "modified": "2026-11-23T07:46:47+00:00",
+      "sha256": "415811ac09a9abd1ad9d72fdf8a75d06998d3d0944773751f1823bd3f67395d4",
+      "words": 1875,
       "headings": [
         {
           "level": 1,
@@ -2568,34 +2765,44 @@
           "line": 173
         },
         {
-          "level": 2,
-          "text": "Active work - 2026-11-23",
+          "level": 3,
+          "text": "Project database - complete",
           "line": 180
         },
         {
           "level": 3,
+          "text": "Known gaps - next refinement",
+          "line": 187
+        },
+        {
+          "level": 2,
+          "text": "Active work - 2026-11-23",
+          "line": 196
+        },
+        {
+          "level": 3,
           "text": "Idle commit hogs - complete",
-          "line": 182
+          "line": 198
         },
         {
           "level": 3,
           "text": "Credentials - complete",
-          "line": 192
+          "line": 208
         },
         {
           "level": 3,
           "text": "Knowledge base & agent preflight - complete",
-          "line": 201
+          "line": 217
         },
         {
           "level": 3,
           "text": "Craft Anything + Hermes diagnosis",
-          "line": 207
+          "line": 223
         },
         {
           "level": 3,
           "text": "Pending - needs elevation or a human",
-          "line": 214
+          "line": 230
         }
       ],
       "links": [],
@@ -2716,33 +2923,43 @@
           "text": "### `polsia free v1` status\n- Was blocked; now building successfully. First CLI run produced the Vite site\n  (`app/`, `dist/` 9 files) and reached **83% likeness / 6 of 6 claims**.\n- That CLI run hit a 600 s tool timeout; user restarted Craft Anything at 07:19\n  and the new run is refining the existing app.\n- Keep exactly one builder at a time. Monitor `build-activity.log`."
         },
         {
-          "heading": "Active work - 2026-11-23",
+          "heading": "Project database - complete",
           "line": 180,
+          "text": "### Project database - complete\n- `data/knowledge.db` remains the generic template. `projects/polsia-free-v1/knowledge.db`\n  is the project's own copy (same schema + assets/sources/runs/approvals), with a\n  working copy in the project workspace `.hive/`.\n- Rebuild with `scripts/build_index.py --root <workspace> --project --out <db>`.\n- `sources` ledger gives one sha256 per file: nothing duplicated or missed."
+        },
+        {
+          "heading": "Known gaps - next refinement",
+          "line": 187,
+          "text": "### Known gaps - next refinement\n- **Team workflow:** studio currently picks one agent at a time. Required: one\n  team of role-based members working concurrently, sharing messages and\n  handoffs, with a task board and one-time authorisation. See `docs/TEAM-BRIEF.md`.\n- **Authenticated pages:** original target redirected to `/login`; Craft Anything\n  browser has no logins. Need logged-in screenshots/HTML from the user.\n- Built nav still links to `/changelog` (and possibly `/acceptable-use`) with no\n  page present — check and fix in the next round."
+        },
+        {
+          "heading": "Active work - 2026-11-23",
+          "line": 196,
           "text": "## Active work - 2026-11-23"
         },
         {
           "heading": "Idle commit hogs - complete",
-          "line": 182,
+          "line": 198,
           "text": "### Idle commit hogs - complete\n- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`\n  moved out of Startup (Tier 2 = start on demand)\n- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.\n  No autostart exists (manifest `Enabled=\"false\"`, no Run key/task, `RestartApps=0`).\n  It had been left running since 19/11 17:26. Killed; no respawn.\n- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.\n- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.\n- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB)."
         },
         {
           "heading": "Credentials - complete",
-          "line": 192,
+          "line": 208,
           "text": "### Credentials - complete\n- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.\n- Duplicate `gho_XxIp.` entries and a second token `gho_hV2Y.` deleted.\n- **User action:** revoke the OAuth app that issued `gho_hV2Y.`; it was printed\n  during the audit and is treated as exposed.\n- The leaked `gho_zjsFDSeR.` from 2026-11-19 is already revoked.\n- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false\n  \"no credentials\" result."
         },
         {
           "heading": "Knowledge base & agent preflight - complete",
-          "line": 201,
+          "line": 217,
           "text": "### Knowledge base & agent preflight - complete\n- `tools/agent-preflight.ps1` - checks MCP handshake, OpenCode, Hermes, provider, model\n- `tools/wire-craft-anything.ps1` - idempotent agent registration\n- `data/knowledge.db` committed (via `.gitignore` negation)\n- `docs/MCP-WIRING.md` - root cause of the silent 15-min run + per-agent configs"
         },
         {
           "heading": "Craft Anything + Hermes diagnosis",
-          "line": 207,
+          "line": 223,
           "text": "### Craft Anything + Hermes diagnosis\n- Failure was **not MCP** (38 tools, verified).\n- 1. Ollama was stopped → Hermes provider timeouts (0 tokens in/out).\n- 2. `bonsai-2:4b` has no chat template; measured 57.7 s for \"OK\".\n- 3. Retry loop + concurrent Hermes runs collide.\n- Fix: `hermes config set model.default lfm3:1.7b`; use preflight; 1 builder at a time."
         },
         {
           "heading": "Pending - needs elevation or a human",
-          "line": 214,
+          "line": 230,
           "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
         }
       ]
@@ -3596,6 +3813,23 @@
       ]
     },
     {
+      "path": "samples/out/ram-options.csv",
+      "kind": "csv",
+      "title": "ram-options",
+      "modified": "2026-11-19T16:52:44+00:00",
+      "sha256": "5bb357f9e396655ace132be32d69bad149d6e82859263e97f5b1c79dd4fd7da0",
+      "words": 89,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "﻿Retailer,Module,Price_GBP,Speed_MTs,Rank,Stock\nAmazon UK,Timetec 8GB DDR4-2666 PC4-21300,51.99,2666,1Rx8,In stock\nEbuyer,Origin Storage 8GB DDR4-2666 2Rx8,58.0,2666,2Rx8,In stock\nAmazon UK,Integral 8GB DDR4-2666 SODIMM,60.95,2666,1Rx8,In stock\nMr Memory,Mr Memory 8GB DDR4-2666 260-pin,62.4,2666,1Rx8,\"In stock, free delivery\"\nAmazon UK,Crucial CT8G4SFS8266 8GB DDR4-2666,63.0,2666,1Rx8,In stock\nAmazon UK,Crucial CT8G4SFRA32A 8GB DDR4-3200,84.23,3200,1Rx8,In stock"
+        }
+      ]
+    },
+    {
       "path": "samples/out/ram-price.html",
       "kind": "html",
       "title": "ram-price",
@@ -3619,6 +3853,33 @@
           "heading": "",
           "line": 1,
           "text": "text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 415.0 430)\">Integral 8GB DD…</text>\n<rect x=\"506.0\" y=\"160.4\" width=\"78.0\" height=\"249.6\" fill=\"#d97706\" rx=\"3\"/>\n<text x=\"545.0\" y=\"152.4\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">62.40</text>\n<text x=\"545.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 545.0 430)\">Mr Memory 8GB D…</text>\n<rect x=\"636.0\" y=\"158.0\" width=\"78.0\" height=\"252.0\" fill=\"#7c3aed\" rx=\"3\"/>\n<text x=\"675.0\" y=\"150.0\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">63.00</text>\n<text x=\"675.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 675.0 430)\">Crucial CT8G4SF…</text>\n<rect x=\"766.0\" y=\"73.1\" width=\"78.0\" height=\"336.9\" fill=\"#0891b2\" rx=\"3\"/>\n<text x=\"805.0\" y=\"65.1\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">84.23</text>\n<text x=\"805.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 805.0 430)\">Crucial CT8G4SF…</text>\n</svg></div></body></html>"
+        }
+      ]
+    },
+    {
+      "path": "samples/out/ram-price.svg",
+      "kind": "svg",
+      "title": "ram-price",
+      "modified": "2026-11-19T16:52:56+00:00",
+      "sha256": "7755b1d226e0d6be4b016ad7439485996c82b0eda40af924e2a4603bef9d682a",
+      "words": 612,
+      "headings": [],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"900\" height=\"520\" viewBox=\"0 0 900 520\" font-family=\"Segoe UI, Arial, sans-serif\">\n<rect width=\"900\" height=\"520\" fill=\"#ffffff\"/>\n<text x=\"450.0\" y=\"34\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"600\" fill=\"#0f172a\">8GB DDR4 SODIMM price, UK, Nov 2026</text>\n<line x1=\"90\" y1=\"410.0\" x2=\"870\" y2=\"410.0\" stroke=\"#e2e8f0\"/>\n<text x=\"80\" y=\"414.0\" text-anchor=\"end\" font-size=\"12\" fill=\"#64748b\">0</text>\n<line x1=\"90\" y1=\"342.0\" x2=\"870\" y2=\"342.0\" stroke=\"#e2e8f0\"/>\n<text x=\"80\" y=\"346.0\" text-anchor=\"end\" font-size=\"12\" fill=\"#64748b\">17</text>\n<line x1=\"90\" y1=\"274.0\" x2=\"870\" y2=\"274.0\" stroke=\"#e2e8f0\"/>\n<text x=\"80\" y=\"278.0\" text-anchor=\"end\" font-size=\"12\" fill=\"#64748b\">34</text>\n<line x1=\"90\" y1=\"206.0\" x2=\"870\" y2=\"206.0\" stroke=\"#e2e8f0\"/>\n<text x=\"80\" y=\"210.0\" text-anchor=\"end\" font-size=\"12\" fill=\"#64748b\">51</text>\n<line x1=\"90\" y1=\"138.0\" x2=\"870\" y2=\"138.0\" stroke=\"#e2e8f0\"/>\n<text x=\"80\" y=\"142.0\" text-anchor=\"end\" font-size=\"12\" fill=\"#64748b\">68</text>\n<line x1=\"90\" y1=\"70.0\" x2=\"870\" y2=\"70.0\" stroke=\"#e2e8f0\"/>\n<text x=\"80\" y=\"74.0\" text-anchor=\"end\" font-size=\"12\" fill=\"#64748b\">85</text>\n<line x1=\"90\" y1=\"410\" x2=\"870\" y2=\"410\" stroke=\"#94a3b8\"/>\n<rect x=\"116.0\" y=\"202.0\" width=\"78.0\" height=\"208.0\" fill=\"#2563eb\" rx=\"3\"/>\n<text x=\"155.0\" y=\"194.0\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fil"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "stroke=\"#94a3b8\"/>\n<rect x=\"116.0\" y=\"202.0\" width=\"78.0\" height=\"208.0\" fill=\"#2563eb\" rx=\"3\"/>\n<text x=\"155.0\" y=\"194.0\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">51.99</text>\n<text x=\"155.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 155.0 430)\">Timetec 8GB DDR…</text>\n<rect x=\"246.0\" y=\"178.0\" width=\"78.0\" height=\"232.0\" fill=\"#16a34a\" rx=\"3\"/>\n<text x=\"285.0\" y=\"170.0\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">58.00</text>\n<text x=\"285.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 285.0 430)\">Origin Storage …</text>\n<rect x=\"376.0\" y=\"166.2\" width=\"78.0\" height=\"243.8\" fill=\"#dc2626\" rx=\"3\"/>\n<text x=\"415.0\" y=\"158.2\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">60.95</text>\n<text x=\"415.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 415.0 430)\">Integral 8GB DD…</text>\n<rect x=\"506.0\" y=\"160.4\" width=\"78.0\" height=\"249.6\" fill=\"#d97706\" rx=\"3\"/>\n<text x=\"545.0\" y=\"152.4\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">62.40</text>\n<text x=\"545.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 545.0 430)\">Mr Memory 8GB D…</text>\n<rect x=\"636.0\" y=\"158.0\" width=\"78.0\" height=\"252.0\" fill=\"#7c3aed\" rx=\"3\"/>\n<text x=\"675.0\" y=\"150.0\" text-anchor=\""
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "155\" transform=\"rotate(-35 545.0 430)\">Mr Memory 8GB D…</text>\n<rect x=\"636.0\" y=\"158.0\" width=\"78.0\" height=\"252.0\" fill=\"#7c3aed\" rx=\"3\"/>\n<text x=\"675.0\" y=\"150.0\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">63.00</text>\n<text x=\"675.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 675.0 430)\">Crucial CT8G4SF…</text>\n<rect x=\"766.0\" y=\"73.1\" width=\"78.0\" height=\"336.9\" fill=\"#0891b2\" rx=\"3\"/>\n<text x=\"805.0\" y=\"65.1\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"#0f172a\">84.23</text>\n<text x=\"805.0\" y=\"430\" text-anchor=\"end\" font-size=\"12\" fill=\"#334155\" transform=\"rotate(-35 805.0 430)\">Crucial CT8G4SF…</text>\n</svg>"
         }
       ]
     },
@@ -3715,9 +3976,9 @@
       "path": "scripts/build_index.py",
       "kind": "py",
       "title": "build_index",
-      "modified": "2026-11-23T06:40:28+00:00",
-      "sha256": "da766d3126baee17bef0435fcb8ccd9c4b2286fda5fe46ef26366ef8101a04a8",
-      "words": 1283,
+      "modified": "2026-11-23T07:42:50+00:00",
+      "sha256": "07a569b9dfccae2a922baeb3bb65e8c83b4ece78db395651b4f0b447c42bbe34",
+      "words": 2283,
       "headings": [],
       "links": [
         "^\\"
@@ -3726,52 +3987,82 @@
         {
           "heading": "",
           "line": 1,
-          "text": "#!/usr/bin/env python3\n\"\"\"Build a portable, searchable index of this repository.\n\nOutputs\n-------\ndata/index.json    structured, diffable dump (documents, headings, links, facts)\ndata/knowledge.db  SQLite + FTS5 for fast offline search\n\nRun from anywhere:\n    python scripts/build_index.py\n\nThe index is deliberately built from files that are safe to publish. Runtime\nstate (repos/, Hermes caches, *.db, session logs) is excluded.\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport hashlib\nimport json\nimport re\nimport sqlite3\nimport sys\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\ntry:\n    import yaml  # PyYAML is optional; the index still builds without it\nexcept Exception:  # pragma: no cover\n    yaml = None\n\nROOT = Path(__file__).resolve().parents[1]\nDATA = ROOT / \"data\"\nDB_PATH = DATA / \"knowledge.db\"\nJSON_PATH = DATA / \"index.json\"\n\nTEXT_SUFFIXES = {\n    \".md\", \".markdown\", \".txt\", \".yaml\", \".yml\", \".json\", \".jsonl\",\n    \".py\", \".ps1\", \".sh\", \".toml\", \".ini\", \".cfg\", \".html\", \".css\", \".js\",\n}\n\nEXCLUDE_DIRS = {\n    \".git\", \"repos\", \"node_modules\", \"__pycache__\", \".venv\", \"venv\",\n    \".pytest_cache\", \".mypy_cache\", \"dist\", \"build\", \".next\", \".cache\",\n}\n\n# Hermes profile subtrees that are runtime state, not knowledge.\nHERMES_SKIP = (\n    \"/cache/\", \"/logs/\", \"/backups/\", \"/sessions/\", \"/runtime/\",\n    \"/audio_cache/\", \"/image_cache/\", \"/pairing/\", "
+          "text": "#!/usr/bin/env python3\n\"\"\"Build a portable, searchable index of a repository OR a project workspace.\n\nOutputs\n-------\n<root>/data/index.json    structured, diffable dump\n<root>/data/knowledge.db  SQLite + FTS5 for fast offline search\n\nRun from anywhere:\n    python scripts/build_index.py                       # this template\n    python scripts/build_index.py --root \"C:\\\\path\\\\project\" --project \\\n        --out \"C:\\\\repo\\\\projects\\\\name\\\\knowledge.db\"   # project copy\n\nThe project mode uses the same schema as the template (so it is a copy of the\ntemplate database), then adds project-only tables: assets, sources, runs,\napprovals. Every file is recorded once in `sources` with a sha256 so nothing is\nduplicated or silently missed.\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport hashlib\nimport json\nimport re\nimport sqlite3\nimport sys\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\ntry:\n    import yaml  # PyYAML is optional; the index still builds without it\nexcept Exception:  # pragma: no cover\n    yaml = None\n\nROOT = Path(__file__).resolve().parents[1]\nDATA = ROOT / \"data\"\nDB_PATH = DATA / \"knowledge.db\"\nJSON_PATH = DATA / \"index.json\"\n\n# Set by main(); project mode builds a separate database from the same schema.\nPROJECT_MODE = False\n\nTEXT_SUFFIXES = {\n    \".md\", \".markdown\", \".txt\", \".yaml\", \".yml\", \".json\", \".jsonl\",\n    \".py\", \".ps1\", \".sh\", \".tom"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "subtrees that are runtime state, not knowledge.\nHERMES_SKIP = (\n    \"/cache/\", \"/logs/\", \"/backups/\", \"/sessions/\", \"/runtime/\",\n    \"/audio_cache/\", \"/image_cache/\", \"/pairing/\", \"/plugin-update-checks/\",\n    \"/platforms/\",\n)\n\nEXCLUDE_FILES = {\"data/index.json\", \"data/knowledge.db\", \"package-lock.json\"}\n\nHEADING_RE = re.compile(r\"^(#{1,6})\\s+(.+?)\\s*$\")\nFENCE_RE = re.compile(r\"^\\s*(```|~~~)\")\nWIKI_RE = re.compile(r\"\\[\\[([^\\]|#]+)(?:[|#][^\\]]*)?\\]\\]\")\nMD_LINK_RE = re.compile(r\"\\[[^\\]]*\\]\\(([^)]+)\\)\")\n\n\ndef rel_posix(path: Path) -> str:\n    return path.relative_to(ROOT).as_posix()\n\n\ndef should_skip(path: Path) -> bool:\n    rel = rel_posix(path)\n    if rel in EXCLUDE_FILES:\n        return True\n    if any(part in EXCLUDE_DIRS for part in path.relative_to(ROOT).parts):\n        return True\n    if rel.startswith(\"hermes/profiles/\") and any(s in f\"/{rel}\" for s in HERMES_SKIP):\n        return True\n    return False\n\n\ndef read_text(path: Path) -> str:\n    try:\n        return path.read_text(encoding=\"utf-8\", errors=\"ignore\")\n    except OSError:\n        return \"\"\n\n\ndef find_headings(text: str):\n    \"\"\"ATX headings outside fenced code blocks, with 1-based line numbers.\"\"\"\n    out = []\n    in_fence = False\n    for i, line in enumerate(text.splitlines(), 1):\n        if FENCE_RE.match(line):\n            in_fence = not in_fence\n            continue\n        if in_fence:\n            continue\n   "
+          "text": " separate database from the same schema.\nPROJECT_MODE = False\n\nTEXT_SUFFIXES = {\n    \".md\", \".markdown\", \".txt\", \".yaml\", \".yml\", \".json\", \".jsonl\",\n    \".py\", \".ps1\", \".sh\", \".toml\", \".ini\", \".cfg\", \".html\", \".css\", \".js\",\n    \".svg\", \".csv\", \".xml\",\n}\n\nASSET_SUFFIXES = {\n    \".png\", \".jpg\", \".jpeg\", \".gif\", \".webp\", \".bmp\", \".ico\", \".avif\",\n    \".otf\", \".ttf\", \".woff\", \".woff2\", \".eot\", \".pdf\", \".mp3\", \".mp4\",\n    \".wav\", \".zip\", \".glb\", \".gltf\",\n}\n\nEXCLUDE_DIRS = {\n    \".git\", \"repos\", \"node_modules\", \"__pycache__\", \".venv\", \"venv\",\n    \".pytest_cache\", \".mypy_cache\", \"dist\", \"build\", \".next\", \".cache\",\n}\n\n# Hermes profile subtrees that are runtime state, not knowledge.\nHERMES_SKIP = (\n    \"/cache/\", \"/logs/\", \"/backups/\", \"/sessions/\", \"/runtime/\",\n    \"/audio_cache/\", \"/image_cache/\", \"/pairing/\", \"/plugin-update-checks/\",\n    \"/platforms/\",\n)\n\nEXCLUDE_FILES = {\"data/index.json\", \"data/knowledge.db\", \"package-lock.json\"}\n\nHEADING_RE = re.compile(r\"^(#{1,6})\\s+(.+?)\\s*$\")\nFENCE_RE = re.compile(r\"^\\s*(```|~~~)\")\nWIKI_RE = re.compile(r\"\\[\\[([^\\]|#]+)(?:[|#][^\\]]*)?\\]\\]\")\nMD_LINK_RE = re.compile(r\"\\[[^\\]]*\\]\\(([^)]+)\\)\")\n\n\ndef rel_posix(path: Path) -> str:\n    return path.relative_to(ROOT).as_posix()\n\n\ndef should_skip(path: Path) -> bool:\n    rel = rel_posix(path)\n    if (rel in EXCLUDE_FILES or rel.endswith(\"knowledge.db\")\n            or rel.endswith(\"index.json\") or rel.ends"
         },
         {
           "heading": "",
           "line": 1,
-          "text": " i, line in enumerate(text.splitlines(), 1):\n        if FENCE_RE.match(line):\n            in_fence = not in_fence\n            continue\n        if in_fence:\n            continue\n        m = HEADING_RE.match(line)\n        if m:\n            out.append({\"level\": len(m.group(1)), \"text\": m.group(2).strip(), \"line\": i})\n    return out\n\n\ndef first_title(text: str, fallback: str) -> str:\n    for h in find_headings(text):\n        if h[\"level\"] == 1:\n            return h[\"text\"]\n    return fallback\n\n\ndef split_chunks(text: str, max_chars: int = 1400, overlap: int = 180):\n    \"\"\"Split on headings (outside fences), then hard-wrap long sections.\"\"\"\n    sections = []\n    heading, start, buf = \"\", 1, []\n    in_fence = False\n\n    for i, line in enumerate(text.splitlines(keepends=True), 1):\n        if FENCE_RE.match(line):\n            in_fence = not in_fence\n        m = None if in_fence else HEADING_RE.match(line)\n        if m:\n            if buf:\n                sections.append((heading, start, \"\".join(buf)))\n            heading, start, buf = m.group(2).strip(), i, [line]\n        else:\n            buf.append(line)\n    if buf:\n        sections.append((heading, start, \"\".join(buf)))\n\n    chunks = []\n    for heading, line, body in sections:\n        body = body.strip()\n        if not body:\n            continue\n        if len(body) <= max_chars:\n            chunks.append((heading, line, body))\n    "
+          "text": "\n\n\ndef should_skip(path: Path) -> bool:\n    rel = rel_posix(path)\n    if (rel in EXCLUDE_FILES or rel.endswith(\"knowledge.db\")\n            or rel.endswith(\"index.json\") or rel.endswith(\"knowledge.json\")):\n        return True\n    dirs = set(EXCLUDE_DIRS)\n    if PROJECT_MODE:\n        # A project's dist/ is output worth recording, not runtime state.\n        dirs.discard(\"dist\")\n        dirs.discard(\"build\")\n    if any(part in dirs for part in path.relative_to(ROOT).parts):\n        return True\n    if not PROJECT_MODE and rel.startswith(\"hermes/profiles/\") and any(\n        s in f\"/{rel}\" for s in HERMES_SKIP\n    ):\n        return True\n    if rel.endswith(\".db-shm\") or rel.endswith(\".db-wal\"):\n        return True\n    return False\n\n\ndef read_text(path: Path) -> str:\n    try:\n        return path.read_text(encoding=\"utf-8\", errors=\"ignore\")\n    except OSError:\n        return \"\"\n\n\ndef find_headings(text: str):\n    \"\"\"ATX headings outside fenced code blocks, with 1-based line numbers.\"\"\"\n    out = []\n    in_fence = False\n    for i, line in enumerate(text.splitlines(), 1):\n        if FENCE_RE.match(line):\n            in_fence = not in_fence\n            continue\n        if in_fence:\n            continue\n        m = HEADING_RE.match(line)\n        if m:\n            out.append({\"level\": len(m.group(1)), \"text\": m.group(2).strip(), \"line\": i})\n    return out\n\n\ndef first_title(text: str, fallbac"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "ne, body in sections:\n        body = body.strip()\n        if not body:\n            continue\n        if len(body) <= max_chars:\n            chunks.append((heading, line, body))\n            continue\n        start_at = 0\n        while start_at < len(body):\n            piece = body[start_at:start_at + max_chars]\n            chunks.append((heading, line, piece))\n            if start_at + max_chars >= len(body):\n                break\n            start_at += max_chars - overlap\n    return chunks\n\n\ndef hard_wrap(text: str, max_chars: int = 1400, overlap: int = 180):\n    text = text.strip()\n    if not text:\n        return []\n    chunks = []\n    start = 0\n    while start < len(text):\n        chunks.append((\"\", 1, text[start:start + max_chars]))\n        if start + max_chars >= len(text):\n            break\n        start += max_chars - overlap\n    return chunks\n\n\ndef flatten_facts(obj, prefix=\"\", category=\"\"):\n    out = []\n    if isinstance(obj, dict):\n        for k, v in obj.items():\n            key = f\"{prefix}.{k}\" if prefix else k\n            out.extend(flatten_facts(v, key, category or k))\n    elif isinstance(obj, list):\n        for i, v in enumerate(obj):\n            out.extend(flatten_facts(v, f\"{prefix}[{i}]\", category))\n    else:\n        out.append((category or \"general\", prefix, str(obj)))\n    return out\n\n\ndef load_stack_facts():\n    path = ROOT / \"core\" / \"stack.yaml\"\n    if not "
+          "text": "= HEADING_RE.match(line)\n        if m:\n            out.append({\"level\": len(m.group(1)), \"text\": m.group(2).strip(), \"line\": i})\n    return out\n\n\ndef first_title(text: str, fallback: str) -> str:\n    for h in find_headings(text):\n        if h[\"level\"] == 1:\n            return h[\"text\"]\n    return fallback\n\n\ndef split_chunks(text: str, max_chars: int = 1400, overlap: int = 180):\n    \"\"\"Split on headings (outside fences), then hard-wrap long sections.\"\"\"\n    sections = []\n    heading, start, buf = \"\", 1, []\n    in_fence = False\n\n    for i, line in enumerate(text.splitlines(keepends=True), 1):\n        if FENCE_RE.match(line):\n            in_fence = not in_fence\n        m = None if in_fence else HEADING_RE.match(line)\n        if m:\n            if buf:\n                sections.append((heading, start, \"\".join(buf)))\n            heading, start, buf = m.group(2).strip(), i, [line]\n        else:\n            buf.append(line)\n    if buf:\n        sections.append((heading, start, \"\".join(buf)))\n\n    chunks = []\n    for heading, line, body in sections:\n        body = body.strip()\n        if not body:\n            continue\n        if len(body) <= max_chars:\n            chunks.append((heading, line, body))\n            continue\n        start_at = 0\n        while start_at < len(body):\n            piece = body[start_at:start_at + max_chars]\n            chunks.append((heading, line, piece))\n       "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "}]\", category))\n    else:\n        out.append((category or \"general\", prefix, str(obj)))\n    return out\n\n\ndef load_stack_facts():\n    path = ROOT / \"core\" / \"stack.yaml\"\n    if not path.exists() or yaml is None:\n        return []\n    try:\n        stack = yaml.safe_load(read_text(path)) or {}\n    except Exception:\n        return []\n    facts = [\n        (\"stack\", \"schema\", str(stack.get(\"schema\", \"\"))),\n        (\"stack\", \"name\", str(stack.get(\"name\", \"\"))),\n        (\"stack\", \"version\", str(stack.get(\"version\", \"\"))),\n    ]\n    for comp in stack.get(\"components\", []) or []:\n        cid = comp.get(\"id\", \"?\")\n        facts.append((\"component\", f\"{cid}.label\", str(comp.get(\"label\", \"\"))))\n        facts.append((\"component\", f\"{cid}.required\", str(comp.get(\"required\", \"\"))))\n        facts.append((\"component\", f\"{cid}.role\", str(comp.get(\"role\", \"\"))))\n        facts.append((\"component\", f\"{cid}.detect\", json.dumps(comp.get(\"detect\", {}))))\n    return facts\n\n\ndef build():\n    DATA.mkdir(parents=True, exist_ok=True)\n    documents = []\n    all_facts = []\n\n    for path in sorted(ROOT.rglob(\"*\")):\n        if not path.is_file():\n            continue\n        if path.suffix.lower() not in TEXT_SUFFIXES:\n            continue\n        if should_skip(path):\n            continue\n\n        text = read_text(path)\n        if not text.strip():\n            continue\n\n        rel = rel_posix(path)\n        i"
+          "text": " continue\n        start_at = 0\n        while start_at < len(body):\n            piece = body[start_at:start_at + max_chars]\n            chunks.append((heading, line, piece))\n            if start_at + max_chars >= len(body):\n                break\n            start_at += max_chars - overlap\n    return chunks\n\n\ndef hard_wrap(text: str, max_chars: int = 1400, overlap: int = 180):\n    text = text.strip()\n    if not text:\n        return []\n    chunks = []\n    start = 0\n    while start < len(text):\n        chunks.append((\"\", 1, text[start:start + max_chars]))\n        if start + max_chars >= len(text):\n            break\n        start += max_chars - overlap\n    return chunks\n\n\ndef flatten_facts(obj, prefix=\"\", category=\"\"):\n    out = []\n    if isinstance(obj, dict):\n        for k, v in obj.items():\n            key = f\"{prefix}.{k}\" if prefix else k\n            out.extend(flatten_facts(v, key, category or k))\n    elif isinstance(obj, list):\n        for i, v in enumerate(obj):\n            out.extend(flatten_facts(v, f\"{prefix}[{i}]\", category))\n    else:\n        out.append((category or \"general\", prefix, str(obj)))\n    return out\n\n\ndef load_stack_facts():\n    path = ROOT / \"core\" / \"stack.yaml\"\n    if not path.exists() or yaml is None:\n        return []\n    try:\n        stack = yaml.safe_load(read_text(path)) or {}\n    except Exception:\n        return []\n    facts = [\n        (\"stack\", \"sc"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "ntinue\n        if should_skip(path):\n            continue\n\n        text = read_text(path)\n        if not text.strip():\n            continue\n\n        rel = rel_posix(path)\n        is_markdown = path.suffix.lower() in {\".md\", \".markdown\"}\n        title = first_title(text, path.stem) if is_markdown else path.stem\n        headings = find_headings(text) if is_markdown else []\n        links = sorted({m.group(1).strip() for m in WIKI_RE.finditer(text)} |\n                       {m.group(1).strip() for m in MD_LINK_RE.finditer(text)})\n        chunks = split_chunks(text) if is_markdown else hard_wrap(text)\n        words = len(re.findall(r\"\\w+\", text))\n\n        documents.append({\n            \"path\": rel,\n            \"kind\": path.suffix.lower().lstrip(\".\"),\n            \"title\": title,\n            \"modified\": datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).isoformat(timespec=\"seconds\"),\n            \"sha256\": hashlib.sha256(text.encode(\"utf-8\", \"ignore\")).hexdigest(),\n            \"words\": words,\n            \"headings\": headings,\n            \"links\": links,\n            \"chunks\": [{\"heading\": h, \"line\": ln, \"text\": t} for h, ln, t in chunks],\n        })\n\n    facts_path = DATA / \"build-facts.json\"\n    if facts_path.exists():\n        try:\n            facts = json.loads(read_text(facts_path))\n            all_facts.extend(flatten_facts(facts))\n        except json.JSONDecodeError as e"
+          "text": "ists() or yaml is None:\n        return []\n    try:\n        stack = yaml.safe_load(read_text(path)) or {}\n    except Exception:\n        return []\n    facts = [\n        (\"stack\", \"schema\", str(stack.get(\"schema\", \"\"))),\n        (\"stack\", \"name\", str(stack.get(\"name\", \"\"))),\n        (\"stack\", \"version\", str(stack.get(\"version\", \"\"))),\n    ]\n    for comp in stack.get(\"components\", []) or []:\n        cid = comp.get(\"id\", \"?\")\n        facts.append((\"component\", f\"{cid}.label\", str(comp.get(\"label\", \"\"))))\n        facts.append((\"component\", f\"{cid}.required\", str(comp.get(\"required\", \"\"))))\n        facts.append((\"component\", f\"{cid}.role\", str(comp.get(\"role\", \"\"))))\n        facts.append((\"component\", f\"{cid}.detect\", json.dumps(comp.get(\"detect\", {}))))\n    return facts\n\n\ndef sha256_file(path: Path) -> str:\n    h = hashlib.sha256()\n    try:\n        with path.open(\"rb\") as fh:\n            for block in iter(lambda: fh.read(65536), b\"\"):\n                h.update(block)\n    except OSError:\n        return \"\"\n    return h.hexdigest()\n\n\ndef parse_activity(path: Path):\n    \"\"\"build-activity.log -> (time, kind, text) rows.\"\"\"\n    rows = []\n    if not path.exists():\n        return rows\n    for line in read_text(path).splitlines():\n        m = re.match(r\"^(\\d\\d:\\d\\d:\\d\\d)\\s+(\\w+)\\s+(.*)$\", line)\n        if m:\n            rows.append((m.group(1), m.group(2), m.group(3)[:2000]))\n    return rows\n\n"
         },
         {
           "heading": "",
           "line": 1,
-          "text": " facts_path.exists():\n        try:\n            facts = json.loads(read_text(facts_path))\n            all_facts.extend(flatten_facts(facts))\n        except json.JSONDecodeError as exc:\n            print(f\"WARN: data/build-facts.json is not valid JSON: {exc}\", file=sys.stderr)\n    all_facts.extend(load_stack_facts())\n\n    index = {\n        \"schema\": \"knowledge-index/v1\",\n        \"generated\": datetime.now(timezone.utc).isoformat(timespec=\"seconds\"),\n        \"root\": str(ROOT),\n        \"counts\": {\n            \"documents\": len(documents),\n            \"headings\": sum(len(d[\"headings\"]) for d in documents),\n            \"chunks\": sum(len(d[\"chunks\"]) for d in documents),\n            \"facts\": len(all_facts),\n        },\n        \"documents\": documents,\n        \"facts\": [{\"category\": c, \"key\": k, \"value\": v} for c, k, v in all_facts],\n    }\n    JSON_PATH.write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding=\"utf-8\")\n\n    if DB_PATH.exists():\n        DB_PATH.unlink()\n    con = sqlite3.connect(DB_PATH)\n    con.execute(\"PRAGMA journal_mode=DELETE\")\n    con.executescript(\n        \"\"\"\n        CREATE TABLE documents(\n            id INTEGER PRIMARY KEY, path TEXT UNIQUE, kind TEXT, title TEXT,\n            modified TEXT, sha256 TEXT, words INTEGER);\n        CREATE TABLE headings(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, level INTEGER,\n            text TEXT, line INTEGER,\n "
+          "text": ".splitlines():\n        m = re.match(r\"^(\\d\\d:\\d\\d:\\d\\d)\\s+(\\w+)\\s+(.*)$\", line)\n        if m:\n            rows.append((m.group(1), m.group(2), m.group(3)[:2000]))\n    return rows\n\n\ndef parse_inbox(root: Path):\n    \"\"\"Inbox questions/approvals -> rows with answered/waiting status.\"\"\"\n    rows = []\n    inbox = root / \"inbox\"\n    if not inbox.exists():\n        return rows\n    for p in sorted(inbox.glob(\"*.json\")):\n        if p.name == \"build-progress.json\":\n            continue\n        try:\n            d = json.loads(read_text(p))\n        except json.JSONDecodeError:\n            continue\n        answered = list(inbox.glob(str(p.stem.split(\"-request\")[0]) + \"*.answer.json\"))\n        rows.append((\n            d.get(\"id\", p.stem), d.get(\"kind\", \"\"), d.get(\"title\", \"\"),\n            d.get(\"action\", \"\"), d.get(\"created_ms\", \"\"),\n            \"answered\" if answered else \"waiting\",\n        ))\n    return rows\n\n\ndef project_facts(root: Path):\n    \"\"\"Curated facts pulled from a project's own state files.\"\"\"\n    facts = []\n    cp = root / \"craft.json\"\n    if cp.exists():\n        try:\n            d = json.loads(read_text(cp))\n            for key in (\"name\", \"builder\", \"status\", \"stack\", \"questions\"):\n                if key in d:\n                    facts.append((\"project\", f\"craft.{key}\", str(d[key])))\n            if d.get(\"request\"):\n                facts.append((\"project\", \"craft.request\", st"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "modified TEXT, sha256 TEXT, words INTEGER);\n        CREATE TABLE headings(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, level INTEGER,\n            text TEXT, line INTEGER,\n            FOREIGN KEY(doc_id) REFERENCES documents(id));\n        CREATE TABLE chunks(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, heading TEXT,\n            line_start INTEGER, text TEXT,\n            FOREIGN KEY(doc_id) REFERENCES documents(id));\n        CREATE TABLE links(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, target TEXT);\n        CREATE TABLE facts(\n            id INTEGER PRIMARY KEY, category TEXT, key TEXT, value TEXT);\n        CREATE VIRTUAL TABLE chunks_fts USING fts5(\n            text, heading, path UNINDEXED, doc_id UNINDEXED,\n            tokenize='porter unicode61');\n        \"\"\"\n    )\n\n    for doc in documents:\n        cur = con.execute(\n            \"INSERT INTO documents(path,kind,title,modified,sha256,words) VALUES(?,?,?,?,?,?)\",\n            (doc[\"path\"], doc[\"kind\"], doc[\"title\"], doc[\"modified\"], doc[\"sha256\"], doc[\"words\"]),\n        )\n        doc_id = cur.lastrowid\n        for h in doc[\"headings\"]:\n            con.execute(\"INSERT INTO headings(doc_id,level,text,line) VALUES(?,?,?,?)\",\n                        (doc_id, h[\"level\"], h[\"text\"], h[\"line\"]))\n        for link in doc[\"links\"]:\n            con.execute(\"INSERT INTO links(doc_id,target) VALUES(?,?)\", (doc_id, "
+          "text": "f key in d:\n                    facts.append((\"project\", f\"craft.{key}\", str(d[key])))\n            if d.get(\"request\"):\n                facts.append((\"project\", \"craft.request\", str(d[\"request\"])[:4000]))\n            if d.get(\"note\"):\n                facts.append((\"project\", \"craft.note\", str(d[\"note\"])[:1000]))\n            approvals = d.get(\"approvals\", {})\n            for k, v in approvals.items():\n                facts.append((\"project\", f\"approval.{k}\", str(v)))\n            for i, c in enumerate(d.get(\"checks\", []) or []):\n                facts.append((\"check\", f\"check[{i}]\", json.dumps(c)[:1000]))\n        except json.JSONDecodeError:\n            pass\n    return facts\n\n\ndef build():\n    DB_PATH.parent.mkdir(parents=True, exist_ok=True)\n    documents = []\n    assets = []\n    sources = []\n    all_facts = []\n\n    for path in sorted(ROOT.rglob(\"*\")):\n        if not path.is_file() or should_skip(path):\n            continue\n\n        suffix = path.suffix.lower()\n        rel = rel_posix(path)\n        stat = path.stat()\n        modified = datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc).isoformat(timespec=\"seconds\")\n\n        # Binary evidence is recorded, never duplicated into text chunks.\n        if suffix in ASSET_SUFFIXES:\n            digest = sha256_file(path)\n            width = height = None\n            try:\n                from PIL import Image\n                with Imag"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "                     (doc_id, h[\"level\"], h[\"text\"], h[\"line\"]))\n        for link in doc[\"links\"]:\n            con.execute(\"INSERT INTO links(doc_id,target) VALUES(?,?)\", (doc_id, link))\n        for chunk in doc[\"chunks\"]:\n            con.execute(\"INSERT INTO chunks(doc_id,heading,line_start,text) VALUES(?,?,?,?)\",\n                        (doc_id, chunk[\"heading\"], chunk[\"line\"], chunk[\"text\"]))\n            con.execute(\"INSERT INTO chunks_fts(text,heading,path,doc_id) VALUES(?,?,?,?)\",\n                        (chunk[\"text\"], chunk[\"heading\"], doc[\"path\"], doc_id))\n\n    for category, key, value in all_facts:\n        con.execute(\"INSERT INTO facts(category,key,value) VALUES(?,?,?)\", (category, key, value))\n\n    con.commit()\n    con.close()\n\n    print(f\"documents : {index['counts']['documents']}\")\n    print(f\"headings  : {index['counts']['headings']}\")\n    print(f\"chunks    : {index['counts']['chunks']}\")\n    print(f\"facts     : {index['counts']['facts']}\")\n    print(f\"json      : {JSON_PATH.relative_to(ROOT)} \"\n          f\"({JSON_PATH.stat().st_size / 1024:.0f} KB)\")\n    print(f\"database  : {DB_PATH.relative_to(ROOT)} \"\n          f\"({DB_PATH.stat().st_size / 1024:.0f} KB)\")\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=\"Build data/index.json and data/knowledge.db\")\n    parser.add_argument(\"--quiet\", action=\"store_true\")\n    args = parser.parse_args()\n    build()\n"
+          "text": " suffix in ASSET_SUFFIXES:\n            digest = sha256_file(path)\n            width = height = None\n            try:\n                from PIL import Image\n                with Image.open(path) as im:\n                    width, height = im.size\n            except Exception:\n                pass\n            assets.append({\n                \"path\": rel, \"kind\": suffix.lstrip(\".\"), \"bytes\": stat.st_size,\n                \"modified\": modified, \"sha256\": digest,\n                \"width\": width, \"height\": height,\n            })\n            sources.append((rel, \"asset\", digest, stat.st_size, modified))\n            continue\n\n        # Very large evidence captures are recorded by hash, never chunked.\n        # Their content is already in the project; duplicating it here only\n        # inflates the database. The path + sha256 prevents anything being lost.\n        if PROJECT_MODE and (\"evidence/\" in rel or stat.st_size > 1_000_000):\n            digest = sha256_file(path)\n            sources.append((rel, \"evidence\" if \"evidence/\" in rel else \"large_text\",\n                            digest, stat.st_size, modified))\n            continue\n\n        if suffix not in TEXT_SUFFIXES:\n            digest = sha256_file(path)\n            sources.append((rel, \"other\", digest, stat.st_size, modified))\n            continue\n\n        text = read_text(path)\n        if not text.strip():\n            sources.appen"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "gparse.ArgumentParser(description=\"Build data/index.json and data/knowledge.db\")\n    parser.add_argument(\"--quiet\", action=\"store_true\")\n    args = parser.parse_args()\n    build()\n\n\nif __name__ == \"__main__\":\n    main()"
+          "text": "          sources.append((rel, \"other\", digest, stat.st_size, modified))\n            continue\n\n        text = read_text(path)\n        if not text.strip():\n            sources.append((rel, \"empty\", sha256_file(path), stat.st_size, modified))\n            continue\n\n        digest = hashlib.sha256(text.encode(\"utf-8\", \"ignore\")).hexdigest()\n        sources.append((rel, \"text\", digest, stat.st_size, modified))\n        is_markdown = suffix in {\".md\", \".markdown\"}\n        title = first_title(text, path.stem) if is_markdown else path.stem\n        headings = find_headings(text) if is_markdown else []\n        links = sorted({m.group(1).strip() for m in WIKI_RE.finditer(text)} |\n                       {m.group(1).strip() for m in MD_LINK_RE.finditer(text)})\n        chunks = split_chunks(text) if is_markdown else hard_wrap(text)\n        words = len(re.findall(r\"\\w+\", text))\n\n        documents.append({\n            \"path\": rel,\n            \"kind\": suffix.lstrip(\".\"),\n            \"title\": title,\n            \"modified\": modified,\n            \"sha256\": digest,\n            \"words\": words,\n            \"headings\": headings,\n            \"links\": links,\n            \"chunks\": [{\"heading\": h, \"line\": ln, \"text\": t} for h, ln, t in chunks],\n        })\n\n    facts_path = ROOT / \"data\" / \"build-facts.json\"\n    if facts_path.exists():\n        try:\n            facts = json.loads(read_text(facts_path))\n     "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": ", t in chunks],\n        })\n\n    facts_path = ROOT / \"data\" / \"build-facts.json\"\n    if facts_path.exists():\n        try:\n            facts = json.loads(read_text(facts_path))\n            all_facts.extend(flatten_facts(facts))\n        except json.JSONDecodeError as exc:\n            print(f\"WARN: data/build-facts.json is not valid JSON: {exc}\", file=sys.stderr)\n    all_facts.extend(load_stack_facts())\n\n    runs = []\n    approvals = []\n    if PROJECT_MODE:\n        all_facts.extend(project_facts(ROOT))\n        runs = parse_activity(ROOT / \"build-activity.log\")\n        approvals = parse_inbox(ROOT)\n\n    index = {\n        \"schema\": \"knowledge-index/v1\",\n        \"mode\": \"project\" if PROJECT_MODE else \"template\",\n        \"generated\": datetime.now(timezone.utc).isoformat(timespec=\"seconds\"),\n        \"root\": str(ROOT),\n        \"database\": str(DB_PATH),\n        \"counts\": {\n            \"documents\": len(documents),\n            \"headings\": sum(len(d[\"headings\"]) for d in documents),\n            \"chunks\": sum(len(d[\"chunks\"]) for d in documents),\n            \"facts\": len(all_facts),\n            \"assets\": len(assets),\n            \"sources\": len(sources),\n            \"runs\": len(runs),\n            \"approvals\": len(approvals),\n        },\n        # Project JSON stays a manifest; the DB holds the full text and FTS.\n        \"documents\": documents if not PROJECT_MODE else [\n            {k: d[k] for "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "rovals),\n        },\n        # Project JSON stays a manifest; the DB holds the full text and FTS.\n        \"documents\": documents if not PROJECT_MODE else [\n            {k: d[k] for k in (\"path\", \"kind\", \"title\", \"modified\", \"sha256\", \"words\")}\n            for d in documents\n        ],\n        \"assets\": assets,\n        \"sources\": [\n            {\"path\": p, \"kind\": k, \"sha256\": h, \"bytes\": b, \"modified\": m}\n            for p, k, h, b, m in sources\n        ],\n        \"runs\": [\n            {\"time\": t, \"kind\": k, \"text\": x} for t, k, x in runs\n        ],\n        \"approvals\": [\n            {\"id\": a, \"kind\": b, \"title\": c, \"action\": d, \"created_ms\": e, \"status\": f}\n            for a, b, c, d, e, f in approvals\n        ],\n        \"facts\": [{\"category\": c, \"key\": k, \"value\": v} for c, k, v in all_facts],\n    }\n    JSON_PATH.write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding=\"utf-8\")\n\n    if DB_PATH.exists():\n        DB_PATH.unlink()\n    con = sqlite3.connect(DB_PATH)\n    con.execute(\"PRAGMA journal_mode=DELETE\")\n    con.executescript(\n        \"\"\"\n        CREATE TABLE documents(\n            id INTEGER PRIMARY KEY, path TEXT UNIQUE, kind TEXT, title TEXT,\n            modified TEXT, sha256 TEXT, words INTEGER);\n        CREATE TABLE headings(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, level INTEGER,\n            text TEXT, line INTEGER,\n            FOREIGN KEY(doc_id"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "ords INTEGER);\n        CREATE TABLE headings(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, level INTEGER,\n            text TEXT, line INTEGER,\n            FOREIGN KEY(doc_id) REFERENCES documents(id));\n        CREATE TABLE chunks(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, heading TEXT,\n            line_start INTEGER, text TEXT,\n            FOREIGN KEY(doc_id) REFERENCES documents(id));\n        CREATE TABLE links(\n            id INTEGER PRIMARY KEY, doc_id INTEGER, target TEXT);\n        CREATE TABLE facts(\n            id INTEGER PRIMARY KEY, category TEXT, key TEXT, value TEXT);\n        CREATE TABLE assets(\n            id INTEGER PRIMARY KEY, path TEXT UNIQUE, kind TEXT, bytes INTEGER,\n            modified TEXT, sha256 TEXT, width INTEGER, height INTEGER);\n        CREATE TABLE sources(\n            id INTEGER PRIMARY KEY, path TEXT UNIQUE, kind TEXT, sha256 TEXT,\n            bytes INTEGER, modified TEXT);\n        CREATE TABLE runs(\n            id INTEGER PRIMARY KEY, time TEXT, kind TEXT, text TEXT);\n        CREATE TABLE approvals(\n            id TEXT PRIMARY KEY, kind TEXT, title TEXT, action TEXT,\n            created_ms TEXT, status TEXT);\n        CREATE VIRTUAL TABLE chunks_fts USING fts5(\n            text, heading, path UNINDEXED, doc_id UNINDEXED,\n            tokenize='porter unicode61');\n        CREATE UNIQUE INDEX idx_facts ON facts(category, key);\n       "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": " fts5(\n            text, heading, path UNINDEXED, doc_id UNINDEXED,\n            tokenize='porter unicode61');\n        CREATE UNIQUE INDEX idx_facts ON facts(category, key);\n        \"\"\"\n    )\n\n    for doc in documents:\n        cur = con.execute(\n            \"INSERT INTO documents(path,kind,title,modified,sha256,words) VALUES(?,?,?,?,?,?)\",\n            (doc[\"path\"], doc[\"kind\"], doc[\"title\"], doc[\"modified\"], doc[\"sha256\"], doc[\"words\"]),\n        )\n        doc_id = cur.lastrowid\n        for h in doc[\"headings\"]:\n            con.execute(\"INSERT INTO headings(doc_id,level,text,line) VALUES(?,?,?,?)\",\n                        (doc_id, h[\"level\"], h[\"text\"], h[\"line\"]))\n        for link in doc[\"links\"]:\n            con.execute(\"INSERT INTO links(doc_id,target) VALUES(?,?)\", (doc_id, link))\n        for chunk in doc[\"chunks\"]:\n            con.execute(\"INSERT INTO chunks(doc_id,heading,line_start,text) VALUES(?,?,?,?)\",\n                        (doc_id, chunk[\"heading\"], chunk[\"line\"], chunk[\"text\"]))\n            con.execute(\"INSERT INTO chunks_fts(text,heading,path,doc_id) VALUES(?,?,?,?)\",\n                        (chunk[\"text\"], chunk[\"heading\"], doc[\"path\"], doc_id))\n\n    for category, key, value in all_facts:\n        con.execute(\"INSERT OR REPLACE INTO facts(category,key,value) VALUES(?,?,?)\",\n                    (category, key, value))\n    for a in assets:\n        con.execute(\"INSERT"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": ":\n        con.execute(\"INSERT OR REPLACE INTO facts(category,key,value) VALUES(?,?,?)\",\n                    (category, key, value))\n    for a in assets:\n        con.execute(\"INSERT OR REPLACE INTO assets(path,kind,bytes,modified,sha256,width,height) \"\n                    \"VALUES(?,?,?,?,?,?,?)\",\n                    (a[\"path\"], a[\"kind\"], a[\"bytes\"], a[\"modified\"], a[\"sha256\"],\n                     a.get(\"width\"), a.get(\"height\")))\n    for p, k, h, b, m in sources:\n        con.execute(\"INSERT OR REPLACE INTO sources(path,kind,sha256,bytes,modified) VALUES(?,?,?,?,?)\",\n                    (p, k, h, b, m))\n    for t, k, x in runs:\n        con.execute(\"INSERT INTO runs(time,kind,text) VALUES(?,?,?)\", (t, k, x))\n    for a, b, c, d, e, f in approvals:\n        con.execute(\"INSERT OR REPLACE INTO approvals(id,kind,title,action,created_ms,status) \"\n                    \"VALUES(?,?,?,?,?,?)\", (a, b, c, d, e, f))\n\n    con.commit()\n    con.close()\n\n    print(f\"mode      : {'project' if PROJECT_MODE else 'template'}\")\n    print(f\"root      : {ROOT}\")\n    for key in (\"documents\", \"headings\", \"chunks\", \"facts\", \"assets\", \"sources\", \"runs\", \"approvals\"):\n        print(f\"{key:<10}: {index['counts'][key]}\")\n    print(f\"json      : {JSON_PATH} ({JSON_PATH.stat().st_size / 1024:.0f} KB)\")\n    print(f\"database  : {DB_PATH} ({DB_PATH.stat().st_size / 1024:.0f} KB)\")\n\n\ndef main():\n    global ROOT, DAT"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "json      : {JSON_PATH} ({JSON_PATH.stat().st_size / 1024:.0f} KB)\")\n    print(f\"database  : {DB_PATH} ({DB_PATH.stat().st_size / 1024:.0f} KB)\")\n\n\ndef main():\n    global ROOT, DATA, DB_PATH, JSON_PATH, PROJECT_MODE\n\n    parser = argparse.ArgumentParser(description=\"Build a template or project knowledge database\")\n    parser.add_argument(\"--root\", help=\"Folder to index (default: this repository)\")\n    parser.add_argument(\"--out\", help=\"Database file to write (default: <root>/data/knowledge.db)\")\n    parser.add_argument(\"--json-out\", help=\"JSON dump to write (default: beside the database)\")\n    parser.add_argument(\"--project\", action=\"store_true\",\n                        help=\"Project mode: add assets, sources, runs and approvals\")\n    parser.add_argument(\"--quiet\", action=\"store_true\")\n    args = parser.parse_args()\n\n    if args.root:\n        ROOT = Path(args.root).resolve()\n    DATA = ROOT / \"data\"\n\n    if args.out:\n        DB_PATH = Path(args.out).resolve()\n    else:\n        DB_PATH = DATA / \"knowledge.db\"\n\n    if args.json_out:\n        JSON_PATH = Path(args.json_out).resolve()\n    elif args.out:\n        JSON_PATH = DB_PATH.with_suffix(\".json\")\n    else:\n        JSON_PATH = DATA / \"index.json\"\n\n    PROJECT_MODE = args.project\n    build()\n\n\nif __name__ == \"__main__\":\n    main()"
         }
       ]
     },
@@ -3930,36 +4221,41 @@
       "path": "scripts/query.py",
       "kind": "py",
       "title": "query",
-      "modified": "2026-11-23T06:38:31+00:00",
-      "sha256": "86b4f3dffccefad09a1496c07214cf8c0e373cab0e62b82716eaadede09de4b2",
-      "words": 665,
+      "modified": "2026-11-23T07:45:06+00:00",
+      "sha256": "9af5ce5e457d1036f4ac5508967b46a2ce4941e2c897c0a6aa488c8e357ccb32",
+      "words": 942,
       "headings": [],
       "links": [],
       "chunks": [
         {
           "heading": "",
           "line": 1,
-          "text": "#!/usr/bin/env python3\n\"\"\"Query data/knowledge.db (built by scripts/build_index.py).\n\nExamples\n--------\n    python scripts/query.py --stats\n    python scripts/query.py --search \"bios ram\"\n    python scripts/query.py --search \"mcp hermes\" --limit 5\n    python scripts/query.py --facts\n    python scripts/query.py --facts toolchain\n    python scripts/query.py --docs\n    python scripts/query.py --doc docs/TROUBLESHOOTING.md\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport re\nimport sqlite3\nimport sys\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[1]\nDB = ROOT / \"data\" / \"knowledge.db\"\n\n\ndef connect():\n    if not DB.exists():\n        sys.exit(\"data/knowledge.db is missing. Run: python scripts/build_index.py\")\n    con = sqlite3.connect(DB)\n    con.row_factory = sqlite3.Row\n    return con\n\n\ndef fts_query(text: str) -> str:\n    tokens = [t for t in re.split(r\"[^0-9A-Za-z_]+\", text) if len(t) >= 2]\n    if not tokens:\n        return '\"\"'\n    return \" AND \".join(f'\"{t}\"*' for t in tokens)\n\n\ndef cmd_stats(con):\n    counts = {\n        \"documents\": con.execute(\"SELECT count(*) FROM documents\").fetchone()[0],\n        \"headings\": con.execute(\"SELECT count(*) FROM headings\").fetchone()[0],\n        \"chunks\": con.execute(\"SELECT count(*) FROM chunks\").fetchone()[0],\n        \"links\": con.execute(\"SELECT count(*) FROM links\").fetchone()[0],\n        \"facts"
+          "text": "#!/usr/bin/env python3\n\"\"\"Query data/knowledge.db (built by scripts/build_index.py).\n\nExamples\n--------\n    python scripts/query.py --stats\n    python scripts/query.py --search \"bios ram\"\n    python scripts/query.py --search \"mcp hermes\" --limit 5\n    python scripts/query.py --facts\n    python scripts/query.py --facts toolchain\n    python scripts/query.py --docs\n    python scripts/query.py --doc docs/TROUBLESHOOTING.md\n    python scripts/query.py --db projects/polsia-free-v1/knowledge.db --stats\n    python scripts/query.py --db projects/polsia-free-v1/knowledge.db --runs 10\n    python scripts/query.py --db projects/polsia-free-v1/knowledge.db --assets\n\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport re\nimport sqlite3\nimport sys\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[1]\nDB = ROOT / \"data\" / \"knowledge.db\"\n\n\ndef connect(path=None):\n    target = Path(path).resolve() if path else DB\n    if not target.exists():\n        sys.exit(f\"{target} is missing. Run: python scripts/build_index.py\")\n    con = sqlite3.connect(target)\n    con.row_factory = sqlite3.Row\n    return con\n\n\ndef fts_query(text: str) -> str:\n    tokens = [t for t in re.split(r\"[^0-9A-Za-z_]+\", text) if len(t) >= 2]\n    if not tokens:\n        return '\"\"'\n    return \" AND \".join(f'\"{t}\"*' for t in tokens)\n\n\ndef cmd_stats(con):\n    counts = {\n        \"documents\": con.execu"
         },
         {
           "heading": "",
           "line": 1,
-          "text": ".fetchone()[0],\n        \"chunks\": con.execute(\"SELECT count(*) FROM chunks\").fetchone()[0],\n        \"links\": con.execute(\"SELECT count(*) FROM links\").fetchone()[0],\n        \"facts\": con.execute(\"SELECT count(*) FROM facts\").fetchone()[0],\n    }\n    print(\"knowledge.db\")\n    for k, v in counts.items():\n        print(f\"  {k:<10} {v}\")\n    print(\"\\nfacts by category\")\n    for row in con.execute(\n        \"SELECT category, count(*) n FROM facts GROUP BY category ORDER BY n DESC\"\n    ):\n        print(f\"  {row['category']:<14} {row['n']}\")\n\n\ndef cmd_search(con, query, limit):\n    rows = con.execute(\n        \"\"\"\n        SELECT path, heading,\n               snippet(chunks_fts, 0, '«', '»', '…', 14) AS snip,\n               bm25(chunks_fts) AS score\n        FROM chunks_fts\n        WHERE chunks_fts MATCH ?\n        ORDER BY\n            CASE\n                WHEN path LIKE 'docs/%' OR path LIKE 'obsidian-vault/%'\n                  OR path LIKE 'data/%' OR path = 'README.md' THEN 0\n                WHEN path LIKE 'hermes/%' OR path LIKE 'platforms/%' THEN 1\n                ELSE 2\n            END,\n            score\n        LIMIT ?\n        \"\"\",\n        (fts_query(query), limit),\n    ).fetchall()\n    if not rows:\n        print(\"no matches\")\n        return\n    for r in rows:\n        head = f\" › {r['heading']}\" if r[\"heading\"] else \"\"\n        print(f\"\\n{r['path']}{head}\")\n        print(f\"  {r['snip"
+          "text": " text) if len(t) >= 2]\n    if not tokens:\n        return '\"\"'\n    return \" AND \".join(f'\"{t}\"*' for t in tokens)\n\n\ndef cmd_stats(con):\n    counts = {\n        \"documents\": con.execute(\"SELECT count(*) FROM documents\").fetchone()[0],\n        \"headings\": con.execute(\"SELECT count(*) FROM headings\").fetchone()[0],\n        \"chunks\": con.execute(\"SELECT count(*) FROM chunks\").fetchone()[0],\n        \"links\": con.execute(\"SELECT count(*) FROM links\").fetchone()[0],\n        \"facts\": con.execute(\"SELECT count(*) FROM facts\").fetchone()[0],\n    }\n    print(\"knowledge.db\")\n    for k, v in counts.items():\n        print(f\"  {k:<10} {v}\")\n    print(\"\\nfacts by category\")\n    for row in con.execute(\n        \"SELECT category, count(*) n FROM facts GROUP BY category ORDER BY n DESC\"\n    ):\n        print(f\"  {row['category']:<14} {row['n']}\")\n\n\ndef cmd_search(con, query, limit):\n    rows = con.execute(\n        \"\"\"\n        SELECT path, heading,\n               snippet(chunks_fts, 0, '«', '»', '…', 14) AS snip,\n               bm25(chunks_fts) AS score\n        FROM chunks_fts\n        WHERE chunks_fts MATCH ?\n        ORDER BY\n            CASE\n                WHEN path LIKE 'docs/%' OR path LIKE 'obsidian-vault/%'\n                  OR path LIKE 'data/%' OR path = 'README.md' THEN 0\n                WHEN path LIKE 'hermes/%' OR path LIKE 'platforms/%' THEN 1\n                ELSE 2\n            END,\n      "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "  print(\"no matches\")\n        return\n    for r in rows:\n        head = f\" › {r['heading']}\" if r[\"heading\"] else \"\"\n        print(f\"\\n{r['path']}{head}\")\n        print(f\"  {r['snip']}\")\n\n\ndef cmd_docs(con):\n    for row in con.execute(\n        \"SELECT path, title, kind, words FROM documents ORDER BY path\"\n    ):\n        print(f\"{row['path']:<48} {row['kind']:<5} {row['words']:>6}w  {row['title']}\")\n\n\ndef cmd_doc(con, path):\n    doc = con.execute(\n        \"SELECT id, path, title, words, modified FROM documents WHERE path = ?\", (path,)\n    ).fetchone()\n    if not doc:\n        matches = con.execute(\n            \"SELECT path FROM documents WHERE path LIKE ? LIMIT 5\", (f\"%{path}%\",)\n        ).fetchall()\n        if matches:\n            print(\"not found; did you mean:\")\n            for m in matches:\n                print(f\"  {m['path']}\")\n        else:\n            print(\"not found\")\n        return\n    print(f\"{doc['path']}  ({doc['words']} words, modified {doc['modified']})\")\n    print(f\"title: {doc['title']}\\n\")\n    for h in con.execute(\n        \"SELECT level, text, line FROM headings WHERE doc_id = ? ORDER BY line\", (doc[\"id\"],)\n    ):\n        print(f\"  {'  ' * (h['level'] - 1)}{h['text']}  (line {h['line']})\")\n\n\ndef cmd_facts(con, category):\n    if category:\n        rows = con.execute(\n            \"SELECT category, key, value FROM facts WHERE lower(category) = lower(?) ORDER BY key\""
+          "text": "       OR path LIKE 'data/%' OR path = 'README.md' THEN 0\n                WHEN path LIKE 'hermes/%' OR path LIKE 'platforms/%' THEN 1\n                ELSE 2\n            END,\n            score\n        LIMIT ?\n        \"\"\",\n        (fts_query(query), limit),\n    ).fetchall()\n    if not rows:\n        print(\"no matches\")\n        return\n    for r in rows:\n        head = f\" › {r['heading']}\" if r[\"heading\"] else \"\"\n        print(f\"\\n{r['path']}{head}\")\n        print(f\"  {r['snip']}\")\n\n\ndef cmd_docs(con):\n    for row in con.execute(\n        \"SELECT path, title, kind, words FROM documents ORDER BY path\"\n    ):\n        print(f\"{row['path']:<48} {row['kind']:<5} {row['words']:>6}w  {row['title']}\")\n\n\ndef cmd_doc(con, path):\n    doc = con.execute(\n        \"SELECT id, path, title, words, modified FROM documents WHERE path = ?\", (path,)\n    ).fetchone()\n    if not doc:\n        matches = con.execute(\n            \"SELECT path FROM documents WHERE path LIKE ? LIMIT 5\", (f\"%{path}%\",)\n        ).fetchall()\n        if matches:\n            print(\"not found; did you mean:\")\n            for m in matches:\n                print(f\"  {m['path']}\")\n        else:\n            print(\"not found\")\n        return\n    print(f\"{doc['path']}  ({doc['words']} words, modified {doc['modified']})\")\n    print(f\"title: {doc['title']}\\n\")\n    for h in con.execute(\n        \"SELECT level, text, line FROM headings WHERE doc"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "})\")\n\n\ndef cmd_facts(con, category):\n    if category:\n        rows = con.execute(\n            \"SELECT category, key, value FROM facts WHERE lower(category) = lower(?) ORDER BY key\",\n            (category,),\n        ).fetchall()\n    else:\n        rows = con.execute(\n            \"SELECT category, key, value FROM facts ORDER BY category, key\"\n        ).fetchall()\n    if not rows:\n        print(\"no facts\")\n        return\n    current = None\n    for r in rows:\n        if r[\"category\"] != current:\n            current = r[\"category\"]\n            print(f\"\\n[{current}]\")\n        print(f\"  {r['key']}: {r['value']}\")\n\n\ndef main():\n    # Windows consoles default to cp1252 and crash on arrows from the docs.\n    if hasattr(sys.stdout, \"reconfigure\"):\n        sys.stdout.reconfigure(encoding=\"utf-8\", errors=\"replace\")\n\n    parser = argparse.ArgumentParser(description=\"Query the repository knowledge base\")\n    parser.add_argument(\"--stats\", action=\"store_true\")\n    parser.add_argument(\"--search\", metavar=\"QUERY\")\n    parser.add_argument(\"--limit\", type=int, default=8)\n    parser.add_argument(\"--docs\", action=\"store_true\")\n    parser.add_argument(\"--doc\", metavar=\"PATH\")\n    parser.add_argument(\"--facts\", nargs=\"?\", const=\"\", metavar=\"CATEGORY\")\n    parser.add_argument(\"--json\", action=\"store_true\")\n    args = parser.parse_args()\n\n    con = connect()\n    if args.stats:\n        cmd_stats(con)\n    "
+          "text": "h']}  ({doc['words']} words, modified {doc['modified']})\")\n    print(f\"title: {doc['title']}\\n\")\n    for h in con.execute(\n        \"SELECT level, text, line FROM headings WHERE doc_id = ? ORDER BY line\", (doc[\"id\"],)\n    ):\n        print(f\"  {'  ' * (h['level'] - 1)}{h['text']}  (line {h['line']})\")\n\n\ndef cmd_facts(con, category):\n    if category:\n        rows = con.execute(\n            \"SELECT category, key, value FROM facts WHERE lower(category) = lower(?) ORDER BY key\",\n            (category,),\n        ).fetchall()\n    else:\n        rows = con.execute(\n            \"SELECT category, key, value FROM facts ORDER BY category, key\"\n        ).fetchall()\n    if not rows:\n        print(\"no facts\")\n        return\n    current = None\n    for r in rows:\n        if r[\"category\"] != current:\n            current = r[\"category\"]\n            print(f\"\\n[{current}]\")\n        print(f\"  {r['key']}: {r['value']}\")\n\n\ndef cmd_runs(con, limit):\n    try:\n        rows = con.execute(\"SELECT time, kind, substr(text,1,180) text FROM runs ORDER BY id DESC LIMIT ?\",\n                           (limit,)).fetchall()\n    except sqlite3.OperationalError:\n        print(\"no runs table (this is the template database)\")\n        return\n    if not rows:\n        print(\"no runs recorded\")\n        return\n    for r in rows:\n        print(f\"  {r['time']} {r['kind']:<6} {r['text']}\")\n\n\ndef cmd_assets(con):\n    try:\n       "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "st=\"\", metavar=\"CATEGORY\")\n    parser.add_argument(\"--json\", action=\"store_true\")\n    args = parser.parse_args()\n\n    con = connect()\n    if args.stats:\n        cmd_stats(con)\n    elif args.search:\n        cmd_search(con, args.search, args.limit)\n    elif args.docs:\n        cmd_docs(con)\n    elif args.doc:\n        cmd_doc(con, args.doc)\n    elif args.facts is not None:\n        cmd_facts(con, args.facts)\n    else:\n        parser.print_help()\n\n\nif __name__ == \"__main__\":\n    main()"
+          "text": " if not rows:\n        print(\"no runs recorded\")\n        return\n    for r in rows:\n        print(f\"  {r['time']} {r['kind']:<6} {r['text']}\")\n\n\ndef cmd_assets(con):\n    try:\n        rows = con.execute(\n            \"SELECT path, kind, bytes, width, height, substr(sha256,1,12) hash \"\n            \"FROM assets ORDER BY bytes DESC LIMIT 40\"\n        ).fetchall()\n    except sqlite3.OperationalError:\n        print(\"no assets table (this is the template database)\")\n        return\n    for r in rows:\n        dims = f\" {r['width']}x{r['height']}\" if r[\"width\"] else \"\"\n        print(f\"  {r['path']:<58} {r['kind']:<5} {r['bytes']:>9,} B{dims}  {r['hash']}\")\n\n\ndef cmd_sources(con):\n    try:\n        rows = con.execute(\n            \"SELECT path, kind, bytes FROM sources ORDER BY bytes DESC LIMIT 40\"\n        ).fetchall()\n    except sqlite3.OperationalError:\n        print(\"no sources table (this is the template database)\")\n        return\n    for r in rows:\n        print(f\"  {r['kind']:<11} {r['bytes']:>11,} B  {r['path']}\")\n\n\ndef main():\n    # Windows consoles default to cp1252 and crash on arrows from the docs.\n    if hasattr(sys.stdout, \"reconfigure\"):\n        sys.stdout.reconfigure(encoding=\"utf-8\", errors=\"replace\")\n\n    parser = argparse.ArgumentParser(description=\"Query a template or project knowledge base\")\n    parser.add_argument(\"--db\", help=\"Database file (default: data/knowledge.db)\")\n "
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "\n    parser = argparse.ArgumentParser(description=\"Query a template or project knowledge base\")\n    parser.add_argument(\"--db\", help=\"Database file (default: data/knowledge.db)\")\n    parser.add_argument(\"--stats\", action=\"store_true\")\n    parser.add_argument(\"--search\", metavar=\"QUERY\")\n    parser.add_argument(\"--limit\", type=int, default=8)\n    parser.add_argument(\"--docs\", action=\"store_true\")\n    parser.add_argument(\"--doc\", metavar=\"PATH\")\n    parser.add_argument(\"--facts\", nargs=\"?\", const=\"\", metavar=\"CATEGORY\")\n    parser.add_argument(\"--runs\", nargs=\"?\", const=10, type=int, metavar=\"N\")\n    parser.add_argument(\"--assets\", action=\"store_true\")\n    parser.add_argument(\"--sources\", action=\"store_true\")\n    parser.add_argument(\"--json\", action=\"store_true\")\n    args = parser.parse_args()\n\n    con = connect(args.db)\n    if args.stats:\n        cmd_stats(con)\n    elif args.runs is not None:\n        cmd_runs(con, args.runs)\n    elif args.assets:\n        cmd_assets(con)\n    elif args.sources:\n        cmd_sources(con)\n    elif args.search:\n        cmd_search(con, args.search, args.limit)\n    elif args.docs:\n        cmd_docs(con)\n    elif args.doc:\n        cmd_doc(con, args.doc)\n    elif args.facts is not None:\n        cmd_facts(con, args.facts)\n    else:\n        parser.print_help()\n\n\nif __name__ == \"__main__\":\n    main()"
         }
       ]
     },
@@ -4328,6 +4624,2342 @@
       ]
     }
   ],
+  "assets": [],
+  "sources": [
+    {
+      "path": ".gitignore",
+      "kind": "other",
+      "sha256": "1c66aed6c2574ca91928b2c8fec2709abf75e0aa17d7aae93fba564d7860ef3b",
+      "bytes": 2041,
+      "modified": "2026-11-23T06:37:57+00:00"
+    },
+    {
+      "path": "core/stack.yaml",
+      "kind": "text",
+      "sha256": "1b15988571d8edd81444dcefcc34b72a72b3ee1e654c509f445436209b76fd15",
+      "bytes": 7224,
+      "modified": "2026-11-19T14:48:13+00:00"
+    },
+    {
+      "path": "data/build-facts.json",
+      "kind": "text",
+      "sha256": "478d11611baea5c4607666c84d0ea9341fd1e9376b75ab924ba1e5d00774b89b",
+      "bytes": 7647,
+      "modified": "2026-11-23T07:46:02+00:00"
+    },
+    {
+      "path": "data/README.md",
+      "kind": "text",
+      "sha256": "19f98708ffd4f073ff9e01f8936dab3d29b4128339bed565f0e6135ddc3dcaf8",
+      "bytes": 2894,
+      "modified": "2026-11-23T06:36:49+00:00"
+    },
+    {
+      "path": "docker/docker-compose.services.yml",
+      "kind": "text",
+      "sha256": "d9e007dc2e035df97a4c30f2667f4ade5ddbdfa4750c1bad6d486af0a4a675c5",
+      "bytes": 1552,
+      "modified": "2026-11-10T06:37:42+00:00"
+    },
+    {
+      "path": "docs/AGENT-ACTIONS.md",
+      "kind": "text",
+      "sha256": "d573a3e08279cb47f6259584a4af6e5e1a55c4394ab21569179a40fcd11a806a",
+      "bytes": 6125,
+      "modified": "2026-11-19T16:53:25+00:00"
+    },
+    {
+      "path": "docs/INSTALL_WINDOWS.md",
+      "kind": "text",
+      "sha256": "9c70b58c886e49e6393f756aab1c2dc02843753763fc3d2408a32a6d3289aa5e",
+      "bytes": 3358,
+      "modified": "2026-11-10T06:40:07+00:00"
+    },
+    {
+      "path": "docs/INTEGRATIONS.md",
+      "kind": "text",
+      "sha256": "0f2dc7ef47a614bb7016e8fe1df6e3bf1fec6733ee5a6277c82f859c00d273e2",
+      "bytes": 6125,
+      "modified": "2026-11-11T19:41:52+00:00"
+    },
+    {
+      "path": "docs/MCP-WIRING.md",
+      "kind": "text",
+      "sha256": "fd5cc2ba3067e6e9ffb72fef9588a7f2a214c558e581cfbbbe081ea089017191",
+      "bytes": 7742,
+      "modified": "2026-11-23T07:21:42+00:00"
+    },
+    {
+      "path": "docs/PIPELINE.md",
+      "kind": "text",
+      "sha256": "6345375d49522c2fb6b52fe25bf2819a44e3e39f8931733ede7dd5592c226328",
+      "bytes": 16333,
+      "modified": "2026-11-11T19:46:55+00:00"
+    },
+    {
+      "path": "docs/PROJECT-DATABASE.md",
+      "kind": "text",
+      "sha256": "0e2f83755c419358ad0e1d327d63251e35ccf58ab0a614bebb2d89e367ba05aa",
+      "bytes": 4490,
+      "modified": "2026-11-23T07:46:09+00:00"
+    },
+    {
+      "path": "docs/TEAM-BRIEF.md",
+      "kind": "text",
+      "sha256": "109d92e0871e3669bda3dd144194e522de52158d200a40ce7d2eb0b1e3c7e4ff",
+      "bytes": 3486,
+      "modified": "2026-11-23T07:46:30+00:00"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "kind": "text",
+      "sha256": "1258c7704aeeb9569ac6dd6089408da3377b26bf2516bbe0ede2b35f27085779",
+      "bytes": 6350,
+      "modified": "2026-11-19T16:36:24+00:00"
+    },
+    {
+      "path": "grafana/provisioning/dashboards/dashboards.yaml",
+      "kind": "text",
+      "sha256": "1b28ac2ee4e28f7884bb8b1a402cfd0d340053b815ec94611a839b42e2c63655",
+      "bytes": 199,
+      "modified": "2026-11-09T18:34:53+00:00"
+    },
+    {
+      "path": "grafana/provisioning/dashboards/work-matrix.json",
+      "kind": "text",
+      "sha256": "b852662046262bf11f49ee22b3b3494b756273e236f211d4c92f1c3d250f581a",
+      "bytes": 930,
+      "modified": "2026-11-09T18:35:02+00:00"
+    },
+    {
+      "path": "grafana/provisioning/datasources/datasources.yaml",
+      "kind": "text",
+      "sha256": "48da01c4296e039d96aee037d5e1b43b337094a63f21f8c27f5fa2f4a7086fc6",
+      "bytes": 198,
+      "modified": "2026-11-09T18:34:53+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/config.yaml",
+      "kind": "text",
+      "sha256": "f05f7891720b131fd7b77f82880e9c82b91ea475648297e18ee5fe9561756ba7",
+      "bytes": 206,
+      "modified": "2026-11-09T16:39:55+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:40:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "6cd40202f405acf7c52398d18786c0f3e2e91088933a393773eed276038d4db8",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "9ec0f2913506bcf4bf1dfff73601e5098c49998399ead15162de2a5ec326fc48",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/gateway.lock",
+      "kind": "other",
+      "sha256": "f2e11b3382f20ae265bc7d2d96bd8c433cf47546ced4b3452b676b843561e9e5",
+      "bytes": 347,
+      "modified": "2026-11-09T16:40:06+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/skills/.curator_state",
+      "kind": "other",
+      "sha256": "06cea378a0125e19c43f2a6a507a53bb2b6c243a684ca78315171fca2586bbb9",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/SOUL.md",
+      "kind": "text",
+      "sha256": "36c1f5a2e92cd1d018311eaf4c8f1e8886672eae78212e033c681d0e3d5d506f",
+      "bytes": 667,
+      "modified": "2026-11-09T16:39:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/state.db",
+      "kind": "other",
+      "sha256": "56cb936311eb5ea02cc68b13ba9c42723973022638dd8405b58e2e84e831b546",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:06+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:06+00:00"
+    },
+    {
+      "path": "hermes/profiles/beam/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:06+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/config.yaml",
+      "kind": "text",
+      "sha256": "cc2616302459fde6d32d601916f069984b0cb904e7f0d75dd816f441949c1a5a",
+      "bytes": 262,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "e49aadc18c07d7ffde5e04b646736326c1dcc330b3dc34924de29abb59dde605",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "ae0e4519da260113d21c06b04765ad3b8b206ee0eb292dfdf7a51d76f13be48f",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/gateway.lock",
+      "kind": "other",
+      "sha256": "b333425adc543d95617f4c976e68f814faba50daf04fcdec04954e41f8ca4c07",
+      "bytes": 348,
+      "modified": "2026-11-09T18:23:21+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/SOUL.md",
+      "kind": "text",
+      "sha256": "123686e14743c52042a1bd5f404b11ee729d58535aa33ff717132936cdc6a51b",
+      "bytes": 313,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/state.db",
+      "kind": "other",
+      "sha256": "32d99b298dffeab1f575c2e2e8c585d4135684fd8e02072cf3632eac09da59a4",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:21+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:21+00:00"
+    },
+    {
+      "path": "hermes/profiles/coder/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:21+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/config.yaml",
+      "kind": "text",
+      "sha256": "5253ae11aada1ee23396cff7a86956413c961189e4ab036c03c3cf40dccf2965",
+      "bytes": 217,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "651ef2b47bc40e23f25b1ae2737a89bd98f83ea7144d0cc1da91689c908f774b",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "ad5cb2be208187b76ea8e008e6d8a0b0b34b28181415199d7c1bbd7ed2b7734d",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/gateway.lock",
+      "kind": "other",
+      "sha256": "c65dd4411fdcf09bf84ed98d6dc7ecb3ed1e62b692b65bcdded3202a012ce178",
+      "bytes": 356,
+      "modified": "2026-11-09T16:40:37+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/skills/.curator_state",
+      "kind": "other",
+      "sha256": "710d4558edd92a44ac995bd2d065421df764829a13a7b6be7a793283cd7a4a43",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/SOUL.md",
+      "kind": "text",
+      "sha256": "bb51a67e5996f5d2b05d801e5a44565599015503435f4bb6714c5107096cd7f2",
+      "bytes": 203,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/state.db",
+      "kind": "other",
+      "sha256": "084d58205cb130905fd7cdfc2177acdb63d5c65d29c351da911153f68eeb4cd9",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:38+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:38+00:00"
+    },
+    {
+      "path": "hermes/profiles/crouton-alpha/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:37+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/config.yaml",
+      "kind": "text",
+      "sha256": "0b9fd2f9b8b2397545090a7d9931b01f6ccf88e6b4a2a014e3fe486d6015e216",
+      "bytes": 257,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "4d7b642706deda79dba3816c8d5f04b9506efc001f92a62788b13cf263eff797",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "7895c18712b0c906195182379d93bd194ac7507014b697dc5c2fe0a44715fbdd",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/gateway.lock",
+      "kind": "other",
+      "sha256": "0dfb912ade96200121ff68d2043d89bb376a9cc914c18400779d9d290190fc37",
+      "bytes": 350,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/SOUL.md",
+      "kind": "text",
+      "sha256": "98fe7408320ca947f011c3a042b9c3444926b03d47e208aac7849aef980228c1",
+      "bytes": 315,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/state.db",
+      "kind": "other",
+      "sha256": "6cd45af3479f5d8d91678aca68c62c9e441eaa94a294ec92a9432c3a8018c094",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/decider/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/config.yaml",
+      "kind": "text",
+      "sha256": "91999c542bcf144a0c0a912ea577f995c148e87016aca67065f6f99d8a70551b",
+      "bytes": 223,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "43c0953b31850af75ff33cf758319566031b1b46e69e4f45bb104c5e769a453e",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "d59305e02c1a39449499da7cec5b0cb5455b3bfa32f5708bd2b8b4799643ad46",
+      "bytes": 17,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/gateway.lock",
+      "kind": "other",
+      "sha256": "6e30e36f2bf970f763ec019d81c4946441ae4594b837a9df51ece66838f6858d",
+      "bytes": 361,
+      "modified": "2026-11-09T16:40:38+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/skills/.curator_state",
+      "kind": "other",
+      "sha256": "2b0eca686191cd24d97ba8abebb030a07ba4626baf1cc56da5c4bf2896b8d30a",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/SOUL.md",
+      "kind": "text",
+      "sha256": "de5be66fb6bd2c43349745e41b16f1780a736d93be8be0e25ee71fcacf9eb56a",
+      "bytes": 208,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/state.db",
+      "kind": "other",
+      "sha256": "3d7a58f989f3bb7a052f05bd066a41e5337bb714c785821521162e201f93e8ac",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:38+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:38+00:00"
+    },
+    {
+      "path": "hermes/profiles/deepseek-v41-flash/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:38+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "5d17b4181f13348cdaa70d9103e32ceecaa4c28c89104adab5f02cf614983db9",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "025e414cf0418a0a7a11e1691f3e753a951d0af40fffc3d0379ec27450b8c0e4",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/gateway.lock",
+      "kind": "other",
+      "sha256": "30ce700807204bdc250d621da2fbd1202dc81044138b58c7991814976e7ba2a4",
+      "bytes": 351,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/SOUL.md",
+      "kind": "text",
+      "sha256": "221c14671ee98838c88f4bb1c37753d61db5dca0d29493d7739d8d8aab1d436e",
+      "bytes": 316,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/state.db",
+      "kind": "other",
+      "sha256": "6132c2907f4d7dcaed5ff61866c14bb0d3d4faeef3feab66f4c5c215944f4b06",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/designer/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:22+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "810b543a849a3aa16a7e1d8c6ef07b4ec0107b60ec566d7c6a4d58e48cedbf36",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "56d26761332d87ec4fd2bfae12aae2c24396d0840203e6210f224a03a586d358",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/gateway.lock",
+      "kind": "other",
+      "sha256": "be6ef0cc2abc5c79e0c397fa88506d63acf6f79ef92149ddf1153f0324648a92",
+      "bytes": 350,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/SOUL.md",
+      "kind": "text",
+      "sha256": "11888143401c8ce92a89a7007aefb50278a57b532b86c18135f571f949c42cde",
+      "bytes": 315,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/state.db",
+      "kind": "other",
+      "sha256": "7426fd743d70e35c69492539a62ca9fb40b682e9a8f48786fc929b4d303ea407",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/finance/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/config.yaml",
+      "kind": "text",
+      "sha256": "8db5e7c71e4e8504c7040b18e172fadcc3bd12e74a4d3b9925c0c6cd1e00ff82",
+      "bytes": 213,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "fe424cd610619163f95e60004c214f28164805b01689e94766c09159bdf731dc",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "76482731960264cb4ed4efedeae11b7addfa01c92d4700e29579f3c49a15170e",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/gateway.lock",
+      "kind": "other",
+      "sha256": "1b77149d61d9a94a1376a4a398ce37244d30d8bac248e3e2c1e34cc0f6b6ca52",
+      "bytes": 352,
+      "modified": "2026-11-09T16:40:39+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/skills/.curator_state",
+      "kind": "other",
+      "sha256": "b7b7d9a6962382148b4f8a3ca2cb2f1b3bf3989da8911925145c212ad0df0bb3",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/SOUL.md",
+      "kind": "text",
+      "sha256": "44c28d9b23acedad45453d70d57b1c5d9a22157e37057a723eb82741b51c5a3a",
+      "bytes": 199,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/state.db",
+      "kind": "other",
+      "sha256": "6ea13757d66ca20f7a2fe59964ff23d04d5fc83480a74284369f0d5dfbcb4433",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:40+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:40+00:00"
+    },
+    {
+      "path": "hermes/profiles/flint-40b/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:39+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/config.yaml",
+      "kind": "text",
+      "sha256": "c2097349d3262f48d9d408f20922bbdb058894781f11a981e5bf6e5a68f5b4bf",
+      "bytes": 217,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "236b2e9154b250af221e19b21656eb0f1c6d69ae4efdca4863c16bef578a5c07",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "fb8607078c6026aa64f44bd8a6e37d2edffee5c10d940243deaa049f25565fc4",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/gateway.lock",
+      "kind": "other",
+      "sha256": "145f798b515a6e46e38bf64f81d79e97b5b0e960ff5da6515094f09e5759e6be",
+      "bytes": 355,
+      "modified": "2026-11-09T16:40:40+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/skills/.curator_state",
+      "kind": "other",
+      "sha256": "56185a11b25a8f1b246f7c83175280ed3701865ad7f9cb62eb222d8fd020bbb0",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/SOUL.md",
+      "kind": "text",
+      "sha256": "62be72313e9ee8d67ad59b7db3e2ce91261e3541ebea92e90d4c07337fd6a20a",
+      "bytes": 202,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/state.db",
+      "kind": "other",
+      "sha256": "f8ea7fea4683668f93056c7b978e5fbae037789da11f0305d119773efc62456c",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:40+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:40+00:00"
+    },
+    {
+      "path": "hermes/profiles/glm-53-flash/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:40+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:23:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "0b1d3f8e65f571d9d59834de0e4107183c766230e3c3966c715fb006e69b8bff",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "ed28a7771840d4b17215930bd50b2814fd73619620fa8dd18d7c88d2972f7372",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/gateway.lock",
+      "kind": "other",
+      "sha256": "b6607856d4fbe3d7e8ea728988612a5d1224eda4e4dfa84ac84cfcb4fa64734c",
+      "bytes": 345,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/SOUL.md",
+      "kind": "text",
+      "sha256": "9f0680d899daa070c4b04dfe7514fd3cd3536aa74942e575928ab8df7ceb7008",
+      "bytes": 310,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/state.db",
+      "kind": "other",
+      "sha256": "cee7182b8786c9d8df781a35e3cae4e5754e80ae2c799e1ca114a2f4e7d5e1c6",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/hr/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/config.yaml",
+      "kind": "text",
+      "sha256": "2df9271112ae396e6ad7c6f14e5aa50edd4d254ad74e472cbf906c24f084bbda",
+      "bytes": 210,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "cfe4f6d53fa565d7bdb05ec9f2c411745407a583e00868bfbcff8b36076eb977",
+      "bytes": 22,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "b9470aab09aa88d71e68d437d2c529995f17897fe56f0c44f6994366e7df8239",
+      "bytes": 17,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/gateway.lock",
+      "kind": "other",
+      "sha256": "dd1b44a42c0f73d182b39042fd1f49572bf3c94ec4ad174489597098b0a35245",
+      "bytes": 349,
+      "modified": "2026-11-09T16:40:41+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/skills/.curator_state",
+      "kind": "other",
+      "sha256": "027db9bb6d3d0fd2695362c916dceb784c5a1f54316fe2bc9fe35c0e74053be8",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/SOUL.md",
+      "kind": "text",
+      "sha256": "09151826f241aa538e00fee72620ba13f0a5d03094b7f6618ea4d7f023815aa3",
+      "bytes": 196,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/state.db",
+      "kind": "other",
+      "sha256": "a6c5adf02f8bb2e6c1c34b009f9a46097a5ddb43578f5c1a80a67767998d974a",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:41+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:41+00:00"
+    },
+    {
+      "path": "hermes/profiles/iceman/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:41+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/config.yaml",
+      "kind": "text",
+      "sha256": "62ee62c4983458e38746cd7fb29c8f176a36fb5680f90d95f5020273a99e9fbd",
+      "bytes": 219,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "6d2028ca5997d3b8ed874fa8acc292dd6af0a1146a60014f62ea0289265da397",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "79b207792aa933265b379c69e41c1f3dad14c3266c3bb0b620c0d14fe6b1a544",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/gateway.lock",
+      "kind": "other",
+      "sha256": "55f3162cf96240f59cfd33d02b704581506cfd4b4b32d101c73720bb947a05b4",
+      "bytes": 358,
+      "modified": "2026-11-09T16:40:42+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/skills/.curator_state",
+      "kind": "other",
+      "sha256": "188e4f83674eb5e53e81fe1e04ed412ac723f5a4b5baba7022d780974bf3ec5e",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/SOUL.md",
+      "kind": "text",
+      "sha256": "ea5a0e882e5f0cc033aaf477ac1a24915b4abb83a559bfcefee30afcf5cd1acf",
+      "bytes": 205,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/state.db",
+      "kind": "other",
+      "sha256": "62f6f637f9e6b4ae768e2923a40b161a3f59e33f4dd4ada9310c7f470e4c7e90",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:43+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:43+00:00"
+    },
+    {
+      "path": "hermes/profiles/inkling-2-small/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:42+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/config.yaml",
+      "kind": "text",
+      "sha256": "de345232df8c14042220eec85b7c78c693ecfcf6fa560193a90edda5faae23a9",
+      "bytes": 215,
+      "modified": "2026-11-09T16:40:13+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "a9c94511f50c42a38865c2eedd94c0a640a99220001c543e850d14a9da079fe5",
+      "bytes": 23,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "b2cd74fa1a76c7d863bff9f16c7e835ee4ee5efb2b744672870f0bbad6114fe9",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/gateway.lock",
+      "kind": "other",
+      "sha256": "b13cbd1317af38c5ab93ae141c020028d90d6a1ff67e89ea686cbda764bf6512",
+      "bytes": 354,
+      "modified": "2026-11-09T16:40:43+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/skills/.curator_state",
+      "kind": "other",
+      "sha256": "f5f648dd10784370170d684d54c9d5546bf32532836b39be4a426e44237bb43c",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/SOUL.md",
+      "kind": "text",
+      "sha256": "088a85efbb0520e6e0a320f07080275c9167e1cbf98efa0e57bd33c6f01cca22",
+      "bytes": 201,
+      "modified": "2026-11-09T16:40:13+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/state.db",
+      "kind": "other",
+      "sha256": "7083cb060614c6d69de1343c8ced052578b4ccce9d61f24b20ee75159cb5d266",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:44+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:44+00:00"
+    },
+    {
+      "path": "hermes/profiles/longcat-2-5/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:43+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "1ea0813001695696e1c16121849a2a27c1224a1106874da47bf8f32311003076",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "105156dd1690e7a7f7959f3817e4b516d06c831d3e344da297c9de5312a4383f",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/gateway.lock",
+      "kind": "other",
+      "sha256": "d5cf0aae5d9872c69b291aef4f7af1bd29e35932e5763fd49ba78798585a9285",
+      "bytes": 351,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/SOUL.md",
+      "kind": "text",
+      "sha256": "3297d31554571212887d0be3186ae0798183a8f918a29f1527aee825aa4492c5",
+      "bytes": 316,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/state.db",
+      "kind": "other",
+      "sha256": "4e42a1dda7fa22a8d5511b9d791bfeee3deb0586cabdf41d98247a5df5023a3b",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/marketer/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:23+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/config.yaml",
+      "kind": "text",
+      "sha256": "0ec50bed27f96fb70f19a5b822b11d1f12ee23530c96900e2e6a177c493a5211",
+      "bytes": 219,
+      "modified": "2026-11-09T16:40:14+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "d009910137b9e5f53bd0e9c3437fb7e37d81fe847c2d9562e345d89fae7087a8",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "cd058f63802d1dba51557308b17ba715deb671c9a16d03fd507d338ed205ea63",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/gateway.lock",
+      "kind": "other",
+      "sha256": "95ca6915bcb7b564e6bb2643408703ab23f71c54c6531537bc4162e20410ea5d",
+      "bytes": 357,
+      "modified": "2026-11-09T16:40:44+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/skills/.curator_state",
+      "kind": "other",
+      "sha256": "e92f797a8fd7868dc6e8eafab8c64f94d87ff32fc8d04fd739fb621c54ae3216",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/SOUL.md",
+      "kind": "text",
+      "sha256": "6265bc048ab5888147fa04e09a20faec6eb9739e41357d522f429afb7d7e8fd7",
+      "bytes": 204,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/state.db",
+      "kind": "other",
+      "sha256": "e08ad9d25234561001da570d018d5f6348c3699b9b2b3dccf99c8d273bc136e1",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:46+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:46+00:00"
+    },
+    {
+      "path": "hermes/profiles/mimo-v26-flash/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:44+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/config.yaml",
+      "kind": "text",
+      "sha256": "5db91612788fe1f5c280c8cadf73f041cb420dfb90fc66e2422f0459d3bbb87f",
+      "bytes": 226,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "1efc732f913f354cf866370ece991a33c34c324264a7103aaaab87643f5d4bd0",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "95ba3584bb3a275ae9e27c68dc8f724ff18a83b5df5a2bb160d2177626ad4646",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/gateway.lock",
+      "kind": "other",
+      "sha256": "608d1bc9bb6edb6558bf5c72b99823511bebeb608b389e627b7110220c6b3c75",
+      "bytes": 364,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/skills/.curator_state",
+      "kind": "other",
+      "sha256": "ca2508b21467a111d228688631a1182f529657457fbb4ecc9cb84c3f66ab6cc6",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/SOUL.md",
+      "kind": "text",
+      "sha256": "1f1017afbf998e925c8ad180cf00d79192cff15558bc2c81c0212dd12500d7f1",
+      "bytes": 211,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/state.db",
+      "kind": "other",
+      "sha256": "45be8b5482feeeaed00701e3cf0c430681fdb90190f2dd106a5f05218da5e01e",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-lightning/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/config.yaml",
+      "kind": "text",
+      "sha256": "c3108d284f300ba2c5f11aaf9225a4227f510b2ff1d9f29e817bcca5eb31e7f7",
+      "bytes": 225,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:41:01+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:36:59+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T16:41:01+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "180f2fd3fe47640fb7f23625c739b757b02a3a28137dd72b2e867e4cc1aa3cf6",
+      "bytes": 23,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "91a57603700d2c683aa7b6f32a6059d4602a0523ffdc44c83de518799c080c2f",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/gateway.lock",
+      "kind": "other",
+      "sha256": "2caff844dd989ad0c4f3ae66fbdf23371610b7b872397b37bfc20f10d3c69635",
+      "bytes": 363,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/skills/.curator_state",
+      "kind": "other",
+      "sha256": "c62f49a771722c99fb4b3b120771cbd3915a0f7f8e6e08b3c65ce6362113c3ba",
+      "bytes": 345,
+      "modified": "2026-11-09T16:59:27+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/SOUL.md",
+      "kind": "text",
+      "sha256": "3bc715eab9875bc4bc9870252ac0d6a333d577eaf17fdc7f95c97181df5ef41c",
+      "bytes": 210,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/state.db",
+      "kind": "other",
+      "sha256": "2191f3670338e0abf0ecd97918b27ff10de251aba016f22e994a430f45d11b1c",
+      "bytes": 327680,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/nemotron-35-super-vl/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T16:40:47+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "b1e40a1a464d3ca96a3e6cc889d669cdaede92710e43a40519efd30fb3afb6d6",
+      "bytes": 23,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "c54c9b948b0a3eba38fbe3a6f3c85498061d6ec86be820e820dc3afe2f4d75f9",
+      "bytes": 17,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/gateway.lock",
+      "kind": "other",
+      "sha256": "6ccccd3c753ad25742ffbdbf64c428fd9f2d6732e01f912dd284372bc1772c80",
+      "bytes": 345,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/SOUL.md",
+      "kind": "text",
+      "sha256": "99ab662e66a9af25da8cdf7d28578068dd810642f17b40ecda260d4e7166f5d1",
+      "bytes": 310,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/state.db",
+      "kind": "other",
+      "sha256": "cf8d9a9e1db2ee7eb5a0ec071f053ac0b8f9f47182073b35026ce4f5e8303940",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/qa/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "829a3974528aeeb6a047e6876cb217be86c139afa451041e910dd3138766d539",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "081cfc0aa3d75707b4de67b5a1479d1088f581a8484a71403980fb2fba5e7322",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/gateway.lock",
+      "kind": "other",
+      "sha256": "eff88b3dd9d8f441a148d8f9c5672aa3099ad67a6974f72f156127c3a4b25642",
+      "bytes": 353,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/SOUL.md",
+      "kind": "text",
+      "sha256": "7599e0d81cdea559e418d3200863b47e9283c1be29913dffd3decafad9479b4c",
+      "bytes": 318,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/state.db",
+      "kind": "other",
+      "sha256": "e637bacd07bba26052111677e98e468ee13a295aa097031d65a017c372c86678",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/researcher/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "cf9aa86bad3baf7ca2aacd81801ae85d2f0e99a63c6e966ceb807e8680e09c21",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "36019e6e7519a39562a07022cdaab461936b34dfa205f57742358d3825a8c537",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/gateway.lock",
+      "kind": "other",
+      "sha256": "a7c27104fd568dc9d57b415a419629c8e4c4553c3544da6455345f79d96f947e",
+      "bytes": 351,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/SOUL.md",
+      "kind": "text",
+      "sha256": "3edfec9050a14bfb48e340f30e52248907e2b3351ad93dc27d4b46fe5e658b13",
+      "bytes": 316,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/state.db",
+      "kind": "other",
+      "sha256": "2af5b603e8f263a591ffe04c750774886161c2061468dfcf814ce5d2462d3fbf",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/reviewer/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:24+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "3fe502e097f55765201dfaa0180fbf341cf0e4a18da818e0f7ecda6bba529b72",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "a792baee9a67ebd9682b52f5cc71b4d93d7777f4fd17541fe43e32a693e2014e",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/gateway.lock",
+      "kind": "other",
+      "sha256": "8c34ff424555974b9281eeb7bcf2d18a0faa5f23848c3a140693b7c601621511",
+      "bytes": 353,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/SOUL.md",
+      "kind": "text",
+      "sha256": "37f112aeed14d2f9787d7f33f03c2c25b8c5177b91eaa27732d3daa9c12dfe2c",
+      "bytes": 318,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/state.db",
+      "kind": "other",
+      "sha256": "19ca9b7ccc520ad0f03ee86e996d4aa436c071e8bafbc0346a97e65849e1085d",
+      "bytes": 479232,
+      "modified": "2026-11-23T06:12:26+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/supervisor/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "49bd6def90d4de27ff95a3788af85775693c4ec86239081238e0139f36f3b00a",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "e818564b75d764825bc8158f7651ce50fb7d7d68a7ac94435e35fd06a9d98b7f",
+      "bytes": 18,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/gateway.lock",
+      "kind": "other",
+      "sha256": "cbf0484c320e26e992a245f71d2e6bb195145934cc8f1b570c07d3139962066b",
+      "bytes": 350,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/SOUL.md",
+      "kind": "text",
+      "sha256": "517dd26091bae41333c9783aad8fe5f9f65e55c1f1216de4b7bd4be3be4cd67b",
+      "bytes": 315,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/state.db",
+      "kind": "other",
+      "sha256": "d6935f81e2820216815de6fc588899d06ae9561a0efbc715f58a28b752fdfb02",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/windows/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:25+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/config.yaml",
+      "kind": "text",
+      "sha256": "9dd4080f6d787cbe3c9cbee1bb986201b87e45c84be054c8373ae51cafca2eaf",
+      "bytes": 264,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/cron/.jobs.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/cron/.tick.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/cron/executions.db",
+      "kind": "other",
+      "sha256": "b9600a06474f6ef0e9b208f9fde6016b37d92e9322c4bdfc879a7b859352a051",
+      "bytes": 24576,
+      "modified": "2026-11-09T18:24:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/cron/ticker_heartbeat",
+      "kind": "other",
+      "sha256": "bb52fabc3c6c3fbbab95973b16456f4152cf53094f2270fbb81bad5563f68919",
+      "bytes": 24,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/cron/ticker_last_success",
+      "kind": "other",
+      "sha256": "a43d48039f64a95a9312086c0db3ac312ebc6ba9e4f1719749aa08b1e7f8ba95",
+      "bytes": 17,
+      "modified": "2026-11-09T18:37:00+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/gateway.lock",
+      "kind": "other",
+      "sha256": "9990258676695b08b366938c3f3f7c9bf0ce4fff2f003bbad8ef86fa4b46212c",
+      "bytes": 349,
+      "modified": "2026-11-09T18:23:26+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/SOUL.md",
+      "kind": "text",
+      "sha256": "967ec3bef1c83b3e64539df0dd0990cb6c2b5189beec62ceddae5a20a8a7e82a",
+      "bytes": 314,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/state.db",
+      "kind": "other",
+      "sha256": "7a84912cd0b753b3db85e398d0963d3bc1f995bdedea610baa6890a1c51859f2",
+      "bytes": 327680,
+      "modified": "2026-11-09T18:23:26+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/state.db.fts_rebuild.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:26+00:00"
+    },
+    {
+      "path": "hermes/profiles/writer/state.db.quarantine.lock",
+      "kind": "other",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "modified": "2026-11-09T18:23:26+00:00"
+    },
+    {
+      "path": "mcp/opencode-mcp.example.json",
+      "kind": "text",
+      "sha256": "f2fa9a5ebdd271eecd77471de4695d5192d99c0b9ba9e82040401584ab48bc3b",
+      "bytes": 1646,
+      "modified": "2026-11-11T17:10:35+00:00"
+    },
+    {
+      "path": "obsidian-vault/Agent_Vocabulary.md",
+      "kind": "text",
+      "sha256": "6ac45b66473a99dc501e3578d41e5546e0baaaa9ad6bf798d26d42934916334e",
+      "bytes": 4164,
+      "modified": "2026-11-09T17:57:34+00:00"
+    },
+    {
+      "path": "obsidian-vault/Agent_Vocabulary_GrokBot.md",
+      "kind": "text",
+      "sha256": "78dc615f1cb12d18efe53f2c73b294579800c04cd8fdbea7f809d379eb17b992",
+      "bytes": 3149,
+      "modified": "2026-11-09T18:04:57+00:00"
+    },
+    {
+      "path": "obsidian-vault/Daily/2026-11-09.md",
+      "kind": "text",
+      "sha256": "2f7f3f95f2b4c8a160f04feeb7217fffa2061392ff4d65692d3d35f501e949f4",
+      "bytes": 6285,
+      "modified": "2026-11-09T18:11:58+00:00"
+    },
+    {
+      "path": "obsidian-vault/Daily/2026-11-19.md",
+      "kind": "text",
+      "sha256": "d00f714af08f6b3c15518551c6e5f9823b2a68ff6d5d54834e0a35b96a9d91c1",
+      "bytes": 4063,
+      "modified": "2026-11-19T17:04:57+00:00"
+    },
+    {
+      "path": "obsidian-vault/Daily/2026-11-23.md",
+      "kind": "text",
+      "sha256": "cefc743e284ba4614d8216a97b0e0920a918b9e8426580a7d8f9d2fe108fab43",
+      "bytes": 10704,
+      "modified": "2026-11-23T07:46:38+00:00"
+    },
+    {
+      "path": "obsidian-vault/Work/Project.md",
+      "kind": "text",
+      "sha256": "285673aadffaecb4984918efd4e4a40c4ce7b3e7d971b3c3ac6e5312d8c8fcf6",
+      "bytes": 919,
+      "modified": "2026-11-09T16:33:17+00:00"
+    },
+    {
+      "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
+      "kind": "text",
+      "sha256": "415811ac09a9abd1ad9d72fdf8a75d06998d3d0944773751f1823bd3f67395d4",
+      "bytes": 12735,
+      "modified": "2026-11-23T07:46:47+00:00"
+    },
+    {
+      "path": "opencode/agents/coder.md",
+      "kind": "text",
+      "sha256": "23e8df89c219b85144a0ab7ac4b47c9d3427e24e60d37a990199c667ff86f179",
+      "bytes": 336,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/crouton-alpha.md",
+      "kind": "text",
+      "sha256": "4546bb5e8f9e7afd729a9ace3d55b17ff05a354264f4b775fda78cccb08d3679",
+      "bytes": 265,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/decider.md",
+      "kind": "text",
+      "sha256": "a5e582a1e9fa08de242053221debdeac6cbd73404b1b493c95dbbf17ab0cde47",
+      "bytes": 361,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/deepseek-v41-flash.md",
+      "kind": "text",
+      "sha256": "8a7e5ed2bb98f6f85c36a4560edddf06ada922b8bb19e4912d0d7323ec541e35",
+      "bytes": 281,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/designer.md",
+      "kind": "text",
+      "sha256": "943d305712ec7183a08ffea44be6b74f73a661fe7fbab8aee4c53957ca881e62",
+      "bytes": 382,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/finance.md",
+      "kind": "text",
+      "sha256": "aa9e7debffd9758e7eb81a5e85f938ae0791a7665b0381aa830d4448f9447676",
+      "bytes": 379,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/flint-40b.md",
+      "kind": "text",
+      "sha256": "8034e8237c2fa552681a87536e788f6365bb6f42aa0e439ac59868b93db861dc",
+      "bytes": 253,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/glm-53-flash.md",
+      "kind": "text",
+      "sha256": "930379254b249a828baada7259ce3b34cba35a4c2521038cc8bd7cfc88fb5ffb",
+      "bytes": 263,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/hr.md",
+      "kind": "text",
+      "sha256": "23c80abd53c70fb5c9be0b3c116b40c5e2eb7641be48e43dc24e727807509de6",
+      "bytes": 364,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/iceman.md",
+      "kind": "text",
+      "sha256": "e53885e9fabf3d896907d78e323565f9774aaafcfbe5b89aa916ec05e58c4db4",
+      "bytes": 244,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/inkling-2-small.md",
+      "kind": "text",
+      "sha256": "92b94929eac174e05a395d0d941408d2d6e7ef514f95b2185d2711807440d238",
+      "bytes": 271,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/longcat-2-5.md",
+      "kind": "text",
+      "sha256": "bbc6774d27358aac8ad290c716168b343548ede2d64eb1d760fc7401f684ea68",
+      "bytes": 259,
+      "modified": "2026-11-09T16:40:14+00:00"
+    },
+    {
+      "path": "opencode/agents/marketer.md",
+      "kind": "text",
+      "sha256": "44ea00bfdbdcdc96a7af3dbe9538d7149023a39fbfea42c614a284547d443151",
+      "bytes": 382,
+      "modified": "2026-11-09T18:24:06+00:00"
+    },
+    {
+      "path": "opencode/agents/mimo-v26-flash.md",
+      "kind": "text",
+      "sha256": "a44ceafb326515c0fe62002df7381ca2a49d14b6247548b36988031ee7f75ed5",
+      "bytes": 269,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/nemotron-35-lightning.md",
+      "kind": "text",
+      "sha256": "9a757895ccf9921f429478f03d92677ad4086166370765594673c1e1bedc5615",
+      "bytes": 290,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/nemotron-35-super-vl.md",
+      "kind": "text",
+      "sha256": "8ede76acba37ad7acd6cedc301d3ca1dc0b90dfdef8c6daf72bb1796642c7daa",
+      "bytes": 287,
+      "modified": "2026-11-09T16:40:15+00:00"
+    },
+    {
+      "path": "opencode/agents/qa.md",
+      "kind": "text",
+      "sha256": "87a709481963e6e30b950f52ee09f8571d4f3fa86cbf15555ae5979abbab6082",
+      "bytes": 364,
+      "modified": "2026-11-09T18:24:06+00:00"
+    },
+    {
+      "path": "opencode/agents/researcher.md",
+      "kind": "text",
+      "sha256": "596b026fbe02ed017415f0e92e446d86b493ad9d19a86a303d124dffcc88bd12",
+      "bytes": 388,
+      "modified": "2026-11-09T18:24:06+00:00"
+    },
+    {
+      "path": "opencode/agents/reviewer.md",
+      "kind": "text",
+      "sha256": "76479e6418bf1762766c99db6521bb84623d093c89b82f1ecaeee71675d23ce7",
+      "bytes": 382,
+      "modified": "2026-11-09T18:24:06+00:00"
+    },
+    {
+      "path": "opencode/agents/supervisor.md",
+      "kind": "text",
+      "sha256": "1a3c2bf3d3b451135511cb105cf9d71c45ccbe7459231607448f1b742a66cb95",
+      "bytes": 417,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/windows.md",
+      "kind": "text",
+      "sha256": "796f48c97900768c3c5e65f43608124300d9d7774fce8232ee3d7e9a972130c6",
+      "bytes": 376,
+      "modified": "2026-11-09T18:24:05+00:00"
+    },
+    {
+      "path": "opencode/agents/writer.md",
+      "kind": "text",
+      "sha256": "944809374304a72dce70cc9d028d11d9a45bf6875a3e4ce73aba390047913c64",
+      "bytes": 376,
+      "modified": "2026-11-09T18:24:06+00:00"
+    },
+    {
+      "path": "platforms/linux/README.md",
+      "kind": "text",
+      "sha256": "1dd0ae756f0f6064ac887dacff495881e395b24e5f519967d1138fed8477711d",
+      "bytes": 1245,
+      "modified": "2026-11-19T14:59:45+00:00"
+    },
+    {
+      "path": "platforms/macos/README.md",
+      "kind": "text",
+      "sha256": "f1b83b579de04a30f819b91e3a4b7e4d87fee23275deaa3f548c8b27f9990f0a",
+      "bytes": 1082,
+      "modified": "2026-11-19T14:59:45+00:00"
+    },
+    {
+      "path": "platforms/windows/README.md",
+      "kind": "text",
+      "sha256": "e034227d347a22d28546bce0c3a9165c83021ae68c080c9ac306fa599ba3c2bf",
+      "bytes": 1958,
+      "modified": "2026-11-19T14:59:45+00:00"
+    },
+    {
+      "path": "README.md",
+      "kind": "text",
+      "sha256": "63fafa070625d3fd0899a117dcb64f3478f832973dac96742be00175369177c0",
+      "bytes": 16284,
+      "modified": "2026-11-23T07:21:49+00:00"
+    },
+    {
+      "path": "samples/out/ram-options.csv",
+      "kind": "text",
+      "sha256": "5bb357f9e396655ace132be32d69bad149d6e82859263e97f5b1c79dd4fd7da0",
+      "bytes": 476,
+      "modified": "2026-11-19T16:52:44+00:00"
+    },
+    {
+      "path": "samples/out/ram-options.docx",
+      "kind": "other",
+      "sha256": "cc7d47321921e660fccf31608ab1f0e7fd58a4886adc71faca922cca619cce97",
+      "bytes": 37077,
+      "modified": "2026-11-19T16:53:07+00:00"
+    },
+    {
+      "path": "samples/out/ram-options.pptx",
+      "kind": "other",
+      "sha256": "c63ec2b58a5d01316e1e66656e34bfac0d2942e5556a82a34c85aaa30861d927",
+      "bytes": 29622,
+      "modified": "2026-11-19T16:53:18+00:00"
+    },
+    {
+      "path": "samples/out/ram-options.xlsx",
+      "kind": "other",
+      "sha256": "51f0f72bf4cb100175422dd7677aef86b0a13cbda76ee48dba7f80301ae864d1",
+      "bytes": 5503,
+      "modified": "2026-11-19T16:52:33+00:00"
+    },
+    {
+      "path": "samples/out/ram-price.html",
+      "kind": "text",
+      "sha256": "871104948659bfb1982fa188d30144e2f0e7af2882887177d1d863d604e96b5e",
+      "bytes": 3564,
+      "modified": "2026-11-19T16:52:56+00:00"
+    },
+    {
+      "path": "samples/out/ram-price.svg",
+      "kind": "text",
+      "sha256": "7755b1d226e0d6be4b016ad7439485996c82b0eda40af924e2a4603bef9d682a",
+      "bytes": 3185,
+      "modified": "2026-11-19T16:52:56+00:00"
+    },
+    {
+      "path": "samples/ram-options.json",
+      "kind": "text",
+      "sha256": "299abc282981163bd7248a5f1f8d551991de18910825bf941de97c43670eff78",
+      "bytes": 1086,
+      "modified": "2026-11-19T16:51:59+00:00"
+    },
+    {
+      "path": "scripts/bootstrap.py",
+      "kind": "text",
+      "sha256": "7a319fa5a3c0bef11528d4fc67588d55cc42b9e431a133bd075780cf306783e0",
+      "bytes": 14070,
+      "modified": "2026-11-19T14:56:47+00:00"
+    },
+    {
+      "path": "scripts/build_index.py",
+      "kind": "text",
+      "sha256": "07a569b9dfccae2a922baeb3bb65e8c83b4ece78db395651b4f0b447c42bbe34",
+      "bytes": 19600,
+      "modified": "2026-11-23T07:42:50+00:00"
+    },
+    {
+      "path": "scripts/doctor.py",
+      "kind": "text",
+      "sha256": "0058d3d75224e896ec2ff4c97b18d1b9cf1101808eda8b52a4e24fc2040c871d",
+      "bytes": 17339,
+      "modified": "2026-11-19T14:51:51+00:00"
+    },
+    {
+      "path": "scripts/office.py",
+      "kind": "text",
+      "sha256": "6804ab6e0c5ff73aadb58e2eceb8a16d5a25c0d75477678a5b39369bd7ff6288",
+      "bytes": 11264,
+      "modified": "2026-11-19T16:48:56+00:00"
+    },
+    {
+      "path": "scripts/query.py",
+      "kind": "text",
+      "sha256": "9af5ce5e457d1036f4ac5508967b46a2ce4941e2c897c0a6aa488c8e357ccb32",
+      "bytes": 7447,
+      "modified": "2026-11-23T07:45:06+00:00"
+    },
+    {
+      "path": "scripts/research.py",
+      "kind": "text",
+      "sha256": "37b811e3371f527c0ffc2c5a1ec64778bb35b073d5843f98084190c78e96a322",
+      "bytes": 8365,
+      "modified": "2026-11-19T16:47:36+00:00"
+    },
+    {
+      "path": "scripts/viz.py",
+      "kind": "text",
+      "sha256": "12ed2a9c8b60ed15022ef21f66f1fa0f004570c257ed938684bbc352ce684446",
+      "bytes": 11618,
+      "modified": "2026-11-19T16:50:56+00:00"
+    },
+    {
+      "path": "tools/agent-preflight.ps1",
+      "kind": "text",
+      "sha256": "af5e230eff794cf93f1d4e6f64e240a82e74ac892f2d0fdb3a5d6a7a55b2c2ab",
+      "bytes": 11987,
+      "modified": "2026-11-23T06:30:34+00:00"
+    },
+    {
+      "path": "tools/install_windows.ps1",
+      "kind": "text",
+      "sha256": "75b54a2fe301065fdb6fd078e887f6f5630b663bfa3f6138ee8443f0417db420",
+      "bytes": 2401,
+      "modified": "2026-11-10T17:15:20+00:00"
+    },
+    {
+      "path": "tools/repair-windows-admin.ps1",
+      "kind": "text",
+      "sha256": "43b7ebb2ee2669a8f3fea91bbdc538b8a0b7460cd2d7d26c6e9fa29082244ee5",
+      "bytes": 15914,
+      "modified": "2026-11-19T15:10:26+00:00"
+    },
+    {
+      "path": "tools/trim-services.ps1",
+      "kind": "text",
+      "sha256": "a44b3c1b6ea10fb8c4cd73d03ce523705035c2176567f1ad026bb673ee5ee61e",
+      "bytes": 11033,
+      "modified": "2026-11-19T16:35:25+00:00"
+    },
+    {
+      "path": "tools/wire-craft-anything.ps1",
+      "kind": "text",
+      "sha256": "c6be11fa1b50f548eb50f3b7e2da094a4e6e85b1cabae627479e63eaaaf63e8c",
+      "bytes": 6110,
+      "modified": "2026-11-23T06:30:52+00:00"
+    }
+  ],
+  "runs": [],
+  "approvals": [],
   "facts": [
     {
       "category": "schema",
@@ -4798,6 +7430,51 @@
       "category": "projects",
       "key": "projects[3].status",
       "value": "present"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_not_picker",
+      "value": "The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company."
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[0]",
+      "value": "Orchestrator decomposes a task and assigns roles; several members work concurrently"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[1]",
+      "value": "Shared message channel and task board visible in the UI; members post findings and hand off artefacts"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[2]",
+      "value": "Each role has goals, permissions and a status (working, waiting, done)"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[3]",
+      "value": "Human authorisation given once, then remembered; approvals are not re-requested every action"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[4]",
+      "value": "Auto mode supports hours, days, weeks, months, years and non-stop"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[5]",
+      "value": "Progress reports can be sent to email or a chat webhook"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[6]",
+      "value": "No subscription, credits or paid feature gates anywhere"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.current_gap",
+      "value": "app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging."
     },
     {
       "category": "lessons",

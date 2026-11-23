@@ -10,6 +10,9 @@ Examples
     python scripts/query.py --facts toolchain
     python scripts/query.py --docs
     python scripts/query.py --doc docs/TROUBLESHOOTING.md
+    python scripts/query.py --db projects/polsia-free-v1/knowledge.db --stats
+    python scripts/query.py --db projects/polsia-free-v1/knowledge.db --runs 10
+    python scripts/query.py --db projects/polsia-free-v1/knowledge.db --assets
 """
 from __future__ import annotations
 
@@ -24,10 +27,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DB = ROOT / "data" / "knowledge.db"
 
 
-def connect():
-    if not DB.exists():
-        sys.exit("data/knowledge.db is missing. Run: python scripts/build_index.py")
-    con = sqlite3.connect(DB)
+def connect(path=None):
+    target = Path(path).resolve() if path else DB
+    if not target.exists():
+        sys.exit(f"{target} is missing. Run: python scripts/build_index.py")
+    con = sqlite3.connect(target)
     con.row_factory = sqlite3.Row
     return con
 
@@ -137,24 +141,74 @@ def cmd_facts(con, category):
         print(f"  {r['key']}: {r['value']}")
 
 
+def cmd_runs(con, limit):
+    try:
+        rows = con.execute("SELECT time, kind, substr(text,1,180) text FROM runs ORDER BY id DESC LIMIT ?",
+                           (limit,)).fetchall()
+    except sqlite3.OperationalError:
+        print("no runs table (this is the template database)")
+        return
+    if not rows:
+        print("no runs recorded")
+        return
+    for r in rows:
+        print(f"  {r['time']} {r['kind']:<6} {r['text']}")
+
+
+def cmd_assets(con):
+    try:
+        rows = con.execute(
+            "SELECT path, kind, bytes, width, height, substr(sha256,1,12) hash "
+            "FROM assets ORDER BY bytes DESC LIMIT 40"
+        ).fetchall()
+    except sqlite3.OperationalError:
+        print("no assets table (this is the template database)")
+        return
+    for r in rows:
+        dims = f" {r['width']}x{r['height']}" if r["width"] else ""
+        print(f"  {r['path']:<58} {r['kind']:<5} {r['bytes']:>9,} B{dims}  {r['hash']}")
+
+
+def cmd_sources(con):
+    try:
+        rows = con.execute(
+            "SELECT path, kind, bytes FROM sources ORDER BY bytes DESC LIMIT 40"
+        ).fetchall()
+    except sqlite3.OperationalError:
+        print("no sources table (this is the template database)")
+        return
+    for r in rows:
+        print(f"  {r['kind']:<11} {r['bytes']:>11,} B  {r['path']}")
+
+
 def main():
     # Windows consoles default to cp1252 and crash on arrows from the docs.
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-    parser = argparse.ArgumentParser(description="Query the repository knowledge base")
+    parser = argparse.ArgumentParser(description="Query a template or project knowledge base")
+    parser.add_argument("--db", help="Database file (default: data/knowledge.db)")
     parser.add_argument("--stats", action="store_true")
     parser.add_argument("--search", metavar="QUERY")
     parser.add_argument("--limit", type=int, default=8)
     parser.add_argument("--docs", action="store_true")
     parser.add_argument("--doc", metavar="PATH")
     parser.add_argument("--facts", nargs="?", const="", metavar="CATEGORY")
+    parser.add_argument("--runs", nargs="?", const=10, type=int, metavar="N")
+    parser.add_argument("--assets", action="store_true")
+    parser.add_argument("--sources", action="store_true")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
-    con = connect()
+    con = connect(args.db)
     if args.stats:
         cmd_stats(con)
+    elif args.runs is not None:
+        cmd_runs(con, args.runs)
+    elif args.assets:
+        cmd_assets(con)
+    elif args.sources:
+        cmd_sources(con)
     elif args.search:
         cmd_search(con, args.search, args.limit)
     elif args.docs:
