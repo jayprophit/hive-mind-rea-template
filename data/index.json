@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T11:36:11+00:00",
+  "generated": "2026-11-23T11:39:32+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 258,
-    "chunks": 572,
+    "headings": 259,
+    "chunks": 574,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -1292,9 +1292,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T11:30:26+00:00",
-      "sha256": "e5621f0634c72dc9fe02582aa20310629f6714b5bf6097261038951a8eb643f7",
-      "words": 3091,
+      "modified": "2026-11-23T11:36:10+00:00",
+      "sha256": "a77ffc36def4f7e0ff7030ea256597cdb912669a753be7acd85fbb602ed44806",
+      "words": 3350,
       "headings": [
         {
           "level": 1,
@@ -1393,23 +1393,28 @@
         },
         {
           "level": 3,
-          "text": "6. Payments (commerce, not feature gates)",
+          "text": "5l. All capabilities and protocols, free by default",
           "line": 294
         },
         {
           "level": 3,
+          "text": "6. Payments (commerce, not feature gates)",
+          "line": 329
+        },
+        {
+          "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 304
+          "line": 339
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 313
+          "line": 348
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 323
+          "line": 358
         }
       ],
       "links": [],
@@ -1530,28 +1535,38 @@
           "text": "### 5k. Near-total autonomy — no \"Load & Run\" for the user\n\nThe user must never have to choose a model, pick a skill, press \"Load\", or run\na build manually. Add an `AUTONOMOUS_BOOTSTRAP` flow:\n\n1. On open, auto-detect the workspace, existing files, available engines and\n   free services; show a short plain-language status, not a technical menu.\n2. Auto-select roles and engines, auto-load the right skills, and start the\n   13-phase loop from the user's single prompt.\n3. Auto-install/configure what is missing through `FREE_SERVICES`, using\n   test-mode defaults; no API keys or credits required.\n4. Auto-verify after every phase (build, links, behaviour, visual check) and\n   auto-fix failures; only surface an item when it truly needs a human.\n5. The only user inputs are: the task, optional credentials/authorisation via\n   the human gate, and feedback. Everything technical is handled internally.\n6. Show a simple progress view (\"Planning → Researching → Building →\n   Checking → Done\") with plain words, and a chat box for follow-ups."
         },
         {
-          "heading": "6. Payments (commerce, not feature gates)",
+          "heading": "5l. All capabilities and protocols, free by default",
           "line": 294,
+          "text": "### 5l. All capabilities and protocols, free by default\n\nAdd a `CAPABILITIES` registry where every capability has a free/open default\nand an optional paid tier using the person's own key. No feature is locked.\n\n| Capability | Free default | Optional paid |\n|---|---|---|\n| Text / chat / reasoning | Nous free, OpenCode free, local Ollama | user's API key |\n| Embeddings / search | local SQLite FTS5, BM25 | hosted vector DB |\n| Speech-to-text / voice recognition | local faster-whisper, Web Speech | hosted STT |\n| Text-to-speech | Edge TTS, browser SpeechSynthesis | hosted TTS |\n| Image generation | local SVG/Canvas, bundled icons | image API |\n| Audio / music generation | local synthesis, Web Audio | music API |\n| Video generation | local render via ffmpeg/Canvas | video API |\n| OCR / document reading | pypdf, Pillow, local OCR | hosted OCR |\n| Email | local `mailto:` drafts + IMAP/SMTP via user config | hosted mail |\n| Phone assistant | WebRTC/SIP test mode with local STT/TTS | telephony provider |\n| Diagrams / charts | Mermaid, `scripts/viz.py` | hosted diagramming |\n| MCP tools | any stdio/HTTP MCP server, allowlisted | hosted MCP |\n| Protocols | MCP, A2A, Agent Skills, webhooks, IMAP/SMTP, HTTP | enterprise connectors |\n\nRules:\n\n- `CAPABILITIES` entries carry `id`, `name`, `freeProvider`, `paidProvider`,\n  `status`, `cost`, `consent`, `testMode`.\n- `MCP_SERVERS` registry suppor"
+        },
+        {
+          "heading": "5l. All capabilities and protocols, free by default",
+          "line": 294,
+          "text": "rprise connectors |\n\nRules:\n\n- `CAPABILITIES` entries carry `id`, `name`, `freeProvider`, `paidProvider`,\n  `status`, `cost`, `consent`, `testMode`.\n- `MCP_SERVERS` registry supports add/remove/enable, tool discovery and a\n  per-role allowlist; new servers are sandboxed until trusted.\n- `ENGINES` supports free and paid models; switching never changes the team's\n  roles.\n- Email can read, draft and send with remembered human approval; no auto-send\n  of sensitive content.\n- Phone assistant is test-mode by default and never places real calls without\n  explicit authorisation.\n- Every capability is callable from the chat widget and from the team loop."
+        },
+        {
+          "heading": "6. Payments (commerce, not feature gates)",
+          "line": 329,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 304,
+          "line": 339,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 313,
+          "line": 348,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 323,
+          "line": 358,
           "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
         },
         {
           "heading": "Acceptance criteria",
-          "line": 323,
+          "line": 358,
           "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
@@ -5737,9 +5752,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "e5621f0634c72dc9fe02582aa20310629f6714b5bf6097261038951a8eb643f7",
-      "bytes": 20576,
-      "modified": "2026-11-23T11:30:26+00:00"
+      "sha256": "a77ffc36def4f7e0ff7030ea256597cdb912669a753be7acd85fbb602ed44806",
+      "bytes": 22452,
+      "modified": "2026-11-23T11:36:10+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",
