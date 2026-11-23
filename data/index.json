@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T11:11:29+00:00",
+  "generated": "2026-11-23T11:12:35+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 253,
-    "chunks": 566,
+    "headings": 254,
+    "chunks": 568,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -1292,9 +1292,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T10:55:56+00:00",
-      "sha256": "ccce264f26d9c69ad7cb755098816cccc66a1bd28c6a23d39836dbbc845d8e74",
-      "words": 2294,
+      "modified": "2026-11-23T11:11:34+00:00",
+      "sha256": "0a16feffe098e9b58c19ea92b33bb0c0b508bbfed9f577c700cade429abdf93c",
+      "words": 2506,
       "headings": [
         {
           "level": 1,
@@ -1368,23 +1368,28 @@
         },
         {
           "level": 3,
-          "text": "6. Payments (commerce, not feature gates)",
+          "text": "5g. Every dashboard button becomes a real, improved action",
           "line": 197
         },
         {
           "level": 3,
+          "text": "6. Payments (commerce, not feature gates)",
+          "line": 224
+        },
+        {
+          "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 207
+          "line": 234
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 216
+          "line": 243
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 226
+          "line": 253
         }
       ],
       "links": [],
@@ -1475,28 +1480,38 @@
           "text": "### 5f. Dashboard surfaces to reproduce\n\nThe studio must expose the same account surfaces seen in the original dashboard:\n**Settings, Teams, Refer and earn, Help, Give feedback, Personal account,\nBilling, Upgrade, Usage details, Top up credits, Credits, New company, My\nportfolio**, plus any other menu items discovered. Each surface needs a real\nroute, a working state model, and links back to the team workflow. `Credits` and\n`Top up credits` must remain informational/test-mode only — no feature may be\nlocked behind them."
         },
         {
-          "heading": "6. Payments (commerce, not feature gates)",
+          "heading": "5g. Every dashboard button becomes a real, improved action",
           "line": 197,
+          "text": "### 5g. Every dashboard button becomes a real, improved action\n\nCaptured from the authenticated dashboard (`samples/dashboard-evidence/`): 58\nclickable controls including `Auto Mode`, `Night task`, `Subscribe`, `Setup\npayments`, `Connect Brex`, `Connect Mercury`, `Connect X account`, `Tweet`,\n`Delete tweet`, `Cold outreach`, `Support`, `Meta Ads - Not running yet`,\n`Image`, `Video`, `New capability`, `New tasks`, `See all tasks`, `Run task: …`,\n`Open inbox`, `Refresh`, `View all`, `Edit`, `Pause`, `Review change`,\n`Save address`, `Try again`, `Close`, `Logout`, `+ Add credits`, `Credits 0`,\n`Top up credits`, `Usage details`, `Upgrade`, `Billing`, `Teams`, `Settings`,\n`Personal accounts`, `Help & More`, `Give Feedback`, `Refer & Earn`,\n`My Portfolio`, `New Company`, `Notifications` and the menu groups.\n\nRules for the rebuild:\n\n- No decorative buttons. Every control dispatches a typed action through the\n  team message bus and appears in the activity/audit log.\n- Each action has `id`, `owner`, `status`, `started`, `finished`, `result`,\n  `retryCount` and, where possible, `undo`.\n- Destructive or irreversible actions (`Delete tweet`, `Logout`, payments,\n  publishing) require remembered human authorisation via the human gate.\n- Long actions (`Run task`, `Tweet`, `Setup payments`) show progress and can be\n  paused/retried; failures produce `Try again` with the reason.\n- Integration b"
+        },
+        {
+          "heading": "5g. Every dashboard button becomes a real, improved action",
+          "line": 197,
+          "text": " via the human gate.\n- Long actions (`Run task`, `Tweet`, `Setup payments`) show progress and can be\n  paused/retried; failures produce `Try again` with the reason.\n- Integration buttons (`Connect X`, `Connect Brex`, `Connect Mercury`, Meta Ads,\n  email, social connections) use test-mode previews and never store secrets.\n- Credit/billing buttons are informational in test mode; no feature is gated."
+        },
+        {
+          "heading": "6. Payments (commerce, not feature gates)",
+          "line": 224,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 207,
+          "line": 234,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 216,
+          "line": 243,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 226,
+          "line": 253,
           "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
         },
         {
           "heading": "Acceptance criteria",
-          "line": 226,
+          "line": 253,
           "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
@@ -5682,9 +5697,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "ccce264f26d9c69ad7cb755098816cccc66a1bd28c6a23d39836dbbc845d8e74",
-      "bytes": 15045,
-      "modified": "2026-11-23T10:55:56+00:00"
+      "sha256": "0a16feffe098e9b58c19ea92b33bb0c0b508bbfed9f577c700cade429abdf93c",
+      "bytes": 16669,
+      "modified": "2026-11-23T11:11:34+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",

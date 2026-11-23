@@ -194,6 +194,33 @@ route, a working state model, and links back to the team workflow. `Credits` and
 `Top up credits` must remain informational/test-mode only — no feature may be
 locked behind them.
 
+### 5g. Every dashboard button becomes a real, improved action
+
+Captured from the authenticated dashboard (`samples/dashboard-evidence/`): 58
+clickable controls including `Auto Mode`, `Night task`, `Subscribe`, `Setup
+payments`, `Connect Brex`, `Connect Mercury`, `Connect X account`, `Tweet`,
+`Delete tweet`, `Cold outreach`, `Support`, `Meta Ads - Not running yet`,
+`Image`, `Video`, `New capability`, `New tasks`, `See all tasks`, `Run task: …`,
+`Open inbox`, `Refresh`, `View all`, `Edit`, `Pause`, `Review change`,
+`Save address`, `Try again`, `Close`, `Logout`, `+ Add credits`, `Credits 0`,
+`Top up credits`, `Usage details`, `Upgrade`, `Billing`, `Teams`, `Settings`,
+`Personal accounts`, `Help & More`, `Give Feedback`, `Refer & Earn`,
+`My Portfolio`, `New Company`, `Notifications` and the menu groups.
+
+Rules for the rebuild:
+
+- No decorative buttons. Every control dispatches a typed action through the
+  team message bus and appears in the activity/audit log.
+- Each action has `id`, `owner`, `status`, `started`, `finished`, `result`,
+  `retryCount` and, where possible, `undo`.
+- Destructive or irreversible actions (`Delete tweet`, `Logout`, payments,
+  publishing) require remembered human authorisation via the human gate.
+- Long actions (`Run task`, `Tweet`, `Setup payments`) show progress and can be
+  paused/retried; failures produce `Try again` with the reason.
+- Integration buttons (`Connect X`, `Connect Brex`, `Connect Mercury`, Meta Ads,
+  email, social connections) use test-mode previews and never store secrets.
+- Credit/billing buttons are informational in test mode; no feature is gated.
+
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a
