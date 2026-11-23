@@ -1,0 +1,113 @@
+{
+  "schema": "build-facts/v1",
+  "updated": "2026-11-23",
+  "machine": {
+    "name": "Lenovo IdeaPad 3 15IIL05",
+    "model": "81WE",
+    "serial": "PF2EJTP9",
+    "cpu": "Intel Core i3-1005G1 (2C/4T, 10th gen)",
+    "gpu": "Intel UHD Graphics (integrated)",
+    "ram_gb_installed": 8,
+    "ram_layout": "4 GB soldered (Samsung M471A5244CB0-CTD) + 4 GB SO-DIMM (Crucial CT4G4SFS8266)",
+    "ram_slots": 1,
+    "ram_max_gb": 12,
+    "ram_upgrade": "Replace the 4 GB SO-DIMM with 8 GB DDR4-2666 SODIMM (Lenovo PSREF: up to 12 GB)",
+    "storage": "Western Digital SN550 250 GB NVMe",
+    "bios_version": "EMCN60WW",
+    "bios_date": "2024-12-04",
+    "bios_note": "Previously EMCN42WW (2020-10-28); the 2024 image is now reported by Win32_BIOS, so the flash is done.",
+    "os": "Windows 11 Pro 10.0.26200",
+    "pagefile_mb": 12796,
+    "pagefile_managed": false
+  },
+  "windows_tuning": {
+    "restart_apps": 0,
+    "wslconfig": "memory=2GB, processors=2, swap=1GB, autoMemoryReclaim=gradual",
+    "service_policy": "Tier 1 stays auto; Tier 2 is Manual and started on demand (tools/trim-services.ps1)",
+    "measured_commit_gb_before": 17.9,
+    "measured_commit_gb_after": 12.2,
+    "known_conflict": "Ollama is Tier 2 for RAM, but Hermes' local provider needs it. Run tools/agent-preflight.ps1 -StartProvider before Hermes/Craft Anything, and stop Ollama afterwards if RAM is tight.",
+    "pending": [
+      "ESRV_SVC_QUEENCREEK and UDCService need an elevated shell to move to Manual",
+      "AnyDesk and TeamViewer are still Auto; decide before stopping remote access"
+    ]
+  },
+  "toolchain": {
+    "python": "3.13.14",
+    "pip": "26.1.2",
+    "node": "26.1.0",
+    "npm": "11.13.0",
+    "git": "2.55.0.windows.3",
+    "craft_anything": "0.6.0",
+    "hermes": "0.23.2",
+    "browse": "0.1.5",
+    "ollama": "0.40.16",
+    "installed_models": {
+      "laya:latest": { "size_gb": 0.84, "use": "router/decider only; chat completions return HTTP 400" },
+      "lfm3:1.7b": { "size_gb": 1.1, "use": "recommended builder model on 8 GB; tool calling; ~16-21 s for a trivial reply" },
+      "bonsai-2:4b": { "size_gb": 1.6, "use": "avoid as an agent model; TEMPLATE is '{{ .Prompt }}' (no chat template), ~58 s and 200 hidden tokens before it says OK" }
+    }
+  },
+  "agents": {
+    "opencode": {
+      "config": "C:\\Users\\jpowe\\.config\\opencode\\opencode.json",
+      "mcp_key": "mcp.craft-anything",
+      "status": "wired and verified"
+    },
+    "hermes": {
+      "config": "C:\\Users\\jpowe\\AppData\\Local\\hermes\\config.yaml",
+      "mcp_managed_by": "hermes mcp add/list/test",
+      "status": "wired and verified (38 tools)"
+    },
+    "other": ["claude code", "codex cli", "gemini cli", "copilot cli", "lm studio", "windsurf", "cursor"]
+  },
+  "mcp": {
+    "server": "craft-anything",
+    "command": "C:\\Program Files\\Craft Anything\\craft-anything-cli.exe",
+    "args": ["mcp"],
+    "transport": "stdio",
+    "tools_discovered": 38,
+    "preflight": "tools/agent-preflight.ps1",
+    "wiring": "tools/wire-craft-anything.ps1",
+    "failure_signature": "Agent sits with 0 tokens in/out, then 'provider did not respond in time' or 'gateway disconnected'. Check the provider BEFORE blaming MCP.",
+    "verified": "2026-11-23"
+  },
+  "projects": [
+    {
+      "name": "hive-mind-rea-template",
+      "path": "C:\\Users\\jpowe\\hive-mind-rea-template",
+      "status": "active",
+      "note": "Portable stack, agent contract, research/office/viz toolkit, knowledge base. Pushed to origin/main."
+    },
+    {
+      "name": "polsia free v1",
+      "path": "C:\\Users\\jpowe\\Desktop\\projects\\polsia free v1",
+      "status": "blocked",
+      "note": "Craft Anything build workspace. The 2026-11-23 run produced no app changes because the local model provider was down and the model was too slow."
+    },
+    {
+      "name": "polsia free version",
+      "path": "C:\\Users\\jpowe\\Desktop\\projects\\polsia free version",
+      "status": "present"
+    },
+    {
+      "name": "tradingbot",
+      "path": "C:\\Users\\jpowe\\Desktop\\projects\\tradingbot",
+      "status": "present"
+    }
+  ],
+  "lessons": [
+    "A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.",
+    "Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.",
+    "Never run Select-String -SimpleMatch with a regex: it silently matches nothing.",
+    "Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.",
+    "A 4B model with no chat template is not an agent model, regardless of parameter count.",
+    "Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work."
+  ],
+  "pending": [
+    "Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)",
+    "Decide on AnyDesk and TeamViewer autostart",
+    "Run the elevated Intel telemetry service demotion",
+    "Review the remaining cloned repos (repos/ is 1.56 GB and not in git)"
+  ]
+}

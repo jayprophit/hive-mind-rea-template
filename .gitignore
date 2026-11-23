@@ -30,6 +30,8 @@ credentials.json
 *.sqlite-wal
 *.sqlite-shm
 state.db*
+# The portable knowledge base is data, not runtime state. Commit it.
+!data/knowledge.db
 *.fts_rebuild.lock
 *.quarantine.lock
 
