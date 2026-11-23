@@ -266,3 +266,15 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
   registries implemented in `app/`.
 - `npm run build` passes; visual check ~83%, 30/30 claims.
 - `craft.json` paused to prevent duplicate builders; resume one at a time.
+
+### Final feature audit - all YES
+- Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte
+  sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/
+  WORKFLOWS/AGENT_TEAMS/AUTO_MEMORY/DOCTOR, dashboard routes + 58 actions,
+  SOCIAL_CONNECTIONS, chat widget, burger+cascading menus (CSS import fixed),
+  role-only teammates, ENGINES, AUTONOMOUS_BOOTSTRAP, CAPABILITIES/MCP_SERVERS/
+  PROTOCOLS, email read/draft/send, phone assistant, TTS/STT, media generation,
+  INSTINCTS, AGENT_ACCESS, RUN_MONITOR, behaviour recordings, optional
+  Composio, help pages and extra login providers.
+- `npm run build` passes; dist ~42+ files. Remaining gap is visual drift on
+  long legal pages, not missing functionality.

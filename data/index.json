@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T12:28:27+00:00",
+  "generated": "2026-11-23T12:40:13+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 263,
-    "chunks": 578,
+    "headings": 264,
+    "chunks": 579,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -3261,9 +3261,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T11:51:39+00:00",
-      "sha256": "728c59528b7f96acc3126beaeff60c372da20be706a39a078a437fbfd6c2f1cf",
-      "words": 2192,
+      "modified": "2026-11-23T12:39:34+00:00",
+      "sha256": "6885bee0583e2c379c6cc3021b66b797346e2a20b08810d3af1ca800e922f6d7",
+      "words": 2287,
       "headings": [
         {
           "level": 1,
@@ -3424,6 +3424,11 @@
           "level": 3,
           "text": "Final build state - complete",
           "line": 262
+        },
+        {
+          "level": 3,
+          "text": "Final feature audit - all YES",
+          "line": 270
         }
       ],
       "links": [],
@@ -3602,6 +3607,11 @@
           "heading": "Final build state - complete",
           "line": 262,
           "text": "### Final build state - complete\n- Dashboard surfaces and all 58 captured buttons implemented as bus actions.\n- Floating agent chat, burger + cascading menus, role-only teammates with\n  swappable ENGINES, autonomous bootstrap, and CAPABILITIES/MCP/PROTOCOLS\n  registries implemented in `app/`.\n- `npm run build` passes; visual check ~83%, 30/30 claims.\n- `craft.json` paused to prevent duplicate builders; resume one at a time."
+        },
+        {
+          "heading": "Final feature audit - all YES",
+          "line": 270,
+          "text": "### Final feature audit - all YES\n- Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte\n  sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/\n  WORKFLOWS/AGENT_TEAMS/AUTO_MEMORY/DOCTOR, dashboard routes + 58 actions,\n  SOCIAL_CONNECTIONS, chat widget, burger+cascading menus (CSS import fixed),\n  role-only teammates, ENGINES, AUTONOMOUS_BOOTSTRAP, CAPABILITIES/MCP_SERVERS/\n  PROTOCOLS, email read/draft/send, phone assistant, TTS/STT, media generation,\n  INSTINCTS, AGENT_ACCESS, RUN_MONITOR, behaviour recordings, optional\n  Composio, help pages and extra login providers.\n- `npm run build` passes; dist ~42+ files. Remaining gap is visual drift on\n  long legal pages, not missing functionality."
         }
       ]
     },
@@ -7724,9 +7734,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "728c59528b7f96acc3126beaeff60c372da20be706a39a078a437fbfd6c2f1cf",
-      "bytes": 15034,
-      "modified": "2026-11-23T11:51:39+00:00"
+      "sha256": "6885bee0583e2c379c6cc3021b66b797346e2a20b08810d3af1ca800e922f6d7",
+      "bytes": 15777,
+      "modified": "2026-11-23T12:39:34+00:00"
     },
     {
       "path": "opencode/agents/coder.md",
