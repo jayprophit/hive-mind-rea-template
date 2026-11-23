@@ -267,6 +267,14 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - `npm run build` passes; visual check ~83%, 30/30 claims.
 - `craft.json` paused to prevent duplicate builders; resume one at a time.
 
+### Tools page + Obsidian - complete
+- Single build now includes `/tools/` with BROWSER_AUTOMATION intents, reusable
+  PAGINATOR and local DATA_ANALYTICS (SVG + CSV export).
+- Obsidian export writes a frontmatter note for `obsidian-vault/Projects/polsia-free-v1.md`;
+  the mirror is `C:\Users\jpowe\Documents\ObsidianVault`.
+- Project keeps its own database `projects/polsia-free-v1/knowledge.db`; the
+  template DB stays generic.
+
 ### Final feature audit - all YES
 - Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte
   sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/

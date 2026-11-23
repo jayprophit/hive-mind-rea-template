@@ -1,16 +1,16 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T12:54:23+00:00",
+  "generated": "2026-11-23T13:03:04+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
-    "documents": 120,
-    "headings": 265,
-    "chunks": 580,
+    "documents": 121,
+    "headings": 272,
+    "chunks": 588,
     "facts": 216,
     "assets": 0,
-    "sources": 342,
+    "sources": 343,
     "runs": 0,
     "approvals": 0
   },
@@ -3180,6 +3180,84 @@
       ]
     },
     {
+      "path": "obsidian-vault/Projects/polsia-free-v1.md",
+      "kind": "md",
+      "title": "Polsia Free v1 — build tracker",
+      "modified": "2026-11-23T13:02:21+00:00",
+      "sha256": "77dc87735bd6d94c86366ebc5cfc7f4295c52e9c2e40cef2e93b814bf60fdde2",
+      "words": 332,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Polsia Free v1 — build tracker",
+          "line": 11
+        },
+        {
+          "level": 2,
+          "text": "Where things live",
+          "line": 13
+        },
+        {
+          "level": 2,
+          "text": "Tracking",
+          "line": 26
+        },
+        {
+          "level": 2,
+          "text": "Capability state (audited)",
+          "line": 36
+        },
+        {
+          "level": 2,
+          "text": "Known limits",
+          "line": 47
+        },
+        {
+          "level": 2,
+          "text": "Open ledger",
+          "line": 55
+        }
+      ],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "",
+          "line": 1,
+          "text": "---\ntype: project\ndate: 2026-11-23\nproject: \"polsia free v1\"\nsource: \"app/tools.js\"\ndatabase: projects/polsia-free-v1/knowledge.db\nstatus: building\nmachine: \"Lenovo IdeaPad 3 15IIL05 / 81WE\"\n---"
+        },
+        {
+          "heading": "Polsia Free v1 — build tracker",
+          "line": 11,
+          "text": "# Polsia Free v1 — build tracker"
+        },
+        {
+          "heading": "Where things live",
+          "line": 13,
+          "text": "## Where things live\n\n| Item | Path |\n|---|---|\n| App source | `C:\\Users\\jpowe\\Desktop\\projects\\polsia free v1\\app\\` |\n| Built site | `...\\app\\dist\\` |\n| Project database | `projects/polsia-free-v1/knowledge.db` |\n| Workspace copy of DB | `...\\.hive\\knowledge.db` |\n| Template database | `data/knowledge.db` |\n| Repo vault | `obsidian-vault/` |\n| Local mirror | `C:\\Users\\jpowe\\Documents\\ObsidianVault` |\n| Tools page | `/tools/` in the built app |"
+        },
+        {
+          "heading": "Tracking",
+          "line": 26,
+          "text": "## Tracking\n\n- The app's **Tools** page exports a Markdown note with frontmatter for this\n  file, plus local analytics and the browser-action log. Drop it into\n  `obsidian-vault/Projects/` to keep the build tracked across machines.\n- The project SQLite DB stores one sha256 per source file, assets, runs and\n  approvals. Rebuild with:\n  `python scripts/build_index.py --root \"<workspace>\" --project --out projects/polsia-free-v1/knowledge.db`\n- The template DB stays generic; this project has its own file."
+        },
+        {
+          "heading": "Capability state (audited)",
+          "line": 36,
+          "text": "## Capability state (audited)\n\nAll 38+ audited features are implemented: 13-phase REA loop, byte sweep, 10\nlanguages, free services, human gate, skills/hooks/subagents/workflows/agent\nteams/auto-memory/doctor, dashboard routes and actions, social connections,\nchat widget, burger/cascading menus, role-only teammates with engines,\nautonomous bootstrap, capabilities/MCP/protocols, instincts, access allowlist,\nrun monitor, behaviour recordings, optional Composio, help pages and extra\nlogin providers. Section 5n tools were added directly to the single build:\nbrowser automation intents, paginator, local analytics and Obsidian export."
+        },
+        {
+          "heading": "Known limits",
+          "line": 47,
+          "text": "## Known limits\n\n- Visual likeness ~83%: long legal pages have drift; our own email form was\n  designed because the original capture did not contain that field.\n- Browser automation in a static page emits intents; a `browse` MCP bridge is\n  required to execute them.\n- `craft.json` is paused — resume one builder at a time."
+        },
+        {
+          "heading": "Open ledger",
+          "line": 55,
+          "text": "## Open ledger\n\n- Revoke exposed `gho_hV2Y…` token on GitHub.\n- Fit 8 GB DDR4-2666 SODIMM; BIOS already EMCN60WW.\n- Elevated demotion of Intel telemetry services; remote-access decision."
+        }
+      ]
+    },
+    {
       "path": "obsidian-vault/Work/Project.md",
       "kind": "md",
       "title": "New Project — Work Tracking Matrix",
@@ -3271,9 +3349,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T12:39:34+00:00",
-      "sha256": "6885bee0583e2c379c6cc3021b66b797346e2a20b08810d3af1ca800e922f6d7",
-      "words": 2287,
+      "modified": "2026-11-23T13:02:31+00:00",
+      "sha256": "b6af57df276a4f76d053da01c632d431b5f6885beb571764892ee7c524df78b4",
+      "words": 2345,
       "headings": [
         {
           "level": 1,
@@ -3437,8 +3515,13 @@
         },
         {
           "level": 3,
-          "text": "Final feature audit - all YES",
+          "text": "Tools page + Obsidian - complete",
           "line": 270
+        },
+        {
+          "level": 3,
+          "text": "Final feature audit - all YES",
+          "line": 278
         }
       ],
       "links": [],
@@ -3619,8 +3702,13 @@
           "text": "### Final build state - complete\n- Dashboard surfaces and all 58 captured buttons implemented as bus actions.\n- Floating agent chat, burger + cascading menus, role-only teammates with\n  swappable ENGINES, autonomous bootstrap, and CAPABILITIES/MCP/PROTOCOLS\n  registries implemented in `app/`.\n- `npm run build` passes; visual check ~83%, 30/30 claims.\n- `craft.json` paused to prevent duplicate builders; resume one at a time."
         },
         {
-          "heading": "Final feature audit - all YES",
+          "heading": "Tools page + Obsidian - complete",
           "line": 270,
+          "text": "### Tools page + Obsidian - complete\n- Single build now includes `/tools/` with BROWSER_AUTOMATION intents, reusable\n  PAGINATOR and local DATA_ANALYTICS (SVG + CSV export).\n- Obsidian export writes a frontmatter note for `obsidian-vault/Projects/polsia-free-v1.md`;\n  the mirror is `C:\\Users\\jpowe\\Documents\\ObsidianVault`.\n- Project keeps its own database `projects/polsia-free-v1/knowledge.db`; the\n  template DB stays generic."
+        },
+        {
+          "heading": "Final feature audit - all YES",
+          "line": 278,
           "text": "### Final feature audit - all YES\n- Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte\n  sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/\n  WORKFLOWS/AGENT_TEAMS/AUTO_MEMORY/DOCTOR, dashboard routes + 58 actions,\n  SOCIAL_CONNECTIONS, chat widget, burger+cascading menus (CSS import fixed),\n  role-only teammates, ENGINES, AUTONOMOUS_BOOTSTRAP, CAPABILITIES/MCP_SERVERS/\n  PROTOCOLS, email read/draft/send, phone assistant, TTS/STT, media generation,\n  INSTINCTS, AGENT_ACCESS, RUN_MONITOR, behaviour recordings, optional\n  Composio, help pages and extra login providers.\n- `npm run build` passes; dist ~42+ files. Remaining gap is visual drift on\n  long legal pages, not missing functionality."
         }
       ]
@@ -7735,6 +7823,13 @@
       "modified": "2026-11-23T11:51:27+00:00"
     },
     {
+      "path": "obsidian-vault/Projects/polsia-free-v1.md",
+      "kind": "text",
+      "sha256": "77dc87735bd6d94c86366ebc5cfc7f4295c52e9c2e40cef2e93b814bf60fdde2",
+      "bytes": 2343,
+      "modified": "2026-11-23T13:02:21+00:00"
+    },
+    {
       "path": "obsidian-vault/Work/Project.md",
       "kind": "text",
       "sha256": "285673aadffaecb4984918efd4e4a40c4ce7b3e7d971b3c3ac6e5312d8c8fcf6",
@@ -7744,9 +7839,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "6885bee0583e2c379c6cc3021b66b797346e2a20b08810d3af1ca800e922f6d7",
-      "bytes": 15777,
-      "modified": "2026-11-23T12:39:34+00:00"
+      "sha256": "b6af57df276a4f76d053da01c632d431b5f6885beb571764892ee7c524df78b4",
+      "bytes": 16209,
+      "modified": "2026-11-23T13:02:31+00:00"
     },
     {
       "path": "opencode/agents/coder.md",
