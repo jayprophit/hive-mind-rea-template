@@ -119,6 +119,8 @@
   "requirements": {
     "team_not_picker": "The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.",
     "team_behaviour": [
+      "No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason",
+      "More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically",
       "Orchestrator decomposes a task and assigns roles; several members work concurrently",
       "Shared message channel and task board visible in the UI; members post findings and hand off artefacts",
       "Each role has goals, permissions and a status (working, waiting, done)",

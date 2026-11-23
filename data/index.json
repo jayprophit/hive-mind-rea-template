@@ -1,14 +1,14 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T07:47:15+00:00",
+  "generated": "2026-11-23T07:48:00+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 111,
     "headings": 209,
     "chunks": 440,
-    "facts": 150,
+    "facts": 152,
     "assets": 0,
     "sources": 333,
     "runs": 0,
@@ -61,9 +61,9 @@
       "path": "data/build-facts.json",
       "kind": "json",
       "title": "build-facts",
-      "modified": "2026-11-23T07:46:02+00:00",
-      "sha256": "478d11611baea5c4607666c84d0ea9341fd1e9376b75ab924ba1e5d00774b89b",
-      "words": 1045,
+      "modified": "2026-11-23T07:47:33+00:00",
+      "sha256": "1134a136109d6f7669b7a01e1ebb2efc0709176beb0bbf5578745cbf6e019098",
+      "words": 1087,
       "headings": [],
       "links": [],
       "chunks": [
@@ -90,17 +90,17 @@
         {
           "heading": "",
           "line": 1,
-          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n "
+          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically\",\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then"
         },
         {
           "heading": "",
           "line": 1,
-          "text": " hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer aut"
+          "text": "n the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "s; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
+          "text": "5 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
         }
       ]
     },
@@ -951,9 +951,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T07:46:30+00:00",
-      "sha256": "109d92e0871e3669bda3dd144194e522de52158d200a40ce7d2eb0b1e3c7e4ff",
-      "words": 547,
+      "modified": "2026-11-23T07:47:24+00:00",
+      "sha256": "cd2414b4da9d7364cad86726e5c0dfd60795f20106a43ec58f4ad53530413d95",
+      "words": 674,
       "headings": [
         {
           "level": 1,
@@ -972,33 +972,33 @@
         },
         {
           "level": 3,
-          "text": "1. One team, not a picker",
+          "text": "1. No picker — the task selects the members",
           "line": 12
         },
         {
           "level": 3,
-          "text": "2. Concurrent work with roles",
-          "line": 20
+          "text": "2. More than one member is active by default",
+          "line": 22
         },
         {
           "level": 3,
           "text": "3. Shared communication (the important part)",
-          "line": 30
+          "line": 35
         },
         {
           "level": 3,
           "text": "4. Automation and human oversight",
-          "line": 43
+          "line": 48
         },
         {
           "level": 3,
           "text": "5. Constraints",
-          "line": 52
+          "line": 57
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 62
+          "line": 67
         }
       ],
       "links": [],
@@ -1019,34 +1019,34 @@
           "text": "## What to build in `app/`"
         },
         {
-          "heading": "1. One team, not a picker",
+          "heading": "1. No picker — the task selects the members",
           "line": 12,
-          "text": "### 1. One team, not a picker\n\n- Remove the \"choose an agent\" interaction as the primary mode.\n- Show a **team** of role-based members, all present and active on the current\n  task. Selecting a member opens their detail/status; it does not switch the\n  system to only that member.\n- Default state: the whole team is working on the shared task."
+          "text": "### 1. No picker — the task selects the members\n\n- **Remove member selection from the UI entirely.** The person types a task and\n  presses Go. They never choose who works on it.\n- The system automatically selects the right member(s) for that task by role,\n  and shows **why** each was chosen (\"Matched: research, data analysis, QA\").\n- Members are visible as a live team roster with status, but clicking one only\n  opens their detail — it does not make the system work on only that member.\n- Default state after a task is submitted: the selected members work together."
         },
         {
-          "heading": "2. Concurrent work with roles",
-          "line": 20,
-          "text": "### 2. Concurrent work with roles\n\n- A task is created once. The orchestrator decomposes it into role-sized jobs\n  and assigns them to several members **at the same time**.\n- Members have distinct roles (orchestrator, planner, researcher, engineer,\n  reviewer, tester, operations, integration, documentation, support, finance,\n  QA, etc.), each with goals, permissions and a live status:\n  `idle → working → blocked → handoff → done`.\n- Several members can be `working` simultaneously."
+          "heading": "2. More than one member is active by default",
+          "line": 22,
+          "text": "### 2. More than one member is active by default\n\n- A task is created once. The orchestrator decomposes it and delegates to\n  several members **at the same time**, based on the task's needs.\n- **More than one member is always active** unless the task genuinely requires\n  only one role. When a single member is selected, the UI explains why\n  (\"Single-role task: documentation only\"). This decision is automatic.\n- Members have distinct roles (orchestrator, planner, researcher, engineer,\n  reviewer, tester, operations, integration, documentation, support, finance,\n  QA, etc.), each with goals, permissions and a live status:\n  `idle → working → blocked → handoff → done`.\n- Several members must be able to show `working` simultaneously."
         },
         {
           "heading": "3. Shared communication (the important part)",
-          "line": 30,
+          "line": 35,
           "text": "### 3. Shared communication (the important part)\n\n- Implement a **shared message bus** in the browser (event bus + `localStorage`\n  persistence, no backend):\n  - members post messages to the team channel with `{from, to, taskId, type, body, time}`\n  - `to` may be a member id, a role, or `all`\n  - a member's output can become another member's input (artefact handoff)\n- The UI shows a **team channel** (chronological messages), a **task board**\n  (to-do / in progress / review / done with owner and role), and a **handoff\n  trail** showing what each member passed to whom.\n- Members react to messages addressed to them and to new tasks in their role;\n  this is what makes it feel like a team rather than a list."
         },
         {
           "heading": "4. Automation and human oversight",
-          "line": 43,
+          "line": 48,
           "text": "### 4. Automation and human oversight\n\n- Auto mode runs in rounds with intervals: hours, days, weeks, months, years,\n  or non-stop. A visible countdown shows the next round.\n- The person authorises once. That authorisation is remembered in local state;\n  ordinary actions do not ask again. Sensitive actions can still be gated.\n- Reports (round summary, messages, decisions, files changed) can be sent to a\n  configured email address or chat webhook. No API keys are hard-coded."
         },
         {
           "heading": "5. Constraints",
-          "line": 52,
+          "line": 57,
           "text": "### 5. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 62,
-          "text": "## Acceptance criteria\n\n1. One task assigned to the team causes several members to show `working` at\n   the same time.\n2. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n3. The task board updates automatically as work moves between members.\n4. Authorisation is requested once, then remembered.\n5. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n6. `npm run build` succeeds and the visual check still passes."
+          "line": 67,
+          "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. `npm run build` succeeds and the visual check still passes."
         }
       ]
     },
@@ -4643,9 +4643,9 @@
     {
       "path": "data/build-facts.json",
       "kind": "text",
-      "sha256": "478d11611baea5c4607666c84d0ea9341fd1e9376b75ab924ba1e5d00774b89b",
-      "bytes": 7647,
-      "modified": "2026-11-23T07:46:02+00:00"
+      "sha256": "1134a136109d6f7669b7a01e1ebb2efc0709176beb0bbf5578745cbf6e019098",
+      "bytes": 7911,
+      "modified": "2026-11-23T07:47:33+00:00"
     },
     {
       "path": "data/README.md",
@@ -4706,9 +4706,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "109d92e0871e3669bda3dd144194e522de52158d200a40ce7d2eb0b1e3c7e4ff",
-      "bytes": 3486,
-      "modified": "2026-11-23T07:46:30+00:00"
+      "sha256": "cd2414b4da9d7364cad86726e5c0dfd60795f20106a43ec58f4ad53530413d95",
+      "bytes": 4261,
+      "modified": "2026-11-23T07:47:24+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",
@@ -7439,36 +7439,46 @@
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[0]",
-      "value": "Orchestrator decomposes a task and assigns roles; several members work concurrently"
+      "value": "No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason"
     },
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[1]",
-      "value": "Shared message channel and task board visible in the UI; members post findings and hand off artefacts"
+      "value": "More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically"
     },
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[2]",
-      "value": "Each role has goals, permissions and a status (working, waiting, done)"
+      "value": "Orchestrator decomposes a task and assigns roles; several members work concurrently"
     },
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[3]",
-      "value": "Human authorisation given once, then remembered; approvals are not re-requested every action"
+      "value": "Shared message channel and task board visible in the UI; members post findings and hand off artefacts"
     },
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[4]",
-      "value": "Auto mode supports hours, days, weeks, months, years and non-stop"
+      "value": "Each role has goals, permissions and a status (working, waiting, done)"
     },
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[5]",
-      "value": "Progress reports can be sent to email or a chat webhook"
+      "value": "Human authorisation given once, then remembered; approvals are not re-requested every action"
     },
     {
       "category": "requirements",
       "key": "requirements.team_behaviour[6]",
+      "value": "Auto mode supports hours, days, weeks, months, years and non-stop"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[7]",
+      "value": "Progress reports can be sent to email or a chat webhook"
+    },
+    {
+      "category": "requirements",
+      "key": "requirements.team_behaviour[8]",
       "value": "No subscription, credits or paid feature gates anywhere"
     },
     {

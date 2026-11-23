@@ -9,23 +9,28 @@ same time on the same task, and pass information between themselves.
 
 ## What to build in `app/`
 
-### 1. One team, not a picker
+### 1. No picker — the task selects the members
 
-- Remove the "choose an agent" interaction as the primary mode.
-- Show a **team** of role-based members, all present and active on the current
-  task. Selecting a member opens their detail/status; it does not switch the
-  system to only that member.
-- Default state: the whole team is working on the shared task.
+- **Remove member selection from the UI entirely.** The person types a task and
+  presses Go. They never choose who works on it.
+- The system automatically selects the right member(s) for that task by role,
+  and shows **why** each was chosen ("Matched: research, data analysis, QA").
+- Members are visible as a live team roster with status, but clicking one only
+  opens their detail — it does not make the system work on only that member.
+- Default state after a task is submitted: the selected members work together.
 
-### 2. Concurrent work with roles
+### 2. More than one member is active by default
 
-- A task is created once. The orchestrator decomposes it into role-sized jobs
-  and assigns them to several members **at the same time**.
+- A task is created once. The orchestrator decomposes it and delegates to
+  several members **at the same time**, based on the task's needs.
+- **More than one member is always active** unless the task genuinely requires
+  only one role. When a single member is selected, the UI explains why
+  ("Single-role task: documentation only"). This decision is automatic.
 - Members have distinct roles (orchestrator, planner, researcher, engineer,
   reviewer, tester, operations, integration, documentation, support, finance,
   QA, etc.), each with goals, permissions and a live status:
   `idle → working → blocked → handoff → done`.
-- Several members can be `working` simultaneously.
+- Several members must be able to show `working` simultaneously.
 
 ### 3. Shared communication (the important part)
 
@@ -61,11 +66,15 @@ same time on the same task, and pass information between themselves.
 
 ## Acceptance criteria
 
-1. One task assigned to the team causes several members to show `working` at
-   the same time.
-2. A message from one member appears in the shared channel and can be addressed
+1. There is **no control to pick a member**. The person only enters a task and
+   presses Go.
+2. Submitting a normal task automatically activates **more than one** member;
+   each shows `working` at the same time, with a visible reason for selection.
+3. A single member is active only for genuinely single-role tasks, and the UI
+   says why. This is automatic, not chosen by the person.
+4. A message from one member appears in the shared channel and can be addressed
    to another member, who responds or produces a handoff artefact.
-3. The task board updates automatically as work moves between members.
-4. Authorisation is requested once, then remembered.
-5. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.
-6. `npm run build` succeeds and the visual check still passes.
+5. The task board updates automatically as work moves between members.
+6. Authorisation is requested once, then remembered.
+7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.
+8. `npm run build` succeeds and the visual check still passes.
