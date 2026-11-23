@@ -44,6 +44,30 @@ Installed and in use: `sqlite-utils` 4.2.1, Pillow, PyYAML, pandas, matplotlib, 
 
 Optional, not installed: DB Browser for SQLite (GUI), Datasette (browser DB UI), `ripgrep`, `jq`. None are required.
 
+## 4b. Composio — useful, but optional
+
+Researched 2026-11-23 from `composio.dev`, `docs.composio.dev/docs/claude-code-plugin`
+and the GitHub API (`ComposioHQ/composio`: 31,254 stars, MIT, TypeScript).
+
+**What it gives you:** 1,700+ app connections (Gmail, Slack, GitHub, Notion,
+HubSpot, Instagram, and most of the social/business tools in the brief), managed
+OAuth so your app never holds provider tokens, per-action permission limits and
+audit logs. It works with Claude Code, Hermes, OpenClaw, Codex, Cursor and any
+MCP client, which matches the agent stack here. Free Hobby plan: 100,000 tool
+calls/month.
+
+**Why it is optional here:** credentials are held by Composio Cloud by default
+(self-hosted/CMK are enterprise); some third-party tools (search, transcription,
+media generation) are billed separately; and a browser-only static app cannot
+safely hold a Composio API key — it needs a small backend proxy or the MCP URL
+registered with the agent instead. That conflicts with the "no account, fully
+local by default" goal.
+
+**Recommendation:** add it as an optional `MCP_SERVERS` / `CAPABILITIES` provider
+with the free Hobby tier, alongside the existing local-first providers. Keep
+`mailto:`, local MCP and webhook paths as the zero-setup default. Never make a
+Composio account a prerequisite for a feature.
+
 ## 5. Where the machine-readable version lives
 
 `data/build-facts.json` contains `recommendations`, `still_needed`, `requirements`, `lessons` and `pending`. The knowledge base indexes them:

@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T11:52:26+00:00",
+  "generated": "2026-11-23T12:18:18+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 261,
-    "chunks": 576,
+    "headings": 262,
+    "chunks": 577,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -1214,9 +1214,9 @@
       "path": "docs/RECOMMENDATIONS.md",
       "kind": "md",
       "title": "Recommendations and what is still needed",
-      "modified": "2026-11-23T10:15:16+00:00",
-      "sha256": "d6907238d01898ed0211dd204cdcdb6833066dc7748c70b73c79e304240f2fcc",
-      "words": 748,
+      "modified": "2026-11-23T12:17:24+00:00",
+      "sha256": "3fed4063c4724bca7c2c121cbdfe6b9d6137f3adf35e494a59ee34d3b0d50f26",
+      "words": 955,
       "headings": [
         {
           "level": 1,
@@ -1245,8 +1245,13 @@
         },
         {
           "level": 2,
-          "text": "5. Where the machine-readable version lives",
+          "text": "4b. Composio — useful, but optional",
           "line": 47
+        },
+        {
+          "level": 2,
+          "text": "5. Where the machine-readable version lives",
+          "line": 71
         }
       ],
       "links": [],
@@ -1282,8 +1287,13 @@
           "text": "## 4. Tools installed vs optional\n\nInstalled and in use: `sqlite-utils` 4.2.1, Pillow, PyYAML, pandas, matplotlib, python-docx/pptx/openpyxl, free cloud model wiring, `browse` and craft-anything MCP.\n\nOptional, not installed: DB Browser for SQLite (GUI), Datasette (browser DB UI), `ripgrep`, `jq`. None are required."
         },
         {
-          "heading": "5. Where the machine-readable version lives",
+          "heading": "4b. Composio — useful, but optional",
           "line": 47,
+          "text": "## 4b. Composio — useful, but optional\n\nResearched 2026-11-23 from `composio.dev`, `docs.composio.dev/docs/claude-code-plugin`\nand the GitHub API (`ComposioHQ/composio`: 31,254 stars, MIT, TypeScript).\n\n**What it gives you:** 1,700+ app connections (Gmail, Slack, GitHub, Notion,\nHubSpot, Instagram, and most of the social/business tools in the brief), managed\nOAuth so your app never holds provider tokens, per-action permission limits and\naudit logs. It works with Claude Code, Hermes, OpenClaw, Codex, Cursor and any\nMCP client, which matches the agent stack here. Free Hobby plan: 100,000 tool\ncalls/month.\n\n**Why it is optional here:** credentials are held by Composio Cloud by default\n(self-hosted/CMK are enterprise); some third-party tools (search, transcription,\nmedia generation) are billed separately; and a browser-only static app cannot\nsafely hold a Composio API key — it needs a small backend proxy or the MCP URL\nregistered with the agent instead. That conflicts with the \"no account, fully\nlocal by default\" goal.\n\n**Recommendation:** add it as an optional `MCP_SERVERS` / `CAPABILITIES` provider\nwith the free Hobby tier, alongside the existing local-first providers. Keep\n`mailto:`, local MCP and webhook paths as the zero-setup default. Never make a\nComposio account a prerequisite for a feature."
+        },
+        {
+          "heading": "5. Where the machine-readable version lives",
+          "line": 71,
           "text": "## 5. Where the machine-readable version lives\n\n`data/build-facts.json` contains `recommendations`, `still_needed`, `requirements`, `lessons` and `pending`. The knowledge base indexes them:\n\n```powershell\npython scripts\\query.py --facts recommendations\npython scripts\\query.py --facts still_needed\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --facts project\n```"
         }
       ]
@@ -5765,9 +5775,9 @@
     {
       "path": "docs/RECOMMENDATIONS.md",
       "kind": "text",
-      "sha256": "d6907238d01898ed0211dd204cdcdb6833066dc7748c70b73c79e304240f2fcc",
-      "bytes": 5073,
-      "modified": "2026-11-23T10:15:16+00:00"
+      "sha256": "3fed4063c4724bca7c2c121cbdfe6b9d6137f3adf35e494a59ee34d3b0d50f26",
+      "bytes": 6395,
+      "modified": "2026-11-23T12:17:24+00:00"
     },
     {
       "path": "docs/TEAM-BRIEF.md",
