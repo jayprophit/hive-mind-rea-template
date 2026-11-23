@@ -143,6 +143,30 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - **BIOS** updated to EMCN60WW (was EMCN42WW) — verified done.
 - **RAM** 8 GB -> 12 GB (8 GB DDR4-2666 SO-DIMM) still not bought.
 
+### Craft Anything / Hermes wiring - complete
+- 30 min of silence was NOT MCP: Hermes MCP test = 38 tools, enabled.
+- Cause 1: Ollama stopped during RAM cleanup, so the local provider was down.
+- Cause 2: `bonsai-2:4b` has no chat template; 57.7 s and ~200 hidden tokens
+  for "OK". Switched Hermes to `lfm3:1.7b` (tool-calling, ~16-21 s).
+- Cause 3: Craft Anything retries every ~90 s; two Hermes one-shots collide
+  on one gateway (`Gateway disconnected`). Loop stopped; one builder at a time.
+- Added `tools/agent-preflight.ps1` (7/7 PASS), `tools/wire-craft-anything.ps1`,
+  `docs/MCP-WIRING.md`. Run preflight before every build on any workstation.
+- 8 GB CPU: use OpenCode/cloud for builds. Desktop 16 GB+/GPU: 7B-14B local.
+
+### Knowledge base - complete
+- `data/build-facts.json` (curated), `data/index.json`, `data/knowledge.db`
+  (SQLite FTS5: 107 docs, 388 chunks, 123 facts), `scripts/build_index.py`,
+  `scripts/query.py`.
+- Committed on purpose: a fresh clone on the desktop gets it with no network.
+- `.gitignore` exception added for `data/knowledge.db`; all other `*.db`
+  stay excluded as runtime state.
+
+### `polsia free v1` status
+- Blocked: no `app/` changes since 11 Nov. The Craft Anything run produced
+  only logs. Restart the build only after the preflight passes and with no
+  other Hermes session running.
+
 ## Active work - 2026-11-23
 
 ### Idle commit hogs - complete

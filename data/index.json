@@ -1,11 +1,11 @@
 {
   "schema": "knowledge-index/v1",
-  "generated": "2026-11-23T06:40:48+00:00",
+  "generated": "2026-11-23T06:53:13+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "counts": {
     "documents": 107,
-    "headings": 173,
-    "chunks": 388,
+    "headings": 188,
+    "chunks": 404,
     "facts": 123
   },
   "documents": [
@@ -2177,9 +2177,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T06:01:05+00:00",
-      "sha256": "4a53034f7faa8ccf6bc87c1d53abed33d14282c4b001a95adfe902e2c190ea72",
-      "words": 549,
+      "modified": "2026-11-23T06:52:29+00:00",
+      "sha256": "798c8c7734ed33d03f064554ff763db64294693212d7e614fcf09ee7079867b9",
+      "words": 1242,
       "headings": [
         {
           "level": 1,
@@ -2218,8 +2218,38 @@
         },
         {
           "level": 2,
+          "text": "Craft Anything ↔ Hermes - the real cause of \"nothing happened\"",
+          "line": 84
+        },
+        {
+          "level": 2,
           "text": "Never do again",
-          "line": 82
+          "line": 115
+        },
+        {
+          "level": 2,
+          "text": "Craft Anything ↔ Hermes - 15 minutes of silence",
+          "line": 123
+        },
+        {
+          "level": 3,
+          "text": "Root causes (MCP was NOT one of them)",
+          "line": 137
+        },
+        {
+          "level": 3,
+          "text": "Fix applied",
+          "line": 150
+        },
+        {
+          "level": 3,
+          "text": "Decision for the desktop",
+          "line": 161
+        },
+        {
+          "level": 2,
+          "text": "Requests queued (for this machine's new build)",
+          "line": 169
         }
       ],
       "links": [],
@@ -2262,12 +2292,47 @@
         {
           "heading": "Still needs elevation / a human",
           "line": 73,
-          "text": "## Still needs elevation / a human\n\n- Intel telemetry services `ESRV_SVC_QUEENCREEK` (198 MB) and `UDCService`\n  (126 MB): `Set-Service` returned **Access is denied** from this shell.\n- `AnyDesk` and `TeamViewer` both run Auto (~67 MB). Left alone — stopping\n  remote access without asking could lock the user out.\n- BIOS EMCN42WW -> EMCN60WW still not flashed.\n- RAM still 8 GB; 8 GB DDR4-2666 SO-DIMM not bought."
+          "text": "## Still needs elevation / a human\n\n- Intel telemetry services `ESRV_SVC_QUEENCREEK` (198 MB) and `UDCService`\n  (126 MB): `Set-Service` returned **Access is denied** from this shell.\n- `AnyDesk` and `TeamViewer` both run Auto (~67 MB). Left alone - stopping\n  remote access without asking could lock the user out.\n- BIOS updated to EMCN60WW (was EMCN42WW) - verified done via Win32_BIOS.\n- RAM still 8 GB; 8 GB DDR4-2666 SO-DIMM not bought.\n- Craft Anything's builder is **stopped**: it was spinning in a retry loop.\n  No build progress was lost (it had made none)."
+        },
+        {
+          "heading": "Craft Anything ↔ Hermes - the real cause of \"nothing happened\"",
+          "line": 84,
+          "text": "## Craft Anything ↔ Hermes - the real cause of \"nothing happened\"\n\nEarlier in this session we assumed the MCP link was broken. The records say otherwise.\n\n| Time | Event |\n|---|---|\n| 06:01:43 | Builder run starts |\n| 06:12:09 | `custom didn't respond in time on any of 3 attempts` - local provider `127.0.0.1:11434` down (Ollama stopped) |\n| 06:12:17 | Hermes exits 2, `0 tokens in / 0 out` |\n| 06:12:49 | Craft Anything retries automatically |\n| 06:33:24 | `Gateway disconnected` again; retry loop every ~90s |\n\nCauses and fixes:\n\n1. **Provider down.** Ollama had been stopped for RAM. Hermes' `model.provider:\n   custom` = `http://127.0.0.1:11434/v1`, so all calls failed. Fixed: use\n   `tools/agent-preflight.ps1 -StartProvider`.\n2. **Wrong model for an agent.** `bonsai-2:4b` has `TEMPLATE {{ .Prompt }}` - no\n   chat template. Measured: 57.7 s and ~200 hidden tokens to answer \"OK\".\n   `laya` returns HTTP 400 on chat. Fixed: `hermes config set model.default lfm3:1.7b`\n   (verified: \"OK\" in 20.8 s).\n3. **Concurrent Hermes runs collide.** Craft Anything retries; manual `-z` tests\n   share one gateway. Rule: one builder at a time (`docs/MCP-WIRING.md`).\n\nMCP itself was never broken: `hermes mcp test craft-anything` - connected in\n3.9 s, **38 tools** discovered.\n\nPreflight results (2026-11-23): 7/7 PASS. MCP handshake: 38 tools. OpenCode:\n`mcp.craft-anything` enabled. Hermes: `craft-anyth"
+        },
+        {
+          "heading": "Craft Anything ↔ Hermes - the real cause of \"nothing happened\"",
+          "line": 84,
+          "text": "ing` - connected in\n3.9 s, **38 tools** discovered.\n\nPreflight results (2026-11-23): 7/7 PASS. MCP handshake: 38 tools. OpenCode:\n`mcp.craft-anything` enabled. Hermes: `craft-anything` enabled. Model:\n`lfm3:1.7b`. `data/knowledge.db`: 107 documents, 388 chunks, 173 headings."
         },
         {
           "heading": "Never do again",
-          "line": 82,
+          "line": 115,
           "text": "## Never do again\n\n- Do not assume a process name identifies an app: `ChatGPT.exe` was Codex.\n- Do not trust an empty `cmdkey` filter; verify with `CredRead` and a real\n  auth call.\n- `commit`, not working set, is the metric that matters on an 8 GB / 20 GB\n  pagefile machine. `ollama app` showed 21 MB WS but 3.6 GB commit."
+        },
+        {
+          "heading": "Craft Anything ↔ Hermes - 15 minutes of silence",
+          "line": 123,
+          "text": "## Craft Anything ↔ Hermes - 15 minutes of silence\n\nThe user's builder ran for ~30 minutes and produced **zero app changes**.\nEvidence from `build-activity.log` and `%LOCALAPPDATA%\\hermes\\logs\\agent.log`:\n\n| Time | Event |\n|---|---|\n| 06:01:43 | build run starts |\n| 06:12:09 | `custom didn't respond in time on any of 3 attempts`; exit 2, 0 tokens |\n| 06:12:49 | Craft Anything retries automatically |\n| 06:21:33 | `Gateway disconnected`; run killed mid-wait |\n| 06:29:19 | retry; a second 9,096-char session competes with the first |\n| 06:33:24 | same error; loop keeps restarting every ~90 s |"
+        },
+        {
+          "heading": "Root causes (MCP was NOT one of them)",
+          "line": 137,
+          "text": "### Root causes (MCP was NOT one of them)\n\n- **Provider down.** Ollama had been stopped in the memory cleanup above.\n  Hermes points at `http://127.0.0.1:11434/v1`, so all calls timed out.\n- **Model unfit for an agent.** `bonsai-2:4b` has `TEMPLATE {{ .Prompt }}` —\n  no chat template. Measured: 57.7 s and ~200 hidden tokens to say \"OK\";\n  empty content below 64 tokens. `laya` returns HTTP 400 on chat completions.\n- **Concurrent one-shots.** Two Hermes runs share one gateway; the second\n  gets `Gateway disconnected; turn outcome is unknown`.\n\n`hermes mcp test craft-anything` proved MCP fine: connected in 3.9 s,\n**38 tools discovered**. `hermes mcp list` shows it enabled."
+        },
+        {
+          "heading": "Fix applied",
+          "line": 150,
+          "text": "### Fix applied\n\n- `hermes config set model.default lfm3:1.7b` (tool-calling, 15.8–20.8 s per\n  short reply; real turn: 2,050 in / 34 out in 46.3 s). Backup of config kept.\n- Killed the self-retrying `craft-anything.exe` loop; no progress was lost.\n- Added `tools/agent-preflight.ps1` (7/7 PASS here) and\n  `tools/wire-craft-anything.ps1`, `docs/MCP-WIRING.md`.\n- Added `data/` knowledge base: `build-facts.json`, `index.json`,\n  `knowledge.db` (SQLite FTS5, 107 docs / 388 chunks / 123 facts),\n  `scripts/build_index.py`, `scripts/query.py`."
+        },
+        {
+          "heading": "Decision for the desktop",
+          "line": 161,
+          "text": "### Decision for the desktop\n\nOn 8 GB CPU-only, use OpenCode (cloud model) for multi-step builds; Hermes with\na local 1.7B cannot prefill a 9k prompt plus 38 tool schemas inside the gateway\nwindow. With 16 GB+ / GPU on the desktop, a 7B–14B local model is viable.\nRun `agent-preflight.ps1 -StartProvider` on any workstation before a build.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+        },
+        {
+          "heading": "Requests queued (for this machine's new build)",
+          "line": 169,
+          "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
     },
@@ -2363,9 +2428,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T06:01:20+00:00",
-      "sha256": "043eed20e1cc7260908788fa13289d49c4616b696883e5ef17e1f6a40bc0d611",
-      "words": 1107,
+      "modified": "2026-11-23T06:52:45+00:00",
+      "sha256": "9911ed628612bdb70df4a6a1742731293333e562cb118927a90afe7ffdb84286",
+      "words": 1626,
       "headings": [
         {
           "level": 1,
@@ -2446,6 +2511,51 @@
           "level": 3,
           "text": "Pending - needs elevation or a human",
           "line": 139
+        },
+        {
+          "level": 3,
+          "text": "Craft Anything / Hermes wiring - complete",
+          "line": 146
+        },
+        {
+          "level": 3,
+          "text": "Knowledge base - complete",
+          "line": 157
+        },
+        {
+          "level": 3,
+          "text": "`polsia free v1` status",
+          "line": 165
+        },
+        {
+          "level": 2,
+          "text": "Active work - 2026-11-23",
+          "line": 170
+        },
+        {
+          "level": 3,
+          "text": "Idle commit hogs - complete",
+          "line": 172
+        },
+        {
+          "level": 3,
+          "text": "Credentials - complete",
+          "line": 182
+        },
+        {
+          "level": 3,
+          "text": "Knowledge base & agent preflight - complete",
+          "line": 191
+        },
+        {
+          "level": 3,
+          "text": "Craft Anything + Hermes diagnosis",
+          "line": 197
+        },
+        {
+          "level": 3,
+          "text": "Pending - needs elevation or a human",
+          "line": 204
         }
       ],
       "links": [],
@@ -2543,7 +2653,52 @@
         {
           "heading": "Pending - needs elevation or a human",
           "line": 139,
-          "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` (198 MB) + `UDCService` (126 MB): Access denied\n  without an elevated shell.\n- `AnyDesk` + `TeamViewer` still Auto (~67 MB). Decision needed before stopping.\n- **BIOS** EMCN42WW -> EMCN60WW still not flashed.\n- **RAM** 8 GB -> 12 GB (8 GB DDR4-2666 SO-DIMM) still not bought."
+          "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` (198 MB) + `UDCService` (126 MB): Access denied\n  without an elevated shell.\n- `AnyDesk` + `TeamViewer` still Auto (~67 MB). Decision needed before stopping.\n- **BIOS** updated to EMCN60WW (was EMCN42WW) — verified done.\n- **RAM** 8 GB -> 12 GB (8 GB DDR4-2666 SO-DIMM) still not bought."
+        },
+        {
+          "heading": "Craft Anything / Hermes wiring - complete",
+          "line": 146,
+          "text": "### Craft Anything / Hermes wiring - complete\n- 30 min of silence was NOT MCP: Hermes MCP test = 38 tools, enabled.\n- Cause 1: Ollama stopped during RAM cleanup, so the local provider was down.\n- Cause 2: `bonsai-2:4b` has no chat template; 57.7 s and ~200 hidden tokens\n  for \"OK\". Switched Hermes to `lfm3:1.7b` (tool-calling, ~16-21 s).\n- Cause 3: Craft Anything retries every ~90 s; two Hermes one-shots collide\n  on one gateway (`Gateway disconnected`). Loop stopped; one builder at a time.\n- Added `tools/agent-preflight.ps1` (7/7 PASS), `tools/wire-craft-anything.ps1`,\n  `docs/MCP-WIRING.md`. Run preflight before every build on any workstation.\n- 8 GB CPU: use OpenCode/cloud for builds. Desktop 16 GB+/GPU: 7B-14B local."
+        },
+        {
+          "heading": "Knowledge base - complete",
+          "line": 157,
+          "text": "### Knowledge base - complete\n- `data/build-facts.json` (curated), `data/index.json`, `data/knowledge.db`\n  (SQLite FTS5: 107 docs, 388 chunks, 123 facts), `scripts/build_index.py`,\n  `scripts/query.py`.\n- Committed on purpose: a fresh clone on the desktop gets it with no network.\n- `.gitignore` exception added for `data/knowledge.db`; all other `*.db`\n  stay excluded as runtime state."
+        },
+        {
+          "heading": "`polsia free v1` status",
+          "line": 165,
+          "text": "### `polsia free v1` status\n- Blocked: no `app/` changes since 11 Nov. The Craft Anything run produced\n  only logs. Restart the build only after the preflight passes and with no\n  other Hermes session running."
+        },
+        {
+          "heading": "Active work - 2026-11-23",
+          "line": 170,
+          "text": "## Active work - 2026-11-23"
+        },
+        {
+          "heading": "Idle commit hogs - complete",
+          "line": 172,
+          "text": "### Idle commit hogs - complete\n- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`\n  moved out of Startup (Tier 2 = start on demand)\n- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.\n  No autostart exists (manifest `Enabled=\"false\"`, no Run key/task, `RestartApps=0`).\n  It had been left running since 19/11 17:26. Killed; no respawn.\n- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.\n- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.\n- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB)."
+        },
+        {
+          "heading": "Credentials - complete",
+          "line": 182,
+          "text": "### Credentials - complete\n- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.\n- Duplicate `gho_XxIp.` entries and a second token `gho_hV2Y.` deleted.\n- **User action:** revoke the OAuth app that issued `gho_hV2Y.`; it was printed\n  during the audit and is treated as exposed.\n- The leaked `gho_zjsFDSeR.` from 2026-11-19 is already revoked.\n- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false\n  \"no credentials\" result."
+        },
+        {
+          "heading": "Knowledge base & agent preflight - complete",
+          "line": 191,
+          "text": "### Knowledge base & agent preflight - complete\n- `tools/agent-preflight.ps1` - checks MCP handshake, OpenCode, Hermes, provider, model\n- `tools/wire-craft-anything.ps1` - idempotent agent registration\n- `data/knowledge.db` committed (via `.gitignore` negation)\n- `docs/MCP-WIRING.md` - root cause of the silent 15-min run + per-agent configs"
+        },
+        {
+          "heading": "Craft Anything + Hermes diagnosis",
+          "line": 197,
+          "text": "### Craft Anything + Hermes diagnosis\n- Failure was **not MCP** (38 tools, verified).\n- 1. Ollama was stopped → Hermes provider timeouts (0 tokens in/out).\n- 2. `bonsai-2:4b` has no chat template; measured 57.7 s for \"OK\".\n- 3. Retry loop + concurrent Hermes runs collide.\n- Fix: `hermes config set model.default lfm3:1.7b`; use preflight; 1 builder at a time."
+        },
+        {
+          "heading": "Pending - needs elevation or a human",
+          "line": 204,
+          "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
         }
       ]
     },
@@ -3104,8 +3259,8 @@
       "path": "README.md",
       "kind": "md",
       "title": "Hive Mind REA Template",
-      "modified": "2026-11-23T06:37:50+00:00",
-      "sha256": "307727a9a70e1cc9f197e7ff801474097c92bc675b862de373314ef0abaf05cc",
+      "modified": "2026-11-23T06:52:19+00:00",
+      "sha256": "2e5f98e0889d906c25eebcb47754ec440d0243d4ea2b8d681d06d43ddb371d39",
       "words": 2368,
       "headings": [
         {
@@ -3376,7 +3531,7 @@
         {
           "heading": "Verified status",
           "line": 375,
-          "text": "## Verified status\n\nMeasured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):\n\n| Check | Result |\n|---|---|\n| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |\n| `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |\n| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |\n| Hermes MCP test | Connected in 3.9 s, 38 tools |\n| Hermes model | `lfm3:1.7b`, \"OK\" in 20.8 s |\n| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |\n| Ollama | 0.40.16, 3 models, listening on :11434 |\n| Grafana | responding on :3000 |\n| SSD | WD Blue SN550, healthy |\n| BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |\n| `data/knowledge.db` | 105 documents, 488 chunks, 123 facts |\n\nKnown warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,\nDocker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.\n\n---"
+          "text": "## Verified status\n\nMeasured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):\n\n| Check | Result |\n|---|---|\n| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |\n| `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |\n| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |\n| Hermes MCP test | Connected in 3.9 s, 38 tools |\n| Hermes model | `lfm3:1.7b`, \"OK\" in 20.8 s |\n| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |\n| Ollama | 0.40.16, 3 models, listening on :11434 |\n| Grafana | responding on :3000 |\n| SSD | WD Blue SN550, healthy |\n| BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |\n| `data/knowledge.db` | 107 documents, 388 chunks, 123 facts |\n\nKnown warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,\nDocker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.\n\n---"
         },
         {
           "heading": "Requirements",

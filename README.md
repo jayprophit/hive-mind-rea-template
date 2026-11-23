@@ -388,7 +388,7 @@ Measured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 2
 | Grafana | responding on :3000 |
 | SSD | WD Blue SN550, healthy |
 | BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |
-| `data/knowledge.db` | 105 documents, 488 chunks, 123 facts |
+| `data/knowledge.db` | 107 documents, 388 chunks, 123 facts |
 
 Known warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,
 Docker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.
