@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T13:27:19+00:00",
+  "generated": "2026-11-23T18:01:38+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 121,
-    "headings": 273,
-    "chunks": 589,
+    "headings": 274,
+    "chunks": 590,
     "facts": 216,
     "assets": 0,
     "sources": 343,
@@ -3349,9 +3349,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T13:26:43+00:00",
-      "sha256": "7dd74d4ae5fa229c443636b14e3e9d262ceb759aee141726a43fc52bd586d555",
-      "words": 2452,
+      "modified": "2026-11-23T18:00:59+00:00",
+      "sha256": "1550f8af8398517d43f17e095b8bbbd8775b00a4da5f84caa26ddd229eb1e80f",
+      "words": 2545,
       "headings": [
         {
           "level": 1,
@@ -3525,8 +3525,13 @@
         },
         {
           "level": 3,
-          "text": "Final feature audit - all YES",
+          "text": "Dashboard rebuilt to the authenticated target - complete",
           "line": 289
+        },
+        {
+          "level": 3,
+          "text": "Final feature audit - all YES",
+          "line": 299
         }
       ],
       "links": [],
@@ -3717,8 +3722,13 @@
           "text": "### Menu/link and live-connection fixes - complete\n- Audited every link: 38 HTML files, 23 internal links, 41 JS path literals —\n  **0 broken**. Added six missing Help routes (help, faq, church, download,\n  download-code, giftshop) and added them to Vite's multi-page input.\n- Fixed workspace deep links: nav now targets real `panel-*` IDs, and the hash\n  activates the matching tab. All seven targets verified present.\n- Real connections are now the default for login, email, payments, phone and\n  integrations. Test mode is an explicit opt-in for trying a flow first.\n- Browser automation emits intents through the shared bus; a real browser\n  bridge is required to execute them."
         },
         {
-          "heading": "Final feature audit - all YES",
+          "heading": "Dashboard rebuilt to the authenticated target - complete",
           "line": 289,
+          "text": "### Dashboard rebuilt to the authenticated target - complete\n- The earlier visual target was the login page (fresh browser redirected).\n  Rebuilt the dashboard from `capture/dashboard/` snapshots of the real signed-in\n  page: Polsia, Business, Tasks, Documents, Twitter, Email, Meta Ads, Media\n  panels, full menu and captured copy.\n- New route `/dashboard/pagemurmur-9jsvs1/` is built; `dashhome.js/.css` hold the\n  authenticated layout. Visual check ~84%, 30/30 claims.\n- All links re-audited: 40 HTML files, 23 internal links, 41 JS literals — 0 broken.\n- `craft.json` set to `ready` so the next prompt can be sent."
+        },
+        {
+          "heading": "Final feature audit - all YES",
+          "line": 299,
           "text": "### Final feature audit - all YES\n- Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte\n  sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/\n  WORKFLOWS/AGENT_TEAMS/AUTO_MEMORY/DOCTOR, dashboard routes + 58 actions,\n  SOCIAL_CONNECTIONS, chat widget, burger+cascading menus (CSS import fixed),\n  role-only teammates, ENGINES, AUTONOMOUS_BOOTSTRAP, CAPABILITIES/MCP_SERVERS/\n  PROTOCOLS, email read/draft/send, phone assistant, TTS/STT, media generation,\n  INSTINCTS, AGENT_ACCESS, RUN_MONITOR, behaviour recordings, optional\n  Composio, help pages and extra login providers.\n- `npm run build` passes; dist ~42+ files. Remaining gap is visual drift on\n  long legal pages, not missing functionality."
         }
       ]
@@ -7849,9 +7859,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "7dd74d4ae5fa229c443636b14e3e9d262ceb759aee141726a43fc52bd586d555",
-      "bytes": 16894,
-      "modified": "2026-11-23T13:26:43+00:00"
+      "sha256": "1550f8af8398517d43f17e095b8bbbd8775b00a4da5f84caa26ddd229eb1e80f",
+      "bytes": 17516,
+      "modified": "2026-11-23T18:00:59+00:00"
     },
     {
       "path": "opencode/agents/coder.md",

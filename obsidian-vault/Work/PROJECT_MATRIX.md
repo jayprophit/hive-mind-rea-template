@@ -286,6 +286,16 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - Browser automation emits intents through the shared bus; a real browser
   bridge is required to execute them.
 
+### Dashboard rebuilt to the authenticated target - complete
+- The earlier visual target was the login page (fresh browser redirected).
+  Rebuilt the dashboard from `capture/dashboard/` snapshots of the real signed-in
+  page: Polsia, Business, Tasks, Documents, Twitter, Email, Meta Ads, Media
+  panels, full menu and captured copy.
+- New route `/dashboard/pagemurmur-9jsvs1/` is built; `dashhome.js/.css` hold the
+  authenticated layout. Visual check ~84%, 30/30 claims.
+- All links re-audited: 40 HTML files, 23 internal links, 41 JS literals — 0 broken.
+- `craft.json` set to `ready` so the next prompt can be sent.
+
 ### Final feature audit - all YES
 - Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte
   sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/
