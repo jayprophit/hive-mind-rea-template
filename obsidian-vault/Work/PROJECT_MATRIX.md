@@ -275,6 +275,17 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - Project keeps its own database `projects/polsia-free-v1/knowledge.db`; the
   template DB stays generic.
 
+### Menu/link and live-connection fixes - complete
+- Audited every link: 38 HTML files, 23 internal links, 41 JS path literals —
+  **0 broken**. Added six missing Help routes (help, faq, church, download,
+  download-code, giftshop) and added them to Vite's multi-page input.
+- Fixed workspace deep links: nav now targets real `panel-*` IDs, and the hash
+  activates the matching tab. All seven targets verified present.
+- Real connections are now the default for login, email, payments, phone and
+  integrations. Test mode is an explicit opt-in for trying a flow first.
+- Browser automation emits intents through the shared bus; a real browser
+  bridge is required to execute them.
+
 ### Final feature audit - all YES
 - Automated audit of 38 features against `app/src/*.js`: 13-phase loop, byte
   sweep, 10 languages, free services, human gate, SKILLS/HOOKS/SUBAGENTS/

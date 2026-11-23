@@ -145,7 +145,7 @@ substitute and uses it automatically unless the user supplies their own:
 | Storage / DB | IndexedDB + local SQLite knowledge databases in this repo |
 | Diagrams / docs | Mermaid, Markdown, Open XML (.docx/.xlsx/.pptx), CSV, SVG, HTML |
 | Email reports | `mailto:` draft plus a user-configured free webhook |
-| Payments | Stripe/PayPal **test mode** with the user's own key; no gating of features |
+| Payments | Stripe/PayPal **live** with the user's own key; test mode opt-in; no feature gating |
 | OCR / PDF / media | Local Python libs already installed (pypdf, Pillow, pandas) |
 
 Every substitute records `substitutesFor`, cost `0`, and a source URL. If a
@@ -179,7 +179,7 @@ Add a `SOCIAL_CONNECTIONS` registry with at least:
 - GitHub (already an integration) and email.
 
 Each entry has `id`, `name`, `category`, `scopes`, `connectSteps`, `status`
-(disconnected / connected / expired), `readOnly` default, and a test-mode
+(disconnected / connected / expired), `readOnly` default, live connections by default and an optional test-mode
 preview. No secret is stored in local state; the person supplies credentials
 through their own OAuth flow or a webhook. Reports can be posted to any
 connected channel, with human approval remembered once.
@@ -191,7 +191,7 @@ The studio must expose the same account surfaces seen in the original dashboard:
 Billing, Upgrade, Usage details, Top up credits, Credits, New company, My
 portfolio**, plus any other menu items discovered. Each surface needs a real
 route, a working state model, and links back to the team workflow. `Credits` and
-`Top up credits` must remain informational/test-mode only — no feature may be
+`Top up credits` must remain informational (real provider config, test optional) - no feature may be
 locked behind them.
 
 ### 5g. Every dashboard button becomes a real, improved action
@@ -218,8 +218,9 @@ Rules for the rebuild:
 - Long actions (`Run task`, `Tweet`, `Setup payments`) show progress and can be
   paused/retried; failures produce `Try again` with the reason.
 - Integration buttons (`Connect X`, `Connect Brex`, `Connect Mercury`, Meta Ads,
-  email, social connections) use test-mode previews and never store secrets.
-- Credit/billing buttons are informational in test mode; no feature is gated.
+  email, social connections) make real connections by default; test mode is an
+  opt-in preview for trying the flow, and no secret is stored.
+- Credit/billing buttons use the configured live provider (test optional); no feature is gated.
 
 ### 5h. Floating chat with the agents (bottom-right)
 
@@ -283,7 +284,7 @@ a build manually. Add an `AUTONOMOUS_BOOTSTRAP` flow:
 2. Auto-select roles and engines, auto-load the right skills, and start the
    13-phase loop from the user's single prompt.
 3. Auto-install/configure what is missing through `FREE_SERVICES`, using
-   test-mode defaults; no API keys or credits required.
+   real/default providers with an opt-in test mode; no API keys or credits required.
 4. Auto-verify after every phase (build, links, behaviour, visual check) and
    auto-fix failures; only surface an item when it truly needs a human.
 5. The only user inputs are: the task, optional credentials/authorisation via
@@ -307,7 +308,7 @@ and an optional paid tier using the person's own key. No feature is locked.
 | Video generation | local render via ffmpeg/Canvas | video API |
 | OCR / document reading | pypdf, Pillow, local OCR | hosted OCR |
 | Email | local `mailto:` drafts + IMAP/SMTP via user config | hosted mail |
-| Phone assistant | WebRTC/SIP test mode with local STT/TTS | telephony provider |
+| Phone assistant | WebRTC/SIP live with local STT/TTS and consent | telephony provider (test opt-in) |
 | Diagrams / charts | Mermaid, `scripts/viz.py` | hosted diagramming |
 | MCP tools | any stdio/HTTP MCP server, allowlisted | hosted MCP |
 | Protocols | MCP, A2A, Agent Skills, webhooks, IMAP/SMTP, HTTP | enterprise connectors |
@@ -322,8 +323,8 @@ Rules:
   roles.
 - Email can read, draft and send with remembered human approval; no auto-send
   of sensitive content.
-- Phone assistant is test-mode by default and never places real calls without
-  explicit authorisation.
+- Phone assistant uses real calls only with explicit authorisation; test mode is
+  available for trying the flow without placing a call.
 - Every capability is callable from the chat widget and from the team loop.
 
 ### 5m. Login providers and Help & More pages
@@ -331,7 +332,7 @@ Rules:
 The login screen must offer more than Email and Google. Add a `LOGIN_PROVIDERS`
 registry with at least: Email (magic link), Google, **GitHub, Apple, Microsoft,
 GitLab, X/Twitter, Discord, Slack, LinkedIn**, plus a generic OAuth option and
-a "continue as guest / local workspace" path. Every provider is test-mode by
+a "continue as guest / local workspace" path. Every provider is live by default (test mode optional) by
 default, uses the person's own OAuth config, and never stores secrets in local
 state. The user can add/remove providers without code changes.
 
@@ -375,7 +376,7 @@ tool registry so new capabilities can be added without editing the UI.
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a
-  payment provider the person configures (e.g. Stripe or PayPal, test mode by
+  payment provider the person configures (e.g. Stripe or PayPal, live by default; test mode opt-in,
   default): create an invoice/checkout, record the transaction, issue a receipt.
 - This is **not** a subscription, credit system or paywall. No feature, core,
   module or function may require payment to activate. The earlier requirement
@@ -419,7 +420,7 @@ tool registry so new capabilities can be added without editing the UI.
    automatic setup → build → test → check → fix → amend → implement → report →
    loop) without manual steps. It keeps cycling until every acceptance
    criterion passes or a human-only item is handed off.
-9. A payment integration can create a test-mode checkout and record it, while
+9. A payment integration can create a real checkout through the configured provider (test mode optional) and record it, while
    no feature is locked behind payment.
 10. Each round produces a retrospective and a visible completion metric.
 11. At least ten communication languages/types are supported, each message is
