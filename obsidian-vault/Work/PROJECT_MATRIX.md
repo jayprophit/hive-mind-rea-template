@@ -114,3 +114,31 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 ### Not present
 - `graphify` and `demobase` do not exist on this machine. Optional, disabled in
   `core/stack.yaml`. Do not report them as broken.
+
+## Active work - 2026-11-23
+
+### Idle commit hogs - complete
+- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`
+  moved out of Startup (Tier 2 = start on demand)
+- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.
+  No autostart exists (manifest `Enabled="false"`, no Run key/task, `RestartApps=0`).
+  It had been left running since 19/11 17:26. Killed; no respawn.
+- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.
+- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.
+- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB).
+
+### GitHub credentials - complete
+- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.
+- Duplicate `gho_XxIp…` entries and a second token `gho_hV2Y…` deleted.
+- **User action:** revoke the OAuth app that issued `gho_hV2Y…`; it was printed
+  during the audit and is treated as exposed.
+- The leaked `gho_zjsFDSeR…` from 2026-11-19 is already revoked.
+- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false
+  "no credentials" result.
+
+### Pending - needs elevation or a human
+- Intel `ESRV_SVC_QUEENCREEK` (198 MB) + `UDCService` (126 MB): Access denied
+  without an elevated shell.
+- `AnyDesk` + `TeamViewer` still Auto (~67 MB). Decision needed before stopping.
+- **BIOS** EMCN42WW -> EMCN60WW still not flashed.
+- **RAM** 8 GB -> 12 GB (8 GB DDR4-2666 SO-DIMM) still not bought.
