@@ -258,3 +258,11 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - Documented but not yet in code: INSTINCTS, AGENT_ACCESS allowlist, run monitor,
   behaviour recordings, catalogue scaling (wave 4 of the deep dive).
 - Policy: lean registries + direct CLI tools; MIT/Apache/CC0 patterns only.
+
+### Final build state - complete
+- Dashboard surfaces and all 58 captured buttons implemented as bus actions.
+- Floating agent chat, burger + cascading menus, role-only teammates with
+  swappable ENGINES, autonomous bootstrap, and CAPABILITIES/MCP/PROTOCOLS
+  registries implemented in `app/`.
+- `npm run build` passes; visual check ~83%, 30/30 claims.
+- `craft.json` paused to prevent duplicate builders; resume one at a time.

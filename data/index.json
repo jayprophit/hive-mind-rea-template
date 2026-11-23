@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T11:39:32+00:00",
+  "generated": "2026-11-23T11:52:26+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 259,
-    "chunks": 574,
+    "headings": 261,
+    "chunks": 576,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -2900,9 +2900,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T10:38:17+00:00",
-      "sha256": "fbf56aad9b254b700f452f0bd5d74fc41f5229c6ab927dba7c2bd8cca7dfaabd",
-      "words": 2438,
+      "modified": "2026-11-23T11:51:27+00:00",
+      "sha256": "bcc5b8d34446da49ede51042c2a6935ceed3e1da22f478dc14e45f29f99bd728",
+      "words": 2576,
       "headings": [
         {
           "level": 1,
@@ -3013,6 +3013,11 @@
           "level": 2,
           "text": "Claude Code / free reverse-engineered ecosystem deep dive",
           "line": 289
+        },
+        {
+          "level": 2,
+          "text": "Final implemented state (11:50)",
+          "line": 309
         }
       ],
       "links": [],
@@ -3136,6 +3141,11 @@
           "heading": "Claude Code / free reverse-engineered ecosystem deep dive",
           "line": 289,
           "text": "## Claude Code / free reverse-engineered ecosystem deep dive\n- Added `docs/CLAUDE-CODE-DEEP-DIVE.md` (official docs + GitHub API evidence).\n- Adopted official capabilities as data-driven registries in `app/src/studio.js`:\n  `SKILLS` (31 refs), `HOOKS` (31), `SUBAGENT_TYPES` (5), `WORKFLOWS` (27),\n  `AGENT_TEAMS` (8), `AUTO_MEMORY` (3), `DOCTOR` (38). Studio is 2,141 lines.\n  `npm run build` succeeds; visual check 81%, 30/30 claims.\n- Key evidence: `rea-lab` (482 runs) found no solve-rate gain from heavy RE MCP\n  tooling at ~2x time/cost; `leanrea` (8 KB skill, direct shell tools) matched\n  accuracy with 38% less time, 35% less cost, 60% fewer tokens. Policy: small\n  registries, on-demand loading, direct CLI tools.\n- Studied free/RE projects by ecosystem: Grok (OpenMausBot, munder-difflin,\n  suparagent), Manus (lemonai, open-agent), Codex/Claude (Paradev, Backboard,\n  open-claude-code), Hermes (ryu, AstraBox, flowwink), OpenClaw (AstrBot,\n  poco-claw, Kai, swarmvault), plus skill packs (superpowers, ECC, caveman,\n  archify, taste-skill).\n- Wave 4 still in docs only, not code: `INSTINCTS`, `AGENT_ACCESS` allowlist,\n  run monitor, behaviour recordings, skill catalogue scaling.\n- Licensing: MIT/Apache/CC0 patterns only; unlicensed/decompiled repos are\n  reference material. Never install decompiled binaries or copy their code."
+        },
+        {
+          "heading": "Final implemented state (11:50)",
+          "line": 309,
+          "text": "## Final implemented state (11:50)\n- Authenticated dashboard captured via `browse` real browser: snapshot of every\n  menu item (Settings, Teams, Refer & Earn, Help & More, Give Feedback, Personal\n  accounts, Billing, Upgrade, Usage details, Top up credits, Credits, New\n  Company, My Portfolio) and 58 clickable controls, saved in\n  `samples/dashboard-evidence/` and the workspace `capture/dashboard/`.\n- Implemented: dashboard routes (22 generated), 58 bus-driven actions with\n  approval/progress/retry/undo, SOCIAL_CONNECTIONS (X plus 15 platforms),\n  floating bottom-right agent chat (`chat.js`, 382 lines), burger + cascading\n  menus (`nav.js`, `nav.css`), role-only teammates with separate ENGINES\n  registry, AUTONOMOUS_BOOTSTRAP, CAPABILITIES/MCP_SERVERS/PROTOCOLS registry.\n- `app/src/studio.js` 3,073 lines; `npm run build` succeeds; 42 dist files.\n- Visual check ~83%, 30/30 claims. Remaining gap is long legal pages and the\n  missing authenticated-form field; logged-in dashboard is now available."
         }
       ]
     },
@@ -3231,9 +3241,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T10:38:37+00:00",
-      "sha256": "d17bf4e75b10db9f118dc328598d62b4d74a7bcb37b9d33fe78affa7bb6b2810",
-      "words": 2133,
+      "modified": "2026-11-23T11:51:39+00:00",
+      "sha256": "728c59528b7f96acc3126beaeff60c372da20be706a39a078a437fbfd6c2f1cf",
+      "words": 2192,
       "headings": [
         {
           "level": 1,
@@ -3389,6 +3399,11 @@
           "level": 3,
           "text": "Claude Code + REA research - complete",
           "line": 253
+        },
+        {
+          "level": 3,
+          "text": "Final build state - complete",
+          "line": 262
         }
       ],
       "links": [],
@@ -3562,6 +3577,11 @@
           "heading": "Claude Code + REA research - complete",
           "line": 253,
           "text": "### Claude Code + REA research - complete\n- `docs/CLAUDE-CODE-DEEP-DIVE.md`: official skills/subagents/hooks/workflows/\n  agent-teams, plus free reverse-engineered ecosystems and controlled evidence.\n- Implemented in `app/`: SKILLS, HOOKS, SUBAGENT_TYPES, WORKFLOWS, AGENT_TEAMS,\n  AUTO_MEMORY, DOCTOR. Build passes; visual check 81%, 30/30 claims.\n- Documented but not yet in code: INSTINCTS, AGENT_ACCESS allowlist, run monitor,\n  behaviour recordings, catalogue scaling (wave 4 of the deep dive).\n- Policy: lean registries + direct CLI tools; MIT/Apache/CC0 patterns only."
+        },
+        {
+          "heading": "Final build state - complete",
+          "line": 262,
+          "text": "### Final build state - complete\n- Dashboard surfaces and all 58 captured buttons implemented as bus actions.\n- Floating agent chat, burger + cascading menus, role-only teammates with\n  swappable ENGINES, autonomous bootstrap, and CAPABILITIES/MCP/PROTOCOLS\n  registries implemented in `app/`.\n- `npm run build` passes; visual check ~83%, 30/30 claims.\n- `craft.json` paused to prevent duplicate builders; resume one at a time."
         }
       ]
     },
@@ -7670,9 +7690,9 @@
     {
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "text",
-      "sha256": "fbf56aad9b254b700f452f0bd5d74fc41f5229c6ab927dba7c2bd8cca7dfaabd",
-      "bytes": 15962,
-      "modified": "2026-11-23T10:38:17+00:00"
+      "sha256": "bcc5b8d34446da49ede51042c2a6935ceed3e1da22f478dc14e45f29f99bd728",
+      "bytes": 16972,
+      "modified": "2026-11-23T11:51:27+00:00"
     },
     {
       "path": "obsidian-vault/Work/Project.md",
@@ -7684,9 +7704,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "d17bf4e75b10db9f118dc328598d62b4d74a7bcb37b9d33fe78affa7bb6b2810",
-      "bytes": 14605,
-      "modified": "2026-11-23T10:38:37+00:00"
+      "sha256": "728c59528b7f96acc3126beaeff60c372da20be706a39a078a437fbfd6c2f1cf",
+      "bytes": 15034,
+      "modified": "2026-11-23T11:51:39+00:00"
     },
     {
       "path": "opencode/agents/coder.md",
