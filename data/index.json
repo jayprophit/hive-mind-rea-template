@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T11:23:18+00:00",
+  "generated": "2026-11-23T11:36:11+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 255,
-    "chunks": 569,
+    "headings": 258,
+    "chunks": 572,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -1292,9 +1292,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T11:22:04+00:00",
-      "sha256": "af41dac25b9b93e337bcbd0859de801d255a452681e8e0ae335c003be18e17a7",
-      "words": 2647,
+      "modified": "2026-11-23T11:30:26+00:00",
+      "sha256": "e5621f0634c72dc9fe02582aa20310629f6714b5bf6097261038951a8eb643f7",
+      "words": 3091,
       "headings": [
         {
           "level": 1,
@@ -1378,23 +1378,38 @@
         },
         {
           "level": 3,
-          "text": "6. Payments (commerce, not feature gates)",
+          "text": "5i. Navigation and UI/UX polish",
           "line": 241
         },
         {
           "level": 3,
+          "text": "5j. Teammates are roles, not AI model names",
+          "line": 260
+        },
+        {
+          "level": 3,
+          "text": "5k. Near-total autonomy — no \"Load & Run\" for the user",
+          "line": 276
+        },
+        {
+          "level": 3,
+          "text": "6. Payments (commerce, not feature gates)",
+          "line": 294
+        },
+        {
+          "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 251
+          "line": 304
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 260
+          "line": 313
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 270
+          "line": 323
         }
       ],
       "links": [],
@@ -1500,28 +1515,43 @@
           "text": "### 5h. Floating chat with the agents (bottom-right)\n\nThe original has a chat bubble in the bottom-right corner where the user talks\nto the AI agents. The rebuild must include it on every page:\n\n- Fixed bottom-right launch button with an unread badge; opens a chat panel.\n- Panel shows a message list with speaker, timestamp, language tag and status,\n  plus a composer with Send, attachments placeholder, quick-action chips and a\n  typing indicator.\n- The person never picks a member: messages are routed through the team message\n  bus and the auto-selection logic chooses the responsible members.\n- All ten communication languages are supported; the panel can filter them.\n- History persists in local state and appears in reports; sensitive requests\n  go through the human gate.\n- Accessible: labelled button, Escape to close, focus management, keyboard\n  send, responsive on mobile with no sideways scroll."
         },
         {
-          "heading": "6. Payments (commerce, not feature gates)",
+          "heading": "5i. Navigation and UI/UX polish",
           "line": 241,
+          "text": "### 5i. Navigation and UI/UX polish\n\nThe rebuild currently looks messy compared with the original. Required:\n\n- A **burger menu** (☰) in the top navigation for narrow screens and as the\n  primary collapsed navigation control on every page.\n- **Cascading menus** for grouped items (Business capabilities, Media\n  capabilities, Billing, Help & More, Notifications). Each group expands on\n  click/hover, shows its children indented, and **collapses** when another\n  group opens, when the user clicks outside, or on Escape.\n- Only one menu group open at a time; expanded state is visible, keyboard\n  accessible (Enter/Space/arrow keys), and announced to screen readers.\n- Match the original's visual language exactly: monochrome palette, Suisse\n  Mono / Editorial fonts, 480px content column, 24/20/12/8px spacing, 2px\n  radii, 1440/768/390 breakpoints, no sideways scroll.\n- Reduce visual noise: consistent alignment, clear heading hierarchy,\n  restrained borders/shadows, deliberate whitespace, and a visible active\n  state. Re-run the visual check after navigation changes."
+        },
+        {
+          "heading": "5j. Teammates are roles, not AI model names",
+          "line": 260,
+          "text": "### 5j. Teammates are roles, not AI model names\n\nNever name a teammate after an AI model or product (no `hermes`, `claude`,\n`codex`, `grok` as identities). Every teammate is a **role**:\n\n`lead`, `research`, `developer`, `coder`, `planner`, `designer`, `tester`,\n`reviewer`, `ops`, `security`, `integration`, `docs`, `support`, `finance`,\n`legal`, `growth`, `people`, `data`, `qa`, `deploy`, `monitor`.\n\nEach role has `id`, `name`, `description`, `goals`, `permissions`, `status` and\n`subRoles`. A separate `ENGINES` registry maps backend agents/models to roles\n(Hermes, OpenCode, Claude Code, Codex, local Ollama, etc.). The person never\nsees a model as a teammate; the system assigns the best available engine to a\nrole at runtime and can swap it without changing the team. This makes the build\nmodel-independent and able to cover any task by adding roles/engines."
+        },
+        {
+          "heading": "5k. Near-total autonomy — no \"Load & Run\" for the user",
+          "line": 276,
+          "text": "### 5k. Near-total autonomy — no \"Load & Run\" for the user\n\nThe user must never have to choose a model, pick a skill, press \"Load\", or run\na build manually. Add an `AUTONOMOUS_BOOTSTRAP` flow:\n\n1. On open, auto-detect the workspace, existing files, available engines and\n   free services; show a short plain-language status, not a technical menu.\n2. Auto-select roles and engines, auto-load the right skills, and start the\n   13-phase loop from the user's single prompt.\n3. Auto-install/configure what is missing through `FREE_SERVICES`, using\n   test-mode defaults; no API keys or credits required.\n4. Auto-verify after every phase (build, links, behaviour, visual check) and\n   auto-fix failures; only surface an item when it truly needs a human.\n5. The only user inputs are: the task, optional credentials/authorisation via\n   the human gate, and feedback. Everything technical is handled internally.\n6. Show a simple progress view (\"Planning → Researching → Building →\n   Checking → Done\") with plain words, and a chat box for follow-ups."
+        },
+        {
+          "heading": "6. Payments (commerce, not feature gates)",
+          "line": 294,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 251,
+          "line": 304,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 260,
+          "line": 313,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 270,
+          "line": 323,
           "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
         },
         {
           "heading": "Acceptance criteria",
-          "line": 270,
+          "line": 323,
           "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
@@ -5707,9 +5737,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "af41dac25b9b93e337bcbd0859de801d255a452681e8e0ae335c003be18e17a7",
-      "bytes": 17579,
-      "modified": "2026-11-23T11:22:04+00:00"
+      "sha256": "e5621f0634c72dc9fe02582aa20310629f6714b5bf6097261038951a8eb643f7",
+      "bytes": 20576,
+      "modified": "2026-11-23T11:30:26+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",

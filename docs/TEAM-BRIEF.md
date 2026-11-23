@@ -238,6 +238,94 @@ to the AI agents. The rebuild must include it on every page:
 - Accessible: labelled button, Escape to close, focus management, keyboard
   send, responsive on mobile with no sideways scroll.
 
+### 5i. Navigation and UI/UX polish
+
+The rebuild currently looks messy compared with the original. Required:
+
+- A **burger menu** (☰) in the top navigation for narrow screens and as the
+  primary collapsed navigation control on every page.
+- **Cascading menus** for grouped items (Business capabilities, Media
+  capabilities, Billing, Help & More, Notifications). Each group expands on
+  click/hover, shows its children indented, and **collapses** when another
+  group opens, when the user clicks outside, or on Escape.
+- Only one menu group open at a time; expanded state is visible, keyboard
+  accessible (Enter/Space/arrow keys), and announced to screen readers.
+- Match the original's visual language exactly: monochrome palette, Suisse
+  Mono / Editorial fonts, 480px content column, 24/20/12/8px spacing, 2px
+  radii, 1440/768/390 breakpoints, no sideways scroll.
+- Reduce visual noise: consistent alignment, clear heading hierarchy,
+  restrained borders/shadows, deliberate whitespace, and a visible active
+  state. Re-run the visual check after navigation changes.
+
+### 5j. Teammates are roles, not AI model names
+
+Never name a teammate after an AI model or product (no `hermes`, `claude`,
+`codex`, `grok` as identities). Every teammate is a **role**:
+
+`lead`, `research`, `developer`, `coder`, `planner`, `designer`, `tester`,
+`reviewer`, `ops`, `security`, `integration`, `docs`, `support`, `finance`,
+`legal`, `growth`, `people`, `data`, `qa`, `deploy`, `monitor`.
+
+Each role has `id`, `name`, `description`, `goals`, `permissions`, `status` and
+`subRoles`. A separate `ENGINES` registry maps backend agents/models to roles
+(Hermes, OpenCode, Claude Code, Codex, local Ollama, etc.). The person never
+sees a model as a teammate; the system assigns the best available engine to a
+role at runtime and can swap it without changing the team. This makes the build
+model-independent and able to cover any task by adding roles/engines.
+
+### 5k. Near-total autonomy — no "Load & Run" for the user
+
+The user must never have to choose a model, pick a skill, press "Load", or run
+a build manually. Add an `AUTONOMOUS_BOOTSTRAP` flow:
+
+1. On open, auto-detect the workspace, existing files, available engines and
+   free services; show a short plain-language status, not a technical menu.
+2. Auto-select roles and engines, auto-load the right skills, and start the
+   13-phase loop from the user's single prompt.
+3. Auto-install/configure what is missing through `FREE_SERVICES`, using
+   test-mode defaults; no API keys or credits required.
+4. Auto-verify after every phase (build, links, behaviour, visual check) and
+   auto-fix failures; only surface an item when it truly needs a human.
+5. The only user inputs are: the task, optional credentials/authorisation via
+   the human gate, and feedback. Everything technical is handled internally.
+6. Show a simple progress view ("Planning → Researching → Building →
+   Checking → Done") with plain words, and a chat box for follow-ups.
+
+### 5l. All capabilities and protocols, free by default
+
+Add a `CAPABILITIES` registry where every capability has a free/open default
+and an optional paid tier using the person's own key. No feature is locked.
+
+| Capability | Free default | Optional paid |
+|---|---|---|
+| Text / chat / reasoning | Nous free, OpenCode free, local Ollama | user's API key |
+| Embeddings / search | local SQLite FTS5, BM25 | hosted vector DB |
+| Speech-to-text / voice recognition | local faster-whisper, Web Speech | hosted STT |
+| Text-to-speech | Edge TTS, browser SpeechSynthesis | hosted TTS |
+| Image generation | local SVG/Canvas, bundled icons | image API |
+| Audio / music generation | local synthesis, Web Audio | music API |
+| Video generation | local render via ffmpeg/Canvas | video API |
+| OCR / document reading | pypdf, Pillow, local OCR | hosted OCR |
+| Email | local `mailto:` drafts + IMAP/SMTP via user config | hosted mail |
+| Phone assistant | WebRTC/SIP test mode with local STT/TTS | telephony provider |
+| Diagrams / charts | Mermaid, `scripts/viz.py` | hosted diagramming |
+| MCP tools | any stdio/HTTP MCP server, allowlisted | hosted MCP |
+| Protocols | MCP, A2A, Agent Skills, webhooks, IMAP/SMTP, HTTP | enterprise connectors |
+
+Rules:
+
+- `CAPABILITIES` entries carry `id`, `name`, `freeProvider`, `paidProvider`,
+  `status`, `cost`, `consent`, `testMode`.
+- `MCP_SERVERS` registry supports add/remove/enable, tool discovery and a
+  per-role allowlist; new servers are sandboxed until trusted.
+- `ENGINES` supports free and paid models; switching never changes the team's
+  roles.
+- Email can read, draft and send with remembered human approval; no auto-send
+  of sensitive content.
+- Phone assistant is test-mode by default and never places real calls without
+  explicit authorisation.
+- Every capability is callable from the chat widget and from the team loop.
+
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a
