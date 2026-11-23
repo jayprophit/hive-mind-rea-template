@@ -190,8 +190,13 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
   handoffs, with a task board and one-time authorisation. See `docs/TEAM-BRIEF.md`.
 - **Authenticated pages:** original target redirected to `/login`; Craft Anything
   browser has no logins. Need logged-in screenshots/HTML from the user.
-- Built nav still links to `/changelog` (and possibly `/acceptable-use`) with no
-  page present — check and fix in the next round.
+- Built nav link gaps FIXED: `/changelog` and `/acceptable-use` now exist;
+  `npm run build` produces 15 dist files across 7 page folders.
+- Ten inter-agent communication languages FIXED (pluggable registry, labelled,
+  auto-routed, filterable, persisted). See `docs/TEAM-BRIEF.md` §3b.
+- Remaining: visual likeness 78% (legal pages weakest, missing form field);
+  authenticated dashboard pages need logged-in evidence from the user.
+- Only run ONE builder at a time; concurrent runs overwrote `studio.js`.
 
 ## Active work - 2026-11-23
 

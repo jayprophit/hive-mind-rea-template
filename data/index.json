@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T09:27:15+00:00",
+  "generated": "2026-11-23T09:50:47+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 111,
-    "headings": 214,
-    "chunks": 446,
+    "headings": 215,
+    "chunks": 447,
     "facts": 152,
     "assets": 0,
     "sources": 333,
@@ -2424,9 +2424,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T07:49:15+00:00",
-      "sha256": "f06a4a1764fef0bb81beb094c1bb75a2c368e98d53b73c8dc3ddcdabc394f98a",
-      "words": 1787,
+      "modified": "2026-11-23T09:50:08+00:00",
+      "sha256": "af1359fb9c1740538e748726750d4c79b0e6e8088499dfc2d0a72c87201e3acf",
+      "words": 1957,
       "headings": [
         {
           "level": 1,
@@ -2514,9 +2514,14 @@
           "line": 216
         },
         {
+          "level": 3,
+          "text": "Verified final build (09:50)",
+          "line": 228
+        },
+        {
           "level": 2,
           "text": "Requests queued (for this machine's new build)",
-          "line": 229
+          "line": 247
         }
       ],
       "links": [],
@@ -2614,11 +2619,16 @@
         {
           "heading": "Team brief refined (user clarification)",
           "line": 216,
-          "text": "### Team brief refined (user clarification)\n- No picker at all: the task auto-selects the right member(s) with a reason.\n- More than one member active by default; single member only when genuinely\n  needed, decided automatically.\n- Must work autonomously: plan, research, build, test, fix, report; resolve\n  blockers and hand off failed steps to another role.\n- Must be able to take payments for real transactions (test mode, user's key)\n  but with **no** subscription, credits or paid feature gates.\n- Each round writes a retrospective and a completion metric.\n- `docs/TEAM-BRIEF.md` is the authoritative spec; a controlled follow-up build\n  was launched with it after stopping the GUI retry loop.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+          "text": "### Team brief refined (user clarification)\n- No picker at all: the task auto-selects the right member(s) with a reason.\n- More than one member active by default; single member only when genuinely\n  needed, decided automatically.\n- Must work autonomously: plan, research, build, test, fix, report; resolve\n  blockers and hand off failed steps to another role.\n- Must be able to take payments for real transactions (test mode, user's key)\n  but with **no** subscription, credits or paid feature gates.\n- Each round writes a retrospective and a completion metric.\n- `docs/TEAM-BRIEF.md` is the authoritative spec; a controlled follow-up build\n  was launched with it after stopping the GUI retry loop."
+        },
+        {
+          "heading": "Verified final build (09:50)",
+          "line": 228,
+          "text": "### Verified final build (09:50)\n- `npm run build` succeeds: 15 dist files, 7 page folders including the new\n  `/changelog` and `/acceptable-use`.\n- `app/src/studio.js` is 951 lines: no member picker, automatic role selection\n  with reasons, multiple members active concurrently, shared message bus,\n  task board, handoffs, autonomy loop, payments tab with no paid gates,\n  retrospectives, auto-mode intervals and remembered authorisation.\n- Ten inter-agent communication languages implemented as a pluggable registry\n  (prose, JSON envelope, task DSL, Markdown, tool calls, pub/sub events,\n  blackboard, semantic digest, A2A/MCP envelopes, human digest); every message\n  is labelled, auto-routed, filterable and persisted.\n- Visual check: 78% alike, 30/30 claims hold. Remaining visual gaps are in the\n  long legal pages (/privacy 64%, /terms 62%) and a missing form field.\n- Authenticated dashboard still cannot be reproduced: Craft Anything's browser\n  has no logins and the target redirected to `/login`. Need logged-in evidence.\n- Two concurrent builders once overwrote each other; stale trees were killed\n  and a final controlled single round produced the state above.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
         },
         {
           "heading": "Requests queued (for this machine's new build)",
-          "line": 229,
+          "line": 247,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
@@ -2715,9 +2725,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T07:46:47+00:00",
-      "sha256": "415811ac09a9abd1ad9d72fdf8a75d06998d3d0944773751f1823bd3f67395d4",
-      "words": 1875,
+      "modified": "2026-11-23T09:50:15+00:00",
+      "sha256": "d4fc377500057e1ec69a7b40f0f8095e51987377746ec3ded24c832c2e58dc18",
+      "words": 1927,
       "headings": [
         {
           "level": 1,
@@ -2832,32 +2842,32 @@
         {
           "level": 2,
           "text": "Active work - 2026-11-23",
-          "line": 196
+          "line": 201
         },
         {
           "level": 3,
           "text": "Idle commit hogs - complete",
-          "line": 198
+          "line": 203
         },
         {
           "level": 3,
           "text": "Credentials - complete",
-          "line": 208
+          "line": 213
         },
         {
           "level": 3,
           "text": "Knowledge base & agent preflight - complete",
-          "line": 217
+          "line": 222
         },
         {
           "level": 3,
           "text": "Craft Anything + Hermes diagnosis",
-          "line": 223
+          "line": 228
         },
         {
           "level": 3,
           "text": "Pending - needs elevation or a human",
-          "line": 230
+          "line": 235
         }
       ],
       "links": [],
@@ -2985,36 +2995,36 @@
         {
           "heading": "Known gaps - next refinement",
           "line": 187,
-          "text": "### Known gaps - next refinement\n- **Team workflow:** studio currently picks one agent at a time. Required: one\n  team of role-based members working concurrently, sharing messages and\n  handoffs, with a task board and one-time authorisation. See `docs/TEAM-BRIEF.md`.\n- **Authenticated pages:** original target redirected to `/login`; Craft Anything\n  browser has no logins. Need logged-in screenshots/HTML from the user.\n- Built nav still links to `/changelog` (and possibly `/acceptable-use`) with no\n  page present — check and fix in the next round."
+          "text": "### Known gaps - next refinement\n- **Team workflow:** studio currently picks one agent at a time. Required: one\n  team of role-based members working concurrently, sharing messages and\n  handoffs, with a task board and one-time authorisation. See `docs/TEAM-BRIEF.md`.\n- **Authenticated pages:** original target redirected to `/login`; Craft Anything\n  browser has no logins. Need logged-in screenshots/HTML from the user.\n- Built nav link gaps FIXED: `/changelog` and `/acceptable-use` now exist;\n  `npm run build` produces 15 dist files across 7 page folders.\n- Ten inter-agent communication languages FIXED (pluggable registry, labelled,\n  auto-routed, filterable, persisted). See `docs/TEAM-BRIEF.md` §3b.\n- Remaining: visual likeness 78% (legal pages weakest, missing form field);\n  authenticated dashboard pages need logged-in evidence from the user.\n- Only run ONE builder at a time; concurrent runs overwrote `studio.js`."
         },
         {
           "heading": "Active work - 2026-11-23",
-          "line": 196,
+          "line": 201,
           "text": "## Active work - 2026-11-23"
         },
         {
           "heading": "Idle commit hogs - complete",
-          "line": 198,
+          "line": 203,
           "text": "### Idle commit hogs - complete\n- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`\n  moved out of Startup (Tier 2 = start on demand)\n- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.\n  No autostart exists (manifest `Enabled=\"false\"`, no Run key/task, `RestartApps=0`).\n  It had been left running since 19/11 17:26. Killed; no respawn.\n- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.\n- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.\n- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB)."
         },
         {
           "heading": "Credentials - complete",
-          "line": 208,
+          "line": 213,
           "text": "### Credentials - complete\n- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.\n- Duplicate `gho_XxIp.` entries and a second token `gho_hV2Y.` deleted.\n- **User action:** revoke the OAuth app that issued `gho_hV2Y.`; it was printed\n  during the audit and is treated as exposed.\n- The leaked `gho_zjsFDSeR.` from 2026-11-19 is already revoked.\n- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false\n  \"no credentials\" result."
         },
         {
           "heading": "Knowledge base & agent preflight - complete",
-          "line": 217,
+          "line": 222,
           "text": "### Knowledge base & agent preflight - complete\n- `tools/agent-preflight.ps1` - checks MCP handshake, OpenCode, Hermes, provider, model\n- `tools/wire-craft-anything.ps1` - idempotent agent registration\n- `data/knowledge.db` committed (via `.gitignore` negation)\n- `docs/MCP-WIRING.md` - root cause of the silent 15-min run + per-agent configs"
         },
         {
           "heading": "Craft Anything + Hermes diagnosis",
-          "line": 223,
+          "line": 228,
           "text": "### Craft Anything + Hermes diagnosis\n- Failure was **not MCP** (38 tools, verified).\n- 1. Ollama was stopped → Hermes provider timeouts (0 tokens in/out).\n- 2. `bonsai-2:4b` has no chat template; measured 57.7 s for \"OK\".\n- 3. Retry loop + concurrent Hermes runs collide.\n- Fix: `hermes config set model.default lfm3:1.7b`; use preflight; 1 builder at a time."
         },
         {
           "heading": "Pending - needs elevation or a human",
-          "line": 230,
+          "line": 235,
           "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
         }
       ]
@@ -6679,9 +6689,9 @@
     {
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "text",
-      "sha256": "f06a4a1764fef0bb81beb094c1bb75a2c368e98d53b73c8dc3ddcdabc394f98a",
-      "bytes": 11404,
-      "modified": "2026-11-23T07:49:15+00:00"
+      "sha256": "af1359fb9c1740538e748726750d4c79b0e6e8088499dfc2d0a72c87201e3acf",
+      "bytes": 12580,
+      "modified": "2026-11-23T09:50:08+00:00"
     },
     {
       "path": "obsidian-vault/Work/Project.md",
@@ -6693,9 +6703,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "415811ac09a9abd1ad9d72fdf8a75d06998d3d0944773751f1823bd3f67395d4",
-      "bytes": 12735,
-      "modified": "2026-11-23T07:46:47+00:00"
+      "sha256": "d4fc377500057e1ec69a7b40f0f8095e51987377746ec3ded24c832c2e58dc18",
+      "bytes": 13110,
+      "modified": "2026-11-23T09:50:15+00:00"
     },
     {
       "path": "opencode/agents/coder.md",
