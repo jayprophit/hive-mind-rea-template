@@ -146,5 +146,26 @@
     "Decide on AnyDesk and TeamViewer autostart",
     "Run the elevated Intel telemetry service demotion",
     "Review the remaining cloned repos (repos/ is 1.56 GB and not in git)"
+  ],
+  "recommendations": [
+    { "priority": "P0", "item": "Logged-in capture evidence", "why": "Original target redirects to /login; dashboard cannot be inferred from public pages", "where": "capture/dashboard/" },
+    { "priority": "P0", "item": "Checkpoint/resume in IndexedDB", "why": "Three builds were lost to crashes and PTY timeouts", "where": "app/src/studio.js" },
+    { "priority": "P0", "item": "One builder at a time", "why": "Concurrent builders overwrote studio.js", "where": "craft.json, operator" },
+    { "priority": "P1", "item": "Self-evaluation harness", "why": "Make acceptance criteria machine-checked", "where": "app/ + rebuild_check" },
+    { "priority": "P1", "item": "Visible blackboard panel", "why": "Shared facts are currently invisible; builder offered it", "where": "app/studio/" },
+    { "priority": "P1", "item": "Vitest tests for phase runner", "why": "Self-modifying team can silently break the 13-phase engine", "where": "app/tests/" },
+    { "priority": "P1", "item": "Model fallback registry", "why": "Free endpoints return 429/503; fail over, then local lfm3", "where": "app/src/studio.js" },
+    { "priority": "P2", "item": "Payment guardrails", "why": "Idempotency, spend cap, audit log before any live mode", "where": "app/src/studio.js" },
+    { "priority": "P2", "item": "Source provenance UI", "why": "Make evidence-to-decision auditable", "where": "app/studio/index.html" },
+    { "priority": "P2", "item": "Retrospective-driven prompt rewriting", "why": "Adapt next round from what failed", "where": "app/src/studio.js" }
+  ],
+  "still_needed": [
+    "Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs",
+    "Revoke the exposed gho_hV2Y OAuth app on GitHub",
+    "Fit an 8 GB DDR4-2666 SO-DIMM",
+    "Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1",
+    "Decide whether AnyDesk and TeamViewer should autostart",
+    "Review the 1.56 GB repos/ folder",
+    "Resume only one Craft Anything builder at a time (craft.json currently paused)"
   ]
 }

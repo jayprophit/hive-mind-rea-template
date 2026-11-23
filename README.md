@@ -234,6 +234,10 @@ python scripts/query.py --doc docs/MCP-WIRING.md
 On the desktop, the same commands work after `git clone`; nothing needs a
 network connection or an API key. See `data/README.md` for the schema.
 
+Prioritised next steps and the outstanding asks are in
+[`docs/RECOMMENDATIONS.md`](docs/RECOMMENDATIONS.md) and queryable with
+`python scripts/query.py --facts recommendations`.
+
 ---
 
 ## REA loop

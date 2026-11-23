@@ -208,6 +208,11 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - `craft.json` paused to prevent duplicate auto-builders; resume one at a time.
 - Remaining external blocker: logged-in dashboard evidence for the original.
 
+### Recommendations ledger - complete
+- `docs/RECOMMENDATIONS.md` holds P0/P1/P2 actions, user asks, known limits and
+  installed-vs-optional tools. Same data is in `data/build-facts.json` under
+  `recommendations` and `still_needed`, queryable with `scripts/query.py`.
+
 ## Active work - 2026-11-23
 
 ### Idle commit hogs - complete

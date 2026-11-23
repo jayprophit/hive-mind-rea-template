@@ -1,16 +1,16 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T10:08:34+00:00",
+  "generated": "2026-11-23T10:16:23+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
-    "documents": 111,
-    "headings": 219,
-    "chunks": 455,
-    "facts": 152,
+    "documents": 112,
+    "headings": 227,
+    "chunks": 465,
+    "facts": 199,
     "assets": 0,
-    "sources": 333,
+    "sources": 334,
     "runs": 0,
     "approvals": 0
   },
@@ -61,9 +61,9 @@
       "path": "data/build-facts.json",
       "kind": "json",
       "title": "build-facts",
-      "modified": "2026-11-23T07:47:33+00:00",
-      "sha256": "1134a136109d6f7669b7a01e1ebb2efc0709176beb0bbf5578745cbf6e019098",
-      "words": 1087,
+      "modified": "2026-11-23T10:15:26+00:00",
+      "sha256": "d8f1b23916c8bfbf091d45f392cbf8f91ce2f5d094fa42934d5232afd6c43e7e",
+      "words": 1354,
       "headings": [],
       "links": [],
       "chunks": [
@@ -100,7 +100,17 @@
         {
           "heading": "",
           "line": 1,
-          "text": "5 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
+          "text": "5 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ],\n  \"recommendations\": [\n    { \"priority\": \"P0\", \"item\": \"Logged-in capture evidence\", \"why\": \"Original target redirects to /login; dashboard cannot be inferred from public pages\", \"where\": \"capture/dashboard/\" },\n    { \"priority\": \"P0\", \"item\": \"Checkpoint/resume in IndexedDB\", \"why\": \"Three builds were lost to crashes and PTY timeouts\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P0\", \"item\": \"One builder at a time\", \"why\": \"Concurrent builders overwrote studio.js\", \"where\": \"craft.json, operator\" },\n    { \"priority\": \"P1\", \"item\": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": ": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },\n    { \"priority\": \"P1\", \"item\": \"Vitest tests for phase runner\", \"why\": \"Self-modifying team can silently break the 13-phase engine\", \"where\": \"app/tests/\" },\n    { \"priority\": \"P1\", \"item\": \"Model fallback registry\", \"why\": \"Free endpoints return 429/503; fail over, then local lfm3\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Payment guardrails\", \"why\": \"Idempotency, spend cap, audit log before any live mode\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Source provenance UI\", \"why\": \"Make evidence-to-decision auditable\", \"where\": \"app/studio/index.html\" },\n    { \"priority\": \"P2\", \"item\": \"Retrospective-driven prompt rewriting\", \"why\": \"Adapt next round from what failed\", \"where\": \"app/src/studio.js\" }\n  ],\n  \"still_needed\": [\n    \"Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs\",\n    \"Revoke the exposed gho_hV2Y OAuth app on GitHub\",\n    \"Fit an 8 GB DDR4-2666 SO-DIMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (cra"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (craft.json currently paused)\"\n  ]\n}"
         }
       ]
     },
@@ -944,6 +954,84 @@
           "heading": "Current limitation — authenticated pages",
           "line": 85,
           "text": "## Current limitation — authenticated pages\n\nCraft Anything's `web_site_open` uses a **fresh browser profile with no logins**.\nThe original target `https://polsia.com/dashboard/untitled-l1v2k8` redirected to\n`/login`, so the capture contains only public pages. Any part of the logged-in\ndashboard cannot be reproduced from this evidence. Provide screenshots or saved\nHTML from a logged-in session, place them under `capture/dashboard/`, rebuild\nthe project database, and run another refinement round.\n\nA second known gap is functional, not visual: `app/src/studio.js` currently has\na **list of selectable agents**. The requested design is a **single team** whose\nmembers work concurrently, share messages and hand off work like a real\ncompany. That requirement is recorded in `data/build-facts.json` under\n`requirements` and must be the subject of the next refinement round."
+        }
+      ]
+    },
+    {
+      "path": "docs/RECOMMENDATIONS.md",
+      "kind": "md",
+      "title": "Recommendations and what is still needed",
+      "modified": "2026-11-23T10:15:16+00:00",
+      "sha256": "d6907238d01898ed0211dd204cdcdb6833066dc7748c70b73c79e304240f2fcc",
+      "words": 748,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Recommendations and what is still needed",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "text": "1. Highest-impact recommendations (implement next)",
+          "line": 6
+        },
+        {
+          "level": 2,
+          "text": "2. What is still needed from the person",
+          "line": 21
+        },
+        {
+          "level": 2,
+          "text": "3. Known limitations (honest ledger)",
+          "line": 33
+        },
+        {
+          "level": 2,
+          "text": "4. Tools installed vs optional",
+          "line": 41
+        },
+        {
+          "level": 2,
+          "text": "5. Where the machine-readable version lives",
+          "line": 47
+        }
+      ],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "Recommendations and what is still needed",
+          "line": 1,
+          "text": "# Recommendations and what is still needed\n\nLiving document for the `polsia free v1` build and the portable template.\nUpdated 2026-11-23. See `data/build-facts.json` for the machine-readable version."
+        },
+        {
+          "heading": "1. Highest-impact recommendations (implement next)",
+          "line": 6,
+          "text": "## 1. Highest-impact recommendations (implement next)\n\n| Priority | Item | Why | Where |\n|---|---|---|---|\n| P0 | **Logged-in capture evidence** | Original target redirects to `/login`; Craft Anything's browser uses a fresh profile with no logins. The authenticated dashboard is the main \"missing parts\" gap and cannot be inferred from public pages. | User supplies screenshots/saved HTML → `capture/dashboard/` |\n| P0 | **Checkpoint / resume** | Three builds were lost to crashes and PTY timeouts. Persist phase, attempt, artefacts and gap list in IndexedDB after every phase so a restart resumes instead of rebuilding. | `app/src/studio.js` |\n| P0 | **One builder at a time** | Two concurrent builders repeatedly overwrote `studio.js`. `craft.json` is paused; resume one run, wait for it to finish, then start another. | `craft.json`, operator |\n| P1 | **Self-evaluation harness** | Run `npm run build` + link check + console errors + unit tests + visual comparison as one scored command, stored per round. Acceptance criteria then become machine-checked rather than judged. | `app/` + Craft Anything `rebuild_check` |\n| P1 | **Visible blackboard panel** | Ten communication languages exist, but the shared blackboard facts are not visible. A panel would let the person see what agents know and spot bad facts early. Builder explicitly offered this. | `app/studio/index.html`, `studio.css`, `studio"
+        },
+        {
+          "heading": "1. Highest-impact recommendations (implement next)",
+          "line": 6,
+          "text": "facts are not visible. A panel would let the person see what agents know and spot bad facts early. Builder explicitly offered this. | `app/studio/index.html`, `studio.css`, `studio.js` |\n| P1 | **Phase-runner tests (Vitest)** | The 13-phase engine and language router are now large; a self-modifying team can silently break them. Add tests for phase order, loop-back, human gate and registry routing. | `app/tests/` |\n| P1 | **Model fallback registry** | Free Nous and OpenCode endpoints sometimes 429 or 503. Auto-failover to the other free endpoint, then local `lfm3:1.7b`, with a visible notice. | `app/src/studio.js`, `docs/MCP-WIRING.md` |\n| P2 | **Payment guardrails** | Payments are test-mode only; add idempotency keys, a spend cap, an audit log and explicit confirmation before any live-mode switch. | `app/src/studio.js` |\n| P2 | **Source provenance UI** | Sources are recorded, but a simple \"evidence → decision\" view would make the reverse-engineering work auditable. | `app/studio/index.html` |\n| P2 | **Retrospective-driven prompt rewriting** | Use the round retrospective to adjust the next round's phase order and role assignments automatically. | `app/src/studio.js` |"
+        },
+        {
+          "heading": "2. What is still needed from the person",
+          "line": 21,
+          "text": "## 2. What is still needed from the person\n\n| Item | Exact ask | Blocks |\n|---|---|---|\n| Logged-in pages | Screenshots or \"Save page as → HTML\" for the dashboard at `https://polsia.com/dashboard/untitled-l1v2k8` and its main tabs while signed in. Put them in `capture/dashboard/`. | Faithful reproduction of the dashboard UI/mechanisms |\n| GitHub token cleanup | Revoke the OAuth app that issued `gho_hV2Y…` (it was exposed during the credential audit). The local entry is deleted; the token is still valid on GitHub. | Security |\n| RAM | Fit an 8 GB DDR4-2666 SO-DIMM (one slot; 4 GB soldered) for 12 GB total. | Compiling and multiple agents on the laptop |\n| Elevated maintenance | Run an elevated shell to move `ESRV_SVC_QUEENCREEK` and `UDCService` to Manual (~324 MB), and run `tools/repair-windows-admin.ps1`. | Memory and driver repair |\n| Remote-access decision | Keep or disable `AnyDesk` and `TeamViewer` autostart (~67 MB). Stopping them could lock out remote access. | Memory |\n| Repo review | `repos/` is 1.56 GB and excluded from git; review which clones to keep. | Disk |\n| Builder control | Resume **one** build at a time. `craft.json` is paused to protect the verified build. | Avoid corrupted files |"
+        },
+        {
+          "heading": "3. Known limitations (honest ledger)",
+          "line": 33,
+          "text": "## 3. Known limitations (honest ledger)\n\n- Visual check is ~80–82% alike, 30/30 claims. Legal pages (`/privacy`, `/terms`) are weakest; the checker reports a missing form field and some missing text/colours.\n- The dashboard behind login is **not** reproduced — no evidence exists locally.\n- Payments are integration scaffolding in test mode, not a live merchant account.\n- The app runs locally in the browser; multi-device sync needs a user-configured endpoint.\n- Craft Anything's `web_site_open` has no login state by design."
+        },
+        {
+          "heading": "4. Tools installed vs optional",
+          "line": 41,
+          "text": "## 4. Tools installed vs optional\n\nInstalled and in use: `sqlite-utils` 4.2.1, Pillow, PyYAML, pandas, matplotlib, python-docx/pptx/openpyxl, free cloud model wiring, `browse` and craft-anything MCP.\n\nOptional, not installed: DB Browser for SQLite (GUI), Datasette (browser DB UI), `ripgrep`, `jq`. None are required."
+        },
+        {
+          "heading": "5. Where the machine-readable version lives",
+          "line": 47,
+          "text": "## 5. Where the machine-readable version lives\n\n`data/build-facts.json` contains `recommendations`, `still_needed`, `requirements`, `lessons` and `pending`. The knowledge base indexes them:\n\n```powershell\npython scripts\\query.py --facts recommendations\npython scripts\\query.py --facts still_needed\npython scripts\\query.py --db projects\\polsia-free-v1\\knowledge.db --facts project\n```"
         }
       ]
     },
@@ -2459,9 +2547,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T10:07:52+00:00",
-      "sha256": "770efdb9fea048ac38bd21a281efde3383ad2cf3ce52f96bdf041b467df7e9a8",
-      "words": 2163,
+      "modified": "2026-11-23T10:15:41+00:00",
+      "sha256": "f936e86b20872c36a71a5df6d48e1570473666c2934e514090148bfd51b15689",
+      "words": 2249,
       "headings": [
         {
           "level": 1,
@@ -2560,8 +2648,13 @@
         },
         {
           "level": 2,
+          "text": "Recommendations ledger",
+          "line": 269
+        },
+        {
+          "level": 2,
           "text": "Requests queued (for this machine's new build)",
-          "line": 270
+          "line": 281
         }
       ],
       "links": [],
@@ -2669,16 +2762,16 @@
         {
           "heading": "Gap analysis and REA loop expansion (10:07)",
           "line": 246,
-          "text": "## Gap analysis and REA loop expansion (10:07)\n\nGaps found against the requested autonomy loop: the old `PHASES` had only\n7 stages (plan, research, build, test, check, fix, report) and no internet/open\nresource scan, no closed-source reverse engineering, no setup, no explicit\ngap analysis, no amend/implement, no \"loop until criteria pass\", no free-service\nregistry and no human handoff cards.\n\nImplemented in `app/src/studio.js` (now 1,488 lines, build succeeds):\n- 13-phase data-driven `PHASES`: intake/gap analysis, plan, discover (internet\n  + open resources), reverse (closed sources), setup, build, test, check, fix,\n  amend, implement, report, loop/decision.\n- `FREE_SERVICES` registry mapping paid capabilities to free substitutes, used\n  automatically during setup; no purchase required.\n- Human gate produces handoff cards with the exact walkthrough, field or\n  permission needed and a continue-without fallback; other members keep working.\n- Gaps, sources with URLs, attempts and evidence are shown in the UI and written\n  into reports; `MAX_REA_ATTEMPTS` and acceptance criteria drive the loop.\n- Verification markers: `FREE_SERVICES` 6, handoff 44, gap 36, discover 10,\n  reverse 8, setup 11, amend 6, implement 7, acceptance 24.\n- `docs/TEAM-BRIEF.md` is the updated source of truth (5, 5b, 5c).\n- Builder auto-retry paused in `craft.json`; one builder at a time.\n- Don't let memory cl"
+          "text": "## Gap analysis and REA loop expansion (10:07)\n\nGaps found against the requested autonomy loop: the old `PHASES` had only\n7 stages (plan, research, build, test, check, fix, report) and no internet/open\nresource scan, no closed-source reverse engineering, no setup, no explicit\ngap analysis, no amend/implement, no \"loop until criteria pass\", no free-service\nregistry and no human handoff cards.\n\nImplemented in `app/src/studio.js` (now 1,488 lines, build succeeds):\n- 13-phase data-driven `PHASES`: intake/gap analysis, plan, discover (internet\n  + open resources), reverse (closed sources), setup, build, test, check, fix,\n  amend, implement, report, loop/decision.\n- `FREE_SERVICES` registry mapping paid capabilities to free substitutes, used\n  automatically during setup; no purchase required.\n- Human gate produces handoff cards with the exact walkthrough, field or\n  permission needed and a continue-without fallback; other members keep working.\n- Gaps, sources with URLs, attempts and evidence are shown in the UI and written\n  into reports; `MAX_REA_ATTEMPTS` and acceptance criteria drive the loop.\n- Verification markers: `FREE_SERVICES` 6, handoff 44, gap 36, discover 10,\n  reverse 8, setup 11, amend 6, implement 7, acceptance 24.\n- `docs/TEAM-BRIEF.md` is the updated source of truth (5, 5b, 5c).\n- Builder auto-retry paused in `craft.json`; one builder at a time."
         },
         {
-          "heading": "Gap analysis and REA loop expansion (10:07)",
-          "line": 246,
-          "text": "ement 7, acceptance 24.\n- `docs/TEAM-BRIEF.md` is the updated source of truth (5, 5b, 5c).\n- Builder auto-retry paused in `craft.json`; one builder at a time.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+          "heading": "Recommendations ledger",
+          "line": 269,
+          "text": "## Recommendations ledger\n- Added `docs/RECOMMENDATIONS.md` and `recommendations` / `still_needed` facts\n  in `data/build-facts.json` so the next agent can query priorities offline.\n- P0: logged-in capture evidence, IndexedDB checkpoint/resume, one builder only.\n- P1: self-evaluation harness, blackboard panel, Vitest phase-runner tests,\n  model fallback registry.\n- P2: payment guardrails, source provenance UI, retrospective-driven prompts.\n- Still needed from the person: dashboard screenshots/HTML, revoke `gho_hV2Y`,\n  8 GB SODIMM, elevated service demotion + driver repair, remote-access decision,\n  repo review, and resuming one builder at a time.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
         },
         {
           "heading": "Requests queued (for this machine's new build)",
-          "line": 270,
+          "line": 281,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
@@ -2775,9 +2868,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T10:07:59+00:00",
-      "sha256": "9670ff7f939d8dd818c319562df46cf4cbf2747fe80e57af7b009d7167f7897f",
-      "words": 2020,
+      "modified": "2026-11-23T10:15:48+00:00",
+      "sha256": "974e8232a9ba359ba4268b8c98c7e1bcd95f9b529a8952c36830fdea38bbad0d",
+      "words": 2057,
       "headings": [
         {
           "level": 1,
@@ -2895,34 +2988,39 @@
           "line": 201
         },
         {
+          "level": 3,
+          "text": "Recommendations ledger - complete",
+          "line": 211
+        },
+        {
           "level": 2,
           "text": "Active work - 2026-11-23",
-          "line": 211
+          "line": 216
         },
         {
           "level": 3,
           "text": "Idle commit hogs - complete",
-          "line": 213
+          "line": 218
         },
         {
           "level": 3,
           "text": "Credentials - complete",
-          "line": 223
+          "line": 228
         },
         {
           "level": 3,
           "text": "Knowledge base & agent preflight - complete",
-          "line": 232
+          "line": 237
         },
         {
           "level": 3,
           "text": "Craft Anything + Hermes diagnosis",
-          "line": 238
+          "line": 243
         },
         {
           "level": 3,
           "text": "Pending - needs elevation or a human",
-          "line": 245
+          "line": 250
         }
       ],
       "links": [],
@@ -3058,33 +3156,38 @@
           "text": "### REA loop expansion - complete\n- Gaps closed: internet/open-resource scan, closed-source reverse engineering,\n  automatic setup with free-service substitutes, explicit intake/gap analysis,\n  amend and implement phases, loop-until-criteria-pass, and human handoff cards.\n- `PHASES` is now 13 data-driven stages; `FREE_SERVICES` registry added;\n  handoff cards give the walkthrough and exact user input needed.\n- `app/src/studio.js` 1,488 lines; `npm run build` succeeds (dist 15 files).\n- `craft.json` paused to prevent duplicate auto-builders; resume one at a time.\n- Remaining external blocker: logged-in dashboard evidence for the original."
         },
         {
-          "heading": "Active work - 2026-11-23",
+          "heading": "Recommendations ledger - complete",
           "line": 211,
+          "text": "### Recommendations ledger - complete\n- `docs/RECOMMENDATIONS.md` holds P0/P1/P2 actions, user asks, known limits and\n  installed-vs-optional tools. Same data is in `data/build-facts.json` under\n  `recommendations` and `still_needed`, queryable with `scripts/query.py`."
+        },
+        {
+          "heading": "Active work - 2026-11-23",
+          "line": 216,
           "text": "## Active work - 2026-11-23"
         },
         {
           "heading": "Idle commit hogs - complete",
-          "line": 213,
+          "line": 218,
           "text": "### Idle commit hogs - complete\n- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`\n  moved out of Startup (Tier 2 = start on demand)\n- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.\n  No autostart exists (manifest `Enabled=\"false\"`, no Run key/task, `RestartApps=0`).\n  It had been left running since 19/11 17:26. Killed; no respawn.\n- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.\n- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.\n- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB)."
         },
         {
           "heading": "Credentials - complete",
-          "line": 223,
+          "line": 228,
           "text": "### Credentials - complete\n- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.\n- Duplicate `gho_XxIp.` entries and a second token `gho_hV2Y.` deleted.\n- **User action:** revoke the OAuth app that issued `gho_hV2Y.`; it was printed\n  during the audit and is treated as exposed.\n- The leaked `gho_zjsFDSeR.` from 2026-11-19 is already revoked.\n- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false\n  \"no credentials\" result."
         },
         {
           "heading": "Knowledge base & agent preflight - complete",
-          "line": 232,
+          "line": 237,
           "text": "### Knowledge base & agent preflight - complete\n- `tools/agent-preflight.ps1` - checks MCP handshake, OpenCode, Hermes, provider, model\n- `tools/wire-craft-anything.ps1` - idempotent agent registration\n- `data/knowledge.db` committed (via `.gitignore` negation)\n- `docs/MCP-WIRING.md` - root cause of the silent 15-min run + per-agent configs"
         },
         {
           "heading": "Craft Anything + Hermes diagnosis",
-          "line": 238,
+          "line": 243,
           "text": "### Craft Anything + Hermes diagnosis\n- Failure was **not MCP** (38 tools, verified).\n- 1. Ollama was stopped → Hermes provider timeouts (0 tokens in/out).\n- 2. `bonsai-2:4b` has no chat template; measured 57.7 s for \"OK\".\n- 3. Retry loop + concurrent Hermes runs collide.\n- Fix: `hermes config set model.default lfm3:1.7b`; use preflight; 1 builder at a time."
         },
         {
           "heading": "Pending - needs elevation or a human",
-          "line": 245,
+          "line": 250,
           "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
         }
       ]
@@ -3646,9 +3749,9 @@
       "path": "README.md",
       "kind": "md",
       "title": "Hive Mind REA Template",
-      "modified": "2026-11-23T07:21:49+00:00",
-      "sha256": "63fafa070625d3fd0899a117dcb64f3478f832973dac96742be00175369177c0",
-      "words": 2398,
+      "modified": "2026-11-23T10:15:33+00:00",
+      "sha256": "52d239a98cd8648b6dc8a91f16100918e55d2b9164e50a1627b9bebc16ffd979",
+      "words": 2422,
       "headings": [
         {
           "level": 1,
@@ -3723,70 +3826,71 @@
         {
           "level": 2,
           "text": "REA loop",
-          "line": 239
+          "line": 243
         },
         {
           "level": 2,
           "text": "Moving to a Windows 10 desktop",
-          "line": 252
+          "line": 256
         },
         {
           "level": 2,
           "text": "Troubleshooting",
-          "line": 299
+          "line": 303
         },
         {
           "level": 3,
           "text": "\"The agent stops mid-prompt and never finishes\"",
-          "line": 301
+          "line": 305
         },
         {
           "level": 3,
           "text": "A `rea` MCP server closes immediately",
-          "line": 312
+          "line": 316
         },
         {
           "level": 3,
           "text": "`pip` fails with `No module named 'pip._vendor...'`",
-          "line": 330
+          "line": 334
         },
         {
           "level": 3,
           "text": "Craft Anything says \"not installed\" but it is",
-          "line": 339
+          "line": 343
         },
         {
           "level": 3,
           "text": "Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`",
-          "line": 345
+          "line": 349
         },
         {
           "level": 3,
           "text": "Craft Anything or Hermes sits for 15 minutes with no output",
-          "line": 351
+          "line": 355
         },
         {
           "level": 2,
           "text": "Verified status",
-          "line": 375
+          "line": 379
         },
         {
           "level": 2,
           "text": "Requirements",
-          "line": 400
+          "line": 404
         },
         {
           "level": 2,
           "text": "Related repos",
-          "line": 415
+          "line": 419
         },
         {
           "level": 2,
           "text": "Contributing",
-          "line": 425
+          "line": 429
         }
       ],
       "links": [
+        "docs/RECOMMENDATIONS.md",
         "https://github.com/jayprophit/Aetherius-OS",
         "https://github.com/jayprophit/Agent-Bridge",
         "https://github.com/jayprophit/craft-anything",
@@ -3863,76 +3967,76 @@
         {
           "heading": "Knowledge base (pull this first)",
           "line": 213,
-          "text": "## Knowledge base (pull this first)\n\n`data/` is a self-contained, offline index of the repo plus the verified build\nfacts. It is committed, so a fresh clone on the desktop has it immediately.\n\n| File | Use |\n|---|---|\n| `data/build-facts.json` | machine, toolchain, MCP, projects, lessons, pending work |\n| `data/knowledge.db` | SQLite + FTS5; any language or DB browser can read it |\n| `data/index.json` | structured dump for diffs and non-SQL tools |\n| `scripts/build_index.py` | rebuild both after editing docs |\n| `scripts/query.py` | search and read from the terminal |\n\n```bash\npython scripts/query.py --stats\npython scripts/query.py --search \"bios ram\"\npython scripts/query.py --facts machine\npython scripts/query.py --facts pending\npython scripts/query.py --doc docs/MCP-WIRING.md\n```\n\nOn the desktop, the same commands work after `git clone`; nothing needs a\nnetwork connection or an API key. See `data/README.md` for the schema.\n\n---"
+          "text": "## Knowledge base (pull this first)\n\n`data/` is a self-contained, offline index of the repo plus the verified build\nfacts. It is committed, so a fresh clone on the desktop has it immediately.\n\n| File | Use |\n|---|---|\n| `data/build-facts.json` | machine, toolchain, MCP, projects, lessons, pending work |\n| `data/knowledge.db` | SQLite + FTS5; any language or DB browser can read it |\n| `data/index.json` | structured dump for diffs and non-SQL tools |\n| `scripts/build_index.py` | rebuild both after editing docs |\n| `scripts/query.py` | search and read from the terminal |\n\n```bash\npython scripts/query.py --stats\npython scripts/query.py --search \"bios ram\"\npython scripts/query.py --facts machine\npython scripts/query.py --facts pending\npython scripts/query.py --doc docs/MCP-WIRING.md\n```\n\nOn the desktop, the same commands work after `git clone`; nothing needs a\nnetwork connection or an API key. See `data/README.md` for the schema.\n\nPrioritised next steps and the outstanding asks are in\n[`docs/RECOMMENDATIONS.md`](docs/RECOMMENDATIONS.md) and queryable with\n`python scripts/query.py --facts recommendations`.\n\n---"
         },
         {
           "heading": "REA loop",
-          "line": 239,
+          "line": 243,
           "text": "## REA loop\n\n```\nPlan → Design → Build → Check → Research → Recheck → Build → Fix → Amend\n  → Compare → Feedback → Fine-tune → Plan → Build → Discovery → Test\n  → Compare → Gather data → Weakness/Gaps → Improve → Next version\n```\n\nEach pass ends with a written row in `Daily/` and `Work/PROJECT_MATRIX.md`.\nThe vault is the memory; the loop is the thing that keeps it honest.\n\n---"
         },
         {
           "heading": "Moving to a Windows 10 desktop",
-          "line": 252,
+          "line": 256,
           "text": "## Moving to a Windows 10 desktop\n\n1. **Install prerequisites** on the desktop: Git, Python 3.10+, Node LTS, Ollama.\n   ```powershell\n   winget install --id Git.Git -e\n   winget install --id OpenJS.NodeJS.LTS -e\n   winget install --id Ollama.Ollama -e\n   ```\n2. **Clone, don't copy.** Copying a working tree brings stale locks with it.\n   ```powershell\n   git clone https://github.com/jayprophit/hive-mind-rea-template.git C:\\hive\n   cd C:\\hive\n   ```\n3. **Check the machine before changing it.**\n   ```powershell\n   python scripts\\doctor.py\n   ```\n4. **Apply config.**\n   ```powershell\n   python scripts\\bootstrap.py --apply --scaffold-vault\n   ```\n5. **Pull one model only** until you know the RAM headroom.\n   ```powershell\n   ollama pull lfm3:1.7b\n   ```\n6. **Run the maintenance script** once, elevated, to clear caches and check drivers.\n7. **Merge your notes.** Copy only `.md` files from the old vault — never `.obsidian/`\n   workspace state, which is per-machine.\n8. **Wire Craft Anything to every agent, then prove it works.**\n   ```powershell\n   .\\tools\\wire-craft-anything.ps1 -Agent opencode,hermes\n   .\\tools\\agent-preflight.ps1 -StartProvider\n   ```\n   Do this before the first build. It catches a stopped Ollama, a missing MCP entry,\n   or a model that returns empty content — the three causes of a silent 15-minute run.\n   Details: `docs/MCP-WIRING.md`.\n\nWindows 10 differences that "
         },
         {
           "heading": "Moving to a Windows 10 desktop",
-          "line": 252,
+          "line": 256,
           "text": " Ollama, a missing MCP entry,\n   or a model that returns empty content — the three causes of a silent 15-minute run.\n   Details: `docs/MCP-WIRING.md`.\n\nWindows 10 differences that matter:\n\n- PowerShell 5.1 is the default shell. `scripts/doctor.py` and `bootstrap.py` avoid\n  PowerShell-only syntax, so they behave the same there.\n- `winget` may need the App Installer update from the Store before it works.\n- Windows 10 has no `SetConsoleMode` VT by default in older builds; `doctor.py`\n  falls back to plain text automatically.\n\n---"
         },
         {
           "heading": "Troubleshooting",
-          "line": 299,
+          "line": 303,
           "text": "## Troubleshooting"
         },
         {
           "heading": "\"The agent stops mid-prompt and never finishes\"",
-          "line": 301,
+          "line": 305,
           "text": "### \"The agent stops mid-prompt and never finishes\"\n\nCheck the provider balance, not the MCP server. In the reference build this was\n`AI.Error: Insufficient balance` from the hosted provider — the local stack was fine.\nRun `python scripts/doctor.py`; if every local check passes, the failure is upstream.\nPoint the agent at a local model to confirm:\n\n```bash\nopencode --model ollama/lfm3:1.7b\n```"
         },
         {
           "heading": "A `rea` MCP server closes immediately",
-          "line": 312,
+          "line": 316,
           "text": "### A `rea` MCP server closes immediately\n\nCorrupted `npx` cache — the module graph is incomplete. Symptom:\n\n```\nERR_MODULE_NOT_FOUND: Cannot find module '@jridgewell/trace-mapping'\n```\n\nFix:\n\n```bash\nrm -rf ~/AppData/Local/npm-cache/_npx/*   # Windows\nrm -rf ~/.npm/_npx/*                      # macOS / Linux\nnpx -y rea-agents@6.7.0 --version         # verify, then restart Hermes\n```\n\n`rea` also needs `REA_PWNTOOLS_PYTHON` set to a Python with `pwntools` installed."
         },
         {
           "heading": "`pip` fails with `No module named 'pip._vendor...'`",
-          "line": 330,
+          "line": 334,
           "text": "### `pip` fails with `No module named 'pip._vendor...'`\n\nA corrupted pip install. Repair in place:\n\n```bash\npython -m ensurepip --upgrade\npython -m pip install --user pwntools\n```"
         },
         {
           "heading": "Craft Anything says \"not installed\" but it is",
-          "line": 339,
+          "line": 343,
           "text": "### Craft Anything says \"not installed\" but it is\n\nGUI installers do not add themselves to `PATH`. `doctor.py` and `bootstrap.py` probe\nthe conventional install roots (`C:\\Program Files\\Craft Anything`,\n`/Applications/Craft Anything.app/Contents/MacOS`, `~/.local/bin`) before giving up."
         },
         {
           "heading": "Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`",
-          "line": 345,
+          "line": 349,
           "text": "### Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`\n\nv3 of that plugin is dashboard-only. The loader expects an importable package.\nAdd a one-line `__init__.py` in the plugin directory, or disable the plugin — the\ndashboard mounts from `dashboard/api.py` regardless."
         },
         {
           "heading": "Craft Anything or Hermes sits for 15 minutes with no output",
-          "line": 351,
+          "line": 355,
           "text": "### Craft Anything or Hermes sits for 15 minutes with no output\n\nThat is a dead run, not slow work. It has three usual causes, in this order:\n\n1. **The model provider is down.** Hermes' `provider: custom` points at\n   `http://127.0.0.1:11434/v1`; if Ollama was stopped to save RAM, every call\n   times out three times and Hermes exits `2`.\n2. **The model cannot act.** A model with no chat template (e.g. `bonsai-2:4b`,\n   `TEMPLATE {{ .Prompt }}`) burns hidden tokens and returns empty content.\n   Measured here: 57.7 s and ~200 tokens to answer \"OK\".\n3. **Two runs collide.** Craft Anything retries every ~90 s; a manual\n   `hermes -z ...` at the same time produces `Gateway disconnected`.\n\nRun the preflight before the build, and only one builder at a time:\n\n```powershell\n.\\tools\\agent-preflight.ps1 -StartProvider\n```\n\nIt tests the MCP handshake (38 tools), the OpenCode and Hermes entries, the\nprovider, and a real model reply. Full diagnosis: `docs/MCP-WIRING.md`.\n\n---"
         },
         {
           "heading": "Verified status",
-          "line": 375,
+          "line": 379,
           "text": "## Verified status\n\nMeasured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):\n\n| Check | Result |\n|---|---|\n| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |\n| `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |\n| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |\n| Hermes MCP test | Connected in 3.9 s, 38 tools |\n| Hermes model | `stepfun/step-3.7-flash:free` via Nous (free), tool calls OK, 9k prompt in 2.6 s |\n| OpenCode model | `opencode/hy4-flash-free` (free), \"OK\" in 2.7 s |\n| Craft Anything builder | OpenCode, free model; build progressing |\n| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |\n| Ollama | 0.40.16, 3 models, listening on :11434 |\n| Grafana | responding on :3000 |\n| SSD | WD Blue SN550, healthy |\n| BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |\n| `data/knowledge.db` | 107 documents, 388 chunks, 123 facts |\n\nKnown warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,\nDocker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.\n\n---"
         },
         {
           "heading": "Requirements",
-          "line": 400,
+          "line": 404,
           "text": "## Requirements\n\n| | Minimum | Recommended |\n|---|---|---|\n| RAM | 8 GB | 16 GB |\n| Disk | 20 GB free | 60 GB free |\n| CPU | 2 cores, AVX2 | 4 cores |\n| GPU | none (CPU inference) | 6 GB+ VRAM |\n\nAt 8 GB, run **one** model at a time (1.5B–4B parameters). Close browsers before\nstarting an agent session. This is the single biggest performance factor, larger than\nany driver update.\n\n---"
         },
         {
           "heading": "Related repos",
-          "line": 415,
+          "line": 419,
           "text": "## Related repos\n\nPart of the same build:\n\n- [`jayprophit/Aetherius-OS`](https://github.com/jayprophit/Aetherius-OS) — AI operating system shell\n- [`jayprophit/Agent-Bridge`](https://github.com/jayprophit/Agent-Bridge) — unified agent/tool runtime\n- [`jayprophit/craft-anything`](https://github.com/jayprophit/craft-anything) — investigation engine (fork)\n\n---"
         },
         {
           "heading": "Contributing",
-          "line": 425,
+          "line": 429,
           "text": "## Contributing\n\nThe most useful contribution is a `doctor.py` run from a platform not in the verified\ntable. Paste the output in an issue.\n\n---\n\n**Local-first. One vault. Any OS.**"
         }
       ]
@@ -4768,9 +4872,9 @@
     {
       "path": "data/build-facts.json",
       "kind": "text",
-      "sha256": "1134a136109d6f7669b7a01e1ebb2efc0709176beb0bbf5578745cbf6e019098",
-      "bytes": 7911,
-      "modified": "2026-11-23T07:47:33+00:00"
+      "sha256": "d8f1b23916c8bfbf091d45f392cbf8f91ce2f5d094fa42934d5232afd6c43e7e",
+      "bytes": 9973,
+      "modified": "2026-11-23T10:15:26+00:00"
     },
     {
       "path": "data/README.md",
@@ -4827,6 +4931,13 @@
       "sha256": "0e2f83755c419358ad0e1d327d63251e35ccf58ab0a614bebb2d89e367ba05aa",
       "bytes": 4490,
       "modified": "2026-11-23T07:46:09+00:00"
+    },
+    {
+      "path": "docs/RECOMMENDATIONS.md",
+      "kind": "text",
+      "sha256": "d6907238d01898ed0211dd204cdcdb6833066dc7748c70b73c79e304240f2fcc",
+      "bytes": 5073,
+      "modified": "2026-11-23T10:15:16+00:00"
     },
     {
       "path": "docs/TEAM-BRIEF.md",
@@ -6749,9 +6860,9 @@
     {
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "text",
-      "sha256": "770efdb9fea048ac38bd21a281efde3383ad2cf3ce52f96bdf041b467df7e9a8",
-      "bytes": 13960,
-      "modified": "2026-11-23T10:07:52+00:00"
+      "sha256": "f936e86b20872c36a71a5df6d48e1570473666c2934e514090148bfd51b15689",
+      "bytes": 14617,
+      "modified": "2026-11-23T10:15:41+00:00"
     },
     {
       "path": "obsidian-vault/Work/Project.md",
@@ -6763,9 +6874,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "9670ff7f939d8dd818c319562df46cf4cbf2747fe80e57af7b009d7167f7897f",
-      "bytes": 13757,
-      "modified": "2026-11-23T10:07:59+00:00"
+      "sha256": "974e8232a9ba359ba4268b8c98c7e1bcd95f9b529a8952c36830fdea38bbad0d",
+      "bytes": 14028,
+      "modified": "2026-11-23T10:15:48+00:00"
     },
     {
       "path": "opencode/agents/coder.md",
@@ -6945,9 +7056,9 @@
     {
       "path": "README.md",
       "kind": "text",
-      "sha256": "63fafa070625d3fd0899a117dcb64f3478f832973dac96742be00175369177c0",
-      "bytes": 16284,
-      "modified": "2026-11-23T07:21:49+00:00"
+      "sha256": "52d239a98cd8648b6dc8a91f16100918e55d2b9164e50a1627b9bebc16ffd979",
+      "bytes": 16463,
+      "modified": "2026-11-23T10:15:33+00:00"
     },
     {
       "path": "samples/out/ram-options.csv",
@@ -7670,6 +7781,241 @@
       "category": "pending",
       "key": "pending[3]",
       "value": "Review the remaining cloned repos (repos/ is 1.56 GB and not in git)"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[0].priority",
+      "value": "P0"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[0].item",
+      "value": "Logged-in capture evidence"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[0].why",
+      "value": "Original target redirects to /login; dashboard cannot be inferred from public pages"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[0].where",
+      "value": "capture/dashboard/"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[1].priority",
+      "value": "P0"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[1].item",
+      "value": "Checkpoint/resume in IndexedDB"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[1].why",
+      "value": "Three builds were lost to crashes and PTY timeouts"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[1].where",
+      "value": "app/src/studio.js"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[2].priority",
+      "value": "P0"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[2].item",
+      "value": "One builder at a time"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[2].why",
+      "value": "Concurrent builders overwrote studio.js"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[2].where",
+      "value": "craft.json, operator"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[3].priority",
+      "value": "P1"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[3].item",
+      "value": "Self-evaluation harness"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[3].why",
+      "value": "Make acceptance criteria machine-checked"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[3].where",
+      "value": "app/ + rebuild_check"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[4].priority",
+      "value": "P1"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[4].item",
+      "value": "Visible blackboard panel"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[4].why",
+      "value": "Shared facts are currently invisible; builder offered it"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[4].where",
+      "value": "app/studio/"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[5].priority",
+      "value": "P1"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[5].item",
+      "value": "Vitest tests for phase runner"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[5].why",
+      "value": "Self-modifying team can silently break the 13-phase engine"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[5].where",
+      "value": "app/tests/"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[6].priority",
+      "value": "P1"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[6].item",
+      "value": "Model fallback registry"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[6].why",
+      "value": "Free endpoints return 429/503; fail over, then local lfm3"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[6].where",
+      "value": "app/src/studio.js"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[7].priority",
+      "value": "P2"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[7].item",
+      "value": "Payment guardrails"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[7].why",
+      "value": "Idempotency, spend cap, audit log before any live mode"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[7].where",
+      "value": "app/src/studio.js"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[8].priority",
+      "value": "P2"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[8].item",
+      "value": "Source provenance UI"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[8].why",
+      "value": "Make evidence-to-decision auditable"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[8].where",
+      "value": "app/studio/index.html"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[9].priority",
+      "value": "P2"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[9].item",
+      "value": "Retrospective-driven prompt rewriting"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[9].why",
+      "value": "Adapt next round from what failed"
+    },
+    {
+      "category": "recommendations",
+      "key": "recommendations[9].where",
+      "value": "app/src/studio.js"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[0]",
+      "value": "Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[1]",
+      "value": "Revoke the exposed gho_hV2Y OAuth app on GitHub"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[2]",
+      "value": "Fit an 8 GB DDR4-2666 SO-DIMM"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[3]",
+      "value": "Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[4]",
+      "value": "Decide whether AnyDesk and TeamViewer should autostart"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[5]",
+      "value": "Review the 1.56 GB repos/ folder"
+    },
+    {
+      "category": "still_needed",
+      "key": "still_needed[6]",
+      "value": "Resume only one Craft Anything builder at a time (craft.json currently paused)"
     },
     {
       "category": "stack",
