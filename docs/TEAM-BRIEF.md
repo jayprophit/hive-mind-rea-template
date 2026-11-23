@@ -54,7 +54,38 @@ same time on the same task, and pass information between themselves.
 - Reports (round summary, messages, decisions, files changed) can be sent to a
   configured email address or chat webhook. No API keys are hard-coded.
 
-### 5. Constraints
+### 5. Autonomy — it must be able to do the work on its own
+
+- Given a task, the team runs the full loop without hand-holding:
+  **plan → research → build → test → check → fix → report**.
+- Members resolve their own problems: if a tool fails, retry with a different
+  approach; if a step is blocked, post it to the channel and let another role
+  pick it up. Do not stop at the first error.
+- The team can plan, research, build, test, document and report. A visible
+  activity log shows what each member did and why.
+- Human authorisation is given once and remembered. Only genuinely sensitive
+  or irreversible actions should re-ask.
+
+### 6. Payments (commerce, not feature gates)
+
+- The app must be able to **take payments** for real transactions through a
+  payment provider the person configures (e.g. Stripe or PayPal, test mode by
+  default): create an invoice/checkout, record the transaction, issue a receipt.
+- This is **not** a subscription, credit system or paywall. No feature, core,
+  module or function may require payment to activate. The earlier requirement
+  "no paid feature gates" still wins.
+- Never hard-code keys or treat a payment as permission to use a feature.
+
+### 7. Self-improvement of delivery
+
+- At the end of each round the team writes a short **retrospective** into local
+  state: what failed, what was retried, what worked, what to change next time.
+- Track a simple completion metric (tasks done / attempted, retries, blocked
+  items) and show it in the UI.
+- Failed tasks go back on the board with a different owner or approach instead
+  of disappearing.
+
+### 8. Constraints
 
 - Keep the captured visual design: same fonts, 480 px column, breakpoints,
   monochrome palette and no sideways scroll on phone.
@@ -77,4 +108,9 @@ same time on the same task, and pass information between themselves.
 5. The task board updates automatically as work moves between members.
 6. Authorisation is requested once, then remembered.
 7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.
-8. `npm run build` succeeds and the visual check still passes.
+8. A task runs plan→research→build→test→fix→report without manual steps; a
+   failed step is retried or handed to another role, not left hanging.
+9. A payment integration can create a test-mode checkout and record it, while
+   no feature is locked behind payment.
+10. Each round produces a retrospective and a visible completion metric.
+11. `npm run build` succeeds and the visual check still passes.

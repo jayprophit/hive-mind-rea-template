@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T07:48:00+00:00",
+  "generated": "2026-11-23T07:49:49+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 111,
-    "headings": 209,
-    "chunks": 440,
+    "headings": 213,
+    "chunks": 444,
     "facts": 152,
     "assets": 0,
     "sources": 333,
@@ -951,9 +951,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T07:47:24+00:00",
-      "sha256": "cd2414b4da9d7364cad86726e5c0dfd60795f20106a43ec58f4ad53530413d95",
-      "words": 674,
+      "modified": "2026-11-23T07:48:57+00:00",
+      "sha256": "ed3974580a24c58c0e35fc145d8d494e037c61a8a7b9e7d08df20a463a53632c",
+      "words": 989,
       "headings": [
         {
           "level": 1,
@@ -992,13 +992,28 @@
         },
         {
           "level": 3,
-          "text": "5. Constraints",
+          "text": "5. Autonomy — it must be able to do the work on its own",
           "line": 57
+        },
+        {
+          "level": 3,
+          "text": "6. Payments (commerce, not feature gates)",
+          "line": 69
+        },
+        {
+          "level": 3,
+          "text": "7. Self-improvement of delivery",
+          "line": 79
+        },
+        {
+          "level": 3,
+          "text": "8. Constraints",
+          "line": 88
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 67
+          "line": 98
         }
       ],
       "links": [],
@@ -1039,14 +1054,29 @@
           "text": "### 4. Automation and human oversight\n\n- Auto mode runs in rounds with intervals: hours, days, weeks, months, years,\n  or non-stop. A visible countdown shows the next round.\n- The person authorises once. That authorisation is remembered in local state;\n  ordinary actions do not ask again. Sensitive actions can still be gated.\n- Reports (round summary, messages, decisions, files changed) can be sent to a\n  configured email address or chat webhook. No API keys are hard-coded."
         },
         {
-          "heading": "5. Constraints",
+          "heading": "5. Autonomy — it must be able to do the work on its own",
           "line": 57,
-          "text": "### 5. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
+          "text": "### 5. Autonomy — it must be able to do the work on its own\n\n- Given a task, the team runs the full loop without hand-holding:\n  **plan → research → build → test → check → fix → report**.\n- Members resolve their own problems: if a tool fails, retry with a different\n  approach; if a step is blocked, post it to the channel and let another role\n  pick it up. Do not stop at the first error.\n- The team can plan, research, build, test, document and report. A visible\n  activity log shows what each member did and why.\n- Human authorisation is given once and remembered. Only genuinely sensitive\n  or irreversible actions should re-ask."
+        },
+        {
+          "heading": "6. Payments (commerce, not feature gates)",
+          "line": 69,
+          "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
+        },
+        {
+          "heading": "7. Self-improvement of delivery",
+          "line": 79,
+          "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
+        },
+        {
+          "heading": "8. Constraints",
+          "line": 88,
+          "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 67,
-          "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. `npm run build` succeeds and the visual check still passes."
+          "line": 98,
+          "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs plan→research→build→test→fix→report without manual steps; a\n   failed step is retried or handed to another role, not left hanging.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. `npm run build` succeeds and the visual check still passes."
         }
       ]
     },
@@ -2379,9 +2409,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T07:46:38+00:00",
-      "sha256": "cefc743e284ba4614d8216a97b0e0920a918b9e8426580a7d8f9d2fe108fab43",
-      "words": 1678,
+      "modified": "2026-11-23T07:49:15+00:00",
+      "sha256": "f06a4a1764fef0bb81beb094c1bb75a2c368e98d53b73c8dc3ddcdabc394f98a",
+      "words": 1787,
       "headings": [
         {
           "level": 1,
@@ -2464,9 +2494,14 @@
           "line": 199
         },
         {
+          "level": 3,
+          "text": "Team brief refined (user clarification)",
+          "line": 216
+        },
+        {
           "level": 2,
           "text": "Requests queued (for this machine's new build)",
-          "line": 217
+          "line": 229
         }
       ],
       "links": [],
@@ -2559,11 +2594,16 @@
         {
           "heading": "Project database + the team correction",
           "line": 199,
-          "text": "## Project database + the team correction\n\n- Generalized `scripts/build_index.py`: `--root`, `--out`, `--project`.\n- Template DB: `data/knowledge.db` (109 docs, 420 chunks, 141 facts, 1.1 MB).\n- Project DB: `projects/polsia-free-v1/knowledge.db` (same core schema + assets,\n  sources, runs, approvals; 75 docs, 1,416 chunks, 40 assets, 224 sources,\n  720 run events, 5.6 MB). Copy also in the workspace `.hive/`.\n- `sources` gives one sha256 per file, so nothing is duplicated or missed.\n  Two 14-16 MB evidence JSON files are recorded by hash, not chunked.\n- Installed `sqlite-utils` 4.2.1; PIL already present for image dimensions.\n- **User correction:** the studio is a picker of individual agents, but the\n  requirement is one collaborative team working concurrently with shared\n  messages, handoffs and a task board. Spec written to `docs/TEAM-BRIEF.md`.\n- Authenticated dashboard pages still cannot be captured: Craft Anything's\n  browser uses a fresh profile with no logins, so the target redirected to\n  `/login`. Need logged-in screenshots/HTML from the user for those parts.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+          "text": "## Project database + the team correction\n\n- Generalized `scripts/build_index.py`: `--root`, `--out`, `--project`.\n- Template DB: `data/knowledge.db` (109 docs, 420 chunks, 141 facts, 1.1 MB).\n- Project DB: `projects/polsia-free-v1/knowledge.db` (same core schema + assets,\n  sources, runs, approvals; 75 docs, 1,416 chunks, 40 assets, 224 sources,\n  720 run events, 5.6 MB). Copy also in the workspace `.hive/`.\n- `sources` gives one sha256 per file, so nothing is duplicated or missed.\n  Two 14-16 MB evidence JSON files are recorded by hash, not chunked.\n- Installed `sqlite-utils` 4.2.1; PIL already present for image dimensions.\n- **User correction:** the studio is a picker of individual agents, but the\n  requirement is one collaborative team working concurrently with shared\n  messages, handoffs and a task board. Spec written to `docs/TEAM-BRIEF.md`.\n- Authenticated dashboard pages still cannot be captured: Craft Anything's\n  browser uses a fresh profile with no logins, so the target redirected to\n  `/login`. Need logged-in screenshots/HTML from the user for those parts."
+        },
+        {
+          "heading": "Team brief refined (user clarification)",
+          "line": 216,
+          "text": "### Team brief refined (user clarification)\n- No picker at all: the task auto-selects the right member(s) with a reason.\n- More than one member active by default; single member only when genuinely\n  needed, decided automatically.\n- Must work autonomously: plan, research, build, test, fix, report; resolve\n  blockers and hand off failed steps to another role.\n- Must be able to take payments for real transactions (test mode, user's key)\n  but with **no** subscription, credits or paid feature gates.\n- Each round writes a retrospective and a completion metric.\n- `docs/TEAM-BRIEF.md` is the authoritative spec; a controlled follow-up build\n  was launched with it after stopping the GUI retry loop.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
         },
         {
           "heading": "Requests queued (for this machine's new build)",
-          "line": 217,
+          "line": 229,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
@@ -4706,9 +4746,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "cd2414b4da9d7364cad86726e5c0dfd60795f20106a43ec58f4ad53530413d95",
-      "bytes": 4261,
-      "modified": "2026-11-23T07:47:24+00:00"
+      "sha256": "ed3974580a24c58c0e35fc145d8d494e037c61a8a7b9e7d08df20a463a53632c",
+      "bytes": 6213,
+      "modified": "2026-11-23T07:48:57+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",
@@ -6624,9 +6664,9 @@
     {
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "text",
-      "sha256": "cefc743e284ba4614d8216a97b0e0920a918b9e8426580a7d8f9d2fe108fab43",
-      "bytes": 10704,
-      "modified": "2026-11-23T07:46:38+00:00"
+      "sha256": "f06a4a1764fef0bb81beb094c1bb75a2c368e98d53b73c8dc3ddcdabc394f98a",
+      "bytes": 11404,
+      "modified": "2026-11-23T07:49:15+00:00"
     },
     {
       "path": "obsidian-vault/Work/Project.md",
