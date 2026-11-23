@@ -221,6 +221,23 @@ Rules for the rebuild:
   email, social connections) use test-mode previews and never store secrets.
 - Credit/billing buttons are informational in test mode; no feature is gated.
 
+### 5h. Floating chat with the agents (bottom-right)
+
+The original has a chat bubble in the bottom-right corner where the user talks
+to the AI agents. The rebuild must include it on every page:
+
+- Fixed bottom-right launch button with an unread badge; opens a chat panel.
+- Panel shows a message list with speaker, timestamp, language tag and status,
+  plus a composer with Send, attachments placeholder, quick-action chips and a
+  typing indicator.
+- The person never picks a member: messages are routed through the team message
+  bus and the auto-selection logic chooses the responsible members.
+- All ten communication languages are supported; the panel can filter them.
+- History persists in local state and appears in reports; sensitive requests
+  go through the human gate.
+- Accessible: labelled button, Escape to close, focus management, keyboard
+  send, responsive on mobile with no sideways scroll.
+
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a
