@@ -26,7 +26,7 @@
     "service_policy": "Tier 1 stays auto; Tier 2 is Manual and started on demand (tools/trim-services.ps1)",
     "measured_commit_gb_before": 17.9,
     "measured_commit_gb_after": 12.2,
-    "known_conflict": "Ollama is Tier 2 for RAM, but Hermes' local provider needs it. Run tools/agent-preflight.ps1 -StartProvider before Hermes/Craft Anything, and stop Ollama afterwards if RAM is tight.",
+    "known_conflict": "RESOLVED: Hermes and OpenCode now use free cloud models, so Ollama is no longer required for agent builds. Ollama stays Tier 2 and can be stopped to reclaim ~3.6 GB of commit when no local model is needed.",
     "pending": [
       "ESRV_SVC_QUEENCREEK and UDCService need an elevated shell to move to Manual",
       "AnyDesk and TeamViewer are still Auto; decide before stopping remote access"
@@ -44,20 +44,40 @@
     "ollama": "0.40.16",
     "installed_models": {
       "laya:latest": { "size_gb": 0.84, "use": "router/decider only; chat completions return HTTP 400" },
-      "lfm3:1.7b": { "size_gb": 1.1, "use": "recommended builder model on 8 GB; tool calling; ~16-21 s for a trivial reply" },
+      "lfm3:1.7b": { "size_gb": 1.1, "use": "local fallback only; tool calling; ~16-21 s for a trivial reply" },
       "bonsai-2:4b": { "size_gb": 1.6, "use": "avoid as an agent model; TEMPLATE is '{{ .Prompt }}' (no chat template), ~58 s and 200 hidden tokens before it says OK" }
+    },
+    "cloud_models": {
+      "decision": "Use free cloud models for agentic builds on this 8 GB laptop",
+      "provider": "Nous inference API, anonymous free tier",
+      "base_url": "https://inference-api.nousresearch.com/v1",
+      "hermes_model": "stepfun/step-3.7-flash:free",
+      "hermes_model_evidence": "tool calls verified; 9000-char prompt answered in 2.6 s; full Hermes turn ~57 s including startup",
+      "opencode_model": "opencode/hy4-flash-free",
+      "opencode_model_evidence": "opencode run answered in 2.7 s with no credits required",
+      "rejected_free_models": {
+        "tencent/hy4-flash:free": "no usable tool calls",
+        "upstage/solar-mini4:free": "no tool calls",
+        "meituan/longcat-2.5:free": "no tool calls; 27 s on a long prompt",
+        "qwen/qwen4-max:free": "upstream capacity errors",
+        "paid models": "account has no credits; HTTP 404 requires credits"
+      },
+      "note": "Nous access tokens are short lived; Hermes refreshes its own. Do not copy a token into the repo or a config file."
     }
   },
   "agents": {
     "opencode": {
       "config": "C:\\Users\\jpowe\\.config\\opencode\\opencode.json",
       "mcp_key": "mcp.craft-anything",
-      "status": "wired and verified"
+      "model": "opencode/hy4-flash-free",
+      "status": "wired and verified; free cloud model; MCP intact"
     },
     "hermes": {
       "config": "C:\\Users\\jpowe\\AppData\\Local\\hermes\\config.yaml",
       "mcp_managed_by": "hermes mcp add/list/test",
-      "status": "wired and verified (38 tools)"
+      "model": "stepfun/step-3.7-flash:free",
+      "provider": "nous",
+      "status": "wired and verified (38 tools); free cloud model"
     },
     "other": ["claude code", "codex cli", "gemini cli", "copilot cli", "lm studio", "windsurf", "cursor"]
   },
@@ -82,8 +102,8 @@
     {
       "name": "polsia free v1",
       "path": "C:\\Users\\jpowe\\Desktop\\projects\\polsia free v1",
-      "status": "blocked",
-      "note": "Craft Anything build workspace. The 2026-11-23 run produced no app changes because the local model provider was down and the model was too slow."
+      "status": "building",
+      "note": "Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress."
     },
     {
       "name": "polsia free version",
@@ -102,7 +122,9 @@
     "Never run Select-String -SimpleMatch with a regex: it silently matches nothing.",
     "Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.",
     "A 4B model with no chat template is not an agent model, regardless of parameter count.",
-    "Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work."
+    "Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.",
+    "A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.",
+    "Not every free model supports tools; verify with a tool-call probe before making it the builder."
   ],
   "pending": [
     "Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)",

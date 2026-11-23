@@ -382,7 +382,9 @@ Measured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 2
 | `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |
 | Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |
 | Hermes MCP test | Connected in 3.9 s, 38 tools |
-| Hermes model | `lfm3:1.7b`, "OK" in 20.8 s |
+| Hermes model | `stepfun/step-3.7-flash:free` via Nous (free), tool calls OK, 9k prompt in 2.6 s |
+| OpenCode model | `opencode/hy4-flash-free` (free), "OK" in 2.7 s |
+| Craft Anything builder | OpenCode, free model; build progressing |
 | `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |
 | Ollama | 0.40.16, 3 models, listening on :11434 |
 | Grafana | responding on :3000 |

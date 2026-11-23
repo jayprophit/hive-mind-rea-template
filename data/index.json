@@ -1,12 +1,12 @@
 {
   "schema": "knowledge-index/v1",
-  "generated": "2026-11-23T06:53:13+00:00",
+  "generated": "2026-11-23T07:22:44+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "counts": {
     "documents": 107,
-    "headings": 188,
-    "chunks": 404,
-    "facts": 123
+    "headings": 191,
+    "chunks": 410,
+    "facts": 141
   },
   "documents": [
     {
@@ -55,31 +55,41 @@
       "path": "data/build-facts.json",
       "kind": "json",
       "title": "build-facts",
-      "modified": "2026-11-23T06:33:10+00:00",
-      "sha256": "aafb9eb562421762817ac3a6eada0a4f12728eea46d250d6e78c0c8b26a22e3a",
-      "words": 664,
+      "modified": "2026-11-23T07:21:14+00:00",
+      "sha256": "bbc7779faa1d44ddfc678b76d8585646e0b50e060e6e04587d4d8e289f5d633a",
+      "words": 890,
       "headings": [],
       "links": [],
       "chunks": [
         {
           "heading": "",
           "line": 1,
-          "text": "{\n  \"schema\": \"build-facts/v1\",\n  \"updated\": \"2026-11-23\",\n  \"machine\": {\n    \"name\": \"Lenovo IdeaPad 3 15IIL05\",\n    \"model\": \"81WE\",\n    \"serial\": \"PF2EJTP9\",\n    \"cpu\": \"Intel Core i3-1005G1 (2C/4T, 10th gen)\",\n    \"gpu\": \"Intel UHD Graphics (integrated)\",\n    \"ram_gb_installed\": 8,\n    \"ram_layout\": \"4 GB soldered (Samsung M471A5244CB0-CTD) + 4 GB SO-DIMM (Crucial CT4G4SFS8266)\",\n    \"ram_slots\": 1,\n    \"ram_max_gb\": 12,\n    \"ram_upgrade\": \"Replace the 4 GB SO-DIMM with 8 GB DDR4-2666 SODIMM (Lenovo PSREF: up to 12 GB)\",\n    \"storage\": \"Western Digital SN550 250 GB NVMe\",\n    \"bios_version\": \"EMCN60WW\",\n    \"bios_date\": \"2024-12-04\",\n    \"bios_note\": \"Previously EMCN42WW (2020-10-28); the 2024 image is now reported by Win32_BIOS, so the flash is done.\",\n    \"os\": \"Windows 11 Pro 10.0.26200\",\n    \"pagefile_mb\": 12796,\n    \"pagefile_managed\": false\n  },\n  \"windows_tuning\": {\n    \"restart_apps\": 0,\n    \"wslconfig\": \"memory=2GB, processors=2, swap=1GB, autoMemoryReclaim=gradual\",\n    \"service_policy\": \"Tier 1 stays auto; Tier 2 is Manual and started on demand (tools/trim-services.ps1)\",\n    \"measured_commit_gb_before\": 17.9,\n    \"measured_commit_gb_after\": 12.2,\n    \"known_conflict\": \"Ollama is Tier 2 for RAM, but Hermes' local provider needs it. Run tools/agent-preflight.ps1 -StartProvider before Hermes/Craft Anything, and stop Ollama afterwards if RAM is tight.\",\n    \"pending"
+          "text": "{\n  \"schema\": \"build-facts/v1\",\n  \"updated\": \"2026-11-23\",\n  \"machine\": {\n    \"name\": \"Lenovo IdeaPad 3 15IIL05\",\n    \"model\": \"81WE\",\n    \"serial\": \"PF2EJTP9\",\n    \"cpu\": \"Intel Core i3-1005G1 (2C/4T, 10th gen)\",\n    \"gpu\": \"Intel UHD Graphics (integrated)\",\n    \"ram_gb_installed\": 8,\n    \"ram_layout\": \"4 GB soldered (Samsung M471A5244CB0-CTD) + 4 GB SO-DIMM (Crucial CT4G4SFS8266)\",\n    \"ram_slots\": 1,\n    \"ram_max_gb\": 12,\n    \"ram_upgrade\": \"Replace the 4 GB SO-DIMM with 8 GB DDR4-2666 SODIMM (Lenovo PSREF: up to 12 GB)\",\n    \"storage\": \"Western Digital SN550 250 GB NVMe\",\n    \"bios_version\": \"EMCN60WW\",\n    \"bios_date\": \"2024-12-04\",\n    \"bios_note\": \"Previously EMCN42WW (2020-10-28); the 2024 image is now reported by Win32_BIOS, so the flash is done.\",\n    \"os\": \"Windows 11 Pro 10.0.26200\",\n    \"pagefile_mb\": 12796,\n    \"pagefile_managed\": false\n  },\n  \"windows_tuning\": {\n    \"restart_apps\": 0,\n    \"wslconfig\": \"memory=2GB, processors=2, swap=1GB, autoMemoryReclaim=gradual\",\n    \"service_policy\": \"Tier 1 stays auto; Tier 2 is Manual and started on demand (tools/trim-services.ps1)\",\n    \"measured_commit_gb_before\": 17.9,\n    \"measured_commit_gb_after\": 12.2,\n    \"known_conflict\": \"RESOLVED: Hermes and OpenCode now use free cloud models, so Ollama is no longer required for agent builds. Ollama stays Tier 2 and can be stopped to reclaim ~3.6 GB of commit when no local model i"
         },
         {
           "heading": "",
           "line": 1,
-          "text": " for RAM, but Hermes' local provider needs it. Run tools/agent-preflight.ps1 -StartProvider before Hermes/Craft Anything, and stop Ollama afterwards if RAM is tight.\",\n    \"pending\": [\n      \"ESRV_SVC_QUEENCREEK and UDCService need an elevated shell to move to Manual\",\n      \"AnyDesk and TeamViewer are still Auto; decide before stopping remote access\"\n    ]\n  },\n  \"toolchain\": {\n    \"python\": \"3.13.14\",\n    \"pip\": \"26.1.2\",\n    \"node\": \"26.1.0\",\n    \"npm\": \"11.13.0\",\n    \"git\": \"2.55.0.windows.3\",\n    \"craft_anything\": \"0.6.0\",\n    \"hermes\": \"0.23.2\",\n    \"browse\": \"0.1.5\",\n    \"ollama\": \"0.40.16\",\n    \"installed_models\": {\n      \"laya:latest\": { \"size_gb\": 0.84, \"use\": \"router/decider only; chat completions return HTTP 400\" },\n      \"lfm3:1.7b\": { \"size_gb\": 1.1, \"use\": \"recommended builder model on 8 GB; tool calling; ~16-21 s for a trivial reply\" },\n      \"bonsai-2:4b\": { \"size_gb\": 1.6, \"use\": \"avoid as an agent model; TEMPLATE is '{{ .Prompt }}' (no chat template), ~58 s and 200 hidden tokens before it says OK\" }\n    }\n  },\n  \"agents\": {\n    \"opencode\": {\n      \"config\": \"C:\\\\Users\\\\jpowe\\\\.config\\\\opencode\\\\opencode.json\",\n      \"mcp_key\": \"mcp.craft-anything\",\n      \"status\": \"wired and verified\"\n    },\n    \"hermes\": {\n      \"config\": \"C:\\\\Users\\\\jpowe\\\\AppData\\\\Local\\\\hermes\\\\config.yaml\",\n      \"mcp_managed_by\": \"hermes mcp add/list/test\",\n      \"status\": \"wired and ve"
+          "text": " and OpenCode now use free cloud models, so Ollama is no longer required for agent builds. Ollama stays Tier 2 and can be stopped to reclaim ~3.6 GB of commit when no local model is needed.\",\n    \"pending\": [\n      \"ESRV_SVC_QUEENCREEK and UDCService need an elevated shell to move to Manual\",\n      \"AnyDesk and TeamViewer are still Auto; decide before stopping remote access\"\n    ]\n  },\n  \"toolchain\": {\n    \"python\": \"3.13.14\",\n    \"pip\": \"26.1.2\",\n    \"node\": \"26.1.0\",\n    \"npm\": \"11.13.0\",\n    \"git\": \"2.55.0.windows.3\",\n    \"craft_anything\": \"0.6.0\",\n    \"hermes\": \"0.23.2\",\n    \"browse\": \"0.1.5\",\n    \"ollama\": \"0.40.16\",\n    \"installed_models\": {\n      \"laya:latest\": { \"size_gb\": 0.84, \"use\": \"router/decider only; chat completions return HTTP 400\" },\n      \"lfm3:1.7b\": { \"size_gb\": 1.1, \"use\": \"local fallback only; tool calling; ~16-21 s for a trivial reply\" },\n      \"bonsai-2:4b\": { \"size_gb\": 1.6, \"use\": \"avoid as an agent model; TEMPLATE is '{{ .Prompt }}' (no chat template), ~58 s and 200 hidden tokens before it says OK\" }\n    },\n    \"cloud_models\": {\n      \"decision\": \"Use free cloud models for agentic builds on this 8 GB laptop\",\n      \"provider\": \"Nous inference API, anonymous free tier\",\n      \"base_url\": \"https://inference-api.nousresearch.com/v1\",\n      \"hermes_model\": \"stepfun/step-3.7-flash:free\",\n      \"hermes_model_evidence\": \"tool calls verified; 9000-char promp"
         },
         {
           "heading": "",
           "line": 1,
-          "text": "d\"\n    },\n    \"hermes\": {\n      \"config\": \"C:\\\\Users\\\\jpowe\\\\AppData\\\\Local\\\\hermes\\\\config.yaml\",\n      \"mcp_managed_by\": \"hermes mcp add/list/test\",\n      \"status\": \"wired and verified (38 tools)\"\n    },\n    \"other\": [\"claude code\", \"codex cli\", \"gemini cli\", \"copilot cli\", \"lm studio\", \"windsurf\", \"cursor\"]\n  },\n  \"mcp\": {\n    \"server\": \"craft-anything\",\n    \"command\": \"C:\\\\Program Files\\\\Craft Anything\\\\craft-anything-cli.exe\",\n    \"args\": [\"mcp\"],\n    \"transport\": \"stdio\",\n    \"tools_discovered\": 38,\n    \"preflight\": \"tools/agent-preflight.ps1\",\n    \"wiring\": \"tools/wire-craft-anything.ps1\",\n    \"failure_signature\": \"Agent sits with 0 tokens in/out, then 'provider did not respond in time' or 'gateway disconnected'. Check the provider BEFORE blaming MCP.\",\n    \"verified\": \"2026-11-23\"\n  },\n  \"projects\": [\n    {\n      \"name\": \"hive-mind-rea-template\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\hive-mind-rea-template\",\n      \"status\": \"active\",\n      \"note\": \"Portable stack, agent contract, research/office/viz toolkit, knowledge base. Pushed to origin/main.\"\n    },\n    {\n      \"name\": \"polsia free v1\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free v1\",\n      \"status\": \"blocked\",\n      \"note\": \"Craft Anything build workspace. The 2026-11-23 run produced no app changes because the local model provider was down and the model was too slow.\"\n    },\n    {\n      \"name\": \"pol"
+          "text": "  \"base_url\": \"https://inference-api.nousresearch.com/v1\",\n      \"hermes_model\": \"stepfun/step-3.7-flash:free\",\n      \"hermes_model_evidence\": \"tool calls verified; 9000-char prompt answered in 2.6 s; full Hermes turn ~57 s including startup\",\n      \"opencode_model\": \"opencode/hy4-flash-free\",\n      \"opencode_model_evidence\": \"opencode run answered in 2.7 s with no credits required\",\n      \"rejected_free_models\": {\n        \"tencent/hy4-flash:free\": \"no usable tool calls\",\n        \"upstage/solar-mini4:free\": \"no tool calls\",\n        \"meituan/longcat-2.5:free\": \"no tool calls; 27 s on a long prompt\",\n        \"qwen/qwen4-max:free\": \"upstream capacity errors\",\n        \"paid models\": \"account has no credits; HTTP 404 requires credits\"\n      },\n      \"note\": \"Nous access tokens are short lived; Hermes refreshes its own. Do not copy a token into the repo or a config file.\"\n    }\n  },\n  \"agents\": {\n    \"opencode\": {\n      \"config\": \"C:\\\\Users\\\\jpowe\\\\.config\\\\opencode\\\\opencode.json\",\n      \"mcp_key\": \"mcp.craft-anything\",\n      \"model\": \"opencode/hy4-flash-free\",\n      \"status\": \"wired and verified; free cloud model; MCP intact\"\n    },\n    \"hermes\": {\n      \"config\": \"C:\\\\Users\\\\jpowe\\\\AppData\\\\Local\\\\hermes\\\\config.yaml\",\n      \"mcp_managed_by\": \"hermes mcp add/list/test\",\n      \"model\": \"stepfun/step-3.7-flash:free\",\n      \"provider\": \"nous\",\n      \"status\": \"wired and verified (38 "
         },
         {
           "heading": "",
           "line": 1,
-          "text": ": \"Craft Anything build workspace. The 2026-11-23 run produced no app changes because the local model provider was down and the model was too slow.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
+          "text": "\\\\config.yaml\",\n      \"mcp_managed_by\": \"hermes mcp add/list/test\",\n      \"model\": \"stepfun/step-3.7-flash:free\",\n      \"provider\": \"nous\",\n      \"status\": \"wired and verified (38 tools); free cloud model\"\n    },\n    \"other\": [\"claude code\", \"codex cli\", \"gemini cli\", \"copilot cli\", \"lm studio\", \"windsurf\", \"cursor\"]\n  },\n  \"mcp\": {\n    \"server\": \"craft-anything\",\n    \"command\": \"C:\\\\Program Files\\\\Craft Anything\\\\craft-anything-cli.exe\",\n    \"args\": [\"mcp\"],\n    \"transport\": \"stdio\",\n    \"tools_discovered\": 38,\n    \"preflight\": \"tools/agent-preflight.ps1\",\n    \"wiring\": \"tools/wire-craft-anything.ps1\",\n    \"failure_signature\": \"Agent sits with 0 tokens in/out, then 'provider did not respond in time' or 'gateway disconnected'. Check the provider BEFORE blaming MCP.\",\n    \"verified\": \"2026-11-23\"\n  },\n  \"projects\": [\n    {\n      \"name\": \"hive-mind-rea-template\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\hive-mind-rea-template\",\n      \"status\": \"active\",\n      \"note\": \"Portable stack, agent contract, research/office/viz toolkit, knowledge base. Pushed to origin/main.\"\n    },\n    {\n      \"name\": \"polsia free v1\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free v1\",\n      \"status\": \"building\",\n      \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ]\n}"
         }
       ]
     },
@@ -491,9 +501,9 @@
       "path": "docs/MCP-WIRING.md",
       "kind": "md",
       "title": "Craft Anything ↔ agents (MCP wiring)",
-      "modified": "2026-11-23T06:37:10+00:00",
-      "sha256": "655b18020d59ba0e37e943607899c1703e8aeb3dd07bdbda72e28c79b3721677",
-      "words": 959,
+      "modified": "2026-11-23T07:21:42+00:00",
+      "sha256": "fd5cc2ba3067e6e9ffb72fef9588a7f2a214c558e581cfbbbe081ea089017191",
+      "words": 1181,
       "headings": [
         {
           "level": 1,
@@ -522,28 +532,28 @@
         },
         {
           "level": 2,
-          "text": "Model capacity rule",
+          "text": "Model policy: free cloud for builds",
           "line": 80
         },
         {
           "level": 2,
           "text": "Concurrency rule",
-          "line": 98
+          "line": 124
         },
         {
           "level": 2,
           "text": "Memory rule",
-          "line": 112
+          "line": 138
         },
         {
           "level": 2,
           "text": "Failure signatures",
-          "line": 125
+          "line": 151
         },
         {
           "level": 2,
           "text": "Verified state",
-          "line": 136
+          "line": 162
         }
       ],
       "links": [],
@@ -574,29 +584,34 @@
           "text": "### Per-agent configuration\n\n| Agent | Where | Entry |\n|---|---|---|\n| OpenCode | `~/.config/opencode/opencode.json` | `mcp.craft-anything = { type: \"local\", command: [\"<cli>\", \"mcp\"], enabled: true }` |\n| Hermes | `hermes mcp add craft-anything --command \"<cli>\" --args mcp` | managed by `hermes mcp list/test` |\n| Claude Code | `claude mcp add craft-anything -- \"<cli>\" mcp` | user scope |\n| Codex CLI | `codex mcp add craft-anything -- \"<cli>\" mcp` | user scope |\n| Gemini CLI | `~/.gemini/settings.json` | `mcpServers.craft-anything = { command, args: [\"mcp\"] }` |\n| Cursor / Windsurf / VS Code | their MCP settings JSON | same command/args |\n| Anything else | stdio MCP client | command = CLI path, args = `[\"mcp\"]` |\n\nThe CLI path is normally:\n\n```\nC:\\Program Files\\Craft Anything\\craft-anything-cli.exe\n```"
         },
         {
-          "heading": "Model capacity rule",
+          "heading": "Model policy: free cloud for builds",
           "line": 80,
-          "text": "## Model capacity rule\n\nThe builder prompt is ~9,000 characters plus Hermes' system prompt and 38 tool\nschemas. That is a large prefill for a CPU-only 8 GB laptop.\n\n| Model | Size | Measured on this laptop | Verdict |\n|---|---|---|---|\n| `bonsai-2:4b` | 1.6 GB | 57.7 s for \"OK\"; empty below 64 tokens; no chat template | **Do not use as an agent** |\n| `laya:latest` | 0.84 GB | HTTP 400 on chat completions | Router only |\n| `lfm3:1.7b` | 1.1 GB | \"OK\" in 15.8–20.8 s; real turn: 2,050 in / 34 out in 46.3 s | **Best available locally** |\n| any 7B+ | 4 GB+ | does not fit comfortably beside Chrome + WSL on 8 GB | Desktop only |\n| cloud provider | — | sub-second to a few seconds | **Recommended for agentic builds** |\n\n`hermes config set model.default lfm3:1.7b` is the local fallback. On a desktop\nwith 16 GB+ and a GPU, a 7B–14B model is the right local choice. For multi-step\nbuilds, a cloud provider is faster and more reliable than any local model on\nthis laptop."
+          "text": "## Model policy: free cloud for builds\n\nThe builder prompt is ~9,000 characters plus the system prompt and 38 tool\nschemas. On an 8 GB CPU-only laptop, no local model can prefill and iterate\nfast enough. **Use free cloud models; keep local models as fallback only.**\n\n| Model | Where | Evidence | Verdict |\n|---|---|---|---|\n| `stepfun/step-3.7-flash:free` | Hermes via Nous API | tool call succeeded; 9k prompt answered in 2.6 s | **chosen for Hermes** |\n| `opencode/hy4-flash-free` | OpenCode built-in | `opencode run` replied in 2.7 s, no credits needed | **chosen for OpenCode / Craft Anything** |\n| `tencent/hy4-flash:free` | Nous free | no usable tool call | rejected |\n| `upstage/solar-mini4:free` | Nous free | no tool call | rejected |\n| `meituan/longcat-2.5:free` | Nous free | no tool call; 27 s on a long prompt | rejected |\n| `qwen/qwen4-max:free` | Nous free | upstream capacity errors | rejected |\n| any `...` paid model on Nous | Nous | HTTP 404: account has no credits | unavailable |\n| `bonsai-2:4b` | local | 57.7 s for \"OK\", empty below 64 tokens, no chat template | **do not use as an agent** |\n| `lfm3:1.7b` | local | \"OK\" in 15.8–20.8 s | fallback only |\n| any 7B+ local | local | does not fit beside Chrome + WSL on 8 GB | desktop only |\n\nApplied configuration:\n\n```powershell\n# Hermes - Nous free tier, tool-capable model\nhermes config set model.default stepfun/step-3.7-flas"
+        },
+        {
+          "heading": "Model policy: free cloud for builds",
+          "line": 80,
+          "text": "ide Chrome + WSL on 8 GB | desktop only |\n\nApplied configuration:\n\n```powershell\n# Hermes - Nous free tier, tool-capable model\nhermes config set model.default stepfun/step-3.7-flash:free\nhermes config set model.provider nous\nhermes config set model.base_url https://inference-api.nousresearch.com/v1\nhermes config set model.api_mode chat_completions\nhermes config set auxiliary.coder.provider nous\nhermes config set auxiliary.coder.model stepfun/step-3.7-flash:free\nhermes config set auxiliary.group_router.provider nous\nhermes config set auxiliary.group_router.model stepfun/step-3.7-flash:free\n```\n\nOpenCode uses `~/.config/opencode/opencode.json`:\n`\"model\": \"opencode/hy4-flash-free\"` (MCP entries preserved).\n\nCraft Anything's `craft.json` sets `\"builder\": \"OpenCode\"`, and CLI runs use\n`--backend OpenCode`. Craft Anything's doctor reports all backends registered\nand the MCP self-test healthy.\n\nNous access tokens are short-lived and Hermes refreshes them itself. Never copy\na token into the repo, an `opencode.json`, or an environment variable file.\nVerify tool support before choosing any free model — most do not support it."
         },
         {
           "heading": "Concurrency rule",
-          "line": 98,
+          "line": 124,
           "text": "## Concurrency rule\n\nDo **not** run two Hermes one-shots at the same time (Craft Anything's builder\nplus a manual `hermes -z ...`, or two Craft Anything retries). They share one\ngateway; the second one produces `Gateway disconnected; turn outcome is unknown`.\nCraft Anything retries automatically every ~90 s, so a failed build can keep\ncolliding with itself.\n\nBefore starting a manual test, confirm no builder is running:\n\n```powershell\nGet-Process hermes -ErrorAction SilentlyContinue\n```"
         },
         {
           "heading": "Memory rule",
-          "line": 112,
+          "line": 138,
           "text": "## Memory rule\n\nOllama is Tier 2: it is stopped at boot to save commit charge, and started on\ndemand. Hermes needs it. So the order is:\n\n```powershell\n.\\tools\\agent-preflight.ps1 -StartProvider   # starts Ollama and waits\n# ... run the build ...\nStop-Process -Name 'ollama app','ollama' -Force   # reclaim ~3.6 GB when done\n```\n\nNever stop Ollama while a Craft Anything build is running."
         },
         {
           "heading": "Failure signatures",
-          "line": 125,
+          "line": 151,
           "text": "## Failure signatures\n\n| Symptom | Meaning | Fix |\n|---|---|---|\n| `provider did not respond in time` | Ollama/API down or wrong URL | `agent-preflight.ps1 -StartProvider` |\n| Empty model output, `finish=length` | model has no chat template / burns hidden tokens | switch model (see table) |\n| `Gateway disconnected; turn outcome is unknown` | two Hermes runs collided, or the run was killed | run one at a time; resume the printed session |\n| MCP tools missing in the agent | not registered, or wrong CLI path | `wire-craft-anything.ps1`, then `agent-preflight.ps1` |\n| MCP `initialize` fails | CLI path wrong or package moved | pass `-Cli \"<path>\"`; test `craft-anything-cli.exe mcp --help` |\n| 15 minutes of silence, 0 tokens | the above, compounded by retries | stop the loop, run preflight, then retry once |"
         },
         {
           "heading": "Verified state",
-          "line": 136,
-          "text": "## Verified state\n\n- Craft Anything CLI `0.6.0`\n- MCP handshake: **38 tools**, stdio\n- OpenCode: `mcp.craft-anything` enabled\n- Hermes: `craft-anything` enabled\n- Hermes model: `lfm3:1.7b` @ `http://127.0.0.1:11434/v1`\n- Preflight: all checks PASS"
+          "line": 162,
+          "text": "## Verified state\n\n- Craft Anything CLI `0.6.0`\n- MCP handshake: **38 tools**, stdio\n- OpenCode: `mcp.craft-anything` enabled\n- Hermes: `craft-anything` enabled\n- Hermes model: `stepfun/step-3.7-flash:free` @ Nous inference API (free tier)\n- OpenCode model: `opencode/hy4-flash-free` (no credits required)\n- Craft Anything builder: OpenCode (verified building the `polsia free v1` site)\n- Preflight: all checks PASS; remote provider is reported as WARN (not probed)"
         }
       ]
     },
@@ -2177,9 +2192,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T06:52:29+00:00",
-      "sha256": "798c8c7734ed33d03f064554ff763db64294693212d7e614fcf09ee7079867b9",
-      "words": 1242,
+      "modified": "2026-11-23T07:22:04+00:00",
+      "sha256": "38e7fdb2717f30104bfe2ca6e8a75f8dc28f0cbefdedac62f30c860008bdafa2",
+      "words": 1510,
       "headings": [
         {
           "level": 1,
@@ -2248,8 +2263,18 @@
         },
         {
           "level": 2,
+          "text": "Free cloud models - final decision",
+          "line": 168
+        },
+        {
+          "level": 3,
+          "text": "Build outcome so far",
+          "line": 191
+        },
+        {
+          "level": 2,
           "text": "Requests queued (for this machine's new build)",
-          "line": 169
+          "line": 200
         }
       ],
       "links": [],
@@ -2327,11 +2352,21 @@
         {
           "heading": "Decision for the desktop",
           "line": 161,
-          "text": "### Decision for the desktop\n\nOn 8 GB CPU-only, use OpenCode (cloud model) for multi-step builds; Hermes with\na local 1.7B cannot prefill a 9k prompt plus 38 tool schemas inside the gateway\nwindow. With 16 GB+ / GPU on the desktop, a 7B–14B local model is viable.\nRun `agent-preflight.ps1 -StartProvider` on any workstation before a build.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
+          "text": "### Decision for the desktop\n\nOn 8 GB CPU-only, use OpenCode (cloud model) for multi-step builds; Hermes with\na local 1.7B cannot prefill a 9k prompt plus 38 tool schemas inside the gateway\nwindow. With 16 GB+ / GPU on the desktop, a 7B–14B local model is viable.\nRun `agent-preflight.ps1 -StartProvider` on any workstation before a build."
+        },
+        {
+          "heading": "Free cloud models - final decision",
+          "line": 168,
+          "text": "## Free cloud models - final decision\n\nThe local setup worked but was too slow, so all three tools now use **free cloud\nmodels**. Probed live from the Nous inference API before choosing:\n\n| Model | Result | Decision |\n|---|---|---|\n| `stepfun/step-3.7-flash:free` | tool call OK; 9k prompt in 2.6 s | Hermes |\n| `opencode/hy4-flash-free` | `opencode run` OK in 2.7 s, no credits | OpenCode + Craft Anything builder |\n| `tencent/hy4-flash:free`, `upstage/solar-mini4:free`, `meituan/longcat-2.5:free` | no usable tool calls | rejected |\n| `qwen/qwen4-max:free` | upstream capacity errors | rejected |\n| all paid Nous models | HTTP 404: no credits | unavailable |\n\nConfig changes:\n- Hermes: `provider: nous`, `base_url: https://inference-api.nousresearch.com/v1`,\n  `model.default` and both auxiliary models = `stepfun/step-3.7-flash:free`.\n- OpenCode: `\"model\": \"opencode/hy4-flash-free\"` in `~/.config/opencode/opencode.json`;\n  MCP entries preserved. Backups kept for both config files.\n- Craft Anything: `craft.json` `\"builder\": \"OpenCode\"`; CLI runs used\n  `--backend OpenCode`. `craft-anything-cli doctor` = healthy, MCP self-test 38 tools.\n- Ollama is no longer needed for agents and can be stopped for ~3.6 GB commit.\n- Never copy a Nous token into the repo or a config file; Hermes refreshes its own."
+        },
+        {
+          "heading": "Build outcome so far",
+          "line": 191,
+          "text": "### Build outcome so far\n- First CLI run built the Vite site (`app/`, `dist/` 9 files) and reached\n  **83% visual likeness, 6/6 claims** after refinement.\n- That run was killed by a 600 s tool timeout; the user restarted Craft Anything\n  at 07:19, and the fresh run is inspecting the existing app and continuing.\n- One transient tool error (`craft-anything_rebuild_status` missing `project`)\n  was recovered by the agent without intervention.\n- Don't let memory cleanup break an agent run; coordinate with its preflight."
         },
         {
           "heading": "Requests queued (for this machine's new build)",
-          "line": 169,
+          "line": 200,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
         }
       ]
@@ -2428,9 +2463,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T06:52:45+00:00",
-      "sha256": "9911ed628612bdb70df4a6a1742731293333e562cb118927a90afe7ffdb84286",
-      "words": 1626,
+      "modified": "2026-11-23T07:22:11+00:00",
+      "sha256": "ff83ff5acbc9c82d743b030b0930128969e58fdd0e25f660b2d570ae540bff51",
+      "words": 1735,
       "headings": [
         {
           "level": 1,
@@ -2524,38 +2559,43 @@
         },
         {
           "level": 3,
-          "text": "`polsia free v1` status",
+          "text": "Free cloud model migration - complete",
           "line": 165
+        },
+        {
+          "level": 3,
+          "text": "`polsia free v1` status",
+          "line": 173
         },
         {
           "level": 2,
           "text": "Active work - 2026-11-23",
-          "line": 170
+          "line": 180
         },
         {
           "level": 3,
           "text": "Idle commit hogs - complete",
-          "line": 172
-        },
-        {
-          "level": 3,
-          "text": "Credentials - complete",
           "line": 182
         },
         {
           "level": 3,
+          "text": "Credentials - complete",
+          "line": 192
+        },
+        {
+          "level": 3,
           "text": "Knowledge base & agent preflight - complete",
-          "line": 191
+          "line": 201
         },
         {
           "level": 3,
           "text": "Craft Anything + Hermes diagnosis",
-          "line": 197
+          "line": 207
         },
         {
           "level": 3,
           "text": "Pending - needs elevation or a human",
-          "line": 204
+          "line": 214
         }
       ],
       "links": [],
@@ -2666,38 +2706,43 @@
           "text": "### Knowledge base - complete\n- `data/build-facts.json` (curated), `data/index.json`, `data/knowledge.db`\n  (SQLite FTS5: 107 docs, 388 chunks, 123 facts), `scripts/build_index.py`,\n  `scripts/query.py`.\n- Committed on purpose: a fresh clone on the desktop gets it with no network.\n- `.gitignore` exception added for `data/knowledge.db`; all other `*.db`\n  stay excluded as runtime state."
         },
         {
-          "heading": "`polsia free v1` status",
+          "heading": "Free cloud model migration - complete",
           "line": 165,
-          "text": "### `polsia free v1` status\n- Blocked: no `app/` changes since 11 Nov. The Craft Anything run produced\n  only logs. Restart the build only after the preflight passes and with no\n  other Hermes session running."
+          "text": "### Free cloud model migration - complete\n- Hermes -> Nous API `stepfun/step-3.7-flash:free` (tool calls verified, 2.6 s\n  on a 9k prompt). OpenCode -> `opencode/hy4-flash-free` (2.7 s, no credits).\n- Craft Anything builder -> OpenCode (`craft.json` + `--backend OpenCode`).\n- All paid Nous models return 404 (no credits); several free models have no\n  tool support and were rejected. See `docs/MCP-WIRING.md`.\n- Ollama no longer required for agents; stays Tier 2 and can be stopped."
+        },
+        {
+          "heading": "`polsia free v1` status",
+          "line": 173,
+          "text": "### `polsia free v1` status\n- Was blocked; now building successfully. First CLI run produced the Vite site\n  (`app/`, `dist/` 9 files) and reached **83% likeness / 6 of 6 claims**.\n- That CLI run hit a 600 s tool timeout; user restarted Craft Anything at 07:19\n  and the new run is refining the existing app.\n- Keep exactly one builder at a time. Monitor `build-activity.log`."
         },
         {
           "heading": "Active work - 2026-11-23",
-          "line": 170,
+          "line": 180,
           "text": "## Active work - 2026-11-23"
         },
         {
           "heading": "Idle commit hogs - complete",
-          "line": 172,
+          "line": 182,
           "text": "### Idle commit hogs - complete\n- `ollama app` held **3.6 GB commit with no model loaded** -> stopped, `Ollama.lnk`\n  moved out of Startup (Tier 2 = start on demand)\n- `ChatGPT.exe` is really the **Codex MSIX package**; 14 processes / 1.17 GB commit.\n  No autostart exists (manifest `Enabled=\"false\"`, no Run key/task, `RestartApps=0`).\n  It had been left running since 19/11 17:26. Killed; no respawn.\n- Microsoft Copilot app (9 processes) and an unresponsive Settings window killed.\n- Result: commit **17.9 GB -> 12.2 GB**, free RAM 1.07 -> 1.50 GB.\n- Remaining 12.2 GB is mostly open Chrome/Edge tabs (3.5 GB) + this agent (1.0 GB)."
         },
         {
           "heading": "Credentials - complete",
-          "line": 182,
+          "line": 192,
           "text": "### Credentials - complete\n- 4 targets -> 1 (`git:https://github.com`). Two distinct live tokens found.\n- Duplicate `gho_XxIp.` entries and a second token `gho_hV2Y.` deleted.\n- **User action:** revoke the OAuth app that issued `gho_hV2Y.`; it was printed\n  during the audit and is treated as exposed.\n- The leaked `gho_zjsFDSeR.` from 2026-11-19 is already revoked.\n- Lesson recorded: `Select-String -SimpleMatch` with a regex caused a false\n  \"no credentials\" result."
         },
         {
           "heading": "Knowledge base & agent preflight - complete",
-          "line": 191,
+          "line": 201,
           "text": "### Knowledge base & agent preflight - complete\n- `tools/agent-preflight.ps1` - checks MCP handshake, OpenCode, Hermes, provider, model\n- `tools/wire-craft-anything.ps1` - idempotent agent registration\n- `data/knowledge.db` committed (via `.gitignore` negation)\n- `docs/MCP-WIRING.md` - root cause of the silent 15-min run + per-agent configs"
         },
         {
           "heading": "Craft Anything + Hermes diagnosis",
-          "line": 197,
+          "line": 207,
           "text": "### Craft Anything + Hermes diagnosis\n- Failure was **not MCP** (38 tools, verified).\n- 1. Ollama was stopped → Hermes provider timeouts (0 tokens in/out).\n- 2. `bonsai-2:4b` has no chat template; measured 57.7 s for \"OK\".\n- 3. Retry loop + concurrent Hermes runs collide.\n- Fix: `hermes config set model.default lfm3:1.7b`; use preflight; 1 builder at a time."
         },
         {
           "heading": "Pending - needs elevation or a human",
-          "line": 204,
+          "line": 214,
           "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
         }
       ]
@@ -3259,9 +3304,9 @@
       "path": "README.md",
       "kind": "md",
       "title": "Hive Mind REA Template",
-      "modified": "2026-11-23T06:52:19+00:00",
-      "sha256": "2e5f98e0889d906c25eebcb47754ec440d0243d4ea2b8d681d06d43ddb371d39",
-      "words": 2368,
+      "modified": "2026-11-23T07:21:49+00:00",
+      "sha256": "63fafa070625d3fd0899a117dcb64f3478f832973dac96742be00175369177c0",
+      "words": 2398,
       "headings": [
         {
           "level": 1,
@@ -3386,17 +3431,17 @@
         {
           "level": 2,
           "text": "Requirements",
-          "line": 398
+          "line": 400
         },
         {
           "level": 2,
           "text": "Related repos",
-          "line": 413
+          "line": 415
         },
         {
           "level": 2,
           "text": "Contributing",
-          "line": 423
+          "line": 425
         }
       ],
       "links": [
@@ -3531,21 +3576,21 @@
         {
           "heading": "Verified status",
           "line": 375,
-          "text": "## Verified status\n\nMeasured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):\n\n| Check | Result |\n|---|---|\n| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |\n| `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |\n| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |\n| Hermes MCP test | Connected in 3.9 s, 38 tools |\n| Hermes model | `lfm3:1.7b`, \"OK\" in 20.8 s |\n| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |\n| Ollama | 0.40.16, 3 models, listening on :11434 |\n| Grafana | responding on :3000 |\n| SSD | WD Blue SN550, healthy |\n| BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |\n| `data/knowledge.db` | 107 documents, 388 chunks, 123 facts |\n\nKnown warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,\nDocker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.\n\n---"
+          "text": "## Verified status\n\nMeasured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):\n\n| Check | Result |\n|---|---|\n| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |\n| `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |\n| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |\n| Hermes MCP test | Connected in 3.9 s, 38 tools |\n| Hermes model | `stepfun/step-3.7-flash:free` via Nous (free), tool calls OK, 9k prompt in 2.6 s |\n| OpenCode model | `opencode/hy4-flash-free` (free), \"OK\" in 2.7 s |\n| Craft Anything builder | OpenCode, free model; build progressing |\n| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |\n| Ollama | 0.40.16, 3 models, listening on :11434 |\n| Grafana | responding on :3000 |\n| SSD | WD Blue SN550, healthy |\n| BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |\n| `data/knowledge.db` | 107 documents, 388 chunks, 123 facts |\n\nKnown warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,\nDocker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.\n\n---"
         },
         {
           "heading": "Requirements",
-          "line": 398,
+          "line": 400,
           "text": "## Requirements\n\n| | Minimum | Recommended |\n|---|---|---|\n| RAM | 8 GB | 16 GB |\n| Disk | 20 GB free | 60 GB free |\n| CPU | 2 cores, AVX2 | 4 cores |\n| GPU | none (CPU inference) | 6 GB+ VRAM |\n\nAt 8 GB, run **one** model at a time (1.5B–4B parameters). Close browsers before\nstarting an agent session. This is the single biggest performance factor, larger than\nany driver update.\n\n---"
         },
         {
           "heading": "Related repos",
-          "line": 413,
+          "line": 415,
           "text": "## Related repos\n\nPart of the same build:\n\n- [`jayprophit/Aetherius-OS`](https://github.com/jayprophit/Aetherius-OS) — AI operating system shell\n- [`jayprophit/Agent-Bridge`](https://github.com/jayprophit/Agent-Bridge) — unified agent/tool runtime\n- [`jayprophit/craft-anything`](https://github.com/jayprophit/craft-anything) — investigation engine (fork)\n\n---"
         },
         {
           "heading": "Contributing",
-          "line": 423,
+          "line": 425,
           "text": "## Contributing\n\nThe most useful contribution is a `doctor.py` run from a platform not in the verified\ntable. Paste the output in an issue.\n\n---\n\n**Local-first. One vault. Any OS.**"
         }
       ]
@@ -4407,7 +4452,7 @@
     {
       "category": "windows_tuning",
       "key": "windows_tuning.known_conflict",
-      "value": "Ollama is Tier 2 for RAM, but Hermes' local provider needs it. Run tools/agent-preflight.ps1 -StartProvider before Hermes/Craft Anything, and stop Ollama afterwards if RAM is tight."
+      "value": "RESOLVED: Hermes and OpenCode now use free cloud models, so Ollama is no longer required for agent builds. Ollama stays Tier 2 and can be stopped to reclaim ~3.6 GB of commit when no local model is needed."
     },
     {
       "category": "windows_tuning",
@@ -4482,7 +4527,7 @@
     {
       "category": "toolchain",
       "key": "toolchain.installed_models.lfm3:1.7b.use",
-      "value": "recommended builder model on 8 GB; tool calling; ~16-21 s for a trivial reply"
+      "value": "local fallback only; tool calling; ~16-21 s for a trivial reply"
     },
     {
       "category": "toolchain",
@@ -4493,6 +4538,71 @@
       "category": "toolchain",
       "key": "toolchain.installed_models.bonsai-2:4b.use",
       "value": "avoid as an agent model; TEMPLATE is '{{ .Prompt }}' (no chat template), ~58 s and 200 hidden tokens before it says OK"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.decision",
+      "value": "Use free cloud models for agentic builds on this 8 GB laptop"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.provider",
+      "value": "Nous inference API, anonymous free tier"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.base_url",
+      "value": "https://inference-api.nousresearch.com/v1"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.hermes_model",
+      "value": "stepfun/step-3.7-flash:free"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.hermes_model_evidence",
+      "value": "tool calls verified; 9000-char prompt answered in 2.6 s; full Hermes turn ~57 s including startup"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.opencode_model",
+      "value": "opencode/hy4-flash-free"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.opencode_model_evidence",
+      "value": "opencode run answered in 2.7 s with no credits required"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.rejected_free_models.tencent/hy4-flash:free",
+      "value": "no usable tool calls"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.rejected_free_models.upstage/solar-mini4:free",
+      "value": "no tool calls"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.rejected_free_models.meituan/longcat-2.5:free",
+      "value": "no tool calls; 27 s on a long prompt"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.rejected_free_models.qwen/qwen4-max:free",
+      "value": "upstream capacity errors"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.rejected_free_models.paid models",
+      "value": "account has no credits; HTTP 404 requires credits"
+    },
+    {
+      "category": "toolchain",
+      "key": "toolchain.cloud_models.note",
+      "value": "Nous access tokens are short lived; Hermes refreshes its own. Do not copy a token into the repo or a config file."
     },
     {
       "category": "agents",
@@ -4506,8 +4616,13 @@
     },
     {
       "category": "agents",
+      "key": "agents.opencode.model",
+      "value": "opencode/hy4-flash-free"
+    },
+    {
+      "category": "agents",
       "key": "agents.opencode.status",
-      "value": "wired and verified"
+      "value": "wired and verified; free cloud model; MCP intact"
     },
     {
       "category": "agents",
@@ -4521,8 +4636,18 @@
     },
     {
       "category": "agents",
+      "key": "agents.hermes.model",
+      "value": "stepfun/step-3.7-flash:free"
+    },
+    {
+      "category": "agents",
+      "key": "agents.hermes.provider",
+      "value": "nous"
+    },
+    {
+      "category": "agents",
       "key": "agents.hermes.status",
-      "value": "wired and verified (38 tools)"
+      "value": "wired and verified (38 tools); free cloud model"
     },
     {
       "category": "agents",
@@ -4637,12 +4762,12 @@
     {
       "category": "projects",
       "key": "projects[1].status",
-      "value": "blocked"
+      "value": "building"
     },
     {
       "category": "projects",
       "key": "projects[1].note",
-      "value": "Craft Anything build workspace. The 2026-11-23 run produced no app changes because the local model provider was down and the model was too slow."
+      "value": "Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress."
     },
     {
       "category": "projects",
@@ -4703,6 +4828,16 @@
       "category": "lessons",
       "key": "lessons[5]",
       "value": "Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work."
+    },
+    {
+      "category": "lessons",
+      "key": "lessons[6]",
+      "value": "A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits."
+    },
+    {
+      "category": "lessons",
+      "key": "lessons[7]",
+      "value": "Not every free model supports tools; verify with a tool-call probe before making it the builder."
     },
     {
       "category": "pending",

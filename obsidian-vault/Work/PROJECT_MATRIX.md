@@ -162,10 +162,20 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 - `.gitignore` exception added for `data/knowledge.db`; all other `*.db`
   stay excluded as runtime state.
 
+### Free cloud model migration - complete
+- Hermes -> Nous API `stepfun/step-3.7-flash:free` (tool calls verified, 2.6 s
+  on a 9k prompt). OpenCode -> `opencode/hy4-flash-free` (2.7 s, no credits).
+- Craft Anything builder -> OpenCode (`craft.json` + `--backend OpenCode`).
+- All paid Nous models return 404 (no credits); several free models have no
+  tool support and were rejected. See `docs/MCP-WIRING.md`.
+- Ollama no longer required for agents; stays Tier 2 and can be stopped.
+
 ### `polsia free v1` status
-- Blocked: no `app/` changes since 11 Nov. The Craft Anything run produced
-  only logs. Restart the build only after the preflight passes and with no
-  other Hermes session running.
+- Was blocked; now building successfully. First CLI run produced the Vite site
+  (`app/`, `dist/` 9 files) and reached **83% likeness / 6 of 6 claims**.
+- That CLI run hit a 600 s tool timeout; user restarted Craft Anything at 07:19
+  and the new run is refining the existing app.
+- Keep exactly one builder at a time. Monitor `build-activity.log`.
 
 ## Active work - 2026-11-23
 

@@ -77,23 +77,49 @@ The CLI path is normally:
 C:\Program Files\Craft Anything\craft-anything-cli.exe
 ```
 
-## Model capacity rule
+## Model policy: free cloud for builds
 
-The builder prompt is ~9,000 characters plus Hermes' system prompt and 38 tool
-schemas. That is a large prefill for a CPU-only 8 GB laptop.
+The builder prompt is ~9,000 characters plus the system prompt and 38 tool
+schemas. On an 8 GB CPU-only laptop, no local model can prefill and iterate
+fast enough. **Use free cloud models; keep local models as fallback only.**
 
-| Model | Size | Measured on this laptop | Verdict |
+| Model | Where | Evidence | Verdict |
 |---|---|---|---|
-| `bonsai-2:4b` | 1.6 GB | 57.7 s for "OK"; empty below 64 tokens; no chat template | **Do not use as an agent** |
-| `laya:latest` | 0.84 GB | HTTP 400 on chat completions | Router only |
-| `lfm3:1.7b` | 1.1 GB | "OK" in 15.8–20.8 s; real turn: 2,050 in / 34 out in 46.3 s | **Best available locally** |
-| any 7B+ | 4 GB+ | does not fit comfortably beside Chrome + WSL on 8 GB | Desktop only |
-| cloud provider | — | sub-second to a few seconds | **Recommended for agentic builds** |
+| `stepfun/step-3.7-flash:free` | Hermes via Nous API | tool call succeeded; 9k prompt answered in 2.6 s | **chosen for Hermes** |
+| `opencode/hy4-flash-free` | OpenCode built-in | `opencode run` replied in 2.7 s, no credits needed | **chosen for OpenCode / Craft Anything** |
+| `tencent/hy4-flash:free` | Nous free | no usable tool call | rejected |
+| `upstage/solar-mini4:free` | Nous free | no tool call | rejected |
+| `meituan/longcat-2.5:free` | Nous free | no tool call; 27 s on a long prompt | rejected |
+| `qwen/qwen4-max:free` | Nous free | upstream capacity errors | rejected |
+| any `...` paid model on Nous | Nous | HTTP 404: account has no credits | unavailable |
+| `bonsai-2:4b` | local | 57.7 s for "OK", empty below 64 tokens, no chat template | **do not use as an agent** |
+| `lfm3:1.7b` | local | "OK" in 15.8–20.8 s | fallback only |
+| any 7B+ local | local | does not fit beside Chrome + WSL on 8 GB | desktop only |
 
-`hermes config set model.default lfm3:1.7b` is the local fallback. On a desktop
-with 16 GB+ and a GPU, a 7B–14B model is the right local choice. For multi-step
-builds, a cloud provider is faster and more reliable than any local model on
-this laptop.
+Applied configuration:
+
+```powershell
+# Hermes - Nous free tier, tool-capable model
+hermes config set model.default stepfun/step-3.7-flash:free
+hermes config set model.provider nous
+hermes config set model.base_url https://inference-api.nousresearch.com/v1
+hermes config set model.api_mode chat_completions
+hermes config set auxiliary.coder.provider nous
+hermes config set auxiliary.coder.model stepfun/step-3.7-flash:free
+hermes config set auxiliary.group_router.provider nous
+hermes config set auxiliary.group_router.model stepfun/step-3.7-flash:free
+```
+
+OpenCode uses `~/.config/opencode/opencode.json`:
+`"model": "opencode/hy4-flash-free"` (MCP entries preserved).
+
+Craft Anything's `craft.json` sets `"builder": "OpenCode"`, and CLI runs use
+`--backend OpenCode`. Craft Anything's doctor reports all backends registered
+and the MCP self-test healthy.
+
+Nous access tokens are short-lived and Hermes refreshes them itself. Never copy
+a token into the repo, an `opencode.json`, or an environment variable file.
+Verify tool support before choosing any free model — most do not support it.
 
 ## Concurrency rule
 
@@ -139,5 +165,7 @@ Never stop Ollama while a Craft Anything build is running.
 - MCP handshake: **38 tools**, stdio
 - OpenCode: `mcp.craft-anything` enabled
 - Hermes: `craft-anything` enabled
-- Hermes model: `lfm3:1.7b` @ `http://127.0.0.1:11434/v1`
-- Preflight: all checks PASS
+- Hermes model: `stepfun/step-3.7-flash:free` @ Nous inference API (free tier)
+- OpenCode model: `opencode/hy4-flash-free` (no credits required)
+- Craft Anything builder: OpenCode (verified building the `polsia free v1` site)
+- Preflight: all checks PASS; remote provider is reported as WARN (not probed)
