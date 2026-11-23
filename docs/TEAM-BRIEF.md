@@ -45,6 +45,36 @@ same time on the same task, and pass information between themselves.
 - Members react to messages addressed to them and to new tasks in their role;
   this is what makes it feel like a team rather than a list.
 
+### 3b. Agents have several languages — support them all
+
+Agents do not all speak the same way, and the team must be efficient. The shared
+bus must support **more than five** distinct communication types, label each
+message with its type, choose the right one automatically, and let the person
+filter the channel by type. Implement at least these:
+
+| # | Language / type | Use |
+|---|---|---|
+| 1 | Natural-language prose | human-readable team channel and summaries |
+| 2 | Canonical JSON envelope | `{from,to,taskId,type,body,time,priority}` — the internal wire format |
+| 3 | Compact task/intent DSL | short verbs: `TASK`, `ASSIGN`, `ASK`, `ANSWER`, `HANDOFF`, `BLOCKED`, `DONE` |
+| 4 | Markdown artefacts | plans, specs and reports passed between roles |
+| 5 | Tool/function-call format | `{tool, arguments, result}` for work done by a member |
+| 6 | Topic-based events (pub/sub) | `task.created`, `build.failed`, `review.ready` with subscribers |
+| 7 | Shared blackboard state | small key/value facts any member can read/write, with versions |
+| 8 | Semantic tags / embedding-style summary | compact meaning tags plus a short vector-like digest for fast matching |
+| 9 | A2A/MCP-style envelopes | agent-to-agent and tool-result messages compatible with external agents |
+| 10 | Human report digest | plain-language round summary for the person (email/chat) |
+
+Rules:
+- A message carries a `language` field; the UI shows which language was used.
+- The router picks the most efficient type for the situation (DSL for control
+  messages, JSON for machine handoffs, Markdown for documents, prose for the
+  person).
+- New languages must be pluggable: a `LANGUAGES` registry, not hard-coded
+  `if/else` chains.
+- All languages persist to the same local message log and participate in the
+  handoff trail.
+
 ### 4. Automation and human oversight
 
 - Auto mode runs in rounds with intervals: hours, days, weeks, months, years,
@@ -113,4 +143,7 @@ same time on the same task, and pass information between themselves.
 9. A payment integration can create a test-mode checkout and record it, while
    no feature is locked behind payment.
 10. Each round produces a retrospective and a visible completion metric.
-11. `npm run build` succeeds and the visual check still passes.
+11. At least ten communication languages/types are supported, each message is
+   labelled with its type, the channel can be filtered by type, and new types
+   are added through a registry.
+12. `npm run build` succeeds and the visual check still passes.
