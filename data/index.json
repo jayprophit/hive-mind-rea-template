@@ -1,13 +1,13 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T12:18:18+00:00",
+  "generated": "2026-11-23T12:28:27+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
     "documents": 120,
-    "headings": 262,
-    "chunks": 577,
+    "headings": 263,
+    "chunks": 578,
     "facts": 216,
     "assets": 0,
     "sources": 342,
@@ -1302,9 +1302,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T11:36:10+00:00",
-      "sha256": "a77ffc36def4f7e0ff7030ea256597cdb912669a753be7acd85fbb602ed44806",
-      "words": 3350,
+      "modified": "2026-11-23T12:26:31+00:00",
+      "sha256": "d4d6b86057fdce9be834b9170f5eaf8da748cbb95392b3bc62d542d69644f360",
+      "words": 3507,
       "headings": [
         {
           "level": 1,
@@ -1408,23 +1408,28 @@
         },
         {
           "level": 3,
-          "text": "6. Payments (commerce, not feature gates)",
+          "text": "5m. Login providers and Help & More pages",
           "line": 329
         },
         {
           "level": 3,
+          "text": "6. Payments (commerce, not feature gates)",
+          "line": 352
+        },
+        {
+          "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 339
+          "line": 362
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 348
+          "line": 371
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 358
+          "line": 381
         }
       ],
       "links": [],
@@ -1555,28 +1560,33 @@
           "text": "rprise connectors |\n\nRules:\n\n- `CAPABILITIES` entries carry `id`, `name`, `freeProvider`, `paidProvider`,\n  `status`, `cost`, `consent`, `testMode`.\n- `MCP_SERVERS` registry supports add/remove/enable, tool discovery and a\n  per-role allowlist; new servers are sandboxed until trusted.\n- `ENGINES` supports free and paid models; switching never changes the team's\n  roles.\n- Email can read, draft and send with remembered human approval; no auto-send\n  of sensitive content.\n- Phone assistant is test-mode by default and never places real calls without\n  explicit authorisation.\n- Every capability is callable from the chat widget and from the team loop."
         },
         {
-          "heading": "6. Payments (commerce, not feature gates)",
+          "heading": "5m. Login providers and Help & More pages",
           "line": 329,
+          "text": "### 5m. Login providers and Help & More pages\n\nThe login screen must offer more than Email and Google. Add a `LOGIN_PROVIDERS`\nregistry with at least: Email (magic link), Google, **GitHub, Apple, Microsoft,\nGitLab, X/Twitter, Discord, Slack, LinkedIn**, plus a generic OAuth option and\na \"continue as guest / local workspace\" path. Every provider is test-mode by\ndefault, uses the person's own OAuth config, and never stores secrets in local\nstate. The user can add/remove providers without code changes.\n\nHelp & More must link to real rebuilt routes, not dead links:\n\n- Help centre (`help.polsia.com`) with search, categories, articles and contact.\n- Changelog (`/changelog`) — already present, keep current.\n- Frequently Asked Questions (`/faq`).\n- About (`/about`) — already present.\n- Church (`/church`).\n- Download code (`/download` and `/download-code`).\n- Gift shop (`/giftshop`).\n- Give Feedback, Refer & Earn, Teams, Settings, Personal accounts as before.\n\nAll pages use the captured theme, the burger/cascading navigation, the floating\nchat widget and the same action/approval system."
+        },
+        {
+          "heading": "6. Payments (commerce, not feature gates)",
+          "line": 352,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 339,
+          "line": 362,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 348,
+          "line": 371,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 358,
+          "line": 381,
           "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
         },
         {
           "heading": "Acceptance criteria",
-          "line": 358,
+          "line": 381,
           "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
@@ -5782,9 +5792,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "a77ffc36def4f7e0ff7030ea256597cdb912669a753be7acd85fbb602ed44806",
-      "bytes": 22452,
-      "modified": "2026-11-23T11:36:10+00:00"
+      "sha256": "d4d6b86057fdce9be834b9170f5eaf8da748cbb95392b3bc62d542d69644f360",
+      "bytes": 23552,
+      "modified": "2026-11-23T12:26:31+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",

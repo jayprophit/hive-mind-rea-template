@@ -326,6 +326,29 @@ Rules:
   explicit authorisation.
 - Every capability is callable from the chat widget and from the team loop.
 
+### 5m. Login providers and Help & More pages
+
+The login screen must offer more than Email and Google. Add a `LOGIN_PROVIDERS`
+registry with at least: Email (magic link), Google, **GitHub, Apple, Microsoft,
+GitLab, X/Twitter, Discord, Slack, LinkedIn**, plus a generic OAuth option and
+a "continue as guest / local workspace" path. Every provider is test-mode by
+default, uses the person's own OAuth config, and never stores secrets in local
+state. The user can add/remove providers without code changes.
+
+Help & More must link to real rebuilt routes, not dead links:
+
+- Help centre (`help.polsia.com`) with search, categories, articles and contact.
+- Changelog (`/changelog`) — already present, keep current.
+- Frequently Asked Questions (`/faq`).
+- About (`/about`) — already present.
+- Church (`/church`).
+- Download code (`/download` and `/download-code`).
+- Gift shop (`/giftshop`).
+- Give Feedback, Refer & Earn, Teams, Settings, Personal accounts as before.
+
+All pages use the captured theme, the burger/cascading navigation, the floating
+chat widget and the same action/approval system.
+
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a
