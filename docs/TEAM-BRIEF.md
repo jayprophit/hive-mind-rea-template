@@ -349,6 +349,29 @@ Help & More must link to real rebuilt routes, not dead links:
 All pages use the captured theme, the burger/cascading navigation, the floating
 chat widget and the same action/approval system.
 
+### 5n. Browser automation, pagination and local analytics
+
+Add three more first-class capabilities to `CAPABILITIES`:
+
+1. **BROWSER_AUTOMATION** — drive a real browser through the `browse` MCP /
+   Playwright-style tools: navigate, click, fill, snapshot, screenshot, wait,
+   extract text, run scripted flows, and record walkthroughs. Every action is
+   logged with the same approval/progress/retry model as other actions. Use it
+   for research, verification and form filling; never bypass bot protections or
+   logins the user has not authorised.
+2. **PAGINATOR** — a reusable, accessible pagination component for every list,
+   table, inbox, document library and search result: page size, first/prev/
+   next/last, page numbers, current-page indicator, URL/hash state, keyboard
+   support and an optional infinite-scroll mode. No list may silently truncate.
+3. **DATA_ANALYTICS** — local-first analytics over the project knowledge DB and
+   captured data: counts, breakdowns, filters, time series, tables, SVG bar/
+   line/pie charts and Mermaid diagrams, with CSV/JSON export. No tracking
+   cookies, no cloud analytics unless the person configures their own endpoint.
+
+Also add any small supporting tools still missing: web search with source
+caching, file import/export, OCR, URL fetching, saved snippets, and a generic
+tool registry so new capabilities can be added without editing the UI.
+
 ### 6. Payments (commerce, not feature gates)
 
 - The app must be able to **take payments** for real transactions through a
