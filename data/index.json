@@ -1,16 +1,16 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T18:45:08+00:00",
+  "generated": "2026-11-23T19:25:21+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
-    "documents": 121,
-    "headings": 274,
-    "chunks": 590,
+    "documents": 122,
+    "headings": 280,
+    "chunks": 596,
     "facts": 216,
     "assets": 0,
-    "sources": 343,
+    "sources": 344,
     "runs": 0,
     "approvals": 0
   },
@@ -572,6 +572,79 @@
           "heading": "5. Sources",
           "line": 287,
           "text": "## 5. Sources\n\n- https://code.claude.com/docs/en/overview\n- https://code.claude.com/docs/en/skills\n- https://code.claude.com/docs/en/sub-agents\n- https://code.claude.com/docs/en/hooks\n- https://code.claude.com/docs/en/workflows\n- https://code.claude.com/docs/en/agent-teams\n- https://agentskills.io\n- GitHub REST search API queries above (stars and licences as of 2026-11-23)\n- https://github.com/AIshihzong/awesome-reverse-engineer-anything (CC0-1.0)\n- https://github.com/pablodiazjorge/rea-lab, https://github.com/aicodeking/leanrea\n- https://github.com/devtechedge/feature-heist, https://github.com/erkamyaman/rust-anything\n- https://github.com/dagoSte/rea-safe-agents, https://github.com/lalbers/agent-sandbox\n- https://github.com/ShadowSwaps/REA-Reconstruction-Companion\n- https://github.com/mattpocock/skills, https://github.com/obra/superpowers,\n  https://github.com/affaan-m/ECC, https://github.com/anthropics/skills,\n  https://github.com/Shubhamsaboo/awesome-llm-apps,\n  https://github.com/JuliusBrussee/caveman,\n  https://github.com/Leonxlnx/taste-skill,\n  https://github.com/addyosmani/agent-skills,\n  https://github.com/tt-a1i/archify,\n  https://github.com/OpenMontageInc/OpenMontage"
+        }
+      ]
+    },
+    {
+      "path": "docs/GAP-ANALYSIS.md",
+      "kind": "md",
+      "title": "Gap analysis — Polsia Free v1",
+      "modified": "2026-11-23T19:24:45+00:00",
+      "sha256": "319b23e4beef5242711e2e29ec78daf260d0f8928a42085cb6aabd7a9e3d0c76",
+      "words": 612,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Gap analysis — Polsia Free v1",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "text": "Verified complete",
+          "line": 5
+        },
+        {
+          "level": 2,
+          "text": "P0 — real gaps that block \"finished\"",
+          "line": 20
+        },
+        {
+          "level": 2,
+          "text": "P1 — should be added for completeness",
+          "line": 41
+        },
+        {
+          "level": 2,
+          "text": "Not gaps (by design or impossible here)",
+          "line": 59
+        },
+        {
+          "level": 2,
+          "text": "Recommended order",
+          "line": 67
+        }
+      ],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "Gap analysis — Polsia Free v1",
+          "line": 1,
+          "text": "# Gap analysis — Polsia Free v1\n\nDate: 2026-11-23. Based on a fresh audit of `app/`, `dist/` and the repo."
+        },
+        {
+          "heading": "Verified complete",
+          "line": 5,
+          "text": "## Verified complete\n\n- `npm run build` passes; **40 HTML pages** in `dist`.\n- **0 broken links**: 23 internal HTML links, 41 JS path literals, all resolve.\n- All 7 workspace deep links resolve to real `panel-*` IDs and activate the tab.\n- 38+ audited capability markers present: 13-phase REA loop, byte sweep, 10\n  languages, free services, human gate, skills/hooks/subagents/workflows/agent\n  teams/auto-memory/doctor, role team + engines, autonomous bootstrap,\n  capabilities/MCP/protocols, dashboard routes + 58 actions, social connections,\n  chat widget, burger/cascading nav, instincts, access allowlist, run monitor,\n  behaviour recordings, optional Composio, help pages, extra login providers,\n  local analytics, paginator, browser-automation intents, Obsidian export,\n  72 currencies.\n- Repo clean at `67d36f7`, `0/0` with origin. Project DB and vault notes current."
+        },
+        {
+          "heading": "P0 — real gaps that block \"finished\"",
+          "line": 20,
+          "text": "## P0 — real gaps that block \"finished\"\n\n1. **No backend bridge for truly live connections.** The app is a static site:\n   it cannot hold OAuth client secrets, SMTP passwords or payment keys. Login,\n   email send, payments, phone assistant and browser automation currently\n   dispatch **intents** through the bus or use `mailto:`/local drafts. Calling\n   them \"live\" means the configuration path is live, not that the network call\n   happens from the browser. **Fix:** add a small Node/Python proxy that holds\n   secrets in environment variables, exposes an allowlisted MCP/HTTP endpoint,\n   and performs OAuth/SMTP/Stripe/browser actions. Then point the app's bridge\n   at it. This is the single biggest remaining item.\n2. **Dashboard visual fidelity** is ~84% and was rebuilt from text snapshots of\n   the authenticated page, because the browser extension kept timing out and a\n   fresh full-page screenshot was not captured. **Fix:** when `browse` is\n   connected again, capture `https://polsia.com/dashboard/pagemurmur-9jsvs1`\n   at 1440/768/390 px and refine panels against the pixels.\n3. **No automated tests or CI.** The 13-phase engine, 10-language router and\n   action bus have no Vitest suite, so self-modification could silently break\n   them. **Fix:** add `npm test` with tests for phase order, loop-back, human\n   gate, language routing and pagination."
+        },
+        {
+          "heading": "P1 — should be added for completeness",
+          "line": 41,
+          "text": "## P1 — should be added for completeness\n\n4. **Automatic second-brain sync.** Obsidian export is manual (download a\n   `.md`). Add a script/watcher that writes the exported note into\n   `obsidian-vault/Projects/` and refreshes the project DB after each round.\n5. **Token lifecycle.** Nous access tokens expire quickly; the app has no\n   refresh flow. Move provider credentials to the backend bridge above.\n6. **Multi-user / accounts.** Only guest/local workspace exists; no real\n   accounts, teams or permissions backend.\n7. **Real media generation.** Image/audio/music/video and TTS are registries\n   with local placeholders; live output needs provider keys via the bridge.\n8. **Pending integrations** in `docs/INTEGRATIONS.md` need identification or\n   installation: `ffmpeg`, `yt-dlp`, `whisper`/`openwhispr`, `cal.com`,\n   `openproject`, `chatwoot`, `weknora`, `cap`, `remotion`, `basemode`,\n   `scion`, `mononoke`, Higgsfield items. Some are optional/unknown.\n9. **Legal/ToS review.** The REA work is clean-room by design, but no formal\n   review of target terms has been recorded."
+        },
+        {
+          "heading": "Not gaps (by design or impossible here)",
+          "line": 59,
+          "text": "## Not gaps (by design or impossible here)\n\n- `graphify`, `demobase`, `basemode` do not exist on this machine — optional/disabled.\n- BIOS is already `EMCN60WW`; that task is done.\n- RAM purchase, driver repair, Intel service demotion, remote-access decision\n  and `repos/` review are **machine tasks**, not app gaps.\n- The exposed `gho_hV2Y…` token still needs revoking on GitHub."
+        },
+        {
+          "heading": "Recommended order",
+          "line": 67,
+          "text": "## Recommended order\n\n1. Backend bridge for real connections (P0-1).\n2. Fresh dashboard screenshot + pixel refinement (P0-2).\n3. Vitest + CI smoke test (P0-3).\n4. Automatic vault/DB sync (P1-4).\n5. Provider token refresh moved to backend (P1-5).\n6. Install/identify the pending tools that are actually needed (P1-8)."
         }
       ]
     },
@@ -5874,6 +5947,13 @@
       "sha256": "6400255c46d41cac077910fc5f17c2bc4318a6741802e8fe0e7141f6508141e7",
       "bytes": 20070,
       "modified": "2026-11-23T10:30:09+00:00"
+    },
+    {
+      "path": "docs/GAP-ANALYSIS.md",
+      "kind": "text",
+      "sha256": "319b23e4beef5242711e2e29ec78daf260d0f8928a42085cb6aabd7a9e3d0c76",
+      "bytes": 4149,
+      "modified": "2026-11-23T19:24:45+00:00"
     },
     {
       "path": "docs/INSTALL_WINDOWS.md",
