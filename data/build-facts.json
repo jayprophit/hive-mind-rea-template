@@ -117,6 +117,7 @@
     }
   ],
   "requirements": {
+    "byte_exact_reverse": "Every reverse-engineering task must sweep the artifact byte by byte: record total bytes and sha256, account for every range with a finding or an unknown carrying its offset, require 100% coverage before closing the gap, and back claims with offset/hash/observed output plus a differential replay. Never silently skip data; never bypass DRM.",
     "team_not_picker": "The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.",
     "team_behaviour": [
       "No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason",
@@ -146,6 +147,13 @@
     "Decide on AnyDesk and TeamViewer autostart",
     "Run the elevated Intel telemetry service demotion",
     "Review the remaining cloned repos (repos/ is 1.56 GB and not in git)"
+  ],
+  "research": [
+    { "topic": "heavy RE MCP tooling", "finding": "rea-lab: 482 runs found no solve-rate gain at ~2x time and cost", "source": "docs/CLAUDE-CODE-DEEP-DIVE.md" },
+    { "topic": "lean RE skill", "finding": "leanrea: 8 KB skill, direct shell tools, same accuracy, 38% less time, 35% less cost, 60% fewer tokens", "source": "docs/CLAUDE-CODE-DEEP-DIVE.md" },
+    { "topic": "official agent patterns", "finding": "Agent Skills, subagents, hooks, dynamic workflows and agent teams adopted as registries", "source": "code.claude.com/docs" },
+    { "topic": "free ecosystems", "finding": "Grok/Manus/Codex/Hermes/OpenClaw open alternatives studied; MIT/Apache/CC0 patterns only", "source": "GitHub API" },
+    { "topic": "pending wave 4", "finding": "INSTINCTS, AGENT_ACCESS allowlist, run monitor, behaviour recordings and catalogue scaling are documented but not implemented", "source": "docs/CLAUDE-CODE-DEEP-DIVE.md" }
   ],
   "recommendations": [
     { "priority": "P0", "item": "Logged-in capture evidence", "why": "Original target redirects to /login; dashboard cannot be inferred from public pages", "where": "capture/dashboard/" },

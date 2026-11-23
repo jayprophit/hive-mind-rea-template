@@ -94,7 +94,7 @@ cycling until the task's acceptance criteria pass or a human-only item blocks it
 | 1 | Intake + gap analysis | `intake` | Restate the task, write acceptance criteria, list what is known/unknown, identify exactly what is missing and what the user must supply. Produce a gap list with severity. |
 | 2 | Plan | `plan` | Decompose the gaps into role-sized jobs, assign owners, set order and dependencies. |
 | 3 | Internet + open resources | `discover` | Search the internet for similar builds, prior art, docs and data. Check open-source repos, public datasets and free services. Record each source with a URL and a one-line finding. |
-| 4 | Reverse-engineer closed sources | `reverse` | Where a target is closed, inspect what is observable: page/HTML, JS bundles, network requests, file formats, strings and behaviour. Record evidence; never copy proprietary code into `app/`. |
+| 4 | Reverse-engineer closed sources | `reverse` | **Byte-by-byte, bit-by-bit sweep** of every available artifact: file ranges, headers, strings, offsets, bundles, network requests, formats and behaviour. Account for **100% of bytes**; anything not understood goes into the unknown ledger with its offset range. Record evidence; never copy proprietary code into `app/`. |
 | 5 | Automatic setup | `setup` | Install/configure whatever the build needs: tools, free-tier accounts/endpoints, model providers, storage and integrations. Use free substitutes for paid services (see registry). |
 | 6 | Build | `build` | Produce the first working version from the gathered evidence. |
 | 7 | Test | `test` | Run automated checks: build, links, console errors, unit tests, visual comparison. |
@@ -114,6 +114,23 @@ Rules:
 - `PHASES` in code must be data-driven so new phases can be added without
   rewriting the runner.
 - The activity log must show phase, attempt number, evidence used and owner.
+
+#### Byte-by-byte reverse-engineering rule (mandatory)
+
+When the `reverse` phase runs, the team must not skim or sample an artifact:
+
+1. Record the artifact's total byte length and sha256 before analysis.
+2. Walk it in explicit ranges (headers, tables, strings, code, data, padding),
+   keeping an `analysed_bytes` total. `coverage = analysed_bytes / total_bytes`.
+3. Every range gets a finding (what it is) or an unknown entry with its offset
+   range and why it could not be understood. No silent skipping.
+4. A reverse-engineering gap closes only at **100% accounted coverage**, even
+   if some ranges are recorded as unknown. Unknowns are carried into the next
+   round and re-probed with a different tool or model.
+5. Findings must be evidence-backed (offset + hash + observed bytes/output).
+   Behavioural claims get a differential replay, not an assumption.
+6. Binary/compressed/encrypted regions are still accounted for by range and
+   hash; do not attempt DRM circumvention — record them as unknown and stop.
 
 ### 5b. Free services instead of paid ones
 

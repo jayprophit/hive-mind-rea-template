@@ -1,16 +1,16 @@
 {
   "schema": "knowledge-index/v1",
   "mode": "template",
-  "generated": "2026-11-23T10:16:23+00:00",
+  "generated": "2026-11-23T10:40:47+00:00",
   "root": "C:\\Users\\jpowe\\hive-mind-rea-template",
   "database": "C:\\Users\\jpowe\\hive-mind-rea-template\\data\\knowledge.db",
   "counts": {
-    "documents": 112,
-    "headings": 227,
-    "chunks": 465,
-    "facts": 199,
+    "documents": 113,
+    "headings": 251,
+    "chunks": 495,
+    "facts": 215,
     "assets": 0,
-    "sources": 334,
+    "sources": 335,
     "runs": 0,
     "approvals": 0
   },
@@ -61,9 +61,9 @@
       "path": "data/build-facts.json",
       "kind": "json",
       "title": "build-facts",
-      "modified": "2026-11-23T10:15:26+00:00",
-      "sha256": "d8f1b23916c8bfbf091d45f392cbf8f91ce2f5d094fa42934d5232afd6c43e7e",
-      "words": 1354,
+      "modified": "2026-11-23T10:40:01+00:00",
+      "sha256": "ae3473ba94cd93d0897f04570ede07492b16f7b7311fcccca6e1debb7c25abd7",
+      "words": 1537,
       "headings": [],
       "links": [],
       "chunks": [
@@ -90,27 +90,32 @@
         {
           "heading": "",
           "line": 1,
-          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically\",\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then"
+          "text": "  \"note\": \"Craft Anything build workspace. First successful run built the Vite site and reached 83% visual likeness (6/6 claims); user restarted the app at 07:19 and a fresh run is in progress.\"\n    },\n    {\n      \"name\": \"polsia free version\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\polsia free version\",\n      \"status\": \"present\"\n    },\n    {\n      \"name\": \"tradingbot\",\n      \"path\": \"C:\\\\Users\\\\jpowe\\\\Desktop\\\\projects\\\\tradingbot\",\n      \"status\": \"present\"\n    }\n  ],\n  \"requirements\": {\n    \"byte_exact_reverse\": \"Every reverse-engineering task must sweep the artifact byte by byte: record total bytes and sha256, account for every range with a finding or an unknown carrying its offset, require 100% coverage before closing the gap, and back claims with offset/hash/observed output plus a differential replay. Never silently skip data; never bypass DRM.\",\n    \"team_not_picker\": \"The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company.\",\n    \"team_behaviour\": [\n      \"No member picker in the UI: the person enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "n the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode"
+          "text": "rson enters a task and the right member(s) are selected automatically, with a visible reason\",\n      \"More than one member is active by default; a single member only for genuinely single-role tasks, decided automatically\",\n      \"Orchestrator decomposes a task and assigns roles; several members work concurrently\",\n      \"Shared message channel and task board visible in the UI; members post findings and hand off artefacts\",\n      \"Each role has goals, permissions and a status (working, waiting, done)\",\n      \"Human authorisation given once, then remembered; approvals are not re-requested every action\",\n      \"Auto mode supports hours, days, weeks, months, years and non-stop\",\n      \"Progress reports can be sent to email or a chat webhook\",\n      \"No subscription, credits or paid feature gates anywhere\"\n    ],\n    \"current_gap\": \"app/src/studio.js currently implements a pick-one-agent list with integrations and scheduling; it does not run a collaborative team with inter-agent messaging.\"\n  },\n  \"lessons\": [\n    \"A process named ChatGPT.exe can be the Codex MSIX package (OpenAI.Codex). Check the path, not the name.\",\n    \"Working set is not commit. 'ollama app' showed 21 MB WS but held 3.6 GB of commit.\",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start "
         },
         {
           "heading": "",
           "line": 1,
-          "text": "5 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ],\n  \"recommendations\": [\n    { \"priority\": \"P0\", \"item\": \"Logged-in capture evidence\", \"why\": \"Original target redirects to /login; dashboard cannot be inferred from public pages\", \"where\": \"capture/dashboard/\" },\n    { \"priority\": \"P0\", \"item\": \"Checkpoint/resume in IndexedDB\", \"why\": \"Three builds were lost to crashes and PTY timeouts\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P0\", \"item\": \"One builder at a time\", \"why\": \"Concurrent builders overwrote studio.js\", \"where\": \"craft.json, operator\" },\n    { \"priority\": \"P1\", \"item\": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },"
+          "text": ",\n    \"Never run Select-String -SimpleMatch with a regex: it silently matches nothing.\",\n    \"Stopping Ollama to free RAM breaks Hermes when its provider is 127.0.0.1:11434. Start it on demand first.\",\n    \"A 4B model with no chat template is not an agent model, regardless of parameter count.\",\n    \"Craft Anything's builder gives up after repeated provider timeouts; 15 quiet minutes is a dead run, not slow work.\",\n    \"A free cloud model that supports tool calls beats a local model on an 8 GB CPU laptop; stepfun/step-3.7-flash:free and opencode/hy4-flash-free both work without credits.\",\n    \"Not every free model supports tools; verify with a tool-call probe before making it the builder.\"\n  ],\n  \"pending\": [\n    \"Buy the 8 GB DDR4-2666 SO-DIMM (RAM still 8 GB)\",\n    \"Decide on AnyDesk and TeamViewer autostart\",\n    \"Run the elevated Intel telemetry service demotion\",\n    \"Review the remaining cloned repos (repos/ is 1.56 GB and not in git)\"\n  ],\n  \"research\": [\n    { \"topic\": \"heavy RE MCP tooling\", \"finding\": \"rea-lab: 482 runs found no solve-rate gain at ~2x time and cost\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"lean RE skill\", \"finding\": \"leanrea: 8 KB skill, direct shell tools, same accuracy, 38% less time, 35% less cost, 60% fewer tokens\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"official agent patterns\", \"finding\": \"Agent Skills, "
         },
         {
           "heading": "",
           "line": 1,
-          "text": ": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },\n    { \"priority\": \"P1\", \"item\": \"Vitest tests for phase runner\", \"why\": \"Self-modifying team can silently break the 13-phase engine\", \"where\": \"app/tests/\" },\n    { \"priority\": \"P1\", \"item\": \"Model fallback registry\", \"why\": \"Free endpoints return 429/503; fail over, then local lfm3\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Payment guardrails\", \"why\": \"Idempotency, spend cap, audit log before any live mode\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Source provenance UI\", \"why\": \"Make evidence-to-decision auditable\", \"where\": \"app/studio/index.html\" },\n    { \"priority\": \"P2\", \"item\": \"Retrospective-driven prompt rewriting\", \"why\": \"Adapt next round from what failed\", \"where\": \"app/src/studio.js\" }\n  ],\n  \"still_needed\": [\n    \"Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs\",\n    \"Revoke the exposed gho_hV2Y OAuth app on GitHub\",\n    \"Fit an 8 GB DDR4-2666 SO-DIMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (cra"
+          "text": "s, same accuracy, 38% less time, 35% less cost, 60% fewer tokens\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" },\n    { \"topic\": \"official agent patterns\", \"finding\": \"Agent Skills, subagents, hooks, dynamic workflows and agent teams adopted as registries\", \"source\": \"code.claude.com/docs\" },\n    { \"topic\": \"free ecosystems\", \"finding\": \"Grok/Manus/Codex/Hermes/OpenClaw open alternatives studied; MIT/Apache/CC0 patterns only\", \"source\": \"GitHub API\" },\n    { \"topic\": \"pending wave 4\", \"finding\": \"INSTINCTS, AGENT_ACCESS allowlist, run monitor, behaviour recordings and catalogue scaling are documented but not implemented\", \"source\": \"docs/CLAUDE-CODE-DEEP-DIVE.md\" }\n  ],\n  \"recommendations\": [\n    { \"priority\": \"P0\", \"item\": \"Logged-in capture evidence\", \"why\": \"Original target redirects to /login; dashboard cannot be inferred from public pages\", \"where\": \"capture/dashboard/\" },\n    { \"priority\": \"P0\", \"item\": \"Checkpoint/resume in IndexedDB\", \"why\": \"Three builds were lost to crashes and PTY timeouts\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P0\", \"item\": \"One builder at a time\", \"why\": \"Concurrent builders overwrote studio.js\", \"where\": \"craft.json, operator\" },\n    { \"priority\": \"P1\", \"item\": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\""
         },
         {
           "heading": "",
           "line": 1,
-          "text": "windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (craft.json currently paused)\"\n  ]\n}"
+          "text": ": \"Self-evaluation harness\", \"why\": \"Make acceptance criteria machine-checked\", \"where\": \"app/ + rebuild_check\" },\n    { \"priority\": \"P1\", \"item\": \"Visible blackboard panel\", \"why\": \"Shared facts are currently invisible; builder offered it\", \"where\": \"app/studio/\" },\n    { \"priority\": \"P1\", \"item\": \"Vitest tests for phase runner\", \"why\": \"Self-modifying team can silently break the 13-phase engine\", \"where\": \"app/tests/\" },\n    { \"priority\": \"P1\", \"item\": \"Model fallback registry\", \"why\": \"Free endpoints return 429/503; fail over, then local lfm3\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Payment guardrails\", \"why\": \"Idempotency, spend cap, audit log before any live mode\", \"where\": \"app/src/studio.js\" },\n    { \"priority\": \"P2\", \"item\": \"Source provenance UI\", \"why\": \"Make evidence-to-decision auditable\", \"where\": \"app/studio/index.html\" },\n    { \"priority\": \"P2\", \"item\": \"Retrospective-driven prompt rewriting\", \"why\": \"Adapt next round from what failed\", \"where\": \"app/src/studio.js\" }\n  ],\n  \"still_needed\": [\n    \"Logged-in screenshots or saved HTML for the Polsia dashboard and its main tabs\",\n    \"Revoke the exposed gho_hV2Y OAuth app on GitHub\",\n    \"Fit an 8 GB DDR4-2666 SO-DIMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review"
+        },
+        {
+          "heading": "",
+          "line": 1,
+          "text": "IMM\",\n    \"Elevated shell: demote ESRV_SVC_QUEENCREEK and UDCService; run tools/repair-windows-admin.ps1\",\n    \"Decide whether AnyDesk and TeamViewer should autostart\",\n    \"Review the 1.56 GB repos/ folder\",\n    \"Resume only one Craft Anything builder at a time (craft.json currently paused)\"\n  ]\n}"
         }
       ]
     },
@@ -319,6 +324,254 @@
           "heading": "Housekeeping",
           "line": 139,
           "text": "## Housekeeping\n\n- Leave the machine measurably better than you found it: report bytes freed,\n  services changed, and what you did **not** do.\n- Never claim a step succeeded without a command output that shows it.\n- If something is not installed and cannot be found, say **\"it does not exist\n  on this machine\"** rather than assuming it is broken.\n- Keep notes in the vault and commit code; a fix that exists only in a chat\n  log is lost."
+        }
+      ]
+    },
+    {
+      "path": "docs/CLAUDE-CODE-DEEP-DIVE.md",
+      "kind": "md",
+      "title": "Claude Code deep dive — capabilities, free equivalents, what to adopt",
+      "modified": "2026-11-23T10:30:09+00:00",
+      "sha256": "6400255c46d41cac077910fc5f17c2bc4318a6741802e8fe0e7141f6508141e7",
+      "words": 2749,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Claude Code deep dive — capabilities, free equivalents, what to adopt",
+          "line": 1
+        },
+        {
+          "level": 2,
+          "text": "1. What Claude Code actually has now",
+          "line": 7
+        },
+        {
+          "level": 3,
+          "text": "Core engine",
+          "line": 9
+        },
+        {
+          "level": 3,
+          "text": "Skills (the biggest portable idea)",
+          "line": 18
+        },
+        {
+          "level": 3,
+          "text": "Subagents",
+          "line": 40
+        },
+        {
+          "level": 3,
+          "text": "Hooks",
+          "line": 48
+        },
+        {
+          "level": 3,
+          "text": "Agent teams (experimental)",
+          "line": 56
+        },
+        {
+          "level": 3,
+          "text": "Dynamic workflows",
+          "line": 64
+        },
+        {
+          "level": 2,
+          "text": "2. Free / reverse-engineered ecosystem (facts from GitHub API)",
+          "line": 71
+        },
+        {
+          "level": 3,
+          "text": "Safety / licensing boundary",
+          "line": 90
+        },
+        {
+          "level": 2,
+          "text": "3. Gap analysis: what this build is missing",
+          "line": 99
+        },
+        {
+          "level": 2,
+          "text": "4. Concrete adoption plan (implemented in `app/`)",
+          "line": 122
+        },
+        {
+          "level": 2,
+          "text": "4b. Second wave — skill packs and harness frameworks",
+          "line": 144
+        },
+        {
+          "level": 3,
+          "text": "Additional concrete takeaways for this build",
+          "line": 162
+        },
+        {
+          "level": 2,
+          "text": "4c. Third wave — by named agent ecosystem",
+          "line": 188
+        },
+        {
+          "level": 3,
+          "text": "Concrete additions selected from the third wave",
+          "line": 214
+        },
+        {
+          "level": 2,
+          "text": "4d. Fourth wave — general reverse-engineering practice",
+          "line": 236
+        },
+        {
+          "level": 3,
+          "text": "The most decision-relevant evidence",
+          "line": 243
+        },
+        {
+          "level": 3,
+          "text": "Practical patterns worth adopting",
+          "line": 257
+        },
+        {
+          "level": 3,
+          "text": "Not adopted",
+          "line": 282
+        },
+        {
+          "level": 2,
+          "text": "5. Sources",
+          "line": 287
+        }
+      ],
+      "links": [],
+      "chunks": [
+        {
+          "heading": "Claude Code deep dive — capabilities, free equivalents, what to adopt",
+          "line": 1,
+          "text": "# Claude Code deep dive — capabilities, free equivalents, what to adopt\n\nResearch date: 2026-11-23. Primary sources: `code.claude.com/docs` (official),\n`agentskills.io`, and the GitHub REST API for repository/licence facts.\nWeb search was unavailable (HTTP 402); all findings below came from direct fetches."
+        },
+        {
+          "heading": "1. What Claude Code actually has now",
+          "line": 7,
+          "text": "## 1. What Claude Code actually has now"
+        },
+        {
+          "heading": "Core engine",
+          "line": 9,
+          "text": "### Core engine\n- Terminal CLI, IDE extensions (VS Code/Cursor/JetBrains), Desktop app and Web.\n- `CLAUDE.md` / `AGENTS.md` memory files plus **auto memory** that saves learnings\n  across sessions without the user writing anything.\n- Git-native workflow: stages changes, writes commits, branches and opens PRs.\n- Composable CLI: `claude -p \"...\"`, pipes, CI, `--agents`, `--append-subagent-system-prompt`.\n- Scheduling: cloud routines, desktop scheduled tasks, `/loop`.\n- Remote Control, Dispatch, `claude --teleport`, Slack `@Claude`, Chrome debugging."
+        },
+        {
+          "heading": "Skills (the biggest portable idea)",
+          "line": 18,
+          "text": "### Skills (the biggest portable idea)\n`SKILL.md` = YAML frontmatter + Markdown instructions, directory name is the\ncommand. Skills follow the **Agent Skills open standard** (`agentskills.io`),\nso they work across tools. Key frontmatter fields:\n\n| Field | Purpose |\n|---|---|\n| `name`, `description`, `when_to_use` | discovery and auto-invocation |\n| `context: fork`, `agent`, `background` | run in a subagent context |\n| `allowed-tools`, `disallowed-tools` | permission scoping |\n| `model`, `effort` | per-skill model/effort override |\n| `paths` | activate only for matching files |\n| `hooks` | lifecycle hooks registered while the skill is active |\n| `!`command`` | dynamic context injection (runs shell before Claude sees the skill) |\n| `metadata`, `license` | open-standard extension fields |\n\nLocations: managed settings → `~/.claude/skills/` → project `.claude/skills/` →\nnested → plugin → claude.ai sync. Bundled skills include `/doctor`, `/code-review`,\n`/batch`, `/debug`, `/loop`, `/run`, `/verify`, `/run-skill-generator`, `/claude-api`.\n`/run` + `/verify` + a recorded `run-<name>` skill let a project follow a saved\nlaunch/verify recipe instead of rediscovering it."
+        },
+        {
+          "heading": "Subagents",
+          "line": 40,
+          "text": "### Subagents\nMarkdown files with `name`, `description`, `tools`, `disallowedTools`, `model`,\n`permissionMode`, `mcpServers`, `hooks`, `maxTurns`, `skills`, `memory`, `effort`,\n`isolation: worktree`, `color`. Built-ins: Explore (read-only), Plan (read-only),\nGeneral-purpose, `claude`, statusline-setup, claude-code-guide, web-fetch.\nThey preserve context, enforce tool restrictions, route to cheaper models and\ncan run in isolated git worktrees."
+        },
+        {
+          "heading": "Hooks",
+          "line": 48,
+          "text": "### Hooks\n40+ lifecycle events: `SessionStart`, `UserPromptSubmit`, `PreToolUse`,\n`PermissionRequest`, `PostToolUse`, `PostToolUseFailure`, `SubagentStart/Stop`,\n`TaskCreated/Completed`, `Stop`, `StopFailure`, `TeammateIdle`, `PreCompact`,\n`SessionEnd`, `FileChanged`, `ConfigChange`, `Elicitation`, and more.\nHandlers can be `command`, `http`, `mcp_tool`, `prompt` or `agent`; they can deny\nor rewrite tool calls, and `PostToolUse` can auto-format or lint after edits."
+        },
+        {
+          "heading": "Agent teams (experimental)",
+          "line": 56,
+          "text": "### Agent teams (experimental)\n`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`. A lead session spawns teammates that\nhave **separate contexts**, a **shared task list** and a **mailbox**\n(`~/.claude/teams/{team}/inboxes/{agent}.json`). Teammates self-claim unblocked\ntasks, message each other directly, and can be individually steered. Quality\ngates use `TeammateIdle` / `TaskCompleted` hooks (exit 2 = keep working).\nThis is the closest official analogue to the team the user asked for."
+        },
+        {
+          "heading": "Dynamic workflows",
+          "line": 64,
+          "text": "### Dynamic workflows\nA JavaScript script (`agent()`, `pipeline()`, `parallel()`, `phase()`)\norchestrates dozens-to-hundreds of subagents in the background. Plans live in\ncode, not in the model's context; runs are **resumable**, agents auto-retry on\nstall (up to 6 attempts), and results can be cross-checked adversarially.\n`/deep-research` is the bundled example; `ultracode` triggers automatic workflows."
+        },
+        {
+          "heading": "2. Free / reverse-engineered ecosystem (facts from GitHub API)",
+          "line": 71,
+          "text": "## 2. Free / reverse-engineered ecosystem (facts from GitHub API)\n\n| Project | Stars | Licence | Relevance |\n|---|---:|---|---|\n| `milind-soni/OpenMausBot` | 27,013 | Apache-2.0 | Open Grok-bot alternative with a VM agents can use; agent/computer-use patterns |\n| `AgriciDaniel/claude-obsidian` | 16,707 | MIT | Self-organising Obsidian second brain + knowledge graph; directly relevant to vault sync |\n| `ParadevAI/Paradev` | 16,501 | MIT | Open Codex App/Conductor alternative; orchestrates parallel coding agents with your own subscriptions |\n| `nexu-io/openmotion` | 15,561 | Apache-2.0 | Agentic video studio, 300+ Motion.md guides, 22 agents; skill-pack pattern |\n| `HarnessMD/munder-difflin` | 9,700 | MIT | Local multi-provider agent harness / agent teams / custom worlds |\n| `OpenCoworkAI/open-codesign` | 8,249 | MIT | BYOK, local-first, multi-model prompt→prototype/slides/PDF |\n| `ZSeven-W/openpencil` | 7,330 | MIT | AI-native vector design with concurrent agent teams |\n| `kalil0321/reverse-api-engineer` | 4,212 | MIT | Website → typed API client; works with Claude Code, Codex, Cursor, OpenCode |\n| `alejandrobalderas/claude-code-from-source` | 3,017 | **none** | Architecture/patterns reverse-engineered from source maps |\n| `NiazMorshed2007/reanimate` | 2,304 | MIT | Skill that reverse-engineers animation frame-by-frame and proves motion parity |\n| `AIshihzong/awesome-reverse-eng"
+        },
+        {
+          "heading": "2. Free / reverse-engineered ecosystem (facts from GitHub API)",
+          "line": 71,
+          "text": " from source maps |\n| `NiazMorshed2007/reanimate` | 2,304 | MIT | Skill that reverse-engineers animation frame-by-frame and proves motion parity |\n| `AIshihzong/awesome-reverse-engineer-anything` | 873 | CC0-1.0 | Curated REA case list incl. Clean-room and open-source alternatives |\n| `ruvnet/open-claude-code` | 576 | MIT | \"Nightly Claude Code CLI Decompile — Reverse Engineered & Rebuilt\" |\n| `T-Lab-CUHKSZ/claude-code` | 327 | **none** | Buildable research fork from reverse-engineered build system (Bun) |\n| `senlindesign/taste-skill` | 515 | **none** | Skill: extract design tokens + rationale from any site |"
+        },
+        {
+          "heading": "Safety / licensing boundary",
+          "line": 90,
+          "text": "### Safety / licensing boundary\n- MIT/Apache/CC0 projects are safe to **study and reuse patterns from**, with\n  attribution and their licence retained. Do **not** paste their code into `app/`.\n- Repos with **no licence** are not licensed for reuse. Treat them as reading material only.\n- Decompiled/rebuilt Claude Code binaries may breach the Anthropic terms of\n  service and can carry malware or telemetry. **Do not install or run them.**\n- We adopt **open standards and documented behaviour** (Agent Skills, MCP, hooks,\n  subagent frontmatter, workflow shape), not proprietary source or keys."
+        },
+        {
+          "heading": "3. Gap analysis: what this build is missing",
+          "line": 99,
+          "text": "## 3. Gap analysis: what this build is missing\n\nAlready present: 13-phase REA loop, ten inter-agent languages, free-service\nregistry, human gate, checkpoint ledger, project knowledge databases,\nmulti-member auto-selection, message bus, task board, handoffs.\n\nMissing (highest value first):\n\n1. **Skills registry with `SKILL.md` shape** — no reusable, on-demand procedure\n   packages; the team re-derives the same workflows every round.\n2. **Hooks / lifecycle gates** — no automatic policy on tool use, task completion\n   or stop; nothing prevents a bad write or a premature \"done\".\n3. **Subagent definitions** — roles exist as names only; no tool restrictions,\n   model routing, worktree isolation or max-turn limits.\n4. **Workflow engine** — the loop is sequential; no `parallel()`/`pipeline()`\n   fan-out, resume, or adversarial cross-check of findings.\n5. **Agent teams semantics** — no explicit lead/teammate mailbox and shared task\n   claim protocol with file-locking-style safety.\n6. **Auto memory + `/doctor`** — no cross-session learnings or self-checkup that\n   reports and fixes setup problems.\n7. **Recorded run/verify recipe** — builds succeed but the launch/check recipe is\n   not saved as a reusable skill."
+        },
+        {
+          "heading": "4. Concrete adoption plan (implemented in `app/`)",
+          "line": 122,
+          "text": "## 4. Concrete adoption plan (implemented in `app/`)\n\nAdd data-driven registries to `app/src/studio.js`, exposed in the UI:\n\n- `SKILLS`: built-ins `doctor`, `verify`, `run`, `deep-research`, `code-review`,\n  `reverse-api`, `taste-skill`, plus a project `run-<name>` recipe. Fields mirror\n  Agent Skills: `name`, `description`, `when_to_use`, `context`, `allowedTools`,\n  `model`, `paths`, `hooks`.\n- `HOOKS`: events `PreToolUse`, `PostToolUse`, `TaskCompleted`, `Stop`,\n  `SubagentStop`, `TeammateIdle`; handler types `command`, `http`, `mcp_tool`,\n  `prompt`, `agent`; decisions allow/deny/rewrite with a reason.\n- `SUBAGENT_TYPES`: `Explore` (read-only), `Plan` (read-only), `General-purpose`,\n  `web-fetch`, each with `tools`, `model`, `permissionMode`, `maxTurns`,\n  `isolation: worktree`.\n- `WORKFLOWS`: script-shaped phases with `agent()`, `parallel()`, `pipeline()`,\n  resume from saved results, stall retry and adversarial verification.\n- `AGENT_TEAMS`: lead + teammates + shared task list + mailbox, self-claim and\n  direct messaging, with `TeammateIdle`/`TaskCompleted` quality gates.\n- `AUTO_MEMORY`: cross-session facts written to local state, surfaced in reports.\n- `DOCTOR`: checks MCP wiring, provider/model health, free-service registry,\n  broken links and build output; offers fixes."
+        },
+        {
+          "heading": "4b. Second wave — skill packs and harness frameworks",
+          "line": 144,
+          "text": "## 4b. Second wave — skill packs and harness frameworks\n\nA follow-up GitHub API query (`agent-skills in:name,description`, sorted by stars)\nfound much larger, directly reusable ecosystems:\n\n| Project | Stars | Licence | What to take |\n|---|---:|---|---|\n| `mattpocock/skills` | 330,919 | MIT | Practical engineering skills from a real `.agents` directory; skill-shape conventions |\n| `obra/superpowers` | 324,536 | MIT | Agentic skills framework + **subagent-driven development** methodology |\n| `affaan-m/ECC` | 309,231 | MIT | Skills, **instincts**, memory, security and **research-first development** for Claude Code/Codex/OpenCode |\n| `anthropics/skills` | 199,208 | none | Official Agent Skills examples (PDF/XLSX/DOCX/PPTX) — reference only, no licence to copy |\n| `Shubhamsaboo/awesome-llm-apps` | 145,472 | Apache-2.0 | 100+ agents, skills and RAG apps as a discovery catalogue |\n| `JuliusBrussee/caveman` | 122,268 | Apache-2.0 | Token-efficient skill + local proxy: shorter output, smaller tool results, **every original recoverable** |\n| `Leonxlnx/taste-skill` | 120,384 | MIT | Art direction, reference images and browser checks instead of generic AI pages |\n| `addyosmani/agent-skills` | 119,887 | MIT | Production-grade engineering skills for coding agents |\n| `tt-a1i/archify` | 98,934 | Apache-2.0 | Idea/codebase → interactive diagrams (Mermaid/diagrams-as-code) |\n| `OpenMontageInc/"
+        },
+        {
+          "heading": "4b. Second wave — skill packs and harness frameworks",
+          "line": 144,
+          "text": "duction-grade engineering skills for coding agents |\n| `tt-a1i/archify` | 98,934 | Apache-2.0 | Idea/codebase → interactive diagrams (Mermaid/diagrams-as-code) |\n| `OpenMontageInc/OpenMontage` | large | see repo | 12 production pipelines, 100+ tools, 700+ skill/knowledge files |"
+        },
+        {
+          "heading": "Additional concrete takeaways for this build",
+          "line": 162,
+          "text": "### Additional concrete takeaways for this build\n\n1. **Research-first development** (ECC): no implementation until evidence is\n   gathered and cited. Our `discover`/`reverse` phases already do this; make the\n   rule explicit in the phase body.\n2. **Instincts** (ECC): persistent, small learned rules that survive sessions —\n   different from facts in memory. Add an `INSTINCTS` registry that the team\n   writes after a failed approach and reads before each phase.\n3. **Subagent-driven development** (superpowers): decompose a task into\n   independent subagent jobs with verification before merge. Our `WORKFLOWS`\n   registry should require a verifier agent after each builder agent.\n4. **Token efficiency with recoverable originals** (caveman): compress tool\n   output in the channel but store the full original in the project database,\n   with a pointer. This keeps the UI fast without losing evidence.\n5. **Taste / art direction** (taste-skill): when reverse-engineering a visual\n   target, capture not only tokens but the *rationale* (why 480px, why mono)\n   and verify in a browser. Our `taste-skill` built-in should do this.\n6. **Diagrams as code** (archify): use Mermaid for plans and architecture,\n   already supported by `scripts/viz.py`.\n7. **Catalogue discovery**: treat `awesome-llm-apps` and `awesome-reverse-engineer-anything`\n   as append-only source lists, not dependencies.\n\n**Licensi"
+        },
+        {
+          "heading": "Additional concrete takeaways for this build",
+          "line": 162,
+          "text": "orted by `scripts/viz.py`.\n7. **Catalogue discovery**: treat `awesome-llm-apps` and `awesome-reverse-engineer-anything`\n   as append-only source lists, not dependencies.\n\n**Licensing reminder:** MIT/Apache projects may be studied and their patterns\nreimplemented. `anthropics/skills` and projects with no licence are reference\nonly. Never copy code into `app/`; attribute ideas in this document."
+        },
+        {
+          "heading": "4c. Third wave — by named agent ecosystem",
+          "line": 188,
+          "text": "## 4c. Third wave — by named agent ecosystem\n\nGitHub API searches for each named system (stars/licences as of 2026-11-23):\n\n| Ecosystem | Project | Stars | Licence | Best part to take |\n|---|---|---:|---|---|\n| Grok Bot | `milind-soni/OpenMausBot` | 27,013 | Apache-2.0 | VM that bots can use; computer-use patterns |\n| Grok Bot | `HarnessMD/munder-difflin` | 9,700 | MIT | Local multi-provider harness, agent teams, custom worlds |\n| Grok/Manus | `Anil-matcha/suparagent` | 7,156 | Apache-2.0 | **Named AI coworkers with instructions, memory, routines, their own isolated computer, and approval before acting** |\n| Manus | `hexdocom/lemonai` | 1,570 | other | **Self-evolving** local general agent; study the evolution loop only |\n| Manus/ChatGPT | `AFK-surf/open-agent` | 1,063 | Apache-2.0 | Open alternative to Agent SDK/ChatGPT Agents/Manus; multi-agent workspace |\n| Claude Code/Codex/Manus | `Backboard-io/Backboard-Desktop` | 26 | other | Parallel agents, computer use, BYOK, built on Code-OSS |\n| Claude Code | `ParadevAI/Paradev` | 16,501 | MIT | Orchestrate parallel coding agents with your own subscriptions |\n| Claude Code | `ruvnet/open-claude-code` | 576 | MIT | Clean-room rebuild patterns (study only; do not run decompiled binaries) |\n| Claude Code | `alejandrobalderas/claude-code-from-source` | 3,017 | none | Architecture notes from source maps — reference only |\n| Claude Code |"
+        },
+        {
+          "heading": "4c. Third wave — by named agent ecosystem",
+          "line": 188,
+          "text": "o not run decompiled binaries) |\n| Claude Code | `alejandrobalderas/claude-code-from-source` | 3,017 | none | Architecture notes from source maps — reference only |\n| Claude Code | `T-Lab-CUHKSZ/claude-code` | 327 | none | Buildable research fork — reference only |\n| Hermes | `amajorai/ryu` | 45 | other | **Monitor every run and control what agents can access**; plugin-based tools |\n| Hermes | `Colton-z/AstraBox` | 17 | Apache-2.0 | Managed agents on your own infrastructure with **sandbox** |\n| Hermes | `magnusfroste/flowwink` | 26 | MIT | **500+ skills** driving CMS/CRM/ERP; catalogue-at-scale pattern |\n| Hermes | `winnifredbalistreri60-prog/murf` | 2 | MIT | Phone bridge / live agent desktop — remote-control pattern |\n| OpenClaw | `AstrBotDevs/AstrBot` | 47,378 | AGPL-3.0 | IM integrations + plugins + multi-LLM gateway (AGPL: do not copy code) |\n| OpenClaw | `poco-ai/poco-claw` | 1,357 | MIT | **Channel-based team collaboration + sandboxed runtime + nicer Web UI** |\n| OpenClaw | `SimonSchubert/Kai` | 1,365 | Apache-2.0 | Cross-platform (Kotlin Multiplatform) mobile assistant |\n| OpenClaw | `swarmclawai/swarmvault` | 739 | MIT | Local-first **knowledge graph + RAG + durable agent memory** for Claude/Codex/OpenClaw |\n| OpenClaw | `kossakovsky/selfhost-ai` | 964 | Apache-2.0 | One-command self-hosted stack (n8n, Ollama, Qdrant, 30+ tools) |"
+        },
+        {
+          "heading": "Concrete additions selected from the third wave",
+          "line": 214,
+          "text": "### Concrete additions selected from the third wave\n\n1. **Isolated per-member computer** (suparagent): each team member gets a\n   namespaced workspace in the shared state, not just a role label.\n2. **Routines** (suparagent): named recurring jobs per member, in addition to\n   our global auto-mode interval.\n3. **Access-control registry** (ryu) + **sandbox flag** (poco-claw, AstraBox):\n   every tool call checks `AGENT_ACCESS` before running; risky actions are\n   sandboxed or sent to the human gate.\n4. **Run monitor** (ryu): a visible list of active/finished runs with owner,\n   phase, cost/tokens and outcome, not just the activity log.\n5. **Skill catalogue** (flowwink): `SKILLS` should be loaded from a catalogue\n   with tags and counts, not a fixed list; add `CATALOGUES` for external lists.\n6. **Durable agent memory + graph** (swarmvault): our per-project SQLite DB is\n   the memory store; add a `graph` view exporting nodes/edges to Mermaid.\n7. **Self-evolution ledger** (lemonai): record failed approaches as instincts.\n8. **One-command bootstrap** (selfhost-ai): a `bootstrap-free-stack` skill that\n   documents installing only free/self-hosted services.\n\nNot adopted: anti-detect/stealth browser projects (`oss-invisible/dots`) —\nevading bot protections is out of scope and conflicts with our human-oversight rule."
+        },
+        {
+          "heading": "4d. Fourth wave — general reverse-engineering practice",
+          "line": 236,
+          "text": "## 4d. Fourth wave — general reverse-engineering practice\n\nSource: the CC0-licensed `AIshihzong/awesome-reverse-engineer-anything` list,\nfetched directly (287 lines). Every entry is checked and tagged REA / AI-RE /\nRebuild / Claim?. Its own summary is that of six most-shared cases, only one\nactually says it used REA."
+        },
+        {
+          "heading": "The most decision-relevant evidence",
+          "line": 243,
+          "text": "### The most decision-relevant evidence\n\n- `pablodiazjorge/rea-lab`: five preregistered studies, 482 Claude Code runs.\n  **No significant solve-rate gain from REA**; REA runs took about twice the\n  time and cost. Study 2: 11/24 solved without REA vs 4/24 with it (p = 0.092).\n- `aicodeking/leanrea`: one **8 KB skill** that drives Ghidra/Hopper/JADX\n  directly through the shell instead of an MCP layer. 36 runs: same accuracy,\n  **38% less wall time, 35% less cost, 56% fewer turns, 60% fewer tokens**,\n  and 34.5k tokens of context instead of 400.7k. Caveat: three reps per cell,\n  one model, one machine, and the external tools were absent in both arms.\n- Conclusion for us: **prefer lean skills + direct CLI tools over a large MCP\n  layer**. Our use of the Craft Anything CLI rather than loading 300+ tools into\n  context is already the right shape. Keep registries small and load on demand."
+        },
+        {
+          "heading": "Practical patterns worth adopting",
+          "line": 257,
+          "text": "### Practical patterns worth adopting\n\n1. **Hash-pinned evidence + differential tests** (`devtechedge/feature-heist`):\n   every rebuild stores the evidence with a hash and has a differential test\n   against the original. Our project DB already stores sha256 per source; add\n   a differential check to `verify`.\n2. **Behaviour recordings** (`erkamyaman/rust-anything`, `ruguevara/zx-reaper`,\n   `AsyncFinn/rook`): record what the original returns/throws, rewrite one\n   piece, replay the recording, then move on. This is stronger than visual\n   similarity alone. Add a `BEHAVIOUR_RECORDINGS` ledger.\n3. **Evidence IDs on every conclusion** (`pablodiazjorge/rea-casebook`): no\n   finding without a cited `evidence_id`. Craft Anything already does this;\n   require it in our report template.\n4. **Sandbox + tool allowlist + hash-approved inputs** (`dagoSte/rea-safe-agents`,\n   `lalbers/agent-sandbox`): no network, read-only roots, no capabilities, and\n   only an allowlisted subset of tools. Maps directly onto our planned\n   `AGENT_ACCESS` registry and human gate.\n5. **Findings → spec → architecture → plan → validation**\n   (`ShadowSwaps/REA-Reconstruction-Companion`): our `intake`/`plan` phases\n   should emit these five artefacts explicitly.\n6. **Clean-room default, deep mode opt-in** (Craft Anything itself): keep\n   `clean_room: false` only in deep mode; never copy proprietary code.\n7. **Leg"
+        },
+        {
+          "heading": "Practical patterns worth adopting",
+          "line": 257,
+          "text": "five artefacts explicitly.\n6. **Clean-room default, deep mode opt-in** (Craft Anything itself): keep\n   `clean_room: false` only in deep mode; never copy proprietary code.\n7. **Legal boundary** (the whole list): own-copy only, interoperability,\n   research and preservation. No DRM circumvention, no shipping original assets."
+        },
+        {
+          "heading": "Not adopted",
+          "line": 282,
+          "text": "### Not adopted\n\nStatic recompilation of commercial games, console ports, anti-bot/stealth\nprojects, and anything requiring a legally purchased original we do not have."
+        },
+        {
+          "heading": "5. Sources",
+          "line": 287,
+          "text": "## 5. Sources\n\n- https://code.claude.com/docs/en/overview\n- https://code.claude.com/docs/en/skills\n- https://code.claude.com/docs/en/sub-agents\n- https://code.claude.com/docs/en/hooks\n- https://code.claude.com/docs/en/workflows\n- https://code.claude.com/docs/en/agent-teams\n- https://agentskills.io\n- GitHub REST search API queries above (stars and licences as of 2026-11-23)\n- https://github.com/AIshihzong/awesome-reverse-engineer-anything (CC0-1.0)\n- https://github.com/pablodiazjorge/rea-lab, https://github.com/aicodeking/leanrea\n- https://github.com/devtechedge/feature-heist, https://github.com/erkamyaman/rust-anything\n- https://github.com/dagoSte/rea-safe-agents, https://github.com/lalbers/agent-sandbox\n- https://github.com/ShadowSwaps/REA-Reconstruction-Companion\n- https://github.com/mattpocock/skills, https://github.com/obra/superpowers,\n  https://github.com/affaan-m/ECC, https://github.com/anthropics/skills,\n  https://github.com/Shubhamsaboo/awesome-llm-apps,\n  https://github.com/JuliusBrussee/caveman,\n  https://github.com/Leonxlnx/taste-skill,\n  https://github.com/addyosmani/agent-skills,\n  https://github.com/tt-a1i/archify,\n  https://github.com/OpenMontageInc/OpenMontage"
         }
       ]
     },
@@ -1039,9 +1292,9 @@
       "path": "docs/TEAM-BRIEF.md",
       "kind": "md",
       "title": "Team workflow brief — polsia free v1",
-      "modified": "2026-11-23T09:58:14+00:00",
-      "sha256": "5384c210ad9d8e3862832f658e217a7a8d644c8977c6c54d3306779d61d15b5f",
-      "words": 1933,
+      "modified": "2026-11-23T10:39:52+00:00",
+      "sha256": "cb128c5bf8cfdd24c07cffe36a3100e19c947f78ed46194c27ad366c10f81782",
+      "words": 2110,
       "headings": [
         {
           "level": 1,
@@ -1089,34 +1342,39 @@
           "line": 87
         },
         {
-          "level": 3,
-          "text": "5b. Free services instead of paid ones",
+          "level": 4,
+          "text": "Byte-by-byte reverse-engineering rule (mandatory)",
           "line": 118
         },
         {
           "level": 3,
+          "text": "5b. Free services instead of paid ones",
+          "line": 135
+        },
+        {
+          "level": 3,
           "text": "5c. Human gate — only what the person must do",
-          "line": 138
+          "line": 155
         },
         {
           "level": 3,
           "text": "6. Payments (commerce, not feature gates)",
-          "line": 154
+          "line": 171
         },
         {
           "level": 3,
           "text": "7. Self-improvement of delivery",
-          "line": 164
+          "line": 181
         },
         {
           "level": 3,
           "text": "8. Constraints",
-          "line": 173
+          "line": 190
         },
         {
           "level": 2,
           "text": "Acceptance criteria",
-          "line": 183
+          "line": 200
         }
       ],
       "links": [],
@@ -1169,51 +1427,56 @@
         {
           "heading": "5. Autonomy — the continuous REA loop",
           "line": 87,
-          "text": "### 5. Autonomy — the continuous REA loop\n\nGiven a task, the team runs this loop **without hand-holding**, and keeps\ncycling until the task's acceptance criteria pass or a human-only item blocks it:\n\n| # | Phase | Key | What must happen |\n|---|---|---|---|\n| 1 | Intake + gap analysis | `intake` | Restate the task, write acceptance criteria, list what is known/unknown, identify exactly what is missing and what the user must supply. Produce a gap list with severity. |\n| 2 | Plan | `plan` | Decompose the gaps into role-sized jobs, assign owners, set order and dependencies. |\n| 3 | Internet + open resources | `discover` | Search the internet for similar builds, prior art, docs and data. Check open-source repos, public datasets and free services. Record each source with a URL and a one-line finding. |\n| 4 | Reverse-engineer closed sources | `reverse` | Where a target is closed, inspect what is observable: page/HTML, JS bundles, network requests, file formats, strings and behaviour. Record evidence; never copy proprietary code into `app/`. |\n| 5 | Automatic setup | `setup` | Install/configure whatever the build needs: tools, free-tier accounts/endpoints, model providers, storage and integrations. Use free substitutes for paid services (see registry). |\n| 6 | Build | `build` | Produce the first working version from the gathered evidence. |\n| 7 | Test | `test` | Run automated checks: b"
+          "text": "### 5. Autonomy — the continuous REA loop\n\nGiven a task, the team runs this loop **without hand-holding**, and keeps\ncycling until the task's acceptance criteria pass or a human-only item blocks it:\n\n| # | Phase | Key | What must happen |\n|---|---|---|---|\n| 1 | Intake + gap analysis | `intake` | Restate the task, write acceptance criteria, list what is known/unknown, identify exactly what is missing and what the user must supply. Produce a gap list with severity. |\n| 2 | Plan | `plan` | Decompose the gaps into role-sized jobs, assign owners, set order and dependencies. |\n| 3 | Internet + open resources | `discover` | Search the internet for similar builds, prior art, docs and data. Check open-source repos, public datasets and free services. Record each source with a URL and a one-line finding. |\n| 4 | Reverse-engineer closed sources | `reverse` | **Byte-by-byte, bit-by-bit sweep** of every available artifact: file ranges, headers, strings, offsets, bundles, network requests, formats and behaviour. Account for **100% of bytes**; anything not understood goes into the unknown ledger with its offset range. Record evidence; never copy proprietary code into `app/`. |\n| 5 | Automatic setup | `setup` | Install/configure whatever the build needs: tools, free-tier accounts/endpoints, model providers, storage and integrations. Use free substitutes for paid services (see registry). |\n| 6 "
         },
         {
           "heading": "5. Autonomy — the continuous REA loop",
           "line": 87,
-          "text": "ubstitutes for paid services (see registry). |\n| 6 | Build | `build` | Produce the first working version from the gathered evidence. |\n| 7 | Test | `test` | Run automated checks: build, links, console errors, unit tests, visual comparison. |\n| 8 | Check / verify | `check` | Independent review against the acceptance criteria by roles that did not build it. |\n| 9 | Fix errors | `fix` | Correct every failure; re-run the failing check. |\n| 10 | Amend | `amend` | Improve the result using new evidence: wording, layout, logic, data and missing content. |\n| 11 | Implement | `implement` | Integrate the amended work, rebuild and freeze a version. |\n| 12 | Report + retrospective | `report` | Write the round report, what changed, what is still blocked, and the next improvement. |\n| 13 | Loop | `loop` | If any acceptance criterion fails, return to phase 3 (new evidence) or 6 (rebuild) with a new attempt. Continue until achieved or blocked only on the human gate. |\n\nRules:\n\n- A task is `done` only when every acceptance criterion passes and the gap\n  list is closed. \"Good enough\" is not a stopping condition.\n- Failures never end the loop: retry with a different approach, then hand the\n  job to another role if it stays blocked.\n- `PHASES` in code must be data-driven so new phases can be added without\n  rewriting the runner.\n- The activity log must show phase, attempt number, evidence used and "
+          "text": "ll/configure whatever the build needs: tools, free-tier accounts/endpoints, model providers, storage and integrations. Use free substitutes for paid services (see registry). |\n| 6 | Build | `build` | Produce the first working version from the gathered evidence. |\n| 7 | Test | `test` | Run automated checks: build, links, console errors, unit tests, visual comparison. |\n| 8 | Check / verify | `check` | Independent review against the acceptance criteria by roles that did not build it. |\n| 9 | Fix errors | `fix` | Correct every failure; re-run the failing check. |\n| 10 | Amend | `amend` | Improve the result using new evidence: wording, layout, logic, data and missing content. |\n| 11 | Implement | `implement` | Integrate the amended work, rebuild and freeze a version. |\n| 12 | Report + retrospective | `report` | Write the round report, what changed, what is still blocked, and the next improvement. |\n| 13 | Loop | `loop` | If any acceptance criterion fails, return to phase 3 (new evidence) or 6 (rebuild) with a new attempt. Continue until achieved or blocked only on the human gate. |\n\nRules:\n\n- A task is `done` only when every acceptance criterion passes and the gap\n  list is closed. \"Good enough\" is not a stopping condition.\n- Failures never end the loop: retry with a different approach, then hand the\n  job to another role if it stays blocked.\n- `PHASES` in code must be data-driven "
         },
         {
           "heading": "5. Autonomy — the continuous REA loop",
           "line": 87,
-          "text": "ys blocked.\n- `PHASES` in code must be data-driven so new phases can be added without\n  rewriting the runner.\n- The activity log must show phase, attempt number, evidence used and owner."
+          "text": "stopping condition.\n- Failures never end the loop: retry with a different approach, then hand the\n  job to another role if it stays blocked.\n- `PHASES` in code must be data-driven so new phases can be added without\n  rewriting the runner.\n- The activity log must show phase, attempt number, evidence used and owner."
+        },
+        {
+          "heading": "Byte-by-byte reverse-engineering rule (mandatory)",
+          "line": 118,
+          "text": "#### Byte-by-byte reverse-engineering rule (mandatory)\n\nWhen the `reverse` phase runs, the team must not skim or sample an artifact:\n\n1. Record the artifact's total byte length and sha256 before analysis.\n2. Walk it in explicit ranges (headers, tables, strings, code, data, padding),\n   keeping an `analysed_bytes` total. `coverage = analysed_bytes / total_bytes`.\n3. Every range gets a finding (what it is) or an unknown entry with its offset\n   range and why it could not be understood. No silent skipping.\n4. A reverse-engineering gap closes only at **100% accounted coverage**, even\n   if some ranges are recorded as unknown. Unknowns are carried into the next\n   round and re-probed with a different tool or model.\n5. Findings must be evidence-backed (offset + hash + observed bytes/output).\n   Behavioural claims get a differential replay, not an assumption.\n6. Binary/compressed/encrypted regions are still accounted for by range and\n   hash; do not attempt DRM circumvention — record them as unknown and stop."
         },
         {
           "heading": "5b. Free services instead of paid ones",
-          "line": 118,
+          "line": 135,
           "text": "### 5b. Free services instead of paid ones\n\nKeep a `FREE_SERVICES` registry that maps a paid capability to a free/open\nsubstitute and uses it automatically unless the user supplies their own:\n\n| Paid capability | Free substitute |\n|---|---|\n| Search / web data | Marginalia, Hacker News, Wikipedia, direct site fetch, Bing/DDG HTML, user's browser via `browse` MCP |\n| LLM inference | Nous free tier models, OpenCode free models, local Ollama fallback |\n| Repo / hosting | GitHub free, GitHub Pages, local git |\n| Storage / DB | IndexedDB + local SQLite knowledge databases in this repo |\n| Diagrams / docs | Mermaid, Markdown, Open XML (.docx/.xlsx/.pptx), CSV, SVG, HTML |\n| Email reports | `mailto:` draft plus a user-configured free webhook |\n| Payments | Stripe/PayPal **test mode** with the user's own key; no gating of features |\n| OCR / PDF / media | Local Python libs already installed (pypdf, Pillow, pandas) |\n\nEvery substitute records `substitutesFor`, cost `0`, and a source URL. If a\nfree option cannot do the job, the team produces a user handoff card instead\nof silently failing or buying anything."
         },
         {
           "heading": "5c. Human gate — only what the person must do",
-          "line": 138,
+          "line": 155,
           "text": "### 5c. Human gate — only what the person must do\n\nWhen a step needs a login, API key, payment credential, irreversible action or\nauthorisation, the team must not stop the whole loop. It creates a **handoff\ncard** containing:\n\n- exactly what is needed and why (one short paragraph),\n- a numbered click-by-click walkthrough to get it,\n- the precise field/link/permission required,\n- which task and phase is waiting,\n- a \"continue without it\" fallback if one exists.\n\nAll other members keep working on independent gaps. Once the user supplies the\nitem, the waiting phase resumes automatically. Authorisation given once is\nremembered; only sensitive or irreversible actions ask again."
         },
         {
           "heading": "6. Payments (commerce, not feature gates)",
-          "line": 154,
+          "line": 171,
           "text": "### 6. Payments (commerce, not feature gates)\n\n- The app must be able to **take payments** for real transactions through a\n  payment provider the person configures (e.g. Stripe or PayPal, test mode by\n  default): create an invoice/checkout, record the transaction, issue a receipt.\n- This is **not** a subscription, credit system or paywall. No feature, core,\n  module or function may require payment to activate. The earlier requirement\n  \"no paid feature gates\" still wins.\n- Never hard-code keys or treat a payment as permission to use a feature."
         },
         {
           "heading": "7. Self-improvement of delivery",
-          "line": 164,
+          "line": 181,
           "text": "### 7. Self-improvement of delivery\n\n- At the end of each round the team writes a short **retrospective** into local\n  state: what failed, what was retried, what worked, what to change next time.\n- Track a simple completion metric (tasks done / attempted, retries, blocked\n  items) and show it in the UI.\n- Failed tasks go back on the board with a different owner or approach instead\n  of disappearing."
         },
         {
           "heading": "8. Constraints",
-          "line": 173,
+          "line": 190,
           "text": "### 8. Constraints\n\n- Keep the captured visual design: same fonts, 480 px column, breakpoints,\n  monochrome palette and no sideways scroll on phone.\n- No subscription, credits, tokens-to-buy or paid feature gates anywhere.\n- Everything runs locally in the browser unless the person configures their own\n  endpoint. Do not paste the original site's code into `app/`.\n- Only edit files inside `app/`. Build with `npm run build` until `dist/` is\n  produced, then run the Craft Anything visual check and fix what it reports."
         },
         {
           "heading": "Acceptance criteria",
-          "line": 183,
+          "line": 200,
           "text": "## Acceptance criteria\n\n1. There is **no control to pick a member**. The person only enters a task and\n   presses Go.\n2. Submitting a normal task automatically activates **more than one** member;\n   each shows `working` at the same time, with a visible reason for selection.\n3. A single member is active only for genuinely single-role tasks, and the UI\n   says why. This is automatic, not chosen by the person.\n4. A message from one member appears in the shared channel and can be addressed\n   to another member, who responds or produces a handoff artefact.\n5. The task board updates automatically as work moves between members.\n6. Authorisation is requested once, then remembered.\n7. Auto-mode interval selector includes hours/days/weeks/months/years/non-stop.\n8. A task runs the full 13-phase REA loop (intake/gap analysis → plan →\n   discover internet+open resources → reverse-engineer closed sources →\n   automatic setup → build → test → check → fix → amend → implement → report →\n   loop) without manual steps. It keeps cycling until every acceptance\n   criterion passes or a human-only item is handed off.\n9. A payment integration can create a test-mode checkout and record it, while\n   no feature is locked behind payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with it"
         },
         {
           "heading": "Acceptance criteria",
-          "line": 183,
+          "line": 200,
           "text": " payment.\n10. Each round produces a retrospective and a visible completion metric.\n11. At least ten communication languages/types are supported, each message is\n   labelled with its type, the channel can be filtered by type, and new types\n   are added through a registry.\n12. A `FREE_SERVICES` registry maps paid capabilities to free substitutes and\n   uses them automatically; no paid tool is required to complete a task.\n13. Human-only items produce a handoff card with the walkthrough and the exact\n   field/permission needed, while other members keep working.\n14. The gap list, sources with URLs, attempts and evidence are visible in the UI\n   and written into the round report.\n15. `npm run build` succeeds and the visual check still passes."
         }
       ]
@@ -2547,9 +2810,9 @@
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "md",
       "title": "2026-11-23 - Idle commit hogs, GitHub credential audit",
-      "modified": "2026-11-23T10:15:41+00:00",
-      "sha256": "f936e86b20872c36a71a5df6d48e1570473666c2934e514090148bfd51b15689",
-      "words": 2249,
+      "modified": "2026-11-23T10:38:17+00:00",
+      "sha256": "fbf56aad9b254b700f452f0bd5d74fc41f5229c6ab927dba7c2bd8cca7dfaabd",
+      "words": 2438,
       "headings": [
         {
           "level": 1,
@@ -2655,6 +2918,11 @@
           "level": 2,
           "text": "Requests queued (for this machine's new build)",
           "line": 281
+        },
+        {
+          "level": 2,
+          "text": "Claude Code / free reverse-engineered ecosystem deep dive",
+          "line": 289
         }
       ],
       "links": [],
@@ -2773,6 +3041,11 @@
           "heading": "Requests queued (for this machine's new build)",
           "line": 281,
           "text": "## Requests queued (for this machine's new build)\n\n- Push `data/knowledge.db` and the docs even though `*.db` is gitignored -\n  fix `.gitignore` negation.\n- Repurpose Craft Anything's built-in agent (OpenCode is verified-working) or\n  a cloud provider on the desktop; the local 1.7B cannot drive the 9k-char\n  build reliably."
+        },
+        {
+          "heading": "Claude Code / free reverse-engineered ecosystem deep dive",
+          "line": 289,
+          "text": "## Claude Code / free reverse-engineered ecosystem deep dive\n- Added `docs/CLAUDE-CODE-DEEP-DIVE.md` (official docs + GitHub API evidence).\n- Adopted official capabilities as data-driven registries in `app/src/studio.js`:\n  `SKILLS` (31 refs), `HOOKS` (31), `SUBAGENT_TYPES` (5), `WORKFLOWS` (27),\n  `AGENT_TEAMS` (8), `AUTO_MEMORY` (3), `DOCTOR` (38). Studio is 2,141 lines.\n  `npm run build` succeeds; visual check 81%, 30/30 claims.\n- Key evidence: `rea-lab` (482 runs) found no solve-rate gain from heavy RE MCP\n  tooling at ~2x time/cost; `leanrea` (8 KB skill, direct shell tools) matched\n  accuracy with 38% less time, 35% less cost, 60% fewer tokens. Policy: small\n  registries, on-demand loading, direct CLI tools.\n- Studied free/RE projects by ecosystem: Grok (OpenMausBot, munder-difflin,\n  suparagent), Manus (lemonai, open-agent), Codex/Claude (Paradev, Backboard,\n  open-claude-code), Hermes (ryu, AstraBox, flowwink), OpenClaw (AstrBot,\n  poco-claw, Kai, swarmvault), plus skill packs (superpowers, ECC, caveman,\n  archify, taste-skill).\n- Wave 4 still in docs only, not code: `INSTINCTS`, `AGENT_ACCESS` allowlist,\n  run monitor, behaviour recordings, skill catalogue scaling.\n- Licensing: MIT/Apache/CC0 patterns only; unlicensed/decompiled repos are\n  reference material. Never install decompiled binaries or copy their code."
         }
       ]
     },
@@ -2868,9 +3141,9 @@
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "md",
       "title": "Master Project Tracker — Hive Mind",
-      "modified": "2026-11-23T10:15:48+00:00",
-      "sha256": "974e8232a9ba359ba4268b8c98c7e1bcd95f9b529a8952c36830fdea38bbad0d",
-      "words": 2057,
+      "modified": "2026-11-23T10:38:37+00:00",
+      "sha256": "d17bf4e75b10db9f118dc328598d62b4d74a7bcb37b9d33fe78affa7bb6b2810",
+      "words": 2133,
       "headings": [
         {
           "level": 1,
@@ -3021,6 +3294,11 @@
           "level": 3,
           "text": "Pending - needs elevation or a human",
           "line": 250
+        },
+        {
+          "level": 3,
+          "text": "Claude Code + REA research - complete",
+          "line": 253
         }
       ],
       "links": [],
@@ -3189,6 +3467,11 @@
           "heading": "Pending - needs elevation or a human",
           "line": 250,
           "text": "### Pending - needs elevation or a human\n- Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell."
+        },
+        {
+          "heading": "Claude Code + REA research - complete",
+          "line": 253,
+          "text": "### Claude Code + REA research - complete\n- `docs/CLAUDE-CODE-DEEP-DIVE.md`: official skills/subagents/hooks/workflows/\n  agent-teams, plus free reverse-engineered ecosystems and controlled evidence.\n- Implemented in `app/`: SKILLS, HOOKS, SUBAGENT_TYPES, WORKFLOWS, AGENT_TEAMS,\n  AUTO_MEMORY, DOCTOR. Build passes; visual check 81%, 30/30 claims.\n- Documented but not yet in code: INSTINCTS, AGENT_ACCESS allowlist, run monitor,\n  behaviour recordings, catalogue scaling (wave 4 of the deep dive).\n- Policy: lean registries + direct CLI tools; MIT/Apache/CC0 patterns only."
         }
       ]
     },
@@ -3749,9 +4032,9 @@
       "path": "README.md",
       "kind": "md",
       "title": "Hive Mind REA Template",
-      "modified": "2026-11-23T10:15:33+00:00",
-      "sha256": "52d239a98cd8648b6dc8a91f16100918e55d2b9164e50a1627b9bebc16ffd979",
-      "words": 2422,
+      "modified": "2026-11-23T10:37:46+00:00",
+      "sha256": "a63eb9b06308f0ffbd51444e974ed0f7a5223dfe6ac0635189d10d7e0c76a175",
+      "words": 2464,
       "headings": [
         {
           "level": 1,
@@ -3826,70 +4109,71 @@
         {
           "level": 2,
           "text": "REA loop",
-          "line": 243
+          "line": 248
         },
         {
           "level": 2,
           "text": "Moving to a Windows 10 desktop",
-          "line": 256
+          "line": 261
         },
         {
           "level": 2,
           "text": "Troubleshooting",
-          "line": 303
+          "line": 308
         },
         {
           "level": 3,
           "text": "\"The agent stops mid-prompt and never finishes\"",
-          "line": 305
+          "line": 310
         },
         {
           "level": 3,
           "text": "A `rea` MCP server closes immediately",
-          "line": 316
+          "line": 321
         },
         {
           "level": 3,
           "text": "`pip` fails with `No module named 'pip._vendor...'`",
-          "line": 334
+          "line": 339
         },
         {
           "level": 3,
           "text": "Craft Anything says \"not installed\" but it is",
-          "line": 343
+          "line": 348
         },
         {
           "level": 3,
           "text": "Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`",
-          "line": 349
+          "line": 354
         },
         {
           "level": 3,
           "text": "Craft Anything or Hermes sits for 15 minutes with no output",
-          "line": 355
+          "line": 360
         },
         {
           "level": 2,
           "text": "Verified status",
-          "line": 379
+          "line": 384
         },
         {
           "level": 2,
           "text": "Requirements",
-          "line": 404
+          "line": 409
         },
         {
           "level": 2,
           "text": "Related repos",
-          "line": 419
+          "line": 424
         },
         {
           "level": 2,
           "text": "Contributing",
-          "line": 429
+          "line": 434
         }
       ],
       "links": [
+        "docs/CLAUDE-CODE-DEEP-DIVE.md",
         "docs/RECOMMENDATIONS.md",
         "https://github.com/jayprophit/Aetherius-OS",
         "https://github.com/jayprophit/Agent-Bridge",
@@ -3967,76 +4251,76 @@
         {
           "heading": "Knowledge base (pull this first)",
           "line": 213,
-          "text": "## Knowledge base (pull this first)\n\n`data/` is a self-contained, offline index of the repo plus the verified build\nfacts. It is committed, so a fresh clone on the desktop has it immediately.\n\n| File | Use |\n|---|---|\n| `data/build-facts.json` | machine, toolchain, MCP, projects, lessons, pending work |\n| `data/knowledge.db` | SQLite + FTS5; any language or DB browser can read it |\n| `data/index.json` | structured dump for diffs and non-SQL tools |\n| `scripts/build_index.py` | rebuild both after editing docs |\n| `scripts/query.py` | search and read from the terminal |\n\n```bash\npython scripts/query.py --stats\npython scripts/query.py --search \"bios ram\"\npython scripts/query.py --facts machine\npython scripts/query.py --facts pending\npython scripts/query.py --doc docs/MCP-WIRING.md\n```\n\nOn the desktop, the same commands work after `git clone`; nothing needs a\nnetwork connection or an API key. See `data/README.md` for the schema.\n\nPrioritised next steps and the outstanding asks are in\n[`docs/RECOMMENDATIONS.md`](docs/RECOMMENDATIONS.md) and queryable with\n`python scripts/query.py --facts recommendations`.\n\n---"
+          "text": "## Knowledge base (pull this first)\n\n`data/` is a self-contained, offline index of the repo plus the verified build\nfacts. It is committed, so a fresh clone on the desktop has it immediately.\n\n| File | Use |\n|---|---|\n| `data/build-facts.json` | machine, toolchain, MCP, projects, lessons, pending work |\n| `data/knowledge.db` | SQLite + FTS5; any language or DB browser can read it |\n| `data/index.json` | structured dump for diffs and non-SQL tools |\n| `scripts/build_index.py` | rebuild both after editing docs |\n| `scripts/query.py` | search and read from the terminal |\n\n```bash\npython scripts/query.py --stats\npython scripts/query.py --search \"bios ram\"\npython scripts/query.py --facts machine\npython scripts/query.py --facts pending\npython scripts/query.py --doc docs/MCP-WIRING.md\n```\n\nOn the desktop, the same commands work after `git clone`; nothing needs a\nnetwork connection or an API key. See `data/README.md` for the schema.\n\nPrioritised next steps and the outstanding asks are in\n[`docs/RECOMMENDATIONS.md`](docs/RECOMMENDATIONS.md) and queryable with\n`python scripts/query.py --facts recommendations`.\n\nDeep research into Claude Code's skills/subagents/hooks/workflows/agent-teams,\nplus the free reverse-engineered ecosystems (Grok Bot, Manus, Codex, Hermes,\nOpenClaw) and general REA practice, is in\n[`docs/CLAUDE-CODE-DEEP-DIVE.md`](docs/CLAUDE-CODE-DEEP-DIVE.md).\n\n---"
         },
         {
           "heading": "REA loop",
-          "line": 243,
+          "line": 248,
           "text": "## REA loop\n\n```\nPlan → Design → Build → Check → Research → Recheck → Build → Fix → Amend\n  → Compare → Feedback → Fine-tune → Plan → Build → Discovery → Test\n  → Compare → Gather data → Weakness/Gaps → Improve → Next version\n```\n\nEach pass ends with a written row in `Daily/` and `Work/PROJECT_MATRIX.md`.\nThe vault is the memory; the loop is the thing that keeps it honest.\n\n---"
         },
         {
           "heading": "Moving to a Windows 10 desktop",
-          "line": 256,
+          "line": 261,
           "text": "## Moving to a Windows 10 desktop\n\n1. **Install prerequisites** on the desktop: Git, Python 3.10+, Node LTS, Ollama.\n   ```powershell\n   winget install --id Git.Git -e\n   winget install --id OpenJS.NodeJS.LTS -e\n   winget install --id Ollama.Ollama -e\n   ```\n2. **Clone, don't copy.** Copying a working tree brings stale locks with it.\n   ```powershell\n   git clone https://github.com/jayprophit/hive-mind-rea-template.git C:\\hive\n   cd C:\\hive\n   ```\n3. **Check the machine before changing it.**\n   ```powershell\n   python scripts\\doctor.py\n   ```\n4. **Apply config.**\n   ```powershell\n   python scripts\\bootstrap.py --apply --scaffold-vault\n   ```\n5. **Pull one model only** until you know the RAM headroom.\n   ```powershell\n   ollama pull lfm3:1.7b\n   ```\n6. **Run the maintenance script** once, elevated, to clear caches and check drivers.\n7. **Merge your notes.** Copy only `.md` files from the old vault — never `.obsidian/`\n   workspace state, which is per-machine.\n8. **Wire Craft Anything to every agent, then prove it works.**\n   ```powershell\n   .\\tools\\wire-craft-anything.ps1 -Agent opencode,hermes\n   .\\tools\\agent-preflight.ps1 -StartProvider\n   ```\n   Do this before the first build. It catches a stopped Ollama, a missing MCP entry,\n   or a model that returns empty content — the three causes of a silent 15-minute run.\n   Details: `docs/MCP-WIRING.md`.\n\nWindows 10 differences that "
         },
         {
           "heading": "Moving to a Windows 10 desktop",
-          "line": 256,
+          "line": 261,
           "text": " Ollama, a missing MCP entry,\n   or a model that returns empty content — the three causes of a silent 15-minute run.\n   Details: `docs/MCP-WIRING.md`.\n\nWindows 10 differences that matter:\n\n- PowerShell 5.1 is the default shell. `scripts/doctor.py` and `bootstrap.py` avoid\n  PowerShell-only syntax, so they behave the same there.\n- `winget` may need the App Installer update from the Store before it works.\n- Windows 10 has no `SetConsoleMode` VT by default in older builds; `doctor.py`\n  falls back to plain text automatically.\n\n---"
         },
         {
           "heading": "Troubleshooting",
-          "line": 303,
+          "line": 308,
           "text": "## Troubleshooting"
         },
         {
           "heading": "\"The agent stops mid-prompt and never finishes\"",
-          "line": 305,
+          "line": 310,
           "text": "### \"The agent stops mid-prompt and never finishes\"\n\nCheck the provider balance, not the MCP server. In the reference build this was\n`AI.Error: Insufficient balance` from the hosted provider — the local stack was fine.\nRun `python scripts/doctor.py`; if every local check passes, the failure is upstream.\nPoint the agent at a local model to confirm:\n\n```bash\nopencode --model ollama/lfm3:1.7b\n```"
         },
         {
           "heading": "A `rea` MCP server closes immediately",
-          "line": 316,
+          "line": 321,
           "text": "### A `rea` MCP server closes immediately\n\nCorrupted `npx` cache — the module graph is incomplete. Symptom:\n\n```\nERR_MODULE_NOT_FOUND: Cannot find module '@jridgewell/trace-mapping'\n```\n\nFix:\n\n```bash\nrm -rf ~/AppData/Local/npm-cache/_npx/*   # Windows\nrm -rf ~/.npm/_npx/*                      # macOS / Linux\nnpx -y rea-agents@6.7.0 --version         # verify, then restart Hermes\n```\n\n`rea` also needs `REA_PWNTOOLS_PYTHON` set to a Python with `pwntools` installed."
         },
         {
           "heading": "`pip` fails with `No module named 'pip._vendor...'`",
-          "line": 334,
+          "line": 339,
           "text": "### `pip` fails with `No module named 'pip._vendor...'`\n\nA corrupted pip install. Repair in place:\n\n```bash\npython -m ensurepip --upgrade\npython -m pip install --user pwntools\n```"
         },
         {
           "heading": "Craft Anything says \"not installed\" but it is",
-          "line": 343,
+          "line": 348,
           "text": "### Craft Anything says \"not installed\" but it is\n\nGUI installers do not add themselves to `PATH`. `doctor.py` and `bootstrap.py` probe\nthe conventional install roots (`C:\\Program Files\\Craft Anything`,\n`/Applications/Craft Anything.app/Contents/MacOS`, `~/.local/bin`) before giving up."
         },
         {
           "heading": "Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`",
-          "line": 349,
+          "line": 354,
           "text": "### Hermes: `Failed to load plugin 'obsidian-memory': No __init__.py`\n\nv3 of that plugin is dashboard-only. The loader expects an importable package.\nAdd a one-line `__init__.py` in the plugin directory, or disable the plugin — the\ndashboard mounts from `dashboard/api.py` regardless."
         },
         {
           "heading": "Craft Anything or Hermes sits for 15 minutes with no output",
-          "line": 355,
+          "line": 360,
           "text": "### Craft Anything or Hermes sits for 15 minutes with no output\n\nThat is a dead run, not slow work. It has three usual causes, in this order:\n\n1. **The model provider is down.** Hermes' `provider: custom` points at\n   `http://127.0.0.1:11434/v1`; if Ollama was stopped to save RAM, every call\n   times out three times and Hermes exits `2`.\n2. **The model cannot act.** A model with no chat template (e.g. `bonsai-2:4b`,\n   `TEMPLATE {{ .Prompt }}`) burns hidden tokens and returns empty content.\n   Measured here: 57.7 s and ~200 tokens to answer \"OK\".\n3. **Two runs collide.** Craft Anything retries every ~90 s; a manual\n   `hermes -z ...` at the same time produces `Gateway disconnected`.\n\nRun the preflight before the build, and only one builder at a time:\n\n```powershell\n.\\tools\\agent-preflight.ps1 -StartProvider\n```\n\nIt tests the MCP handshake (38 tools), the OpenCode and Hermes entries, the\nprovider, and a real model reply. Full diagnosis: `docs/MCP-WIRING.md`.\n\n---"
         },
         {
           "heading": "Verified status",
-          "line": 379,
+          "line": 384,
           "text": "## Verified status\n\nMeasured on the reference machine (Windows 11 26200, i3-1005G1, 8 GB, WD SN550 250 GB):\n\n| Check | Result |\n|---|---|\n| `scripts/doctor.py` | 20 pass, 6 warn, 0 fail |\n| `tools/agent-preflight.ps1` | 7/7 PASS (MCP, OpenCode, Hermes, provider, model) |\n| Craft Anything MCP handshake | OK — `craft-anything 0.6.0`, **38 tools** over stdio |\n| Hermes MCP test | Connected in 3.9 s, 38 tools |\n| Hermes model | `stepfun/step-3.7-flash:free` via Nous (free), tool calls OK, 9k prompt in 2.6 s |\n| OpenCode model | `opencode/hy4-flash-free` (free), \"OK\" in 2.7 s |\n| Craft Anything builder | OpenCode, free model; build progressing |\n| `rea-agents@6.7.0` MCP handshake | OK — `rea 6.7.0` |\n| Ollama | 0.40.16, 3 models, listening on :11434 |\n| Grafana | responding on :3000 |\n| SSD | WD Blue SN550, healthy |\n| BIOS | `EMCN60WW` (2024-12-04), updated from `EMCN42WW` |\n| `data/knowledge.db` | 107 documents, 388 chunks, 123 facts |\n\nKnown warnings on that machine, all expected: 7.7 GB usable RAM, ~21 GB free disk,\nDocker daemon stopped, `opencode` CLI not on `PATH`, three Obsidian vault copies.\n\n---"
         },
         {
           "heading": "Requirements",
-          "line": 404,
+          "line": 409,
           "text": "## Requirements\n\n| | Minimum | Recommended |\n|---|---|---|\n| RAM | 8 GB | 16 GB |\n| Disk | 20 GB free | 60 GB free |\n| CPU | 2 cores, AVX2 | 4 cores |\n| GPU | none (CPU inference) | 6 GB+ VRAM |\n\nAt 8 GB, run **one** model at a time (1.5B–4B parameters). Close browsers before\nstarting an agent session. This is the single biggest performance factor, larger than\nany driver update.\n\n---"
         },
         {
           "heading": "Related repos",
-          "line": 419,
+          "line": 424,
           "text": "## Related repos\n\nPart of the same build:\n\n- [`jayprophit/Aetherius-OS`](https://github.com/jayprophit/Aetherius-OS) — AI operating system shell\n- [`jayprophit/Agent-Bridge`](https://github.com/jayprophit/Agent-Bridge) — unified agent/tool runtime\n- [`jayprophit/craft-anything`](https://github.com/jayprophit/craft-anything) — investigation engine (fork)\n\n---"
         },
         {
           "heading": "Contributing",
-          "line": 429,
+          "line": 434,
           "text": "## Contributing\n\nThe most useful contribution is a `doctor.py` run from a platform not in the verified\ntable. Paste the output in an issue.\n\n---\n\n**Local-first. One vault. Any OS.**"
         }
       ]
@@ -4872,9 +5156,9 @@
     {
       "path": "data/build-facts.json",
       "kind": "text",
-      "sha256": "d8f1b23916c8bfbf091d45f392cbf8f91ce2f5d094fa42934d5232afd6c43e7e",
-      "bytes": 9973,
-      "modified": "2026-11-23T10:15:26+00:00"
+      "sha256": "ae3473ba94cd93d0897f04570ede07492b16f7b7311fcccca6e1debb7c25abd7",
+      "bytes": 11280,
+      "modified": "2026-11-23T10:40:01+00:00"
     },
     {
       "path": "data/README.md",
@@ -4896,6 +5180,13 @@
       "sha256": "d573a3e08279cb47f6259584a4af6e5e1a55c4394ab21569179a40fcd11a806a",
       "bytes": 6125,
       "modified": "2026-11-19T16:53:25+00:00"
+    },
+    {
+      "path": "docs/CLAUDE-CODE-DEEP-DIVE.md",
+      "kind": "text",
+      "sha256": "6400255c46d41cac077910fc5f17c2bc4318a6741802e8fe0e7141f6508141e7",
+      "bytes": 20070,
+      "modified": "2026-11-23T10:30:09+00:00"
     },
     {
       "path": "docs/INSTALL_WINDOWS.md",
@@ -4942,9 +5233,9 @@
     {
       "path": "docs/TEAM-BRIEF.md",
       "kind": "text",
-      "sha256": "5384c210ad9d8e3862832f658e217a7a8d644c8977c6c54d3306779d61d15b5f",
-      "bytes": 12621,
-      "modified": "2026-11-23T09:58:14+00:00"
+      "sha256": "cb128c5bf8cfdd24c07cffe36a3100e19c947f78ed46194c27ad366c10f81782",
+      "bytes": 13771,
+      "modified": "2026-11-23T10:39:52+00:00"
     },
     {
       "path": "docs/TROUBLESHOOTING.md",
@@ -6860,9 +7151,9 @@
     {
       "path": "obsidian-vault/Daily/2026-11-23.md",
       "kind": "text",
-      "sha256": "f936e86b20872c36a71a5df6d48e1570473666c2934e514090148bfd51b15689",
-      "bytes": 14617,
-      "modified": "2026-11-23T10:15:41+00:00"
+      "sha256": "fbf56aad9b254b700f452f0bd5d74fc41f5229c6ab927dba7c2bd8cca7dfaabd",
+      "bytes": 15962,
+      "modified": "2026-11-23T10:38:17+00:00"
     },
     {
       "path": "obsidian-vault/Work/Project.md",
@@ -6874,9 +7165,9 @@
     {
       "path": "obsidian-vault/Work/PROJECT_MATRIX.md",
       "kind": "text",
-      "sha256": "974e8232a9ba359ba4268b8c98c7e1bcd95f9b529a8952c36830fdea38bbad0d",
-      "bytes": 14028,
-      "modified": "2026-11-23T10:15:48+00:00"
+      "sha256": "d17bf4e75b10db9f118dc328598d62b4d74a7bcb37b9d33fe78affa7bb6b2810",
+      "bytes": 14605,
+      "modified": "2026-11-23T10:38:37+00:00"
     },
     {
       "path": "opencode/agents/coder.md",
@@ -7056,9 +7347,9 @@
     {
       "path": "README.md",
       "kind": "text",
-      "sha256": "52d239a98cd8648b6dc8a91f16100918e55d2b9164e50a1627b9bebc16ffd979",
-      "bytes": 16463,
-      "modified": "2026-11-23T10:15:33+00:00"
+      "sha256": "a63eb9b06308f0ffbd51444e974ed0f7a5223dfe6ac0635189d10d7e0c76a175",
+      "bytes": 16728,
+      "modified": "2026-11-23T10:37:46+00:00"
     },
     {
       "path": "samples/out/ram-options.csv",
@@ -7669,6 +7960,11 @@
     },
     {
       "category": "requirements",
+      "key": "requirements.byte_exact_reverse",
+      "value": "Every reverse-engineering task must sweep the artifact byte by byte: record total bytes and sha256, account for every range with a finding or an unknown carrying its offset, require 100% coverage before closing the gap, and back claims with offset/hash/observed output plus a differential replay. Never silently skip data; never bypass DRM."
+    },
+    {
+      "category": "requirements",
       "key": "requirements.team_not_picker",
       "value": "The AI workers must be one collaborative team, not a list of individually selectable agents. Members have roles, work at the same time on the same task, and pass information to each other through a shared message bus / workspace, like a real company."
     },
@@ -7781,6 +8077,81 @@
       "category": "pending",
       "key": "pending[3]",
       "value": "Review the remaining cloned repos (repos/ is 1.56 GB and not in git)"
+    },
+    {
+      "category": "research",
+      "key": "research[0].topic",
+      "value": "heavy RE MCP tooling"
+    },
+    {
+      "category": "research",
+      "key": "research[0].finding",
+      "value": "rea-lab: 482 runs found no solve-rate gain at ~2x time and cost"
+    },
+    {
+      "category": "research",
+      "key": "research[0].source",
+      "value": "docs/CLAUDE-CODE-DEEP-DIVE.md"
+    },
+    {
+      "category": "research",
+      "key": "research[1].topic",
+      "value": "lean RE skill"
+    },
+    {
+      "category": "research",
+      "key": "research[1].finding",
+      "value": "leanrea: 8 KB skill, direct shell tools, same accuracy, 38% less time, 35% less cost, 60% fewer tokens"
+    },
+    {
+      "category": "research",
+      "key": "research[1].source",
+      "value": "docs/CLAUDE-CODE-DEEP-DIVE.md"
+    },
+    {
+      "category": "research",
+      "key": "research[2].topic",
+      "value": "official agent patterns"
+    },
+    {
+      "category": "research",
+      "key": "research[2].finding",
+      "value": "Agent Skills, subagents, hooks, dynamic workflows and agent teams adopted as registries"
+    },
+    {
+      "category": "research",
+      "key": "research[2].source",
+      "value": "code.claude.com/docs"
+    },
+    {
+      "category": "research",
+      "key": "research[3].topic",
+      "value": "free ecosystems"
+    },
+    {
+      "category": "research",
+      "key": "research[3].finding",
+      "value": "Grok/Manus/Codex/Hermes/OpenClaw open alternatives studied; MIT/Apache/CC0 patterns only"
+    },
+    {
+      "category": "research",
+      "key": "research[3].source",
+      "value": "GitHub API"
+    },
+    {
+      "category": "research",
+      "key": "research[4].topic",
+      "value": "pending wave 4"
+    },
+    {
+      "category": "research",
+      "key": "research[4].finding",
+      "value": "INSTINCTS, AGENT_ACCESS allowlist, run monitor, behaviour recordings and catalogue scaling are documented but not implemented"
+    },
+    {
+      "category": "research",
+      "key": "research[4].source",
+      "value": "docs/CLAUDE-CODE-DEEP-DIVE.md"
     },
     {
       "category": "recommendations",

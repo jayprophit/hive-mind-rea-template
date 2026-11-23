@@ -249,3 +249,12 @@ Open: Obsidian > File > Open folder as vault > C:\Users\jpowe\Documents\Obsidian
 
 ### Pending - needs elevation or a human
 - Intel `ESRV_SVC_QUEENCREEK` + `UDCService`: Access denied without an elevated shell.
+
+### Claude Code + REA research - complete
+- `docs/CLAUDE-CODE-DEEP-DIVE.md`: official skills/subagents/hooks/workflows/
+  agent-teams, plus free reverse-engineered ecosystems and controlled evidence.
+- Implemented in `app/`: SKILLS, HOOKS, SUBAGENT_TYPES, WORKFLOWS, AGENT_TEAMS,
+  AUTO_MEMORY, DOCTOR. Build passes; visual check 81%, 30/30 claims.
+- Documented but not yet in code: INSTINCTS, AGENT_ACCESS allowlist, run monitor,
+  behaviour recordings, catalogue scaling (wave 4 of the deep dive).
+- Policy: lean registries + direct CLI tools; MIT/Apache/CC0 patterns only.

@@ -238,6 +238,11 @@ Prioritised next steps and the outstanding asks are in
 [`docs/RECOMMENDATIONS.md`](docs/RECOMMENDATIONS.md) and queryable with
 `python scripts/query.py --facts recommendations`.
 
+Deep research into Claude Code's skills/subagents/hooks/workflows/agent-teams,
+plus the free reverse-engineered ecosystems (Grok Bot, Manus, Codex, Hermes,
+OpenClaw) and general REA practice, is in
+[`docs/CLAUDE-CODE-DEEP-DIVE.md`](docs/CLAUDE-CODE-DEEP-DIVE.md).
+
 ---
 
 ## REA loop
