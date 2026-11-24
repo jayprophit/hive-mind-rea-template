@@ -23,6 +23,16 @@ patterns were reimplemented in our own code.
 | `Superalgos/Superalgos` | 5,820 / Apache-2.0 | Visual bot design, charting, data mining, backtesting, paper trading, multi-server | Visual strategy-design and paper-trading patterns |
 | `spanoff/mega-arbitrade-flashbot` | 22 / no licence / stalled 2021 | "No code" flash-loan arbitrage, ETH/BSC | **Skipped**: unmaintained, no licence, risky "risk-free" claim, flash loans |
 
+## Additional check (same session)
+
+| Repo | Stars / licence | Finding | Action |
+|---|---|---|---|
+| `Hattorius/Tradingview-ticker` | 105 / GPL-3.0 | Reverse-engineered connection to the TradingView ticker in Python; last pushed 2024 | Pattern only: added a **read-only live ticker** source to `MARKET_DATA_SOURCES`. No GPL code copied |
+| `Mehal45/LinkCharts` | 18 / MIT | Free TradingView-style charting: drawing tools, 22 indicators, screener, watchlists, alerts, bar replay, paper trading | Pattern only: added `CHARTING` metadata (22 indicators, drawing tools, alerts, bar replay, screener, watchlists). No code/assets copied |
+
+Both feed the existing local analytics and paper-trading paths; neither adds a
+network dependency or a paid gate.
+
 ## What was added to the build
 
 `app/src/treasury.js` (exposed as `window.PFV1_TREASURY`):
