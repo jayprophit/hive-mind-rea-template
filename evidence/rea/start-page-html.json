@@ -1,0 +1,83 @@
+{
+  "evidence_id": "REA-START-PAGE-HTML",
+  "artifact": "<workspace>\\capture\\page.html",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 28154,
+  "sha256": "f20f7cb830b1cad63a7627b3fa9714007b0b73ea195c3bd24553c549e9424fe7",
+  "analysed_bytes": 28154,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "f08bb2b09393cdc3d55d1904d013d149eba04018eff1a37f74a0dc2a54791f0c",
+      "kind": "text",
+      "finding": "text: <html lang=\"en\"><head>"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "00302b22d5d234ef0d4e9509871127d6d84102e2b4e29f2cb952c28d926c5ea0",
+      "kind": "text",
+      "finding": "text: , codes, and markets daily while founders sleep."
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "e5f9c670cd4efc2f0d169060ff127c6849b638d370046f516239224d30dc64d6",
+      "kind": "text",
+      "finding": "text: ad pixels"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "7a3ba1e81a81c95f05b93e593b0c630f921d428132f531b0349f74ef3cf322d6",
+      "kind": "text",
+      "finding": "text:    // Sending a denied consent update can itself"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "d9f69f8ab7b51a84be16b5ada6e8441d98ebb2ea1b09f7c9e65fa71c7e43ed9c",
+      "kind": "text",
+      "finding": "text: s', new Date());"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "343d5fcf271b62f5ce5e2aae21fd3f65d1215a82757da9dc970929816be1a8ac",
+      "kind": "text",
+      "finding": "text: e-m7Mkw7Jz.js\">"
+    },
+    {
+      "offset": [
+        24576,
+        28154
+      ],
+      "length": 3578,
+      "sha256": "cb59890aa99b14975146283243f6c9242fa237e6e245da171f0103210dea3228",
+      "kind": "text",
+      "finding": "text: lt=\"Polsia\" src=\"/landing/logonoir.webp\"></a></d"
+    }
+  ],
+  "unknowns": []
+}

@@ -310,9 +310,9 @@
     "semantic_hash": ""
   },
   "docs/GAP-ANALYSIS.md": {
-    "mtime": 1795524339.1661768,
-    "seen": 1795524417.9871619,
-    "ast_hash": "f01353fb74259c1a5541cc5396e2571c",
+    "mtime": 1795526738.7734058,
+    "seen": 1795526891.8698573,
+    "ast_hash": "30911a01a8439e03ffc4c6b8257e1dc6",
     "semantic_hash": ""
   },
   "docs/INSTALL_WINDOWS.md": {
@@ -322,9 +322,9 @@
     "semantic_hash": ""
   },
   "docs/INTEGRATIONS.md": {
-    "mtime": 1795463205.8664699,
-    "seen": 1795463240.1146672,
-    "ast_hash": "f88df3c8b7b274322cc6b03c97a18af9",
+    "mtime": 1795526751.139606,
+    "seen": 1795526891.8698618,
+    "ast_hash": "25b322c2970ec4ace722aff2385f2123",
     "semantic_hash": ""
   },
   "docs/MCP-WIRING.md": {
@@ -544,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795524385.7841818,
-    "seen": 1795524417.9873009,
-    "ast_hash": "b9af3676de8af9f683bb7a49c74f0119",
+    "mtime": 1795526852.5205784,
+    "seen": 1795526891.8699677,
+    "ast_hash": "b9867951fea0b6d519f96f560d76dd42",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {
@@ -733,6 +733,60 @@
     "mtime": 1795431398.6959453,
     "seen": 1795463240.1147726,
     "ast_hash": "429cafce1b1a2043a6a1e0f41d59e5db",
+    "semantic_hash": ""
+  },
+  "evidence/rea/dashboard-menu.json": {
+    "mtime": 1795525842.449418,
+    "seen": 1795526891.8696973,
+    "ast_hash": "3a1d66b6d42cf83aef2dc51c13e0b2a5",
+    "semantic_hash": ""
+  },
+  "evidence/rea/dashboard-snapshot.json": {
+    "mtime": 1795525842.4378004,
+    "seen": 1795526891.8697019,
+    "ast_hash": "7cbace83deaf08f065891618dca289a8",
+    "semantic_hash": ""
+  },
+  "evidence/rea/screenshot-1440.json": {
+    "mtime": 1795525842.456989,
+    "seen": 1795526891.8697047,
+    "ast_hash": "3219a3586c9d4888355a9539d17198f0",
+    "semantic_hash": ""
+  },
+  "evidence/rea/screenshot-390.json": {
+    "mtime": 1795525842.473558,
+    "seen": 1795526891.8697073,
+    "ast_hash": "c292f806cdf94643cdb40384c44ac195",
+    "semantic_hash": ""
+  },
+  "evidence/rea/screenshot-768.json": {
+    "mtime": 1795525842.4677265,
+    "seen": 1795526891.8697097,
+    "ast_hash": "796b9e97bb3a8cf96f29aa8230ee652f",
+    "semantic_hash": ""
+  },
+  "evidence/rea/start-page-html.json": {
+    "mtime": 1795525842.3636491,
+    "seen": 1795526891.8697119,
+    "ast_hash": "9b7f4c7c02b34be3c59e499c08033e40",
+    "semantic_hash": ""
+  },
+  "scripts/rea_evidence.py": {
+    "mtime": 1795525817.7796671,
+    "seen": 1795526891.86982,
+    "ast_hash": "c9615a47fd4de30a189916ddd34777ea",
+    "semantic_hash": ""
+  },
+  "docs/LEGAL-REVIEW.md": {
+    "mtime": 1795526246.6101444,
+    "seen": 1795526891.869864,
+    "ast_hash": "dea375d8a5ecd58da201c1f4f075cac2",
+    "semantic_hash": ""
+  },
+  "docs/REA-EVIDENCE.md": {
+    "mtime": 1795525842.473558,
+    "seen": 1795526891.8698735,
+    "ast_hash": "8eb3d8df147d551b56b89b1cfba6b974",
     "semantic_hash": ""
   }
 }

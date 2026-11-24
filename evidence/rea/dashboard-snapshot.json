@@ -1,0 +1,33 @@
+{
+  "evidence_id": "REA-DASHBOARD-SNAPSHOT",
+  "artifact": "<repo>\\samples\\dashboard-evidence\\snapshot-full.txt",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 4875,
+  "sha256": "ab489fa85cc760654ffcb39d2b2db3a3a9524ed7cfc093d22382ec286f59d702",
+  "analysed_bytes": 4875,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "986d11849a216487cdb5d981f1a759fe44367f39d927fc9be9763b84f8804544",
+      "kind": "text",
+      "finding": "text: - button \"> Filing your mission into your compan"
+    },
+    {
+      "offset": [
+        4096,
+        4875
+      ],
+      "length": 779,
+      "sha256": "38ab388b1dafd506fa7192d16d508476a542d5ca666bb8bde33fad349a2ef384",
+      "kind": "text",
+      "finding": "text:     - group \"Twitter actions\""
+    }
+  ],
+  "unknowns": []
+}

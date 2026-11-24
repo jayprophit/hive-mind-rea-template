@@ -1,0 +1,33 @@
+{
+  "evidence_id": "REA-DASHBOARD-MENU",
+  "artifact": "<repo>\\samples\\dashboard-evidence\\menu-full.txt",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 5596,
+  "sha256": "49ce9d84736bf911072a199e016bd004b7a365419910e469b29112a3bd9968e5",
+  "analysed_bytes": 5596,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "bd67b6c2062cec0ca18355f8961cfe03746384fc76311fe842c6b63a130ecaf6",
+      "kind": "text",
+      "finding": "text: - button \"> Filing your mission into your compan"
+    },
+    {
+      "offset": [
+        4096,
+        5596
+      ],
+      "length": 1500,
+      "sha256": "28f0837d84d47592b4e601ecdea0915142992a3d1f37334ddf186b53b15eda24",
+      "kind": "text",
+      "finding": "text: til they matter. PageMurmur tracks public produc"
+    }
+  ],
+  "unknowns": []
+}

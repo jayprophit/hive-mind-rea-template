@@ -1,0 +1,160 @@
+{
+  "evidence_id": "REA-ABOUT-DESIGN-TOKENS",
+  "artifact": "<workspace>\\capture\\routes\\about\\capture.json",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 51177,
+  "sha256": "5b2a45082ad448062fee5015cbf048542590cf0152cd6796e27a13aaee893590",
+  "analysed_bytes": 51177,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "3ff7b80292efa92ef479e304fc8dad127788e9c890082dc51747cc22feb1fe55",
+      "kind": "text",
+      "finding": "text:   \"a11y\": {"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "895c15fa9adcc17e61ea23018c3b1cb393fd5da394cf410f214efd797149aa44",
+      "kind": "text",
+      "finding": "text:         \"type\": \"other\","
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "204091e18d7f1480523d615467ce624af3da765467bc450fc1179e2f5a3f8ea2",
+      "kind": "text",
+      "finding": "text:       \"query\": \"max-width 340px\""
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "b4242023a33bcae4698e4f58cd1683d3e90d09b5a1ec16cf39d5fd3efeceb5c7",
+      "kind": "text",
+      "finding": "text: 5e5e5\","
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "2bb9fe7f0e03736006229f3404e96f06e989e31cae7bcc4ed02c82199aa2f88b",
+      "kind": "text",
+      "finding": "text: e, monospace\","
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "e8390065ab7dbee0de5318f20f16810d7336654c3db566f2c17622248baf9173",
+      "kind": "text",
+      "finding": "text: atus\": \"unloaded\","
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "e49430c0585591d5556aeb4465bdee539eff3fdfb45b57a2fa5082f2abf533d5",
+      "kind": "text",
+      "finding": "text:  \"unloaded\","
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "a258278bf494d4421aca930bacdc1cb98bb00ddbfe21f97509d4e5698ecb2bc6",
+      "kind": "text",
+      "finding": "text:     \"value\": \"\\\"Suisse Mono\\\", \\\"Courier New\\\","
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "0100e156519b43dff3d7fc445ed8e85d28c655e7900d0b43dcaf39575f099ccf",
+      "kind": "text",
+      "finding": "text: tion\","
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "length": 4096,
+      "sha256": "7d28854844146b58f78cb9bdee112cc749095070a91923b4adf0bd47cb5c45e2",
+      "kind": "text",
+      "finding": "text: .com/favicon-16x16.png\","
+    },
+    {
+      "offset": [
+        40960,
+        45056
+      ],
+      "length": 4096,
+      "sha256": "96871c638dcd55e3623f8e7c3dc4d08895c9e4354031a93e83e6e9b83019988d",
+      "kind": "text",
+      "finding": "text: s (Brasil) Polski T"
+    },
+    {
+      "offset": [
+        45056,
+        49152
+      ],
+      "length": 4096,
+      "sha256": "bb9957c4d90cc4693e3883086d8a2c872df29bde93ec15b0098fcb21f93071d3",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        49152,
+        51177
+      ],
+      "length": 2025,
+      "sha256": "d1019b1f9c3a7f00686e19b865a7decd5098d7c611ba0cba58e1ce71d6ee7b35",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    }
+  ],
+  "unknowns": [
+    {
+      "offset": [
+        45056,
+        49152
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "bb9957c4d90cc4693e3883086d8a2c872df29bde93ec15b0098fcb21f93071d3"
+    },
+    {
+      "offset": [
+        49152,
+        51177
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "d1019b1f9c3a7f00686e19b865a7decd5098d7c611ba0cba58e1ce71d6ee7b35"
+    }
+  ]
+}

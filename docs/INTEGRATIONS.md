@@ -31,6 +31,8 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 | faster-whisper | Latest | pip | Speech-to-text for audio analysis |
 | ffmpeg | Gyan.FFmpeg | winget | Media processing, format conversion |
 | yt-dlp | 2026.10.26 | pip | Media download from URLs |
+| edge-tts | 7.3.1 | pip | Free text-to-speech via the bridge `/api/media/tts` |
+| Pillow / av | installed | pip | Local image generation and video frame handling |
 
 ### Installed in Ubuntu WSL (for Linux debugging)
 | Tool | Version | Location | Purpose |

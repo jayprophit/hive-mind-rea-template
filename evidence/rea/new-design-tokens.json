@@ -1,0 +1,123 @@
+{
+  "evidence_id": "REA-NEW-DESIGN-TOKENS",
+  "artifact": "<workspace>\\capture\\routes\\new\\capture.json",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 43688,
+  "sha256": "4e2956a7f67b9889545655a244396d0d3b520686a98d081c8be5d5565d451a1f",
+  "analysed_bytes": 43688,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "043fb3590941a58e6e32671613b1ce55d69c4830b26ec89a748061f19a029ba0",
+      "kind": "text",
+      "finding": "text:   \"a11y\": {"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "5ee8158efa9260bef25b670dbb4f56ce558b6199572de304032080d9a7706042",
+      "kind": "text",
+      "finding": "text:  \"other\","
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "604a3d1d1e40339c1146e51a877cab481cb2717a084165aad8852e3000cf20ac",
+      "kind": "text",
+      "finding": "text:  \"query\": \"max-width 340px\""
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "66b444fb5eb2b71191160db750bc818cbbe274fac3c73908cd0014fdfaa0189c",
+      "kind": "text",
+      "finding": "text:       \"--polsia-color-hover-overlay\": \"#0000000a"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "bb68d63bb13d72e9dac67808cf8d39c36191a33df6eb661c8855e85e6f8dab02",
+      "kind": "text",
+      "finding": "text: pace\","
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "475e0b0c0f447d4c8e91c01f312954906db661576857bcf5d60aeaba5498caff",
+      "kind": "text",
+      "finding": "text: unloaded\","
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "495e22b460d4790155c5229ee017b2f0c98a574200fcb5aabd2e42e1ac964e07",
+      "kind": "text",
+      "finding": "text: aded\","
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "e05b06e830e72919171b53c996b215cb7802e72ebc99dea774bb9f49d4c2c599",
+      "kind": "text",
+      "finding": "text:       {"
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "58aa9e11e3082680ed444482f272f46ab237c3890b040b4195e1fa47d743f1e3",
+      "kind": "text",
+      "finding": "text:           \"y\": 0"
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "length": 4096,
+      "sha256": "cb10f6e4f548c13233861cc50155c32f97a1c6b739c834cb3ee8de7e6a2768e9",
+      "kind": "text",
+      "finding": "text: n, we also use cookies for analytics and session"
+    },
+    {
+      "offset": [
+        40960,
+        43688
+      ],
+      "length": 2728,
+      "sha256": "4c19e72f2cb57cbdcfa5170272e01acc5f266ed582273baf430ffcd25bfaca21",
+      "kind": "text",
+      "finding": "text: x\": \"row\","
+    }
+  ],
+  "unknowns": []
+}

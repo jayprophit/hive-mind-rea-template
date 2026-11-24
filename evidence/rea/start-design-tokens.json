@@ -1,0 +1,133 @@
+{
+  "evidence_id": "REA-START-DESIGN-TOKENS",
+  "artifact": "<workspace>\\capture\\capture.json",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 46944,
+  "sha256": "30770bf5134c4e99fea218b70832e6ce2457a834c9621ef5b2940bbbc33532f9",
+  "analysed_bytes": 46944,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "9975fd6f92acf9022a23ac46acc9d75b770be9bdda7d44671d9ffb49a1467883",
+      "kind": "text",
+      "finding": "text:   \"a11y\": {"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "34254ffa3879558004afa60398f05e60bda8fdfa113962ab75b3020d21182a7a",
+      "kind": "text",
+      "finding": "text:         \"url\": \"https://polsia.com/assets/ui-DqI"
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "7794c128006b936bb7251dd181a57f55132f83c4fbbc7852489b517033dadb21",
+      "kind": "text",
+      "finding": "text: px\": 220,"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "be86d530a501e4ebe9ba084892e02235f0291d8a2c6bfba0e4fc5003fbbfc945",
+      "kind": "text",
+      "finding": "text: \"#6a6a6a\","
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "1b9a4d839487b3384e1ec54294ddb7ad631a538cba496af94b53a0e12904a67e",
+      "kind": "text",
+      "finding": "text:       \"--polsia-font-mono\": \"\\\"Suisse Mono\\\", \\\""
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "a56d6e7592f6d1533628bd3902eb6e8cd6e009f268a44ce40f428bc9b62deb9e",
+      "kind": "text",
+      "finding": "text:         \"family\": \"BlackletterBit\","
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "5e078c8e908b8bff2ccef7d302f448b9183bd1a82bf1223bf6608b70a5180f89",
+      "kind": "text",
+      "finding": "text:   \"family\": \"Editorial Old\","
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "b71fb9bfb0343814f0b48dfe1275c6ede4dce0f78fc83849ee191afcd2d3c3db",
+      "kind": "text",
+      "finding": "text:       },"
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "5b2b9d7bbe076208cbf760258480dcba5b1a37dba14ee8961e27d1d3aa76c230",
+      "kind": "text",
+      "finding": "text:         {"
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "length": 4096,
+      "sha256": "632167853b7a7b7944d2539c8b1cc6184b9a114af0a80a363aa8b2d138431c5e",
+      "kind": "text",
+      "finding": "text: icon.ico\","
+    },
+    {
+      "offset": [
+        40960,
+        45056
+      ],
+      "length": 4096,
+      "sha256": "4356a0e00e99bab851efedd5ee134770c4522eced7fae9ee93b432360638b9df",
+      "kind": "text",
+      "finding": "text:       \"tag\": \"button\","
+    },
+    {
+      "offset": [
+        45056,
+        46944
+      ],
+      "length": 1888,
+      "sha256": "b0e8ee03f7606126a2e9cbe34f71751e9ccc3c11b210822e833c79514b661fc3",
+      "kind": "text",
+      "finding": "text: y\": 864"
+    }
+  ],
+  "unknowns": []
+}

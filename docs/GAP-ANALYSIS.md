@@ -29,29 +29,32 @@ updated after the "install the missing gaps" pass.
 | P1-8 Installable tools | **Installed** | `graphify` 0.9.118 (knowledge graph: 660 nodes / 863 edges / 39 communities; CLI, OpenCode skill + plugin, MCP registered), `yt-dlp` 2026.10.26, `faster-whisper` 1.2.1. `ffmpeg` was already installed. `demobase` and `basemode` do not exist as installable package/repo/skill (checked GitHub, npm, PyPI, skills.sh) — documented, not faked. |
 | Dashboard visual fidelity | **Rebuilt against real screenshots** | The user supplied authenticated dashboard screenshots. `app/src/dashhome.js` + `dashhome.css` were rebuilt into the captured four-column board: all 19 panels now present (Polsia, Routines, Business, Website, Teams, Tasks, Documents, Twitter, Instagram, Email, TikTok, YouTube Shorts, Pinterest, Facebook, LinkedIn, Google Business, Meta Ads, Media, Team activity), black terminal strip, exact top bar and black chat bubble. Also fixed a real bug where the dashboard route loaded `dashhome.js` but never called `initDashboardHome()` (empty `#dash-app`). Verified in-browser: 59 controls, 4 columns, 19 panels. |
 | Onboarding flow | **Corrected** | `/new` previously jumped straight to `/studio/` on either CTA. `app/src/onboarding.js` now runs the captured provisioning sequence in the terminal (46 lines from `provision-log.js`, shared with the dashboard log), records the choice/state locally, supports reduced motion and Escape-to-skip, then opens `/dashboard/pagemurmur-9jsvs1/`. Verified end-to-end in-browser: CTA → 9/46 lines after 1.6 s → completion → dashboard with 4 columns. |
+| Bridge wired into served app | **Fixed** | `app/src/bridge-client.js` imports the adapter into every entry point; the six static doc pages now load `main.js` too. Verified at bundle level: **all 40 HTML pages load the bridge client**, and all 40 now have the floating chat widget. The client also auto-detects a local bridge at `127.0.0.1:8787` (live by default where possible) and forwards payment, email, OAuth, report, browser, capability and media intents. |
+| Real REA byte evidence | **Built** | `scripts/rea_evidence.py` records total byte length + sha256 for 11 captured artifacts, walks each in explicit 4096-byte ranges with offset, length, hash and finding/unknown, and verifies `analysed_bytes / total_bytes = 100%`. `python scripts/rea_evidence.py --check` passes for all 11; full records in `evidence/rea/*.json`, summary in `docs/REA-EVIDENCE.md`. Opaque binary ranges are recorded as unknowns by hash, never decoded. |
+| Browser automation execution | **Built** | Bridge route `POST /api/browser/action` invokes an allowlisted `browse` CLI tool with an argument list (no shell). Verified: health reports browser=True, allowlisted pass-through works and a disallowed tool (`rm`) is rejected. |
+| Local media / TTS | **Built** | Bridge routes `/api/media/stt` (faster-whisper), `/api/media/tts` (edge-tts, installed), `/api/media/image` (Pillow) and `/api/media/video` (ffmpeg) run locally with no paid API. Verified image generation and generic capability passthrough. |
+| Multi-user accounts / permissions | **Built** | `app/src/accounts.js` provides role-based local accounts (owner/lead/researcher/developer/coder/designer/tester/reviewer/ops/integration/support/finance/viewer) with per-role permission lists, create/switch/remove and an exposed `window.PFV1_ACCOUNTS` API. An Accounts & permissions card in the studio account panel creates and switches accounts and shows the active role's permissions. |
+| Legal/ToS posture | **Documented** | `docs/LEGAL-REVIEW.md` records the clean-room posture (no copied source/assets/fonts, no DRM circumvention, local data, user-held keys) and lists the unresolved human questions (formal ToS review, trademark/look-and-feel, provider terms). |
 
 ## Still open
 
-1. **Dashboard pixel-perfect pass at 1440/768/390.** The structure and styling
-   now follow the supplied screenshots and render correctly, but a numeric
-   pixel diff against a same-size fresh capture has not been run (the `browse`
-   CLI writes screenshots into a filesystem namespace not reachable from this
-   shell). Visual inspection shows the design is complete; only sub-pixel
-   typography/spacing tuning may remain.
-2. **Multi-user accounts / permissions backend (P1-6).** Guest/local workspace
-   only. A real auth/teams service would need a database and identity provider;
-   the local bridge is the foundation but this is not yet built.
-3. **Real generated media / TTS (P1-7).** Capabilities are free local
-   placeholders; live image/audio/video output needs provider keys routed
-   through the bridge. No feature is locked meanwhile.
-4. **Browser automation execution.** The app emits intents; a `browse` MCP
-   bridge is needed to execute them. Same bridge pattern applies.
-5. **Pending unidentified integrations (P1-8 remainder).** `cal.com`,
+1. **Numeric pixel-perfect pass at 1440/768/390.** The dashboard structure and
+   styling follow the supplied screenshots and render correctly, but an exact
+   pixel diff was not run (the `browse` CLI writes screenshots into a filesystem
+   namespace this shell cannot read). The structural/token audit passes; only
+   sub-pixel typography/spacing tuning may remain.
+2. **Cloud-hosted accounts (P1-6 remainder).** Local role-based accounts exist;
+   a real hosted identity provider / multi-device sync is not built and would
+   need a service the person chooses.
+3. **Pending unidentified integrations (P1-8 remainder).** `cal.com`,
    `openproject`, `chatwoot`, `weknora`, `cap`, `voicestudio`, `openseo`,
    Higgsfield items, `calude x jev skill` — need repo/source identification or
    are too heavy for 8 GB RAM. Optional, not blockers.
-6. **Legal / ToS review (P1-9).** Clean-room by design, but no formal review
-   recorded. Human task.
+4. **Formal legal review.** `docs/LEGAL-REVIEW.md` documents the posture; a
+   qualified lawyer has not reviewed terms or trademark/look-and-feel.
+5. **Human ledger.** Revoke the exposed `gho_hV2Y…` token; fit the 8 GB SODIMM;
+   demote Intel telemetry services; decide remote-access autostart; review
+   `repos/`. These are machine/account actions, not app defects.
 
 ## Not gaps (by design or outside the app)
 
@@ -62,8 +65,18 @@ updated after the "install the missing gaps" pass.
 
 ## Recommended order from here
 
-1. Fresh dashboard screenshot + pixel refinement (needs browser bridge).
-2. Execute browser-automation intents through a `browse` bridge.
-3. Multi-user accounts/permissions on top of the local bridge.
-4. Live media providers via env-held keys.
+1. Numeric pixel diff at 1440/768/390 once screenshots can be written into the
+   workspace (the app-side design is complete).
+2. Hosted identity provider for multi-device accounts, if wanted.
+3. Identify/install the remaining optional integrations that actually exist.
+4. Formal legal/ToS review with counsel.
 5. Human ledger: token revocation, RAM, services, remote-access decision.
+
+## Deep-dive verification (2026-11-24)
+
+A full requirement audit (`deep_gap_audit.py`) checks 27 acceptance markers
+against the actual source plus built output: **0 FAIL**, 13 REA phases, bridge
+client present on **40/40** pages, 100% byte coverage on 11 artifacts, 18/18
+tests passing, build passing, 0 broken links. The audit separates "marker
+present" from "behaviour verified in-browser"; both were done for the gaps
+fixed in this pass.

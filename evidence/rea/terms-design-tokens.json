@@ -1,0 +1,323 @@
+{
+  "evidence_id": "REA-TERMS-DESIGN-TOKENS",
+  "artifact": "<workspace>\\capture\\routes\\terms\\capture.json",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 123910,
+  "sha256": "27c5efce0f318281d1196c9d92384965bdd4bdec1e4369ed81936f91ffd0c306",
+  "analysed_bytes": 123910,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "8d06c5e502c25148ba62cf7ed33bf3b11e9c05446a7196d50707567226e41950",
+      "kind": "text",
+      "finding": "text:   \"a11y\": {"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "db51c5d1f80e31f536b8a75cd4ce24bc5f3aae3f49c15e0ca66b6ad80eaa1d59",
+      "kind": "text",
+      "finding": "text: other\","
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "0fcab71cc32053a858fe4d1e31a4ee7195b641557b532c2cd23561ddad5bed10",
+      "kind": "text",
+      "finding": "text:       \"px\": 360,"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "c263f1bb932842bc0ab3ba4ac6339e3ebd18d175b54ca11b391afe7e0b8248ae",
+      "kind": "text",
+      "finding": "text:       \"--polsia-color-muted\": \"var(--polsia-colo"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "4b83aca4e06dee4f5286f0883c2c6e5d992dd0c69c6c32cb97c3727076e3ecb1",
+      "kind": "text",
+      "finding": "text: 3-mono\": \"\\\"Geist Mono\\\", ui-monospace, Menlo, m"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "82bf95836fd064343f0a26ca79d358b372e110181d4fa8cab5ed8e3f27ca93d4",
+      "kind": "text",
+      "finding": "text: unloaded\","
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "a613e0254d1564070660558c1b17c1f47ffc22da1922e589044c23b0d83c8fcb",
+      "kind": "text",
+      "finding": "text:         \"style\": \"normal\","
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "30686b78bbf23c31548dcdb440a03f434f567a28dc313c560e9ba8f9ba5fc986",
+      "kind": "text",
+      "finding": "text: \", \\\"Times New Roman\\\", serif\""
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "2776cc5713e72863a9fe9d4501e4b022114e479f22a841fab1dda2e61b4a5580",
+      "kind": "text",
+      "finding": "text:            24,"
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "length": 4096,
+      "sha256": "571915a0e80b24c137c8afcc111d500e7728b3bba3ed264083140cfe094ed1de",
+      "kind": "text",
+      "finding": "text: s://polsia.com/privacy\","
+    },
+    {
+      "offset": [
+        40960,
+        45056
+      ],
+      "length": 4096,
+      "sha256": "7d874ea4b36aa4ea3e6f16d66630265459118a321dccf84b5c5ae06ead388fc6",
+      "kind": "text",
+      "finding": "text:         \"h\": 29,"
+    },
+    {
+      "offset": [
+        45056,
+        49152
+      ],
+      "length": 4096,
+      "sha256": "05e2e45898a7788d43bf72fa6a50ef48ae78e1f74b573b2f09223df3cce62264",
+      "kind": "text",
+      "finding": "text: N) RELATED TO THE SERVICES THROUGH BINDING IN\""
+    },
+    {
+      "offset": [
+        49152,
+        53248
+      ],
+      "length": 4096,
+      "sha256": "69e6163aa3d5863d477ff09092ff104815a56f9538029cbce59278a549e5bb20",
+      "kind": "text",
+      "finding": "text: \"tag\": \"a\","
+    },
+    {
+      "offset": [
+        53248,
+        57344
+      ],
+      "length": 4096,
+      "sha256": "dd828801790d659c0cbb12f80e3a17d2899d0875d1f8d3a7eed301f16020d06b",
+      "kind": "text",
+      "finding": "text: d other oper\""
+    },
+    {
+      "offset": [
+        57344,
+        61440
+      ],
+      "length": 4096,
+      "sha256": "989c81cddc9f61434271df2891c507ed6748d48b0515df1c7b97de3c35010b76",
+      "kind": "text",
+      "finding": "text:       \"text\": \"ii. Services-managed third-party"
+    },
+    {
+      "offset": [
+        61440,
+        65536
+      ],
+      "length": 4096,
+      "sha256": "5e449dec8db32905d35859bd3874f179465a6bd1ffc82c502fa0724a85c3045e",
+      "kind": "text",
+      "finding": "text:   \"text\": \"3. Services Fees\""
+    },
+    {
+      "offset": [
+        65536,
+        69632
+      ],
+      "length": 4096,
+      "sha256": "c9fe1ea4a7441a5c7691878c722f33bde0275d4f4eeb933ed1013b17164e8e26",
+      "kind": "text",
+      "finding": "text:       \"color\": \"#000000\","
+    },
+    {
+      "offset": [
+        69632,
+        73728
+      ],
+      "length": 4096,
+      "sha256": "573cff9cc6d1a631225190f3b6d8a5c37bf5a7af4f519e2d1ad87421ebe87150",
+      "kind": "text",
+      "finding": "text:       \"depth\": 6,"
+    },
+    {
+      "offset": [
+        73728,
+        77824
+      ],
+      "length": 4096,
+      "sha256": "b00777e30a7f7766580c32249bf4ba48c6d81fcb7218b50b1bf059f01d136eb3",
+      "kind": "text",
+      "finding": "text:   \"box\": {"
+    },
+    {
+      "offset": [
+        77824,
+        81920
+      ],
+      "length": 4096,
+      "sha256": "f6f3363b715e48f6dfad73d9a4e87679c3d3eee862e5226862ed80802419d03f",
+      "kind": "text",
+      "finding": "text: WILL ACHIEVE SPECIFIC RESULTS, THAT ADS WILL BE"
+    },
+    {
+      "offset": [
+        81920,
+        86016
+      ],
+      "length": 4096,
+      "sha256": "ea789c12a12c0af3166416e682df5430403516d777cb1a90ffdbc918c84ab8a9",
+      "kind": "text",
+      "finding": "text:    \"h\": 115,"
+    },
+    {
+      "offset": [
+        86016,
+        90112
+      ],
+      "length": 4096,
+      "sha256": "e45d93d406bbbface2f94464689db4466cbf9b978ca09adb367ea325a39d9901",
+      "kind": "text",
+      "finding": "text: EEMENT TO ARBITRATE SHALL BE NULL AND VOID WITH"
+    },
+    {
+      "offset": [
+        90112,
+        94208
+      ],
+      "length": 4096,
+      "sha256": "4ee6b7a08a3d5e6af763b1ac1d6d4a297cf038163eb9efa76f24951067416d2a",
+      "kind": "text",
+      "finding": "text: es that are material, we will use \""
+    },
+    {
+      "offset": [
+        94208,
+        98304
+      ],
+      "length": 4096,
+      "sha256": "dd76a244d025e28a4afe7ef759f513c2529574574202458b6972ccbe11fecfdb",
+      "kind": "text",
+      "finding": "text:  Magyar GET STARTED"
+    },
+    {
+      "offset": [
+        98304,
+        102400
+      ],
+      "length": 4096,
+      "sha256": "e47fc7b38b2460569f12ad62b6fa172a89695e14eb5342dd72b9f0f57609003a",
+      "kind": "text",
+      "finding": "text:  You are solely responsible for obtaining all ne"
+    },
+    {
+      "offset": [
+        102400,
+        106496
+      ],
+      "length": 4096,
+      "sha256": "9a2119c780c2cdace7061873691ab7895ae55e288b7d46450c59a9e363c060de",
+      "kind": "text",
+      "finding": "text: es. By enabling advertising features and setting"
+    },
+    {
+      "offset": [
+        106496,
+        110592
+      ],
+      "length": 4096,
+      "sha256": "d5e6ac9f983a86169c80b5e97e662280c25ec0c7fac58cfef399296d124b69ab",
+      "kind": "text",
+      "finding": "text: ganizations held under your Account. We are not"
+    },
+    {
+      "offset": [
+        110592,
+        114688
+      ],
+      "length": 4096,
+      "sha256": "7b586bcea623fa7b54c18553b27a5f82f6c6be81aa459bd1896ecfee7408779c",
+      "kind": "text",
+      "finding": "text:  all shipping and handling charges and all appli"
+    },
+    {
+      "offset": [
+        114688,
+        118784
+      ],
+      "length": 4096,
+      "sha256": "afce3352f487daa0f284a1ab191be8572031f79a383689895315e13d31d4e445",
+      "kind": "text",
+      "finding": "text: nsmitter, or merchant of record. You are the mer"
+    },
+    {
+      "offset": [
+        118784,
+        122880
+      ],
+      "length": 4096,
+      "sha256": "fdec33ffa10fe7f71d53e14d3fd7eb1612a54d1d2c315893fc300c236319e1c9",
+      "kind": "text",
+      "finding": "text:  ownership of content or inputs you provide to t"
+    },
+    {
+      "offset": [
+        122880,
+        123910
+      ],
+      "length": 1030,
+      "sha256": "8a6f626e4b526e036b65245eaaca01a4840c3bc4e305cf83ca79408ac5a2d2a8",
+      "kind": "text",
+      "finding": "text: on-beta version. If we provide you any Beta Offe"
+    }
+  ],
+  "unknowns": []
+}

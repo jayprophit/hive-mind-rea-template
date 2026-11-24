@@ -1,0 +1,213 @@
+{
+  "evidence_id": "REA-PRIVACY-DESIGN-TOKENS",
+  "artifact": "<workspace>\\capture\\routes\\privacy\\capture.json",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 79468,
+  "sha256": "9c7367bcf7b9ab546847434ccd7c2e725b8903394ae3363d712acdd544825200",
+  "analysed_bytes": 79468,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "dd1510b173380cb24789fbfa0b6ee9f08b5f6987c56853d8e29d0d8c88e467dd",
+      "kind": "text",
+      "finding": "text:   \"a11y\": {"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "914a5a4ee943d6e91162c3f982f961c6da35d30dfd64c54c5c15f39ac8c07a10",
+      "kind": "text",
+      "finding": "text: other\","
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "8869431e62c890b93330c40c87ed3c7221bc29471fe65fc99f0b73e17dde3fa5",
+      "kind": "text",
+      "finding": "text: nt\": 1,"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "bc4de8454682a61731e712e0e3ce0fc3638fdf7552b9bac7677a2cfaf35a48fa",
+      "kind": "text",
+      "finding": "text:       \"--polsia-color-muted\": \"var(--polsia-colo"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "c0962b4b10d5ad7c135e2fe1b79db54ca6e63686282dee95f13737db4418aefb",
+      "kind": "text",
+      "finding": "text: -v3-mono\": \"\\\"Geist Mono\\\", ui-monospace, Menlo,"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "c00c10ac5b37245baffe1d755b248846a1f1a0a230fe17f48782f20f486e3025",
+      "kind": "text",
+      "finding": "text:  \"unloaded\","
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "b6b0c15671957b11bfb06020e082f80b83451ccea0f4d9fc24693949d8379016",
+      "kind": "text",
+      "finding": "text:         \"style\": \"normal\","
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "df60c679e4858ad561014d0c5f77488b9c9dbfe6555d116dcf2cb2d9eddf5b11",
+      "kind": "text",
+      "finding": "text: \\\"Courier New\\\", monospace\""
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "7215b4f49699684f9807b8edb3809f1abf9b3559da7381857ab25fd3be3e34b4",
+      "kind": "text",
+      "finding": "text:    \"h\": 85,"
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "length": 4096,
+      "sha256": "0aafb2a7a3692e021a6179438275b81d5e0dfeeaf9762fda0d439ff3933983bd",
+      "kind": "text",
+      "finding": "text: y\": 612"
+    },
+    {
+      "offset": [
+        40960,
+        45056
+      ],
+      "length": 4096,
+      "sha256": "c4249b00a9fa24bcdef3a9785b60d912e2178ebb374f043ae59ab38234b869c4",
+      "kind": "text",
+      "finding": "text:     \"font\": \"12px 400\","
+    },
+    {
+      "offset": [
+        45056,
+        49152
+      ],
+      "length": 4096,
+      "sha256": "ba98b3e19048466542de3b7b906ac83c36c937393aa3b02eb72009b0ab2ff28a",
+      "kind": "text",
+      "finding": "text:       \"color\": \"#000000\","
+    },
+    {
+      "offset": [
+        49152,
+        53248
+      ],
+      "length": 4096,
+      "sha256": "019aa376167090ed6c5eba53ff8795617d5ff541134b3ccb82133ae4062d6f74",
+      "kind": "text",
+      "finding": "text:  to collect certain information about your inter"
+    },
+    {
+      "offset": [
+        53248,
+        57344
+      ],
+      "length": 4096,
+      "sha256": "f9bda23f03ca97226008db24ff4ddcbfa6f16ece128af360ac8c5b20e17f250d",
+      "kind": "text",
+      "finding": "text: 000000\","
+    },
+    {
+      "offset": [
+        57344,
+        61440
+      ],
+      "length": 4096,
+      "sha256": "b1ddafc1a9b1df1de0aebf604d555812a48efcbbb3da663f971d7248e5c2cd80",
+      "kind": "text",
+      "finding": "text: h\": 48,"
+    },
+    {
+      "offset": [
+        61440,
+        65536
+      ],
+      "length": 4096,
+      "sha256": "0b487ffbbfaedcf7b7e1d1e988f8591dc8cd999683a0c0f19ef5c315dbd7184b",
+      "kind": "text",
+      "finding": "text: e Bahasa Indonesia Rom"
+    },
+    {
+      "offset": [
+        65536,
+        69632
+      ],
+      "length": 4096,
+      "sha256": "d219a8120d136b1156e51a302071548ac101b733c49472c7670c3e85f25c8559",
+      "kind": "text",
+      "finding": "text: actively or passively (\\\"Input\\\"), which we use"
+    },
+    {
+      "offset": [
+        69632,
+        73728
+      ],
+      "length": 4096,
+      "sha256": "20cd5751e740d211d897c80eea2900dbcdaf10153f368024dfba8d157311525c",
+      "kind": "text",
+      "finding": "text:  settings may allow you to transmit a signal or"
+    },
+    {
+      "offset": [
+        73728,
+        77824
+      ],
+      "length": 4096,
+      "sha256": "cd379b5f6921c5043210abd1f8027dab632c7796ba8b6967efab56ff23b9b9fe",
+      "kind": "text",
+      "finding": "text: ise interacting with us, may not be secure while"
+    },
+    {
+      "offset": [
+        77824,
+        79468
+      ],
+      "length": 1644,
+      "sha256": "5760275de73dae8b997248184ab1960dd82ec5f7821dc27ca705bb72463c0af0",
+      "kind": "text",
+      "finding": "text: s. We store your OAuth tokens (encrypted), your"
+    }
+  ],
+  "unknowns": []
+}

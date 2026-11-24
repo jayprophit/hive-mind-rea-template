@@ -1,0 +1,258 @@
+{
+  "evidence_id": "REA-SCREENSHOT-768",
+  "artifact": "<workspace>\\capture\\screenshot-768.png",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 54749,
+  "sha256": "2c1188c59965a5bea45f431149247e5bde308a07531aeac559fb38be9796260e",
+  "analysed_bytes": 54749,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "40de64a6f06f2e0690773f44403f0a4981983fe2ccd825c2129aa8e82e047c99",
+      "kind": "binary-header",
+      "finding": "PNG signature + IHDR: width/height/colour type (parsed by format)"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "e480f23aceca7af4ebca497550f40517f84fc5b2504fbd0cf3336995fc361af3",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "92e64428a44669e99d643c48c666e6b368149c752a00933b2fb9be7be4cb76f0",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "44f918db58132b3fc059c8d9ae115402843b0a7564c518ef434d973961671141",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "a0a0a4df2169e500c7e0702491e8ad554e4940544c9f6257ea69a59e2486ac91",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "a5fd1d8906d54156270da74f2a54a3e2a177ed42ac1f09364dce4d4d2677ec39",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "4731e32800f2da251019bddd935722fb355218560a1de0aa0e68b8e46d402f30",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "694b3c9f302099f22a32e98fca3b4345478127e37c21b2db71c2b3c725a25791",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "ca7136ed454b81323fbbef601c5a4751814330df729e7bb9f81a26bdeabf1794",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "length": 4096,
+      "sha256": "b3ba5e26d546f0ac90a93f5cb6f577bbf11e30ec53ac968dceb19a4c25b33aac",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        40960,
+        45056
+      ],
+      "length": 4096,
+      "sha256": "a06b788fd2b752b070d0e53f391be459877b19249a995d6ec2e9db4cc517468e",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        45056,
+        49152
+      ],
+      "length": 4096,
+      "sha256": "e5e19fc719a6c7d3323e84aefc60cb98556684c0e647c6c05cd0d33c418d161a",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        49152,
+        53248
+      ],
+      "length": 4096,
+      "sha256": "669c7290d3b534a436af2ef58a97e03333f39af55925081b2abffa2ea715ec58",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        53248,
+        54749
+      ],
+      "length": 1501,
+      "sha256": "9d79dc84c49158a71bc5757eb465e3b99fa012ebb1bc02cb8b8864d4d60a641d",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    }
+  ],
+  "unknowns": [
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "e480f23aceca7af4ebca497550f40517f84fc5b2504fbd0cf3336995fc361af3"
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "92e64428a44669e99d643c48c666e6b368149c752a00933b2fb9be7be4cb76f0"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "44f918db58132b3fc059c8d9ae115402843b0a7564c518ef434d973961671141"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "a0a0a4df2169e500c7e0702491e8ad554e4940544c9f6257ea69a59e2486ac91"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "a5fd1d8906d54156270da74f2a54a3e2a177ed42ac1f09364dce4d4d2677ec39"
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "4731e32800f2da251019bddd935722fb355218560a1de0aa0e68b8e46d402f30"
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "694b3c9f302099f22a32e98fca3b4345478127e37c21b2db71c2b3c725a25791"
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "ca7136ed454b81323fbbef601c5a4751814330df729e7bb9f81a26bdeabf1794"
+    },
+    {
+      "offset": [
+        36864,
+        40960
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "b3ba5e26d546f0ac90a93f5cb6f577bbf11e30ec53ac968dceb19a4c25b33aac"
+    },
+    {
+      "offset": [
+        40960,
+        45056
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "a06b788fd2b752b070d0e53f391be459877b19249a995d6ec2e9db4cc517468e"
+    },
+    {
+      "offset": [
+        45056,
+        49152
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "e5e19fc719a6c7d3323e84aefc60cb98556684c0e647c6c05cd0d33c418d161a"
+    },
+    {
+      "offset": [
+        49152,
+        53248
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "669c7290d3b534a436af2ef58a97e03333f39af55925081b2abffa2ea715ec58"
+    },
+    {
+      "offset": [
+        53248,
+        54749
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "9d79dc84c49158a71bc5757eb465e3b99fa012ebb1bc02cb8b8864d4d60a641d"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "evidence_id": "REA-SCREENSHOT-390",
+  "artifact": "<workspace>\\capture\\screenshot-390.png",
+  "recorded_at": "2026-11-24T13:10:42+00:00",
+  "total_bytes": 40777,
+  "sha256": "8b38190d615d4138d701415e202efebf3efedde4674097d58d87cebc4daec2e3",
+  "analysed_bytes": 40777,
+  "coverage": 1.0,
+  "range_size": 4096,
+  "ranges": [
+    {
+      "offset": [
+        0,
+        4096
+      ],
+      "length": 4096,
+      "sha256": "b85a2da1a11614a71e09d43129096fcf34ef4d465b7e188220586ecfb988d516",
+      "kind": "binary-header",
+      "finding": "PNG signature + IHDR: width/height/colour type (parsed by format)"
+    },
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "length": 4096,
+      "sha256": "b96f46755a8e0b2ffe6de3cf99f5758f1c1d1a54881a1546320c7d57247bf66f",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "length": 4096,
+      "sha256": "184e6e741fccbb420ba2b87f653c255a1082c27e9aad5f468f1ad7c82b3d4484",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "length": 4096,
+      "sha256": "5a6bd5c6400f4222b395744995cad455599fc428be88f68c52465b574ee08f69",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "length": 4096,
+      "sha256": "570d72c7ffb809220a2208c27038d23c9877f438252836b7ca4b5666a8087ab6",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "length": 4096,
+      "sha256": "6266ae578a369109852b476932d510fb21219556003018e597a7060813850807",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "length": 4096,
+      "sha256": "d266fca47ebc8e16e729191d73359494690b96e18315e894f369ee9b6288da80",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "length": 4096,
+      "sha256": "602fdf96b8af6d0c41c3bba3506e6bdbc2e39d0e87f59af1b3316f484d1ee1cf",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "length": 4096,
+      "sha256": "f7d759855fbf33528db83bffb41f4116bb1ff4b29b1ee12ff13821bd74222ac5",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    },
+    {
+      "offset": [
+        36864,
+        40777
+      ],
+      "length": 3913,
+      "sha256": "000808c23e0dca88f1094130fa5c6df480c77ffefed0ab3bb45ec251ed148fc5",
+      "kind": "mixed",
+      "finding": "mixed text/binary: accounted by range + hash"
+    }
+  ],
+  "unknowns": [
+    {
+      "offset": [
+        4096,
+        8192
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "b96f46755a8e0b2ffe6de3cf99f5758f1c1d1a54881a1546320c7d57247bf66f"
+    },
+    {
+      "offset": [
+        8192,
+        12288
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "184e6e741fccbb420ba2b87f653c255a1082c27e9aad5f468f1ad7c82b3d4484"
+    },
+    {
+      "offset": [
+        12288,
+        16384
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "5a6bd5c6400f4222b395744995cad455599fc428be88f68c52465b574ee08f69"
+    },
+    {
+      "offset": [
+        16384,
+        20480
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "570d72c7ffb809220a2208c27038d23c9877f438252836b7ca4b5666a8087ab6"
+    },
+    {
+      "offset": [
+        20480,
+        24576
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "6266ae578a369109852b476932d510fb21219556003018e597a7060813850807"
+    },
+    {
+      "offset": [
+        24576,
+        28672
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "d266fca47ebc8e16e729191d73359494690b96e18315e894f369ee9b6288da80"
+    },
+    {
+      "offset": [
+        28672,
+        32768
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "602fdf96b8af6d0c41c3bba3506e6bdbc2e39d0e87f59af1b3316f484d1ee1cf"
+    },
+    {
+      "offset": [
+        32768,
+        36864
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "f7d759855fbf33528db83bffb41f4116bb1ff4b29b1ee12ff13821bd74222ac5"
+    },
+    {
+      "offset": [
+        36864,
+        40777
+      ],
+      "reason": "opaque binary/compressed region; accounted by range and hash, not decoded (no DRM circumvention)",
+      "sha256": "000808c23e0dca88f1094130fa5c6df480c77ffefed0ab3bb45ec251ed148fc5"
+    }
+  ]
+}
