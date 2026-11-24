@@ -13,11 +13,10 @@
     "ast_empty": true
   },
   "data/index.json": {
-    "mtime": 1795461921.6162229,
-    "seen": 1795462629.9922276,
-    "ast_hash": "d58de3bf925dbaf9b012d130c42a72d9",
-    "semantic_hash": "d58de3bf925dbaf9b012d130c42a72d9",
-    "ast_empty": true
+    "mtime": 1795463339.0378737,
+    "seen": 1795524417.9869952,
+    "ast_hash": "7069bc5982c60084566f7f8ef2062a53",
+    "semantic_hash": ""
   },
   "docker/docker-compose.services.yml": {
     "mtime": 1794292662.4533253,
@@ -311,9 +310,9 @@
     "semantic_hash": ""
   },
   "docs/GAP-ANALYSIS.md": {
-    "mtime": 1795463215.6198473,
-    "seen": 1795463240.114664,
-    "ast_hash": "ef25df02665299af01f62be5f58c0f35",
+    "mtime": 1795524339.1661768,
+    "seen": 1795524417.9871619,
+    "ast_hash": "f01353fb74259c1a5541cc5396e2571c",
     "semantic_hash": ""
   },
   "docs/INSTALL_WINDOWS.md": {
@@ -545,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795463196.2081738,
-    "seen": 1795463240.1147306,
-    "ast_hash": "ba8597c2a8ae5011607eea188c9872af",
+    "mtime": 1795524385.7841818,
+    "seen": 1795524417.9873009,
+    "ast_hash": "b9af3676de8af9f683bb7a49c74f0119",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {

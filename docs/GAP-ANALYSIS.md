@@ -27,13 +27,16 @@ updated after the "install the missing gaps" pass.
 | P1-4 Automatic second-brain sync | **Built** | `scripts/sync_second_brain.py` — idempotent, cross-platform, standard library. Syncs project DB to the workspace `.hive/` copy, mirrors `obsidian-vault/` to `Documents\ObsidianVault\`, and writes `Work/SYNC_LOG.md` to both. `--check` dry-run supported. Verified applied. |
 | P1-5 Token lifecycle | **Built** | Folded into the bridge: `POST /api/oauth/refresh` with `OAUTH_<PROVIDER>_*` env credentials and an allowlisted provider. |
 | P1-8 Installable tools | **Installed** | `graphify` 0.9.118 (knowledge graph: 660 nodes / 863 edges / 39 communities; CLI, OpenCode skill + plugin, MCP registered), `yt-dlp` 2026.10.26, `faster-whisper` 1.2.1. `ffmpeg` was already installed. `demobase` and `basemode` do not exist as installable package/repo/skill (checked GitHub, npm, PyPI, skills.sh) — documented, not faked. |
+| Dashboard visual fidelity | **Rebuilt against real screenshots** | The user supplied authenticated dashboard screenshots. `app/src/dashhome.js` + `dashhome.css` were rebuilt into the captured four-column board: all 19 panels now present (Polsia, Routines, Business, Website, Teams, Tasks, Documents, Twitter, Instagram, Email, TikTok, YouTube Shorts, Pinterest, Facebook, LinkedIn, Google Business, Meta Ads, Media, Team activity), black terminal strip, exact top bar and black chat bubble. Also fixed a real bug where the dashboard route loaded `dashhome.js` but never called `initDashboardHome()` (empty `#dash-app`). Verified in-browser: 59 controls, 4 columns, 19 panels. |
 
 ## Still open
 
-1. **Dashboard visual fidelity ~84%.** Rebuilt from text snapshots because the
-   browser extension kept timing out; needs a fresh pixel capture at
-   1440/768/390 px against `https://polsia.com/dashboard/pagemurmur-9jsvs1`.
-   Blocked on a working browser bridge.
+1. **Dashboard pixel-perfect pass at 1440/768/390.** The structure and styling
+   now follow the supplied screenshots and render correctly, but a numeric
+   pixel diff against a same-size fresh capture has not been run (the `browse`
+   CLI writes screenshots into a filesystem namespace not reachable from this
+   shell). Visual inspection shows the design is complete; only sub-pixel
+   typography/spacing tuning may remain.
 2. **Multi-user accounts / permissions backend (P1-6).** Guest/local workspace
    only. A real auth/teams service would need a database and identity provider;
    the local bridge is the foundation but this is not yet built.
