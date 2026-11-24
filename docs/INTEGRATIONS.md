@@ -33,6 +33,9 @@ This file tracks requested integrations. On this i3-1005G1/7.75GB RAM Windows ho
 | yt-dlp | 2026.10.26 | pip | Media download from URLs |
 | edge-tts | 7.3.1 | pip | Free text-to-speech via the bridge `/api/media/tts` |
 | Pillow / av | installed | pip | Local image generation and video frame handling |
+| fpdf2 | 2.9.0 | pip | Invoice/receipt PDF generation in the bridge |
+| qrcode | 8.2 | pip | Web3 payment-request QR codes |
+| Playwright | 1.65.2 | pip | Exact-size visual diff of the built dashboard (system Edge channel) |
 
 ### Installed in Ubuntu WSL (for Linux debugging)
 | Tool | Version | Location | Purpose |

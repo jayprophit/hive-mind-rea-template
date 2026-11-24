@@ -310,9 +310,9 @@
     "semantic_hash": ""
   },
   "docs/GAP-ANALYSIS.md": {
-    "mtime": 1795526738.7734058,
-    "seen": 1795526891.8698573,
-    "ast_hash": "30911a01a8439e03ffc4c6b8257e1dc6",
+    "mtime": 1795538033.6011238,
+    "seen": 1795538366.2446601,
+    "ast_hash": "12942b7bbf9eec11991751f71c514902",
     "semantic_hash": ""
   },
   "docs/INSTALL_WINDOWS.md": {
@@ -322,9 +322,9 @@
     "semantic_hash": ""
   },
   "docs/INTEGRATIONS.md": {
-    "mtime": 1795526751.139606,
-    "seen": 1795526891.8698618,
-    "ast_hash": "25b322c2970ec4ace722aff2385f2123",
+    "mtime": 1795538015.8874118,
+    "seen": 1795538366.2446673,
+    "ast_hash": "bf207c5436d912c74e16561d7d67586e",
     "semantic_hash": ""
   },
   "docs/MCP-WIRING.md": {
@@ -544,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795526852.5205784,
-    "seen": 1795526891.8699677,
-    "ast_hash": "b9867951fea0b6d519f96f560d76dd42",
+    "mtime": 1795538335.6619308,
+    "seen": 1795538366.2447855,
+    "ast_hash": "1f2f67f3dd8734c3c95d7c43a6f9ec31",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {
@@ -787,6 +787,12 @@
     "mtime": 1795525842.473558,
     "seen": 1795526891.8698735,
     "ast_hash": "8eb3d8df147d551b56b89b1cfba6b974",
+    "semantic_hash": ""
+  },
+  "docs/SKILL-MARKET-ANALYSIS.md": {
+    "mtime": 1795537104.486689,
+    "seen": 1795538366.244691,
+    "ast_hash": "96bf21f44dddaecae35bb5c2c4dbbcc7",
     "semantic_hash": ""
   }
 }
