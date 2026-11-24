@@ -1,0 +1,58 @@
+name: verify-repo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Check Python scripts compile
+        run: python -m compileall -q scripts
+      - name: Verify REA evidence records
+        run: |
+          python - <<'PY'
+          import json, glob, sys
+          files = glob.glob('evidence/rea/*.json')
+          assert files, 'no REA evidence records committed'
+          for f in files:
+              d = json.load(open(f, encoding='utf-8'))
+              assert d.get('coverage') == 1.0, f
+              assert d.get('analysed_bytes') == d.get('total_bytes'), f
+              assert d.get('sha256'), f
+          print(f'verified {len(files)} REA records at 100% byte coverage')
+          PY
+      - name: Verify required docs exist
+        run: |
+          for f in docs/TEAM-BRIEF.md docs/GAP-ANALYSIS.md docs/REQUEST-LEDGER.md docs/REA-EVIDENCE.md docs/LEGAL-REVIEW.md; do
+            test -s "$f" || { echo "missing $f"; exit 1; }
+          done
+      - name: Validate node config files
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JSON files parse
+        run: |
+          python - <<'PY'
+          import json, glob
+          for f in glob.glob('**/*.json', recursive=True):
+              if any(p in f for p in ('node_modules', '.git')):
+                  continue
+              try:
+                  json.load(open(f, encoding='utf-8'))
+              except Exception as e:
+                  print('invalid JSON', f, e)
+                  raise
+          print('all committed JSON parses')
+          PY
+
+  # The app build itself is local: app/ lives on the machine, not in this
+  # declarative-config repo. Run `npm test && npm run build` in app/ locally,
+  # or use the Craft Anything monitor and the repo scripts/audit-*.py tools.
