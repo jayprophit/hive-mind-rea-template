@@ -544,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795541530.9123833,
-    "seen": 1795541549.9989173,
-    "ast_hash": "f665acabe8b622a47b0a68c1ecc7b1a2",
+    "mtime": 1795543136.402847,
+    "seen": 1795543182.8304284,
+    "ast_hash": "6f886daa800413e3bd83864af1b11ec4",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {
@@ -793,6 +793,36 @@
     "mtime": 1795537104.486689,
     "seen": 1795538366.244691,
     "ast_hash": "96bf21f44dddaecae35bb5c2c4dbbcc7",
+    "semantic_hash": ""
+  },
+  "docs/BUILD-ANALYSIS.md": {
+    "mtime": 1795542673.7746744,
+    "seen": 1795543182.8302686,
+    "ast_hash": "9d2269ed4053f274fc3b5c5ce3c9436f",
+    "semantic_hash": ""
+  },
+  "docs/CLOUD-SERVICES-ANALYSIS.md": {
+    "mtime": 1795542873.7206347,
+    "seen": 1795543182.830276,
+    "ast_hash": "daddb0e8aaae8990ee0a6ec8b9d8c40f",
+    "semantic_hash": ""
+  },
+  "docs/DEPLOYMENT-ARCHITECTURE.md": {
+    "mtime": 1795542248.9648778,
+    "seen": 1795543182.8302789,
+    "ast_hash": "1c6ee33396c8cfbfe4ecf76d7baf4955",
+    "semantic_hash": ""
+  },
+  "docs/GROKBOT-TEAM-REA.md": {
+    "mtime": 1795542204.136976,
+    "seen": 1795543182.8302846,
+    "ast_hash": "5bfd9c29f4f18a34869fe8843d8ca2a8",
+    "semantic_hash": ""
+  },
+  "docs/REQUEST-LEDGER.md": {
+    "mtime": 1795542980.5661197,
+    "seen": 1795543182.8303246,
+    "ast_hash": "81522df039757bd4c0026f884e111a0f",
     "semantic_hash": ""
   }
 }
