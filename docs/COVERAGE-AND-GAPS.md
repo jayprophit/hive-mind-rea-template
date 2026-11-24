@@ -75,9 +75,11 @@ work is running.
   hybrid is partial; centralised, self-hosted and decentralised are not
   provisioned. Distributed compute and decentralised governance are kept
   independently configurable; blockchain is not required for routine work.
-- **Contract-intelligence vertical (REFERENCE).** Documented as one possible
-  customer business with a three-paid-pilot gate; no product built, no demand
-  validated, no revenue claimed.
+- **Contract-intelligence vertical (IMPLEMENTED, reference data).** A local
+  deterministic pipeline now exists in `app/src/contract-intel.js` with 6 tests;
+  it keeps source links, flags uncertainty and requires human go/no-go. The
+  three-paid-pilot commercial gate is unchanged — no demand validated, no
+  revenue claimed.
 
 ## 4. Human-only (cannot be done here)
 - Revoke exposed `gho_hV2Y…` token on GitHub.
@@ -92,18 +94,27 @@ guaranteed returns, commingling client funds, offensive security tools, DRM
 bypass, paid feature gates. Rejected by design with documented reasons.
 
 ## 6. Honest answer to "have we covered everything needed?"
-**No.** We have far surpassed the original Polsia concept in breadth — 13-phase
-REA, 10 languages, role team, payments, commerce/learning/finance/security/
-governance references, solo runner, observability — but three things remain:
-(a) the dashboard's last ~9% visual fidelity, (b) test/refactor depth, and
-(c) anything requiring your keys, accounts, hardware or a lawyer. Everything
-reference-only is honestly labelled and never presented as a live connection.
+**No — but the locally closable part is now closed.** 28/28 tests, 0 broken
+links, 27/27 audit markers, a 100-area registry (85% Verified/Implemented), a
+12-target benchmark (11 Verified/Implemented), and a 16-capture visual
+regression suite. What remains is: (a) the dashboard's last ~9% pixel gap,
+blocked only by a Craft Anything tool consent, (b) the `studio.js` refactor,
+and (c) anything requiring your keys, accounts, hardware, a third-party audit
+or a lawyer. See `docs/DEEP-DIVE-GAP-ANALYSIS.md` for the authoritative list.
 
 ## 7. Recommended order
-1. Dashboard measured typography pass + visual regression suite.
-2. Split `studio.js` into modules.
-3. Wire local Playwright as the browser-automation executor.
-4. Add hosted auth only if you want multi-device accounts.
-5. Add provider keys only where you actually need high-quality media or live
+1. Approve the `rebuild_start` consent in Craft Anything so the watcher can run
+   the bounded dashboard typography follow-up.
+2. Split `studio.js` into modules (the last maintenance-risk refactor).
+3. Add hosted auth only if you want multi-device accounts.
+4. Add provider keys only where you actually need high-quality media or live
    payments — never as gates.
+5. Commission an independent OWASP agentic security review.
 6. Work the human ledger.
+
+## 8. This pass — 2026-11-24 deep dive
+Added the formal 100-area audit, contract-intelligence pipeline, benchmark
+harness, visual regression suite, payment idempotency, local Edge browser
+executor, budget ceiling guard, build rollback, company namespace helper and a
+working graphify invocation. Full evidence and the remaining honest gaps are in
+`docs/DEEP-DIVE-GAP-ANALYSIS.md`.

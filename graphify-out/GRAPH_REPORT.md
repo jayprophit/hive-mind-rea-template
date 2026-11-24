@@ -1,17 +1,17 @@
 # Graph Report - hive-mind-rea-template  (2026-11-24)
 
 ## Corpus Check
-- 56 files · ~269,902 words
+- 60 files · ~283,290 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: (none) 12, .db 1)
 
 ## Summary
-- 698 nodes · 937 edges · 41 communities (36 shown, 5 thin omitted)
+- 721 nodes · 974 edges · 41 communities (36 shown, 5 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e17fa719`
+- Built from commit: `b11a8498`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,7 +52,7 @@
 - providers
 - datasources
 - agent-preflight.ps1
-- sync_second_brain.py
+- argparse
 - steps
 
 ## God Nodes (most connected - your core abstractions)
@@ -68,16 +68,16 @@
 10. `check_layout()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `account()` --references--> `Path`  [EXTRACTED]
-  scripts/rea_evidence.py →   _Bridges community 1 → community 39_
+- `main()` --calls--> `argparse`  [EXTRACTED]
+  scripts/office.py →   _Bridges community 1 → community 39_
 - `fts_query()` --calls--> `re`  [EXTRACTED]
   scripts/query.py →   _Bridges community 20 → community 1_
+- `main()` --calls--> `argparse`  [EXTRACTED]
+  scripts/query.py →   _Bridges community 20 → community 39_
 - `check_layout()` --calls--> `json`  [EXTRACTED]
   scripts/doctor.py →   _Bridges community 3 → community 1_
 - `check_mcp()` --calls--> `subprocess`  [EXTRACTED]
   scripts/doctor.py →   _Bridges community 3 → community 5_
-- `check_resources()` --calls--> `shutil`  [EXTRACTED]
-  scripts/doctor.py →   _Bridges community 3 → community 39_
 
 ## Import Cycles
 - None detected.
@@ -89,8 +89,8 @@ Cohesion: 0.04
 Nodes (48): command, enabled, environment, type, command, enabled, type, command (+40 more)
 
 ### Community 1 - "research.py"
-Cohesion: 0.08
-Nodes (33): as_sections(), as_table(), load(), main(), parse_markdown(), write_csv(), write_docx(), write_pptx() (+25 more)
+Cohesion: 0.10
+Nodes (29): as_sections(), as_table(), load(), main(), parse_markdown(), write_csv(), write_docx(), write_pptx() (+21 more)
 
 ### Community 2 - "stack.yaml"
 Cohesion: 0.05
@@ -165,7 +165,7 @@ Cohesion: 0.12
 Nodes (15): auxiliary, group_router, model, provider, memory, memory_enabled, search, model (+7 more)
 
 ### Community 20 - "query.py"
-Cohesion: 0.20
+Cohesion: 0.25
 Nodes (11): cmd_assets(), cmd_doc(), cmd_docs(), cmd_facts(), cmd_runs(), cmd_search(), cmd_sources(), cmd_stats() (+3 more)
 
 ### Community 21 - "model"
@@ -220,9 +220,9 @@ Nodes (8): apiVersion, path, providers, disableDeletion, name, options, type, up
 Cohesion: 0.29
 Nodes (6): apiVersion, datasources, access, name, type, url
 
-### Community 39 - "sync_second_brain.py"
-Cohesion: 0.40
-Nodes (5): main(), needs_copy(), sync_project_db(), sync_vault(), write_log()
+### Community 39 - "argparse"
+Cohesion: 0.07
+Nodes (17): classify(), main(), read(), account(), classify(), main(), sha(), main() (+9 more)
 
 ### Community 40 - "steps"
 Cohesion: 0.12
@@ -234,16 +234,16 @@ Nodes (16): jobs, verify, name, on, pull_request, push, workflow_dispatch, branc
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `components` connect `components` to `stack.yaml`?**
+- **Why does `main()` connect `doctor.py` to `research.py`, `argparse`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `main()` (e.g. with `check_core_binaries()` and `check_layout()`) actually correct?**
   _`main()` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **Should `mcp` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Why does `main()` connect `doctor.py` to `research.py`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `components` connect `components` to `stack.yaml`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Should `research.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07597895967270601 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0966183574879227 - nodes in this community are weakly interconnected._
 - **Should `stack.yaml` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `doctor.py` be split into smaller, more focused modules?**
