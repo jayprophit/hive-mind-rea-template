@@ -9,7 +9,10 @@ Date: 2026-11-24. Strict classification:
 ## 1. Verified build state (last full check)
 18/18 tests, `npm run build` passes, 41 HTML pages, 0 broken links
 (28 HTML links + 42 JS path literals), 13 REA phases, 27/27 requirement
-markers pass, bridge client on 40/40 pages, `craft.json` `ready`, ≤1 builder.
+markers pass, bridge client on 40/40 pages. At this pass a real Craft Anything
+builder is active (1 process, round 22 at 99.9% visual likeness), so
+`craft.json` remains `building` and is deliberately not forced to `ready` while
+work is running.
 
 ## 2. Domain coverage
 
@@ -34,6 +37,10 @@ markers pass, bridge client on 40/40 pages, `craft.json` `ready`, ≤1 builder.
 | Commerce / e-learning platforms | **REFERENCE** | Platform metadata; no marketplace credentials or course content |
 | Security / anti-tampering / quantum | **REFERENCE** | Defensive controls, STRIDE, red lines, PQC readiness; **not a security audit** |
 | AI governance / compliance | **REFERENCE** | GDPR/AI Act/ASA/IP/AUP checklist; **not legal advice** |
+| Client-owned data / portability | **LIVE (local)** | `src/data-ownership.js`: user-chosen backup targets, export, erasure, no silent upload; **remote backup needs your own repo/cloud credentials** |
+| Competitive intel / benchmark registry | **LIVE (reference)** | `src/competitive-intel.js` + `docs/COMPETITOR-POLSIA-DEEP-RESEARCH.md`; **no benchmark measurement harness yet** |
+| Optional user-chosen connectors | **LIVE / OPTIONAL** | `src/connectors.js`, bridge `/api/connectors/status|call`, env-held keys; **no third-party credentials supplied** |
+| Agent-platform landscape | **REFERENCE** | `src/agent-platforms.js` + doc; discovery only, no interchangeable runtime adapter |
 | Solo business operations | **LIVE (local) + REFERENCE** | Orders, complaints, quality gates, governance records; no courier/KYC APIs |
 | Monitor | **LIVE / ONGOING** | 15-min automation, silent when healthy |
 
@@ -53,6 +60,24 @@ markers pass, bridge client on 40/40 pages, `craft.json` `ready`, ≤1 builder.
 6. **Browser relay reliability (MISSING).** `browse` CLI writes screenshots to
    an inaccessible path; local Playwright works but isn't wired to the app's
    browser-automation intents as a default executor.
+
+## 3b. Newly identified from the 24 Nov research
+
+- **Formal 100-area audit (MISSING).** The checklist is reference material;
+  there is no requirement-ID'd evidence table with severity, dependencies and
+  acceptance tests for each area yet.
+- **Benchmark measurement (MISSING).** 12 targets are defined but not
+  instrumented; no adversarial or security results are recorded against them.
+  A visible registry is not proof of a working backend.
+- **Agent harness adapter interface (PARTIAL).** Platform registry exists, but
+  there is no interchangeable runtime adapter or head-to-head harness benchmark.
+- **Five deployment modes (REFERENCE / PARTIAL).** Local/offline is live and
+  hybrid is partial; centralised, self-hosted and decentralised are not
+  provisioned. Distributed compute and decentralised governance are kept
+  independently configurable; blockchain is not required for routine work.
+- **Contract-intelligence vertical (REFERENCE).** Documented as one possible
+  customer business with a three-paid-pilot gate; no product built, no demand
+  validated, no revenue claimed.
 
 ## 4. Human-only (cannot be done here)
 - Revoke exposed `gho_hV2Y…` token on GitHub.
