@@ -34,6 +34,12 @@ requires an action only you can take.
 | 25 | Full gap analysis and competitive research with an independent benchmark | **DONE** | `docs/COMPETITOR-POLSIA-DEEP-RESEARCH.md` §B + `app/src/competitive-intel.js`: 5 deployment modes, 100-area checklist, 12 benchmark targets, 10 audit classifications, self-healing rules; reference only |
 | 26 | User-chosen optional connectors (exchanges, wallets, marketplaces, KYC/legal, messaging) and agent-platform landscape | **DONE** | `app/src/connectors.js`, `app/src/agent-platforms.js`, bridge `/api/connectors/status|call`, bridge client events; credentials in env, nothing gated |
 
+| 27 | Formal 100-area audit with requirement IDs, evidence, severity and acceptance tests | **PENDING** | Selected by the user but not started; only the reference checklist exists in `PFV1_INTEL.REQUIREMENT_CHECKLIST` |
+| 28 | Build the contract-intelligence vertical | **PENDING** | Selected by the user but not started; `PFV1_INTEL.REFERENCE_VERTICAL` is reference only, no product built |
+| 29 | Close existing P0 gaps (dashboard typography, visual regression suite, studio.js refactor) | **PENDING** | Selected by the user but not started; dashboard still ~90.7% pixel similarity, no regression suite |
+| 30 | Benchmark harness for the 12 performance targets | **PENDING** | Selected by the user but not started; targets defined, no measurement instrumentation |
+| 31 | Restart the stopped builder and keep it going when it stops | **PARTIAL** | Old "do not restart" monitor paused; restart watcher `aut_20fbfa10b001qkp2PPmoZzwbvT` active every 20 min. `rebuild_start` returns `consent_required` — needs approval in the Craft Anything app before the restart can run |
+
 ## Remaining outside this build
 
 - **HUMAN:** revoke `gho_hV2Y…` on GitHub; fit 8 GB SODIMM; demote Intel
