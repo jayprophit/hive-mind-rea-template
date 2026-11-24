@@ -105,3 +105,4 @@ Craft Anything (MCP) ── investigation, triage, reports, rebuild studies
 | livekit | realtime media | pending | LiveKit server/SDK; docker or cloud |
 | craft-anything | investigation/reverse-engineering | installed | MCP server (30 tools), connected to 9 agents, skill in 3 locations, Chromium engine OK |
 
+
