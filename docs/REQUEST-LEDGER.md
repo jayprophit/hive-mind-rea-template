@@ -28,6 +28,7 @@ requires an action only you can take.
 | 19 | Kaggle, Colab, Higgsfield and others — do they help? | **DONE** | `docs/CLOUD-SERVICES-ANALYSIS.md`; all added as optional entries in `CLOUD_SERVICES`; no paid gates |
 | 20 | Make sure all prompts have been addressed and completed | **DONE** | This ledger; the two PARTIAL items are stated explicitly rather than claimed complete |
 | 21 | REA Polsia alternatives (NanoCorp, Willo, brainer.ceo, Cofounder, Launchyard, Sistava, Vybe, others) and add missing mechanisms | **DONE** | `docs/COMPETITOR-MECHANISMS.md` + `app/src/mechanisms.js`: Decision Register, approval levels, free-fix policy, multi-company fleet, custom-app templates, AD campaigns, cofounder persona, export checklist, RBAC/audit posture; real `/live/` page added so the public feed route works |
+| 22 | REA finance/trading repos (gloomberb, smolagents, barebones, FinceptTerminal, freqtrade, Superalgos, ccxt, OctoBot, others) so money can be reinvested | **DONE** | `docs/TRADING-TREASURY-REA.md` + `app/src/treasury.js` + bridge `/api/trading/paper|live`: paper-first trades, per-order human confirmation, risk limits, strategy/exchange metadata; GPL/AGPL code not copied, flash-loan bot rejected |
 
 ## Remaining outside this build
 
