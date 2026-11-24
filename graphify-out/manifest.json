@@ -544,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795561559.5402594,
-    "seen": 1795561583.1039534,
-    "ast_hash": "cfebc86f2f8804a5d83dc1427f92bad1",
+    "mtime": 1795562268.759359,
+    "seen": 1795562288.4807153,
+    "ast_hash": "3cf6540bcb83d2c56de1509b611b87aa",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {
@@ -820,9 +820,9 @@
     "semantic_hash": ""
   },
   "docs/REQUEST-LEDGER.md": {
-    "mtime": 1795561526.049168,
-    "seen": 1795561583.103823,
-    "ast_hash": "4a2ab700759b43b869046a72fb2b36e3",
+    "mtime": 1795562232.8267424,
+    "seen": 1795562288.4805756,
+    "ast_hash": "f6f6de89bec6532980ae14c3d51dbff4",
     "semantic_hash": ""
   },
   ".github/workflows/build.yml": {
@@ -922,9 +922,9 @@
     "semantic_hash": ""
   },
   "docs/DEEP-DIVE-GAP-ANALYSIS.md": {
-    "mtime": 1795561496.055143,
-    "seen": 1795561583.1037796,
-    "ast_hash": "a42549381e572fe7b87a9f071f25ad05",
+    "mtime": 1795562241.7780032,
+    "seen": 1795562288.4805279,
+    "ast_hash": "4bdd6100d053869206cc9be0b9a6c5f2",
     "semantic_hash": ""
   },
   "docs/FINANCE-GUARDRAILS.md": {
@@ -1069,6 +1069,12 @@
     "mtime": 1795561076.071423,
     "seen": 1795561583.1041121,
     "ast_hash": "40031713f7c8af40f9048718573c1b77",
+    "semantic_hash": ""
+  },
+  "docs/CAPABILITY-AUDIT.md": {
+    "mtime": 1795562222.5722086,
+    "seen": 1795562288.4804995,
+    "ast_hash": "f348e6fe6cd134370f9eaee89f32daac",
     "semantic_hash": ""
   }
 }

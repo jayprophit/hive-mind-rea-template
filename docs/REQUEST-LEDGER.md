@@ -41,6 +41,10 @@ requires an action only you can take.
 | 31 | Restart the stopped builder and keep it going when it stops | **PARTIAL / EXTERNAL** | Old monitor paused; watcher `aut_20fbfa10b001qkp2PPmoZzwbvT` active every 20 min. `rebuild_start` still returns `consent_required` after chat authorisation; the app's own consent is the only blocker. No workaround attempted |
 | 32 | Deep-dive gap analysis using all data beyond the original site | **DONE** | `docs/DEEP-DIVE-GAP-ANALYSIS.md`: verified baseline, 11 closed gaps, 9 remaining labelled items, deliberate exclusions, honest conclusion |
 
+| 33 | Capability audit: paper trading, live transition, browser automation, scraping, REA, exchanges, Web3 meta wallet and the rest | **DONE** | `docs/CAPABILITY-AUDIT.md`: honest LIVE/OPTIONAL/REFERENCE/PARTIAL/MISSING answers with file evidence for every area |
+| 34 | Local strategy backtesting and public-page scraping | **DONE** | `runBacktest()` in `src/treasury.js` + 4 tests; bridge `/api/web/fetch` + `src/web.js` + 4 Python tests; `extract` browser tool added; 32 JS / 6 Python tests pass |
+| 35 | Zero-idle monitoring: restart the builder immediately when it stops | **DONE** | Old watcher deleted; `aut_20fd8e3db001rJFlKqKd661Qcv` runs every 2 minutes and restarts with no 2-hour wait; consent_required is still reported, never worked around |
+
 ## Remaining outside this build
 
 - **HUMAN:** revoke `gho_hV2Y…` on GitHub; fit 8 GB SODIMM; demote Intel

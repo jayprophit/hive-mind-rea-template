@@ -60,6 +60,14 @@ Also completed earlier in the build: client-owned data layer, optional
 connectors, competitive-intel registry, agent-platform registry, second-brain
 sync and the research docs. None of these gate a feature.
 
+### Added after the first pass
+A follow-up capability audit found two real gaps and closed them: local
+deterministic strategy backtesting (`runBacktest()` in `src/treasury.js`) and a
+bounded public-page reader (`/api/web/fetch` + `src/web.js` + the browser
+`extract` tool). The monitoring watcher was also changed to restart the builder
+immediately every 2 minutes with no 2-hour wait. Evidence is in
+`docs/CAPABILITY-AUDIT.md` and the ledger; 32 JS and 6 Python tests pass.
+
 ## 4. What genuinely remains
 
 These are not hidden failures. They are labelled and most require something
