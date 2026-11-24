@@ -38,5 +38,6 @@
   "36": "agent-preflight.ps1",
   "37": "install_windows.ps1",
   "38": "wire-craft-anything.ps1",
-  "39": "sync_second_brain.py"
+  "39": "sync_second_brain.py",
+  "40": "steps"
 }

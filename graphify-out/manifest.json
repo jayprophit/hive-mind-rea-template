@@ -544,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795543136.402847,
-    "seen": 1795543182.8304284,
-    "ast_hash": "6f886daa800413e3bd83864af1b11ec4",
+    "mtime": 1795544933.6913815,
+    "seen": 1795544957.77622,
+    "ast_hash": "35dcaec3b065e832cbe8cfe99a2fe871",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {
@@ -802,9 +802,9 @@
     "semantic_hash": ""
   },
   "docs/CLOUD-SERVICES-ANALYSIS.md": {
-    "mtime": 1795542873.7206347,
-    "seen": 1795543182.830276,
-    "ast_hash": "daddb0e8aaae8990ee0a6ec8b9d8c40f",
+    "mtime": 1795543624.2359643,
+    "seen": 1795544957.776076,
+    "ast_hash": "6436959dc19d22ccd1ce2648607359e0",
     "semantic_hash": ""
   },
   "docs/DEPLOYMENT-ARCHITECTURE.md": {
@@ -820,9 +820,39 @@
     "semantic_hash": ""
   },
   "docs/REQUEST-LEDGER.md": {
-    "mtime": 1795542980.5661197,
-    "seen": 1795543182.8303246,
-    "ast_hash": "81522df039757bd4c0026f884e111a0f",
+    "mtime": 1795544798.6571708,
+    "seen": 1795544957.7761161,
+    "ast_hash": "e9168eba4311221157affb9c3b97d4c7",
+    "semantic_hash": ""
+  },
+  ".github/workflows/build.yml": {
+    "mtime": 1795544379.853305,
+    "seen": 1795544957.7758615,
+    "ast_hash": "2143550e45c72ce793f2e0dc81fb7127",
+    "semantic_hash": ""
+  },
+  "scripts/audit-js-links.py": {
+    "mtime": 1795544319.8290935,
+    "seen": 1795544957.7760117,
+    "ast_hash": "115ada21afaab7b222ec20ef376acd96",
+    "semantic_hash": ""
+  },
+  "scripts/audit-links.py": {
+    "mtime": 1795544211.990126,
+    "seen": 1795544957.776015,
+    "ast_hash": "2b4ca6a256890f8e420a1a47800bc2f8",
+    "semantic_hash": ""
+  },
+  "docs/COMPETITOR-MECHANISMS.md": {
+    "mtime": 1795544516.932944,
+    "seen": 1795544957.7760787,
+    "ast_hash": "53cc4e98d2eec95d16d102999fada53a",
+    "semantic_hash": ""
+  },
+  "docs/MONETIZATION-STACK.md": {
+    "mtime": 1795543703.3338194,
+    "seen": 1795544957.7761016,
+    "ast_hash": "63f43f583493a55e06b4c0a087445595",
     "semantic_hash": ""
   }
 }
