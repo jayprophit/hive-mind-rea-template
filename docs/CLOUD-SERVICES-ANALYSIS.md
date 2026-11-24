@@ -58,6 +58,28 @@ account and free quotas. Paid tiers are never required to finish a task.
 - **Replicate / fal.ai**: paid per-use model APIs; useful only with your own key,
   never required.
 
+## Recommended free stack (what to actually use)
+
+Do **not** sign up for everything. Use this minimal set, in this order:
+
+| Priority | Service | Use it for | Free? | Action |
+|---|---|---|---|---|
+| 1 | **GitHub** (already in use) | Source, CI, Pages, 60 h/mo Codespaces | Yes | Keep — no change |
+| 2 | **Local Ollama** (already in use) | Daily chat/worker models, private data | Yes | Keep — `qwen3:4b`, `gemma3:4b`, `nomic-embed-text` |
+| 3 | **Cloudflare Workers AI** | Serverless model APIs + embeddings + Whisper/FLUX | Free daily allowance | Add first cloud account; keys in bridge env only |
+| 4 | **Hugging Face Spaces** | Free hosted image/video/TTS/OCR demos for media you can't run locally | Free CPU; ZeroGPU is PRO | Use for media generation, no key needed for demos |
+| 5 | **Oracle Always Free ARM VM** | One always-on team VM (24 GB) with Ollama + bridge | Yes, permanently free | Add only if you want 24/7 operation without your laptop |
+| 6 | **Kaggle** or **Colab** | Occasional GPU notebook jobs (training, batch evaluation) | Yes, quota-limited | Add when a job needs a GPU; not for daily running |
+| 7 | **Supabase free** / **Neon free** | Multi-device accounts and shared DB, only if needed | Yes | Optional; local SQLite stays the source of truth |
+| 8 | **Resend free** / **Brevo free** | Email delivery beyond your own SMTP | Yes, limited | Optional; bridge SMTP already works |
+
+**Skip for now:** Higgsfield (commercial, paid tiers), Replicate/fal (paid per
+use), HF ZeroGPU (PRO), any "Ultra"-style paid tier. Revisit Higgsfield only if
+you decide the local/Pillow media output is not good enough and accept paying.
+
+**Rule:** one account per service, keys only in the bridge environment, no
+feature gated by any of them. Free-tier limits change — verify at signup.
+
 ## Decision
 Add Kaggle, Colab, HF Spaces, Higgsfield and Oracle as **optional** entries in
 the model/cloud registry (`CLOUD_SERVICES` in `app/src/models.js`). Keep local
