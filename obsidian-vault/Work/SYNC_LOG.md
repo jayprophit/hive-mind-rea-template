@@ -113,3 +113,8 @@
 
 - OK project DB already current (knowledge.db)
 - VAULT: 1 to copy, 11 already current -> C:\Users\jpowe\Documents\ObsidianVault
+
+## 2026-11-25T06:58:37+00:00
+
+- COPY project DB -> C:\Users\jpowe\Desktop\projects\polsia free v1\.hive\knowledge.db
+- VAULT: 1 to copy, 11 already current -> C:\Users\jpowe\Documents\ObsidianVault

@@ -12,7 +12,7 @@ Generated from `work_items` in the project database. Edit
 `data/board-polsia-free-v1.json`, then run
 `python scripts/track_status.py`. Do not hand-edit this note.
 
-Counts: active 2, next 3, blocked 1, owner 12, missing 4, done 19.
+Counts: active 2, next 8, blocked 1, owner 13, missing 4, done 20.
 
 ## Active now
 
@@ -28,6 +28,11 @@ Counts: active 2, next 3, blocked 1, owner 12, missing 4, done 19.
 | audit | Re-run requirement and benchmark audits after the next app change | Update docs/DEEP-DIVE-GAP-ANALYSIS.md, COVERAGE-AND-GAPS.md and REQUEST-LEDGER.md. | `scripts/build_requirement_audit.py, scripts/benchmark_targets.py` |
 | brand | Execute the rebrand once the owner gives the new name | Follow docs/REBRAND-PLAN.md; migrate pfv1_* keys; regenerate baselines; re-verify. | `docs/REBRAND-PLAN.md` |
 | code | Split app/src/studio.js into modules | Behaviour-preserving refactor after the builder is idle; keep tests green. | `app/src/studio.js` |
+| research | REA ChatGPT public surface | Observe streaming/stop, engine picker, attachments, side panel and memory; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
+| research | REA Claude public surface | Observe composer, artifacts, projects and connectors; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
+| research | REA DeepSeek public surface | Observe reasoning and search toggles, document reading and API docs; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
+| research | REA Kimi public surface | Observe long-context reading, research modes and document output; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
+| research | REA Manus public surface | Observe task runs, step logs and deliverables; computer use stays human-gated. | `docs/REA-AI-PLATFORMS.md` |
 
 ## Blocked
 
@@ -48,6 +53,7 @@ Counts: active 2, next 3, blocked 1, owner 12, missing 4, done 19.
 | hardware | Elevated demotion of Intel telemetry services | Admin policy choice; no hardware or credential change made. | `machine audit` |
 | hardware | Fit 8 GB DDR4-2666 SODIMM | One slot, 4 GB soldered; BIOS EMCN60WW. | `machine audit` |
 | legal | Formal legal, terms and privacy review | Qualified human review; current pages are drafts. | `docs/LEGAL-REVIEW.md` |
+| research | Permission for signed-in observation of the five platforms | Public pages can be observed now; anything behind a login needs the owner's own session and a terms check. No bypass. | `docs/REA-AI-PLATFORMS.md` |
 | security | Independent OWASP agentic audit | Third-party assessor; cannot self-certify. | `docs/DEEP-DIVE-GAP-ANALYSIS.md` |
 | security | Remote-access decision | Owner chooses whether any remote access is enabled. | `human-only ledger` |
 | security | Revoke the exposed gho_hV2Y GitHub token | Only the account owner can revoke it; gho_XxIp is the working local token. | `human-only ledger` |
@@ -81,6 +87,7 @@ Counts: active 2, next 3, blocked 1, owner 12, missing 4, done 19.
 | quality | Visual regression suite, 16 captures at 1440/768/390 | Public pages 100% vs baseline; dashboard 90.56% vs attachments/picture-1.png. | `scripts/visual_regression.py` |
 | research | Aetherius/Genesis research extract | Attributed; no code, assets or prompts copied. | `docs/AETHERIUS-GENESIS-RESEARCH-EXTRACT.md` |
 | research | Public-page reader and browser automation | Respects access controls; no bypass. | `app/src/web.js, bridge` |
+| research | REA registry for ChatGPT, Claude, Manus, DeepSeek and Kimi | Public-surface scope, 11-phase plan, legal guardrails, evidence states and 5 tests; nothing observed or copied yet. | `app/src/rea-targets.js, docs/REA-AI-PLATFORMS.md` |
 | site | Public site and dashboard, 42 built pages | Five public pages at 99.9% likeness and must not change. | `app/dist` |
 | tooling | Knowledge graph refreshed | Use python -m graphify update . | `graphify-out/` |
 | tracking | Work items tracked in the project database | work_items table generated from board.json; vault board generated from the same data. | `scripts/track_status.py, projects/polsia-free-v1/board.json` |
