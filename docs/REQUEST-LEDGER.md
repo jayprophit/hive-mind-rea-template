@@ -45,6 +45,10 @@ requires an action only you can take.
 | 34 | Local strategy backtesting and public-page scraping | **DONE** | `runBacktest()` in `src/treasury.js` + 4 tests; bridge `/api/web/fetch` + `src/web.js` + 4 Python tests; `extract` browser tool added; 32 JS / 6 Python tests pass |
 | 35 | Zero-idle monitoring: restart the builder immediately when it stops | **DONE** | Old watcher deleted; `aut_20fd8e3db001rJFlKqKd661Qcv` runs every 2 minutes and restarts with no 2-hour wait; consent_required is still reported, never worked around |
 
+| 36 | Extract the best parts of the Aetherius Genesis and Cloud Fabric research for this build | **DONE** | `docs/AETHERIUS-GENESIS-RESEARCH-EXTRACT.md`: cost ladder, zero-surprise billing, service classes, logical directory tree, credential broker, provisioning gates, evidence states; attributed, no code copied |
+| 37 | Local free AI human that handles user requests (Griffin-style interaction, no paid service) | **DONE** | `app/src/ai-human.js` + `app/human/index.html`: perception→think→speak→render controller, interruption, local memory, disclosure, human gates, canvas avatar; `app/src/cloud-fabric.js` £0-first guardrails |
+| 38 | Verify AI human and fabric additions | **DONE** | 40/40 JS tests, build passes with 42 pages, 0 broken HTML/JS links, 8 new tests in `human-fabric.test.js` |
+
 ## Remaining outside this build
 
 - **HUMAN:** revoke `gho_hV2Y…` on GitHub; fit 8 GB SODIMM; demote Intel

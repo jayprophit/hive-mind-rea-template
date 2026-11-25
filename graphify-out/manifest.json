@@ -544,9 +544,9 @@
     "semantic_hash": ""
   },
   "obsidian-vault/Work/SYNC_LOG.md": {
-    "mtime": 1795562268.759359,
-    "seen": 1795562288.4807153,
-    "ast_hash": "3cf6540bcb83d2c56de1509b611b87aa",
+    "mtime": 1795587573.2682185,
+    "seen": 1795587601.1007273,
+    "ast_hash": "e2bbedae54cbad62b0af539cbdbed6a6",
     "semantic_hash": ""
   },
   "opencode/agents/coder.md": {
@@ -820,9 +820,9 @@
     "semantic_hash": ""
   },
   "docs/REQUEST-LEDGER.md": {
-    "mtime": 1795562232.8267424,
-    "seen": 1795562288.4805756,
-    "ast_hash": "f6f6de89bec6532980ae14c3d51dbff4",
+    "mtime": 1795587542.9496684,
+    "seen": 1795587601.100586,
+    "ast_hash": "9280207e85b96df8584e59d65a01287d",
     "semantic_hash": ""
   },
   ".github/workflows/build.yml": {
@@ -1075,6 +1075,12 @@
     "mtime": 1795562222.5722086,
     "seen": 1795562288.4804995,
     "ast_hash": "f348e6fe6cd134370f9eaee89f32daac",
+    "semantic_hash": ""
+  },
+  "docs/AETHERIUS-GENESIS-RESEARCH-EXTRACT.md": {
+    "mtime": 1795587230.297886,
+    "seen": 1795587601.1004887,
+    "ast_hash": "20df62018f817fb296194593ef635192",
     "semantic_hash": ""
   }
 }
