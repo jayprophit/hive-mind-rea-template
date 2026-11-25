@@ -85,8 +85,9 @@ __pycache__/
 repos/
 
 # --- user project work (each project gets its own repo) ------------------
-Projects/
-projects/
+# Anchored to the repo root so obsidian-vault/Projects/ stays tracked.
+/Projects/
+/projects/
 scratch/
 
 # --- editor / OS noise ----------------------------------------------------
