@@ -80,7 +80,7 @@ engine registry that can point at a local model.
 
 Boundary: account required for chat; docs and API pages are public.
 
-### Kimi — `https://www.kimi.com/en`
+### Kimi — `https://www.kimi.ai/en`
 
 Observe: long-context chat and document reading, research/agent modes,
 slide and document generation, file and web-page input, responsive entry
