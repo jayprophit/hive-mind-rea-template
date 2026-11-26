@@ -1,6 +1,6 @@
 ---
 type: board
-date: 2026-11-25
+date: 2026-11-26
 project: "polsia free v1"
 status: live
 generated: track_status.py
@@ -12,7 +12,7 @@ Generated from `work_items` in the project database. Edit
 `data/board-polsia-free-v1.json`, then run
 `python scripts/track_status.py`. Do not hand-edit this note.
 
-Counts: active 2, next 8, blocked 1, owner 13, missing 4, done 20.
+Counts: active 2, next 3, blocked 4, owner 13, missing 4, done 23.
 
 ## Active now
 
@@ -28,17 +28,15 @@ Counts: active 2, next 8, blocked 1, owner 13, missing 4, done 20.
 | audit | Re-run requirement and benchmark audits after the next app change | Update docs/DEEP-DIVE-GAP-ANALYSIS.md, COVERAGE-AND-GAPS.md and REQUEST-LEDGER.md. | `scripts/build_requirement_audit.py, scripts/benchmark_targets.py` |
 | brand | Execute the rebrand once the owner gives the new name | Follow docs/REBRAND-PLAN.md; migrate pfv1_* keys; regenerate baselines; re-verify. | `docs/REBRAND-PLAN.md` |
 | code | Split app/src/studio.js into modules | Behaviour-preserving refactor after the builder is idle; keep tests green. | `app/src/studio.js` |
-| research | REA ChatGPT public surface | Observe streaming/stop, engine picker, attachments, side panel and memory; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
-| research | REA Claude public surface | Observe composer, artifacts, projects and connectors; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
-| research | REA DeepSeek public surface | Observe reasoning and search toggles, document reading and API docs; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
-| research | REA Kimi public surface | Observe long-context reading, research modes and document output; build original equivalents only. | `docs/REA-AI-PLATFORMS.md` |
-| research | REA Manus public surface | Observe task runs, step logs and deliverables; computer use stays human-gated. | `docs/REA-AI-PLATFORMS.md` |
 
 ## Blocked
 
 | Area | Item | Detail | Evidence |
 |---|---|---|---|
 | design | Raise dashboard likeness from 90.56% to >95% | Only typography may change; 4-column board, 19 panels and 59 controls must stay. Blocked by the Craft Anything app's own consent prompt. | `docs/DEEP-DIVE-GAP-ANALYSIS.md, craft.json` |
+| research | REA ChatGPT public surface | Challenge page and 403 in a fresh private browser; nothing observed. Original equivalents stay reference-only. | `app/src/rea-targets.js OBSERVATIONS, docs/REA-AI-PLATFORMS.md` |
+| research | REA Claude public surface | /new returned a challenge page and 403; nothing observed. No bypass attempted. | `app/src/rea-targets.js OBSERVATIONS` |
+| research | REA DeepSeek public surface | Content-delivery error page; no chat surface observed. No bypass attempted. | `app/src/rea-targets.js OBSERVATIONS` |
 
 ## Owner-only — cannot be closed locally
 
@@ -87,8 +85,11 @@ Counts: active 2, next 8, blocked 1, owner 13, missing 4, done 20.
 | quality | Visual regression suite, 16 captures at 1440/768/390 | Public pages 100% vs baseline; dashboard 90.56% vs attachments/picture-1.png. | `scripts/visual_regression.py` |
 | research | Aetherius/Genesis research extract | Attributed; no code, assets or prompts copied. | `docs/AETHERIUS-GENESIS-RESEARCH-EXTRACT.md` |
 | research | Public-page reader and browser automation | Respects access controls; no bypass. | `app/src/web.js, bridge` |
+| research | REA Kimi public surface | OBSERVED: public app shell with chat, projects, plugins, scheduled, research, docs, build etc.; modes mapped to local originals, no login used. | `app/src/rea-targets.js OBSERVATIONS, MODE_EQUIVALENTS` |
+| research | REA Manus public surface | PARTIAL: /app redirected to login; signed-out framework shell only. Durable task record stays a local original. | `app/src/rea-targets.js OBSERVATIONS` |
 | research | REA registry for ChatGPT, Claude, Manus, DeepSeek and Kimi | Public-surface scope, 11-phase plan, legal guardrails, evidence states and 5 tests; nothing observed or copied yet. | `app/src/rea-targets.js, docs/REA-AI-PLATFORMS.md` |
 | site | Public site and dashboard, 42 built pages | Five public pages at 99.9% likeness and must not change. | `app/dist` |
+| site | Visible /rea/ findings page | Observation cards, evidence ids, mode equivalents and guardrails rendered from the registry; no shared nav or public-page styling changed. | `app/rea/index.html, app/vite.config.js` |
 | tooling | Knowledge graph refreshed | Use python -m graphify update . | `graphify-out/` |
 | tracking | Work items tracked in the project database | work_items table generated from board.json; vault board generated from the same data. | `scripts/track_status.py, projects/polsia-free-v1/board.json` |
 

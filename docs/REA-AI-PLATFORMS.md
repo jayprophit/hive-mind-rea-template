@@ -106,7 +106,30 @@ to `VERIFIED` without a local test.
 - Any API keys only if a target's API is used; keys stay in bridge env and
   are never stored in app state.
 
+## Observation run — 25 November 2026
+
+Craft Anything ran a fresh private browser against the five URLs. No logins
+were supplied and no challenge or paywall was bypassed. Feature claims in the
+registry remain `REFERENCE`; only the public surface was recorded.
+
+| Platform | Surface status | What was seen |
+|---|---|---|
+| ChatGPT | `BLOCKED` | Challenge page and 403 in the fresh browser; nothing observable |
+| Claude | `BLOCKED` | `/new` returned the challenge page and a 403 |
+| Manus | `PARTIAL` | `/app` loaded then redirected to login; signed-out framework shell only |
+| DeepSeek | `BLOCKED` | Content-delivery error page; no chat surface |
+| Kimi | `OBSERVED` | Public app shell without login: New chat, Projects, Chats, My Kimi, Plugins, Scheduled, Inspiration, Slides, 3D Make, Deep Research, Docs, Build, Sheets, Design; composer with file upload, voice, project chooser and model/effort picker; Log in to sync |
+
+Each record carries Craft Anything evidence ids in `app/src/rea-targets.js`
+(`OBSERVATIONS`). `MODE_EQUIVALENTS` maps the observed Kimi modes to features
+this build already has — task composer, projects, connectors, scheduled runs
+with one-time authorisation, research with sources, local documents and the
+role-based team. A similarity of job type is never a claim of connection.
+
+The findings are visible in the app at `/rea/` (registry, observation cards,
+evidence ids, mode equivalents and guardrails).
+
 ## Current status
 
-All five are `REFERENCE`. The registry and plan generator exist and are
-tested; no target has been observed yet, and no claim is made that it has.
+All five feature sets remain `REFERENCE`. One public surface was `OBSERVED`,
+one was `PARTIAL`, and three were `BLOCKED`; nothing is `VERIFIED` locally.
