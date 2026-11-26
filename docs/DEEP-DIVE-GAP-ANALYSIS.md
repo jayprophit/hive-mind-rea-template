@@ -109,3 +109,37 @@ because it requires an external security audit. The remaining ~9% dashboard
 pixel gap and third-party/credential/hardware items are the only things between
 this build and the stated maximum — and they are pending for concrete,
 stated reasons, not hidden by a higher percentage.
+
+## 7. Recheck — 2026-11-26 23:00 UTC (builder active)
+
+This section supersedes the builderstate in section 4 only; it does not claim
+new work that has not been measured.
+
+| Check | Observed now |
+|---|---|
+| Craft Anything | `status=building`, note "about 100% like the original"; 1 builder (PID 29268, 17.7 min at check) and 1 GUI. Last recorded check still round 33, passed, 99.79% (2026-11-25). No newer check round exists, so no new fidelity number is claimed. |
+| `npm test` | 57/57 passing (was 18/28 at earlier passes; the builder is adding tests while it runs). |
+| `npm run build` | Passes; `dist` contains 43 HTML pages (was 41; the added `/human/` and `/rea/` routes explain the difference). |
+| Links | 0 broken — 34 unique HTML links, 42 JS path literals. |
+| Git | `hive-mind-rea-template` clean. |
+
+Still genuinely open, unchanged by this recheck:
+
+1. **Dashboard typography** — last measured 90.56% against
+   `attachments/picture-1.png`, below the >95% target. The builder is running on
+   the follow-up, but without a new check round this remains **Partial**, not
+   Verified. The five public pages stay at the Craft Anything 99.9% baseline.
+2. **studio.js refactor** — still a single ~213 KB file; not split.
+3. **Hosted identity / multi-device sync** — local role accounts only.
+4. **Live external execution** — exchanges, marketplaces, wallets, KYC and legal
+   services remain reference/guardrail registries; user-owned keys and approvals
+   are required for live use. Paper trading and invoice generation are local.
+5. **High-quality provider media** — local STT/TTS/image/video paths work;
+   provider-quality output still needs the user's own key in the bridge env.
+6. **Independent OWASP agentic audit and the human-only ledger** — external.
+
+Deliberate exclusions are unchanged (MEV/front-running, flash-loan arbitrage,
+guaranteed returns, commingling client funds, offensive security, DRM bypass,
+paid gates, bulk unsolicited messaging and unapproved ad spend). No claim of
+100% completion is made while the dashboard metric is below 95% and these
+items are open.
